@@ -3,7 +3,7 @@
         Version 1.0.8
           https://github.com/allejo/jekyll-toc
     {% endcomment %}
-<h1>TOC OVerride</h1>
+
     {% capture my_toc %}{% endcapture %}
     {% assign orderedList = include.ordered | default: false %}
     {% assign minHeader = include.h_min | default: 1 %}
@@ -78,4 +78,5 @@
         {{ my_toc | markdownify | strip }}
     </div>
 </div>
+
 
