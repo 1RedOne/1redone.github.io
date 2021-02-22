@@ -1,0 +1,59 @@
+<a class="button feedback-type-product has-margin-bottom-small github-link" aria-label="Send feedback about this page" data-bi-name="create-issue-on-github" href="
+https://github.com/1RedOne/1RedOne.Github.io/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%200c255caa-7381-d349-f77a-576b5ecc2000%0A*%20Version%20Independent%20ID%3A%208871f1d6-9a6f-869e-3eda-6c2e10d3149e%0A*%20Content%3A%20%5BEnable%20DevSecOps%20with%20Azure%20and%20GitHub%20-%20DevSecOps%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fdevops%2Fdevsecops%2F%3Fview%3Dazure-devops)%0A*%20Content%20Source%3A%20%5Bdocs%2Fdevsecops%2Findex.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fazure-devops-docs%2Fblob%2Fmaster%2Fdocs%2Fdevsecops%2Findex.md)%0A*%20Product%3A%20**devops**%0A*%20Technology%3A%20**devops-agile**%0A*%20GitHub%20Login%3A%20%40mijacobs%0A*%20Microsoft%20Alias%3A%20**mijacobs**
+				<span aria-hidden="true" class="docon docon-brand-github has-padding-right-extra-small"></span>
+				<span>This page</span>
+			</a>
+
+
+https://github.com/1RedOne/1RedOne.Github.io/issues/new?title="Problem witht 
+
+
+
+
+================
+
+/new?title=User reported Blog post issue;body=
+
+[Enter feedback here]
+
+
+---
+#### Document Details
+
+⚠ *Do not edit this section. It is required for docs.microsoft.com ➟ GitHub issue linking.*
+
+* ID: 0c255caa-7381-d349-f77a-576b5ecc2000
+* Version Independent ID: 8871f1d6-9a6f-869e-3eda-6c2e10d3149e
+* Content: [SomeBlogPost](https://foxdeploy.com/en-us/azure/devops/devsecops/?view=azure-devops)
+* Content Source: [docs/devsecops/index.md](https://github.com/MicrosoftDocs/azure-devops-docs/blob/master/docs/devsecops/index.md)
+* Product: **devops**
+* Technology: **devops-agile**
+* GitHub Login: @mijacobs
+* Microsoft Alias: **mijacobs**">
+
+
+-----------
+
+encoded 
+
+?title=&amp;
+
+https://github.com/1RedOne/1RedOne.Github.io/issues/new?title=&amp;body%3D%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20%2ADo%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.%2A%0A%0A%2A%20ID%3A%200c255caa-7381-d349-f77a-576b5ecc2000%0A%2A%20Version%20Independent%20ID%3A%208871f1d6-9a6f-869e-3eda-6c2e10d3149e%0A%2A%20Content%3A%20%5BSomeBlogPost%5D%28https%3A%2F%2Ffoxdeploy.com%2Fen-us%2Fazure%2Fdevops%2Fdevsecops%2F%3Fview%3Dazure-devops%29%0A%2A%20Content%20Source%3A%20%5Bdocs%2Fdevsecops%2Findex.md%5D%28https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fazure-devops-docs%2Fblob%2Fmaster%2Fdocs%2Fdevsecops%2Findex.md%29%0A%2A%20Product%3A%20%2A%2Adevops%2A%2A%0A%2A%20Technology%3A%20%2A%2Adevops-agile%2A%2A%0A%2A%20GitHub%20Login%3A%20%40mijacobs%0A%2A%20Microsoft%20Alias%3A%20%2A%2Amijacobs%2A%2A%22%3E
+
+
+
+
+
+--------------------------------------------------------------
+function MakeLink()
+
+https://github.com/1RedOne/1RedOne.Github.io/issues/new?title=BlogPostIssue&amp;body=
+
+[Enter feedback here]
+
+
+---
+#### Document Details
+
+* Content: [{{ page.title }}]({{ page.url }})
+* Content Source: [docs/devsecops/index.md](https://github.com/1RedOne/1RedOne.Github.io/blob/master/_posts/{{ page.path }})

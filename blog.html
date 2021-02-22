@@ -1,0 +1,19 @@
+--------
+layout: default
+title: FoxDeploy.com
+subtitle: Page Subtitle
+image: /path/to/image.jpg
+description: The pages meta description
+hero_image: /image/foxdeployMOUNTAINTOP_hero.jpg
+hero_height: is-fullheight
+
+--------
+3333
+<h1>Latest Post</h1>
+{% for post in site.posts limit:1 %}
+... Show the first post all big ...
+{% endfor %}
+<h1>Recent Posts</h1>
+{% for post in site.posts offset:1 limit:2 %}
+... Show the next two posts ...
+{% endfor %}

@@ -1,0 +1,36 @@
+- name: Get-Help
+  link: /GetHelp/
+- name: Functions  
+  dropdown: 
+    - name: Admin Cheatsheet
+      link: /series/snippet-adminCheatSheet
+    - name: PowerBullet - PushBullet for PowerShell
+      link: /series/snippet-powerBullet
+    - name: XAML to GUI Snippet
+      link: /series/snippet-xamlToGui
+    - name: Random Code Samples              
+      link: /series/snippet-randomSamples
+    - name: Random SQL Snippets
+      link: /series/snippet-randomSql
+- name: Series
+  link: /series/
+  dropdown: 
+    - name: Learn PowerShell
+      link: /series/LearningPowerShell
+    - name: Learn DSC
+      link: /series/LearningDSC
+    - name: Learn GUI Toolmaking
+      link: /series/LearningGUIs    
+    - name: Learn Rasperry Pi
+      link: /series/learningRaspberryPi
+    - name: Scripting for SCCM
+      link: /series/LearningSCCM
+    - name: WinRM and Certificates
+      link: /series/LearningWinRM
+- name: About Me
+  link: /about
+  dropdown: 
+    - name: Recommendations
+      link: /page-2/
+    - name: Speaking Engagements
+      link: /page-2/

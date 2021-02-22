@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+<style>
+.title is-2{ 
+-webkit-text-size-adjust: 100%;
+--font-headings: unset;
+--font-base: unset;
+--font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+--font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+text-align: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+line-height: 1;
+text-shadow: 3px 4px #000;
+box-sizing: inherit;
+border: 0;
+font-family: inherit;
+font-size: 100%;
+font-style: inherit;
+font-weight: inherit;
+margin: 0;
+outline: 0;
+padding: 0;
+vertical-align: baseline;
+transition: color .1s linear;
+color: #fff;
+text-decoration: none;
+}
+
+.subtitle is-4{
+    color: #000;
+    margin-bottom: 10px;
+    text-shadow: 2px 3px #fff;
+}
+</style>
+<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary" {% if page.hero_image %} style="background: url('{{ page.hero_image }}') no-repeat center center; background-size: cover;" {% endif %}>
+    <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">
+        <div class="container" style="text-align: center;">
+            <h1 class="title is-3" style="text-shadow: 3px 4px #000;   
+            font-family: Raleway,Arial,Helvetica,sans-serif;text-align: center;    text-transform: uppercase;">FoxDeploy.com</h1>
+            <p class="subtitle is-4">Automation Tails from the FoxHole</p>
+        </div>
+    </div>
+</section>

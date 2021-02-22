@@ -1,0 +1,50 @@
+<style>
+.alert-info{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+</style>
+<div class="alert alert-info" role="alert">
+<i>See an Issue with this page?  Report it on Github Automatically!</i><br>
+<button class="button" id='GitHubButton'>
+     <i class="fa fa-github" aria-hidden="true"></i>Report Issue 
+</button>
+
+</div>
+
+
+
+<script>
+function MakeLink(){
+var urlToEncode = `https://github.com/1RedOne/1RedOne.Github.io/issues/new?title=BlogPostIssue&amp;body=
+
+[Enter feedback here]
+
+
+---
+Document Details
+
+- Content  [{{ page.title }}]({{ page.url }})
+- Content Source  [{{ page.name }}](https://github.com/1RedOne/1RedOne.Github.io/blob/master/{{ page.path }})
+`;
+return encodeURI(urlToEncode);
+}
+console.log("script loaded");
+var gitHubURL = MakeLink();
+console.log("setting button for " + gitHubURL);
+var item = document.getElementById("GitHubButton");
+item.onclick = function(){window.open(gitHubURL);}
+</script>

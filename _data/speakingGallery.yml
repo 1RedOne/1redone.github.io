@@ -1,0 +1,40 @@
+- title: Image Gallery Title
+  images:
+    - link: assets/images/ignitelogo.png
+      large_link: assets/images/ignitelogo.png
+      alt: The Microsoft Ignite event logo
+      description: |-
+        I was proud to deliver five sessions in Ignite ATL!
+      ratio: is-4by3
+    - link: assets/images/microsoft-ignite-2017-100734688-large.jpg
+      large_link: assets/images/microsoft-ignite-2017-100734688-large.jpg
+      alt: The Microsoft Ignite event logo
+      description: |-
+        I was proud to deliver four sessions in Ignite Miami!
+      ratio: is-4by3
+    - link: assets/images/ignitelogo.png
+      large_link: assets/images/ignitelogo.png
+      alt: The Microsoft Ignite event logo
+      description: |-
+        I was proud to deliver five sessions in Ignite!
+      ratio: is-4by3
+    - link: assets/images/imspeaking-square.png
+      large_link: assets/images/imspeaking-square.png
+      alt: MMS - The greatest Conference
+      description: Proud to speak at MMS 2017
+      ratio: is-4by3
+    - link: assets/images/imspeaking-square.png
+      large_link: assets/images/imspeaking-square.png
+      alt: MMS - The greatest Conference
+      description: Proud to speak at MMS 2018
+      ratio: is-4by3
+    - link: assets/images/mmspecialspeaking
+      large_link: assets/images/mmspecialspeaking
+      alt: MMS - The greatest Conference
+      description: Proud to speak at MMS 2019
+      ratio: is-4by3
+    - link: assets/images/mms180x150_adjazza.png
+      large_link: assets/images/mms180x150_adjazza.png
+      alt: MMS - The greatest Conference
+      description: Proud to speak at MMS 2019 Jazz Edition
+      ratio: is-4by3

@@ -1,0 +1,16 @@
+<h2>Tags</h2>
+<div class="card" style="padding-top:20px;">    
+    <header class="card-header">
+        <div class="card-header-title">Categories</a>
+    </header>
+    
+    <div class="card-content">
+<ul class="tags">
+    {% for tag in site.categories: %}
+      {% assign t = tag | first %}
+      {% assign posts = tag | last %}
+      <li>{{t | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
+    {% endfor %}
+</ul>
+</div>
+</div>

@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<style>
+  .column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<div class="content">
+
+    <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+      <div class="meta"><i class="fa fa-calendar" aria-hidden="true"></i> Published {{ page.date | date: '%B %d, %Y' }} by 
+        <i class="fa fa-user" aria-hidden="true"></i> FoxDeploy
+		<i class="fa fa-hourglass" aria-hidden="true"></i> <i>{{ content | reading_time_as_s }} average reading time</i>
+      </div>	  
+      <a href="{{ post.url }}"><img src="{{ post.header }}{{ post.coverImage }}"></a><br>	
+    {{ content }}
+</div>
+
+<div class="row">
+  <div class="column">  
+    <p>
+      <strong>Tags</strong>
+    </p>
+    <div class="tags">
+    {% for tag in page.tags %}
+      {% include tag.html tag=tag %}
+    {% endfor %}
+  </div>
+</div>
+  <div class="column">
+    {% include share-buttons.html %}
+  </div>
+</div>
+{% include gitHubLink.html %}
+{% include disqus.html %}
+{% include analytics.html %}
+<!-- {% if site.disqus.shortname %}
+  
+{% endif %}
+
+{% if site.google_analytics and jekyll.environment == 'production' %}
+
+{% endif %} -->
