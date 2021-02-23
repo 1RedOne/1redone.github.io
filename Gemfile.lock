@@ -59,8 +59,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-time-to-read (0.1.2)
-      jekyll
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.3.0)
@@ -112,7 +110,6 @@ DEPENDENCIES
   jekyll-postfiles
   jekyll-redirect-from
   jekyll-remote-theme
-  jekyll-time-to-read
   kramdown-parser-gfm
   tzinfo-data
   wdm (~> 0.1.0)

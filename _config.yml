@@ -26,7 +26,7 @@ github_username:  1RedOne
 permalink: /blog/:title.html
 disqus_shortname: foxdeploy-com.disqus.com
 google_analytics: UA-60348969-1
-
+fixed_navbar: top
 #permalink: /:year/:month:/:title.html
 # Build settings
 markdown: kramdown
