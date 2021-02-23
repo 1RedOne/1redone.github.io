@@ -23,8 +23,7 @@ gem "kramdown-parser-gfm"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-postfiles"
-  gem "jekyll-gist"
-  gem "jekyll-time-to-read"
+  gem "jekyll-gist"  
   gem "jekyll-remote-theme"
   gem "jekyll-redirect-from"
 end

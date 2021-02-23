@@ -18,8 +18,7 @@ layout: default
 
     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
       <div class="meta"><i class="fa fa-calendar" aria-hidden="true"></i> Published {{ page.date | date: '%B %d, %Y' }} by 
-        <i class="fa fa-user" aria-hidden="true"></i> FoxDeploy
-		<i class="fa fa-hourglass" aria-hidden="true"></i> <i>{{ content | reading_time_as_s }} average reading time</i>
+        <i class="fa fa-user" aria-hidden="true"></i> FoxDeploy		
       </div>	  
       <a href="{{ post.url }}"><img src="{{ post.header }}{{ post.coverImage }}"></a><br>	
     {{ content }}

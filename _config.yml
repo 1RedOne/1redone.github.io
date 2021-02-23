@@ -35,8 +35,7 @@ theme: bulma-clean-theme
 remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-time-to-read
+  - jekyll-gist  
   - jekyll-remote-theme
   - jekyll-redirect-from
   
