@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Speaking and Media
-permalink: /about/speakingandmedia            
+permalink: /about/speakingandmedia
 hero_image: ../assets/images/foxdeployMOUNTAINTOP_hero.jpg
 hero_height: is-medium
 show_sidebar: true

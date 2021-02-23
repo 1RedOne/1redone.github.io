@@ -31,6 +31,6 @@
   link: /about
   dropdown: 
     - name: Recommendations
-      link: /page-2/
+      link: /about/recommendations
     - name: Speaking Engagements
-      link: /page-2/
+      link: /about/speakingandmedia
