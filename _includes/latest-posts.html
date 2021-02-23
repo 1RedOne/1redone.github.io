@@ -38,7 +38,7 @@
     <div class="card-content">
         <div class="content">
             <p>Get help much faster on our new dedicated Subreddit!<br>
-                Click the banner to join us<br>
+                <br>
                 <a href="https://reddit.com/r/foxdeploy"><img src="/assets/images/foxdeploySubreddit.png" alt="depicts a crowd of people in a night club with colored lights and says 'join the foxdeploy subrreddit today'" width="320" height="70"></a><br>                
                 </a></p>                
         <p></p>
@@ -103,10 +103,19 @@
     </header>
     
     <div class="card-content">
-        <div class="content">
-            <img src="../assets/images/confusedDog.gif">
-            <p></p><p>I definitely forget to change this content</p>
+        <div class="content">            
+            <div id='blogHits'></div>
+            <Script>
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.countapi.xyz/hit/foxdeployhits");
+xhr.responseType = "json";
+xhr.onload = function() {
+    document.getElementById('blogHits').innerText = this.response.value.toLocaleString('en') + ' hits';
+    console.log("total hits " + this.response.value.toLocaleString('en'));
+}
+xhr.send();
 
+</Script>
 <p></p>
         </div>        
     </div>    
@@ -115,7 +124,7 @@
 <br>
 <div class="card" style="padding-top:20px;">    
     <header class="card-header">
-        <div class="card-header-title">Twitter Widget</a>
+        <div class="card-header-title">Twitter</a>
     </header>
     
     <div class="card-content">
@@ -127,30 +136,38 @@
         </div>        
     </div>    
 </div>
-
-
 <br>
-<div class="card" style="padding-top:20px;">    
+<div class="card" style="padding-top:20px;">
     <header class="card-header">
-        <div class="card-header-title">Need Help?</a>
+        <div class="card-header-title">GitHub</a>
     </header>
     
     <div class="card-content">
         <div class="content">
-            <p>Get help much faster (and help each other) on our new dedicated Subreddit!<br>
-                Click the fox to join us! <a href="https://reddit.com/r/foxdeploy"><br>
-                <img src="https://foxdeploy.files.wordpress.com/2017/06/redditfox.png" alt="The logo of the Reddit alien is depicted" scale="0"><br>
-                </a></p>
-                <h4>Reddit.com/R/FoxDeploy</h4>
-                <h2 class="widget-title">StackExchange</h2>
+            <div class="github-card" data-github="1RedOne" data-width="400" data-height="" data-theme="default"></div>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+            <a href="https://twitter.com/intent/tweet?screen_name=FoxDeploy&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to me! @FoxDeploy</a>            
+<p></p>
+        </div>        
+    </div>
+</div>
+<br>
+<div class="card" style="padding-top:20px;">
+    <header class="card-header">
+        <div class="card-header-title">Stack Overflow</a>
+    </header>
+    <div class="card-content">
+        <div class="content">            
                 <p><a href="https://stackexchange.com/users/1285187"><br>
                 <img src="https://stackexchange.com/users/flair/1285187.png" alt="the logo of Stack Exchange is displayed" scale="0"><br>
                 </a></p>
-
-<p></p>
         </div>        
-    </div>    
+    </div>
 </div>
+
+
+
+
 
 <!-- <div class="card"> -->
     
