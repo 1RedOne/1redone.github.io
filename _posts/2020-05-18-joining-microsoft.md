@@ -6,6 +6,7 @@ tags:
   - "life"
 coverImage: "../assets/images/2020/05/images/azureatl.png"
 excerpt: "I have really loved these last three years with #BigBank #SpoilersItWasWellsFargoAllAlong and made some great friends and had some awesome experiences creating and sharing sessions at MMS with my friends I made along the way."
+redirect_from: /2020/05/18/joining-microsoft/
 ---
 
 ![Picture of the author in front of the Microsoft Logo sign in Redmond Washington on the microsoft campus](../assets/images/2020/05/images/azureatl.png?w=636)

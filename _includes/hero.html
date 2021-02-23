@@ -1,11 +1,80 @@
+<style>
+    .customTitle{
+        -webkit-text-size-adjust: 100%;
+    --font-headings: unset;
+    --font-base: unset;
+    --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-sizing: inherit;
+    border: 0;
+    font-style: inherit;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    clear: both;    
+    font-family: Raleway,Arial,Helvetica,sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    font-size: 3rem;
+    text-shadow: 3px 4px #000;
+    margin-top: 15px;
+    }
+
+    .customSlug{
+        -webkit-text-size-adjust: 100%;
+    --coblocks-spacing--0: 0;
+    --coblocks-spacing--1: .5em;
+    --coblocks-spacing--2: 1em;
+    --coblocks-spacing--3: 1.5em;
+    --coblocks-spacing--4: 2em;
+    --coblocks-spacing--5: 2.5em;
+    --coblocks-spacing--6: 3em;
+    --coblocks-spacing--7: 3.5em;
+    --coblocks-spacing--8: 4em;
+    --coblocks-spacing--9: 4.5em;
+    --coblocks-spacing--10: 7em;
+    --wp-admin-theme-color: #007cba;
+    --wp-admin-theme-color-darker-10: #006ba1;
+    --wp-admin-theme-color-darker-20: #005a87;
+    --font-headings: unset;
+    --font-base: unset;
+    --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-sizing: inherit;
+    border: 0;
+    font-style: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    clear: both;
+    font-family: Raleway,Arial,Helvetica,sans-serif;
+    line-height: 1.8;
+    margin-top: .9em;
+    color: #000;
+    margin-bottom: 10px;
+    text-shadow: 2px 3px #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#eee,#333);
+    -webkit-background-clip: text;
+    }
+</style>
+
 <section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary" {% if page.hero_image %} style="background: url('{{ page.hero_image }}') no-repeat center center; background-size: cover;" {% endif %}>
     <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">
         <div class="container">
-            <h1 class="title is-2">{{ page.title }}</h1>
-            <p class="subtitle is-3">{{ page.subtitle }}</p>
-            {% if page.hero_link %}
-                <a href="{{ page.hero_link | relative_url }}" class="button is-info is-large">{{ page.hero_link_text }}</a>
-            {% endif %}
+            <a href="\">
+            <h1 class="customTitle is-2">FoxDeploy.com</h1>
+            <p class="customSlug is-3">Automation Tails from the Fox Hole</p>
+            </a>
         </div>
     </div>
 </section>
