@@ -2,13 +2,13 @@
 layout: default
 ---
 <style>
-  .column {
+  .footer-column {
   float: left;
   width: 50%;
 }
 
 /* Clear floats after the columns */
-.row:after {
+.footer-row:after {
   content: "";
   display: table;
   clear: both;
@@ -25,8 +25,8 @@ layout: default
     {{ content }}
 </div>
 
-<div class="row">
-  <div class="column">  
+<div class="footer-row">
+  <div class="footer-column">  
     <p>
       <strong>Tags</strong>
     </p>
@@ -36,7 +36,7 @@ layout: default
     {% endfor %}
   </div>
 </div>
-  <div class="column">
+  <div class="footer-column">
     {% include share-buttons.html %}
   </div>
 </div>
