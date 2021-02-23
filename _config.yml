@@ -38,6 +38,7 @@ plugins:
   - jekyll-gist
   - jekyll-time-to-read
   - jekyll-remote-theme
+  - jekyll-redirect-from
   
 hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
 defaults:
@@ -62,8 +63,6 @@ defaults:
       hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
       show_sidebar: true
       
-
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

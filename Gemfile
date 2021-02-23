@@ -26,6 +26,7 @@ group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-time-to-read"
   gem "jekyll-remote-theme"
+  gem "jekyll-redirect-from"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
