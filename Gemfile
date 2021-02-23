@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-postfiles"
   gem "jekyll-gist"
   gem "jekyll-time-to-read"
+  gem "jekyll-remote-theme"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
