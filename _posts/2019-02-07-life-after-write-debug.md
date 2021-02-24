@@ -151,12 +151,8 @@ These commands will change your debugging life.
 
 In the demo below, I show how Step-Over works, which runs the current line but doesn't jump into the definition of any functions within it, like Step-Into does.
 
-## make youtube Link DebugInCode
+{% include youtube.html video=YJfkNCqGPZc %}
 
-Now, let's go back to our initial example and set a breakpoint to test the value on that last line.
-
-
-## make you tube link Debugging.mp4
 
 See how easy that was?  This is why I believe that once you learn of the power of ultra instinct--er, once you learn about Breakpoints, you'll simply _**never need Write-Debug again!**_
 
