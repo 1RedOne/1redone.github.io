@@ -1,5 +1,18 @@
 ﻿$FixedPostsPath = gci .\_posts | ? Extension -In ('.md',".markdown")
-$PostsToProcess = gci .\_posts -Recurse | ? Extension -In ('.md',".markdown") | ? BaseName -notin ($FixedPostsPath.BaseName)
+$FixedPostsPathBaseName = $FixedPostsPath | % { $_.Name.SubString(11) }
+$PostsToProcess = gci .\_posts -Recurse | 
+    ? Extension -In ('.md',".markdown") | % {
+        if ( $FixedPostsPathBaseName -notcontains $_.Name `
+        -and $FixedPostsPathBaseName -notcontains $_.Name.Substring(11)){
+            write-host "need to fix $($_.Name)"
+            $_
+        }
+    }
+
+
+
+
+
 "found $($PostsToProcess.Count) files to process"
 "======================================================"
 $fixedPosts = get-item .\fixed
