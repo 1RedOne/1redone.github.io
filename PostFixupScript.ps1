@@ -42,6 +42,7 @@ forEach ($file in $PostsToProcess){
     $addRedirect = @"
 $($dateLine.Line)
 redirect_from : $redirectPayload
+coverImage: goes here...
 "@
 
     $fileContent = $fileContent -replace $dateLine.Line, $addRedirect
