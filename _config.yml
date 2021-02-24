@@ -31,6 +31,7 @@ fixed_navbar: top
 # Build settings
 markdown: kramdown
 #theme: minima
+paginate: 5
 theme: bulma-clean-theme
 remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
@@ -38,6 +39,7 @@ plugins:
   - jekyll-gist  
   - jekyll-remote-theme
   - jekyll-redirect-from
+  - jekyll-paginate
   
 hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
 defaults:

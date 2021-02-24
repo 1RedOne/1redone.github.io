@@ -107,6 +107,7 @@ DEPENDENCIES
   jekyll (~> 3.9)
   jekyll-feed (~> 0.6)
   jekyll-gist
+  jekyll-paginate
   jekyll-postfiles
   jekyll-redirect-from
   jekyll-remote-theme
