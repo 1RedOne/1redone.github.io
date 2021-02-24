@@ -18,4 +18,4 @@ $out += "}" $out } \[/code\]
 
 And the usage of it:
 
-![ConvertTo-PSCustomObject](../assets/images/2019/03/../assets/images/2019/03/images/convertto-pscustomobject.png)
+![ConvertTo-PSCustomObject](../assets/images/2019/03/images/convertto-pscustomobject.png)

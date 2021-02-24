@@ -32,8 +32,20 @@ forEach ($file in $PostsToProcess){
         #![](../assets/images/2020/08/images/quicker-auto-mocking-in-c.png) 
 
     }
-    #change the path of images
-    #update in script
+
+    #update and add redirect 
+    
+    $dateLine =$fileContent | select-string "date:"
+
+
+    $redirectPayload = "/$($fileDate.P2.Replace('"','').Replace('-','/'))/$($file.BaseName)"
+    $addRedirect = @"
+$($dateLine.Line)
+redirect_from : $redirectPayload
+"@
+
+    $fileContent = $fileContent -replace $dateLine.Line, $addRedirect
+
     
     $newName = "$($FixedPosts.FullName)\$($fileDate.P2.Replace('"',''))-$($file.Name)"
 

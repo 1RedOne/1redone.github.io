@@ -12,9 +12,8 @@ excerpt: "Hey y'all.  I need to come clean.  I am a bad debugger.
 
 Why?  Because until recently, I was notorious for leaving Write-Debug statements everywhere.  I mean, just take a look at my local git folder."
 redirect_from: /2019/02/07/progressive-automation-pt-ii-powershell-guis/
-
 ---
-
+![](../assets/images/2019/02/images/life-after-write-debug-2.png)
 Hey y'all.  I need to come clean.  I am a bad debugger.
 
 Why?  Because until recently, I was notorious for leaving Write-Debug statements everywhere.  I mean, just take a look at my local git folder.
