@@ -178,19 +178,22 @@ To be trusted with presence info, apps like Office, Teams and Skype all had to d
 
 So, in order for us to do it in code, here's what we can do.
 
-\[code lang="powershell"\] Add-Type -Path "C:\\Program Files (x86)\\Microsoft Office 2013\\LyncSDK\\Assemblies\\Desktop\\Microsoft.Lync.Model.dll";
+```
 
-#Gets a reference to the currently running Skype4Business client $lyncclient = \[Microsoft.Lync.Model.LyncClient\]::GetClient()
+Add-Type -Path "C:\Program Files (x86)\Microsoft Office 2013\LyncSDK\Assemblies\Desktop\Microsoft.Lync.Model.dll";
+
+#Gets a reference to the currently running Skype4Business client $lyncclient = [Microsoft.Lync.Model.LyncClient]::GetClient()
 
 #Gets a reference to our special contact object from Skype $myContact = $lyncclient.Self.Contact;
 
-#Calls our contact to update the status and retrieve an \`Availability\` property back $myState = $myContact.GetContactInformation("Availability") \[/code\]
+#Calls our contact to update the status and retrieve an \`Availability\` property back $myState = $myContact.GetContactInformation("Availability") 
+
+```
 
 See, even retrieving our own state results in a call that Lync/Skype4Business processes for us.
 
 But it works! Now to bake the whole thing into some code to run...
-
-https://gist.github.com/1RedOne/d9284559742a832fdb2e7bd190a62da7
+{% gist d9284559742a832fdb2e7bd190a62da7 %}
 
 And it works! When I join a call or a meeting, in just a few moments, the light outside my door turns on!
 
@@ -198,7 +201,7 @@ And it works! When I join a call or a meeting, in just a few moments, the light 
 
 I realize that my instructions on how to actually make the On Air light fixture are akin to this.
 
-![a humorous image showing how to draw an owl in two steps.  The first step is two simple circles.  The next step shows an incredibly ornate drawing of an owl with the instructions 'now draw the rest of the damn owl'](images/howtodrawanowl.jpeg?w=636)
+![a humorous image showing how to draw an owl in two steps.  The first step is two simple circles.  The next step shows an incredibly ornate drawing of an owl with the instructions 'now draw the rest of the damn owl'](../assets/images/2020/07/images/howtodrawanowl.jpeg?w=636)
 
 My wife made the whole thing for me!  She used a leftover children's crafting lunchbox and some black and red vinyl for the graphic, which she cut out using a Cricut machine.
 
