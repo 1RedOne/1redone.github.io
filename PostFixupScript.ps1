@@ -9,10 +9,6 @@ $PostsToProcess = gci .\_posts -Recurse |
         }
     }
 
-
-
-
-
 "found $($PostsToProcess.Count) files to process"
 "======================================================"
 $fixedPosts = get-item .\fixed
@@ -24,7 +20,7 @@ forEach ($file in $PostsToProcess){
     #if not found => Continue
     if (0 -eq $imagesToFix.Count){"---no images"}
     #calculate new image path
-
+    $fileDate = $fileContent | select-string "date:" |convertfrom-string
     forEach ($img in $imagesToFix){
         $elementToFix = $img.ToString().Split('(')[-1]
         if (IsProbablyAnImage $elementToFix){
@@ -38,7 +34,7 @@ forEach ($file in $PostsToProcess){
     }
     #change the path of images
     #update in script
-    $fileDate = $fileContent | select-string "date:" |convertfrom-string
+    
     $newName = "$($FixedPosts.FullName)\$($fileDate.P2.Replace('"',''))-$($file.Name)"
 
     Write-host -ForegroundColor Cyan "---new name determined to be `n`t`t$newName"
@@ -46,7 +42,7 @@ forEach ($file in $PostsToProcess){
     set-content -Path "$newName" -Value $fileContent -Force 
     #copy to fixed
     #exit
-    read-host "check the fil!"
+    read-host "check the file!"
     #pause to check
 }
 
