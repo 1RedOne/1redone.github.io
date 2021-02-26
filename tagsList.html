@@ -1,0 +1,123 @@
+---
+layout:   default
+title:    Tag
+---
+<style>
+    .tags-expo-list{
+        line-height: 1.5;
+    font-family: "PT Serif",Georgia,"Times New Roman",serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #515151;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    }
+
+    .post-tag{
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+        -webkit-text-size-adjust: 100%;
+        box-sizing: border-box;
+        text-decoration: none;
+        display: inline-block;
+        background: rgba(106,159,181,0.15);
+        padding: 0 .5rem;
+        border-radius: 4px;
+        font-family: "PT Sans",Helvetica,Arial,sans-serif;
+        font-size: 90%;
+        transition: all 0.1s ease-in-out;
+        color: #6a9fb5;
+        margin: .2em .3em;
+    }
+
+    .bigTag{
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        box-sizing: border-box;
+        margin-bottom: .5rem;
+        line-height: 1.25;
+        text-rendering: optimizeLegibility;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-family: "PT Sans",Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        color: #313131;
+        letter-spacing: -.025rem;
+    }
+
+    .postTitle{
+        line-height: 1.5;
+        font-size: 17px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+        -webkit-text-size-adjust: 100%;
+        font-family: "PT Sans",Helvetica,Arial,sans-serif;
+        list-style-type: circle;
+        list-style-position: inside;
+        box-sizing: border-box;
+        margin-top: 0;
+        color: #6a9fb5;
+        text-decoration: none;
+    }
+</style>
+{% comment%}
+Here we generate all the tags.
+{% endcomment%}
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+{% assign ttags = post.tags | join:'|' | append:'|' %}
+{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+
+{% for tag in rawtags %}
+{% if tag != "" %}
+
+{% if tags == "" %}
+{% assign tags = tag | split:'|' %}
+{% endif %}
+
+{% unless tags contains tag %}
+{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+<h1 class="page-title">
+  <a href="/blog">Blog</a> | {{ page.title }}
+</h1>
+<br/>
+
+<div class="posts">
+<p>
+{% for tag in tags %}
+<a href="#{{ tag | slugify }}" class="post-tag"> 
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    {{ tag }} </a> &nbsp;&nbsp;
+{% endfor %}
+
+{% for tag in tags %}
+<div class="bigTag" id="{{ tag | slugify }}"> {{ tag }} </div>
+<ul class="codinfox-category-list">
+  {% for post in site.posts %}
+  {% if post.tags contains tag %}
+  <li>
+    <h3>
+      <a href="{{ post.url }}" class="postTitle">
+        {{ post.title }}
+        <small style="color:lightslategrey">{{ post.date | date_to_string }}</small>
+      </a>      
+    </h3>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
+
+</div>

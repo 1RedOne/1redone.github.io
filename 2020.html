@@ -19,10 +19,13 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
   }
 </style>
 <ul>
-<h2>All Posts for 2020</h2>
-  {% for post in site.posts %}
-    {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
-    {% if year == "2020" %}
+{% assign postsForYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" | where: "name", "2020" %} 
+
+Posts for year {{ postsForYear[0].name }}, total posts {{ postsForYear[0].size }} 
+
+
+<h2>All Posts for {{ postsForYear[0].name }}</h2>
+  {% for post in postsForYear[0].items %}
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <div class="meta"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}
         <i class="fa fa-user" aria-hidden="true"></i> FoxDeploy
@@ -35,8 +38,7 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
           {% include tag.html tag=tag %}
         {% endfor %}
       </div>
-      <hr>
-      {% endif %}
+      <hr>      
   {% endfor %}
 </ul>
 
