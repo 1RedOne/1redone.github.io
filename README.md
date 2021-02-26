@@ -18,10 +18,17 @@ Year | Migrated
 2016   | ❌
 2015   | ❌
 2014   | ❌
-2013   | ♻
+2013   | ✔
 newPosts | ❌
+tagging works | ❌
+archives work | ❌
+video quality test | ❌
+New logo? | ❌
 final review | ❌
 domain cutover | ❌
 
+### New Posts to do
 
-
+- PowerShell DVT Testing
+- PowerShell Lazy Caching
+- Test Driven Proof of Concepting 
