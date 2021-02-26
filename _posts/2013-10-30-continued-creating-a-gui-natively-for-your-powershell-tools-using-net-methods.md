@@ -42,7 +42,7 @@ Why is this?  I'm sorry I mislead you.  It's because given the current flow of
 
 Clicking the OK button changes the value of the text! Sweet!
 
-Okay, cool, it works.  Now to move our earlier code for the pinging function into the space of the $ping\_computer\_click variable, and uncomment it, and while we're at it, lets change the value of `$ComputerName` from Read-host "blah blah blah" to `$textbox.Text`​.  You should have something similar to the following:
+Okay, cool, it works.  Now to move our earlier code for the pinging function into the space of the `$ping\_computer\_click` variable, and uncomment it, and while we're at it, lets change the value of `$ComputerName` from Read-host "blah blah blah" to `$textbox.Text`​.  You should have something similar to the following:
 
 ![](../assets/images/2013/10/images/ep2_pingtool_03.png) 
 

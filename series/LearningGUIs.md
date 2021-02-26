@@ -29,4 +29,5 @@ As time goes on and I post more and more about GUI Toolmaking, this post will al
 ### Windows Forms
 * Part III – Two Ways to Provide GUI Interactions to users
 * [Part II –  Continued: Creating a GUI Natively using .Net Methods](/2013/10/30/continued-creating-a-gui-natively-for-your-powershell-tools-using-net-methods)
-* Part I – Creating a GUI Natively using .Net Methods
+* [Part I – Creating a GUI Natively using .Net Methods](../blog/creating-a-gui-natively-for-your-powershell-tools-using-net-methods)
+
