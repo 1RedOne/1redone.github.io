@@ -27,6 +27,10 @@
       link: /series/LearningSCCM
     - name: WinRM and Certificates
       link: /series/LearningWinRM
+    - name: Posts By Tag
+      link: /tagsList
+    - name: Posts Archived by  Year
+      link: /archives
 - name: About Me
   link: /about
   dropdown: 

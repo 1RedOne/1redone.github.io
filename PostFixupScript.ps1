@@ -4,14 +4,14 @@ $PostsToProcess = gci .\_posts -Recurse |
     ? Extension -In ('.md',".markdown") | % {
         if ( $FixedPostsPathBaseName -notcontains $_.Name `
         -and $FixedPostsPathBaseName -notcontains $_.Name.Substring(11)){
-            write-host "need to fix $($_.Name)"
+            write-host "need to fix [$($_.FullName)])"
             $_
         }
     }
 
 "found $($PostsToProcess.Count) files to process"
 "======================================================"
-$fixedPosts = get-item .\fixed
+$fixedPosts = get-item .\_posts
 forEach ($file in $PostsToProcess){
     Write-host -fore Yellow "Parsing file [$($file.Name)]"
     #scrape file for images
@@ -36,8 +36,7 @@ forEach ($file in $PostsToProcess){
     #update and add redirect 
     
     $dateLine =$fileContent | select-string "date:"
-
-
+    $fileContent = $fileContent.Replace('\[/caption\]','')
     $redirectPayload = "/$($fileDate.P2.Replace('"','').Replace('-','/'))/$($file.BaseName)"
     $addRedirect = @"
 $($dateLine.Line)
