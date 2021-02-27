@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Archives
-permalink: /archives/            
+permalink: /archives/
 hero_image: ../assets/images/foxdeployMOUNTAINTOP_hero.jpg
 hero_height: is-medium
 show_sidebar: true
@@ -19,4 +19,4 @@ If you'd like to dig into posts from a given year, look no further.
 
 
 
-<a href="https://reddit.com/r/foxdeploy"><img src="/assets/images/foxdeploySubreddit.png" alt="depicts a crowd of people in a night club with colored lights and says 'join the foxdeploy subrreddit today'" ></a><br>                
+<a href="https://reddit.com/r/foxdeploy"><img src="/assets/images/foxdeploySubreddit.png" alt="depicts a crowd of people in a night club with colored lights and says 'join the foxdeploy subrreddit today'" ></a><br>
