@@ -9,19 +9,22 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
 
 To do : 
 
-Year | Migrated
+Year | Posts | Migrated
+------ | ------ | ----
+2020   | ✔| ✔
+2019   | ✔| ✔
+2018   | 7 |❌
+2017   | 21 |❌
+2016   | 40 |❌
+2015   | 44 |❌
+2014   | 63 |❌
+2013   |  ✔ |✔
+newPosts | 3 |❌
+
+Features | Completed
 ------ | ------
-2020   | ✔
-2019   | ✔
-2018   | ❌
-2017   | ❌
-2016   | ❌
-2015   | ❌
-2014   | ❌
-2013   | ✔
-newPosts | ❌
-tagging works | ❌
-archives work | ❌
+tagging works | ✔
+archives work | ✔
 video quality test | ❌
 New logo? | ❌
 final review | ❌
@@ -29,6 +32,8 @@ domain cutover | ❌
 
 ### New Posts to do
 
-- PowerShell DVT Testing
-- PowerShell Lazy Caching
-- Test Driven Proof of Concepting 
+Post | Code Complete | Drafted | Ready 
+--| --|--|--
+PowerShell Lazy Caching | ✔ | ✔ | ✔
+PowerShell DVT Testing  | ✔ | ❌ | ❌
+Test Driven POC | ❌ | ❌ | ❌
