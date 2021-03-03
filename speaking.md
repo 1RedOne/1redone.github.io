@@ -2,7 +2,7 @@
 layout: page
 title: Speaking and Media
 permalink: /about/speakingandmedia
-hero_image: ../assets/images/foxdeployMOUNTAINTOP_hero.jpg
+hero_image: ../assets/images/foxdeployMOUNTAINTOP_hero.png
 hero_height: is-medium
 show_sidebar: true
 ---
@@ -37,9 +37,3 @@ In September of 2016, Stephen was thrilled to be invited to deliver a number of 
 Stephen returned to Microsoft Ignite in 2017 and 2018.  
 
 Stephen spoke at [MMS MOA summit in Minneapolis in 2018](https://mms2018.sched.com/moderator/sred13) [and 2019](https://mms2019.sched.com/speaker/sred13), and also spoke at [MMS Jazz New Orleans in 2019](https://mmsjazz.sched.com/speaker/sred13).  
-
-
-
-
-
-

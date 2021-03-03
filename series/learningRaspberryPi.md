@@ -2,7 +2,7 @@
 layout: page
 title: Learning Raspberry Pi |  Series Home
 permalink: /series/learningRaspberryPi
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 hero_height: is-medium
 show_sidebar: true
 ---

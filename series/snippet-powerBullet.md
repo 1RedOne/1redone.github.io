@@ -2,7 +2,7 @@
 layout: page
 title: Tools | PowerBullet Cheatsheet
 permalink: /series/snippet-powerBullet
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 hero_height: is-medium
 show_sidebar: true
 ---

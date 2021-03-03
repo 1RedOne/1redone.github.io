@@ -41,7 +41,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-paginate
   
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 defaults:
   -
     scope:
@@ -50,7 +50,7 @@ defaults:
     values:
       author: "Stephen Owen"
       layout: post
-      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
+      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
       show_sidebar: true
       hero_link: "FoxDeploy.com" 
 
@@ -61,7 +61,7 @@ defaults:
     values:
       author: "Stephen Owen"
       layout: post
-      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
+      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
       show_sidebar: true
       
 # Exclude from processing.

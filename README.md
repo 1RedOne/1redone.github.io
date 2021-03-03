@@ -3,7 +3,7 @@
 title: Automation Tails from the FoxHole
 layout: page
 show_sidebar: true
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 ---
 ## FoxDeploy Blog Repo
 

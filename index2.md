@@ -5,7 +5,7 @@ title: Automation Tails from the FoxHole
 food: Pizza
 layout: page
 show_sidebar: true
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.jpg
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 ---
 <style>
   meta{
