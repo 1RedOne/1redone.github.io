@@ -35,6 +35,7 @@ domain cutover | ❌
 Post | Code Complete | Drafted | Ready 
 --| --|--|--
 PowerShell Lazy Caching | ✔ | ✔ | ✔
+GitHub Report Issue Link  | ✔ | ❌ | ❌
 PowerShell DVT Testing  | ✔ | ❌ | ❌
 The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌
 Test Driven POC | ❌ | ❌ | ❌
