@@ -16,6 +16,8 @@
   dropdown: 
     - name: Learn PowerShell
       link: /series/LearningPowerShell
+    - name: Learn PowerShell Autocompletion
+      link: /series/powershell-autocompletion
     - name: Learn DSC
       link: /series/LearningDSC
     - name: Learn GUI Toolmaking
