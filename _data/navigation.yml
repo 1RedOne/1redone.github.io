@@ -12,8 +12,7 @@
       link: /series/snippet-randomSamples
     - name: Random SQL Snippets
       link: /series/snippet-randomSql
-- name: Series
-  link: /series/
+- name: Series  
   dropdown: 
     - name: Learn PowerShell
       link: /series/LearningPowerShell
