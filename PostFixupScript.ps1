@@ -1,4 +1,5 @@
-﻿$FixedPostsPath = gci .\_posts | ? Extension -In ('.md',".markdown")
+﻿#to use, place a source year into the posts directory
+$FixedPostsPath = gci .\_posts | ? Extension -In ('.md',".markdown")
 $FixedPostsPathBaseName = $FixedPostsPath | % { $_.Name.SubString(11) }
 $PostsToProcess = gci .\_posts -Recurse | 
     ? Extension -In ('.md',".markdown") | % {
@@ -37,7 +38,7 @@ forEach ($file in $PostsToProcess){
     
     $dateLine =$fileContent | select-string "date:"
     $fileContent = $fileContent.Replace('\[/caption\]','')
-    $fileContent = $fileContent.Replace('\[/code\]',"`n``````").Replace("\[code lang='powershell'\]","``````powershell`n").Replace('\[code lang="powershell" light="true"\]',"``````powershell`n")
+    $fileContent = $fileContent.Replace('\[/code\]',"`n``````").Replace("\[code lang='powershell'\]","``````powershell`n").Replace('\[code lang="powershell" light="true"\]',"``````powershell`n").Replace("\[code lang=`"powershell`"\]","``````powershell`n")
     $fileContent = $fileContent.Replace('\[code\]',"```````n")
     $redirectPayload = "/$($fileDate.P2.Replace('"','').Replace('-','/'))/$($file.BaseName)"
     $addRedirect = @"

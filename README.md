@@ -13,13 +13,13 @@ Year | Posts | Migrated
 ------ | ------ | ----
 2020   | 6| ✔
 2019   | 6| ✔
-2018   | 7 |❌
-2017   | 21 |❌
+2018   | 7 |✔
+2017   | 21 |♻
 2016   | 40 |❌
 2015   | 44 |❌
 2014   | 63 |❌
 2013   |  37 |✔
-newPosts | 3 |❌
+newPosts | 4 |❌
 
 Features | Completed
 ------ | ------
@@ -36,4 +36,5 @@ Post | Code Complete | Drafted | Ready
 --| --|--|--
 PowerShell Lazy Caching | ✔ | ✔ | ✔
 PowerShell DVT Testing  | ✔ | ❌ | ❌
+The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌
 Test Driven POC | ❌ | ❌ | ❌
