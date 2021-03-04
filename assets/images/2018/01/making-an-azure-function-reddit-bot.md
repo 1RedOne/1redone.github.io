@@ -73,11 +73,11 @@ In order for this script to work, it needs to access my credentials.  To do tha
 
 Getting access to Reddit's API is easy.  Log on to your account, then click **Preferences \\ Apps.**
 
-\[caption id="attachment\_5424" align="alignnone" width="636"\]![](images/redditapp-creation-1.png) Click 'Apps'\[/caption\]
+![](images/redditapp-creation-1.png) Click 'Apps'\[/caption\]
 
 Scroll down to **Create Application** and fill this form in.
 
-\[caption id="attachment\_5425" align="alignnone" width="636"\]![](images/redditapp-creation-2.png) Click "Create App' to finish\[/caption\]
+![](images/redditapp-creation-2.png) Click "Create App' to finish\[/caption\]
 
 The Redirect URI doesn't need to go anywhere specifically (it's used because the assumption is that oAuth will be used when a user grants their DropBox access to their Office account, for instance.  After they click 'OK' to delegate access, they need to be redirected somewhere.) but you must provide one here and you **must use the same value** when you request a token in the next step.![](images/redditapp-creation-3.png)
 
@@ -111,7 +111,7 @@ Next, here's the body params you MUST pass along.
 
 Finally, pass all of this along using `Invoke-RestMethod` and you'll see...
 
-\[caption id="attachment\_5430" align="alignnone" width="356"\]![](images/datenvelope.png) Ohhh yeah, dat envelope.\[/caption\]
+![](images/datenvelope.png) Ohhh yeah, dat envelope.\[/caption\]
 
 ![](images/poshtweet.png)
 
@@ -163,11 +163,11 @@ With all of the work done locally, all that remained was to find a way to reprod
 
 I began by logging on to my Azure Portal and then clicking the `+` button to add a new resource.
 
-\[caption id="attachment\_5445" align="alignnone" width="636"\]![](images/00.png) Search for 'Function App' (I swear they were called Azure Functions like a week ago...)\[/caption\]
+![](images/00.png) Search for 'Function App' (I swear they were called Azure Functions like a week ago...)\[/caption\]
 
 Then fill in the mandatory questions.  Be sure to choose a region which makes sense.
 
-\[caption id="attachment\_5446" align="alignnone" width="636"\]![](images/01.png) The actual UI is a long vertical panel. I awkwardly cut and paste it into this equally awkward square. It looks bad, but at least it took way too long.\[/caption\]
+![](images/01.png) The actual UI is a long vertical panel. I awkwardly cut and paste it into this equally awkward square. It looks bad, but at least it took way too long.\[/caption\]
 
 Once you've filled these in, all that remains is to wait a few minutes for the resource to be created.  Click 'Go to resource' when you see the prompt.![](images/azure-deployment-completed.png)
 
@@ -207,7 +207,7 @@ Once the UI is displayed to a user a single time, you can forever refresh your t
 
 \[code lang="javascript" light="true"\]Settings.json { "scope": \[ "privatemessages", "save", "submit" \], "secret": "xAqXHdh-mySecret\_PleaseDontSteal\_rV3MY", "client\_id": "123Ham4uandMe", "duration": "permanent", "refresh\_token": "1092716171-RefreshMe123Please4meySifmKQ", "redirect\_uri": "http://www.foxdeploy.com" } \[/code\]
 
-\[caption id="attachment\_5461" align="alignnone" width="636"\]![](images/azure-deploy-make-a-file.png) Just click upload on the right side\[/caption\]
+![](images/azure-deploy-make-a-file.png) Just click upload on the right side\[/caption\]
 
 Uploading files is easy, just click the upload icon on the far right side then give it a moment.  It may take up to a minute for your file to appear, so don't hit Upload over and over, or you'll end up with multiple copies of it.  I uploaded the `Refresh-Token.ps1` and `Send-RedditMail.ps1` functions as well.
 
@@ -219,7 +219,7 @@ You'll notice that I had to change the directory at the head of the script.  Al
 
 With all of this completed, I hit Save and then...waited.
 
-\[caption id="attachment\_5462" align="alignnone" width="636"\]![](images/completed-post.png) The first version of this function never checked to see if an alert had been sent before, so every four hours I received a private message for every post on my subreddit!\[/caption\]
+![](images/completed-post.png) The first version of this function never checked to see if an alert had been sent before, so every four hours I received a private message for every post on my subreddit!\[/caption\]
 
 With this in place, I received notices every few hours until I was caught up, and had personally responded to every post on the sub!  And I now get a PM within hours of a new post, so posts will never go unanswered again!  It was a huge success and is still running today, smoothly.
 

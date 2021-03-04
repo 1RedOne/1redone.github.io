@@ -18,7 +18,7 @@ Hey y'all.  I need to come clean.  I am a bad debugger.
 
 Why?  Because until recently, I was notorious for leaving Write-Debug statements everywhere.  I mean, just take a look at my local git folder.
  <!--more-->
-\[caption id="attachment\_5693" align="alignnone" width="1321"\]![A PowerShell console window running the following command. Dir c:\git -recurse | select-string 'write-debug' | measure This shows that there are over 150 uses of this command in my PowerShell modules. Uh, probably too many!](../assets/images/2019/02/images/1.png) I \*wasn't\* expecting it to be \*this\* bad. I'm so, so sorry.\[/caption\]
+![A PowerShell console window running the following command. Dir c:\git -recurse | select-string 'write-debug' | measure This shows that there are over 150 uses of this command in my PowerShell modules. Uh, probably too many!](../assets/images/2019/02/images/1.png) I \*wasn't\* expecting it to be \*this\* bad. I'm so, so sorry.\[/caption\]
 
 My code was just littered with these after practically every logical operation...just in case I needed to pause my code here at some point in the future.  Actually, someone could look at my code in the past and every Verbose or Debug cmd was basically a place that I got stuck while writing that cmdlet or script.  I mean, using the tools is not wrong, but it always felt like there should be better ways to do it.
 
@@ -119,11 +119,11 @@ They essentially function just the same as a `Write-Debug` statement, but you c
 
 If you're in the PowerShell ISE (obligatory WHAT YEAR IS THIS.png) , simply highlight a line on which you'd love to pause your code, then hit `F9`. Then run the code and PowerShell will automatically stop in a debug command line.
 
-\[caption id="attachment\_5703" align="alignnone" width="636"\]![](../assets/images/2019/02/images/setting-a-breakpoint-ise.png) Hit 'F9' to set the breakpoint, then run the code.\[/caption\]
+![](../assets/images/2019/02/images/setting-a-breakpoint-ise.png) Hit 'F9' to set the breakpoint, then run the code.\[/caption\]
 
 The code will execute like it normally would until it reaches the breakpoint line at which point...
 
-\[caption id="attachment\_5721" align="alignnone" width="636"\]![](../assets/images/2019/02/images/breakpoint-prompt.png) You get a Write-Debug style command prompt but never had to change the source code!\[/caption\]
+![](../assets/images/2019/02/images/breakpoint-prompt.png) You get a Write-Debug style command prompt but never had to change the source code!\[/caption\]
 
 The same goes for Visual Studio Code, which is even better, as it includes a point-in-time listing of all variable values as well!
 
@@ -156,6 +156,6 @@ In the demo below, I show how Step-Over works, which runs the current line but d
 
 See how easy that was?  This is why I believe that once you learn of the power of ultra instinct--er, once you learn about Breakpoints, you'll simply _**never need Write-Debug again!**_
 
-\[caption id="attachment\_5715" align="alignnone" width="592"\]![](../assets/images/2019/02/images/dbzui.gif) Security camera footage of me using Breakpoints for the first time\[/caption\]
+![](../assets/images/2019/02/images/dbzui.gif) Security camera footage of me using Breakpoints for the first time\[/caption\]
 
 Still confused about the difference between Step Over, Step Into and Step Out?  I don't blame you, [checkout this great answer from StackOverflow which does a good job shining light on the distinction.](https://stackoverflow.com/a/3580905/1238413)

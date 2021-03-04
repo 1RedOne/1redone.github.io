@@ -123,7 +123,7 @@ Yeah... we're going to need a different tool.
 
 When it comes to picking a decompiler or text editor, if we're not careful we'll end up looking like this guy:
 
-\[caption id="attachment\_4839" align="alignnone" width="636"\]![I choose mountain climbers because I think their tools look SOO cool. I should buy an ice-axe](images/tools.jpg) I choose mountain climbers because I think their tools look SOO cool. I should buy an ice-axe\[/caption\]
+![I choose mountain climbers because I think their tools look SOO cool. I should buy an ice-axe](images/tools.jpg) I choose mountain climbers because I think their tools look SOO cool. I should buy an ice-axe\[/caption\]
 
 There are a lot of options, I worked through .net Reflector and Ida pro before finally stopping on [.Peek, by JetBrains. You can download it here.](https://www.jetbrains.com/decompiler/) I chose .Peek because it's free, and not just a free trial like .net Reflector, and it's very up-to-date and designed with .net in mind. IDA Pro does a good job, but I got the impression that it is SO powerful and flexible that it isn't as good as a tailor made .net tool.
 
@@ -197,7 +197,7 @@ Double-clicking on `TargetDevice,` we can then scroll down to the `RemovePackage
 
 We're so close now guys, I've got a feeling that this will be worth it!
 
-\[caption id="attachment\_4857" align="alignnone" width="374"\]![](images/181010-shibainu-bobo-jacket.jpg) The closest thing that I could find to a fox in a winter coat.\[/caption\]
+![](images/181010-shibainu-bobo-jacket.jpg) The closest thing that I could find to a fox in a winter coat.\[/caption\]
 
 ## The Summit
 
@@ -211,7 +211,7 @@ https://giphy.com/gifs/the-office-no-steve-carell-12XMGIWtrHBl5e
 
 I dunno, I expected a little more, something a bit cooler. It's like climbing Mt Fuji to see only this.
 
-\[caption id="attachment\_4855" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2017/05/lara_view.jpg?w=636) Image Courtesy of WaneringVegans\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2017/05/lara_view.jpg?w=636) Image Courtesy of WaneringVegans\[/caption\]
 
 Well, after hours of work, I certainly had to see what happened if I just ran that exact command line on another machine. What if we just try that on another machine? Only one way to find out.
 

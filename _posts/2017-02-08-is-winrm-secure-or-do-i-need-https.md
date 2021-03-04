@@ -17,7 +17,7 @@ Case in point: a client of ours recently was investigating WinRM and whether or 
 
 One of the things I absolutely love about my job is being thrown into the deep end of the rapids with little to no time to prepare given the opportunity to try new things and new technologies, pushing me out of my comfort zone.  It normally goes _okay_.
 
-\[caption id="attachment\_4697" align="alignnone" width="600"\]![whitewater](../assets/images/2017/02/images/whitewater.gif) actual camera footage of my last project
+![whitewater](../assets/images/2017/02/images/whitewater.gif) actual camera footage of my last project
 
 Case in point: a client of ours recently was investigating WinRM and whether or not it was secure, leading me down a rabbit hole of Certificates, Enterprise CA's, SSL Handshakes, WireShark and more.
 

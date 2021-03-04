@@ -183,7 +183,7 @@ At this point, I knew 30K would be equally fast.
 
 This was required of me at this point, all 115K machines in my testlab would be added with massive IN queries to really test performance.
 
-\[caption id="attachment\5639" align="alignnone" width="702"\]![](images/115k-machines.png) A weird screen shot. The PowerShell line reflects the total time to run the command (2:18 for 115K rules), while the bottom half is the relevant lines from Collection Evaluation
+![](images/115k-machines.png) A weird screen shot. The PowerShell line reflects the total time to run the command (2:18 for 115K rules), while the bottom half is the relevant lines from Collection Evaluation
 
 Only 2 minutes, 18 seconds to apply the rules, and two minutes to run the query!  Incredible!   This is a huge improvement compared to adding devices with direct rules, in which case using CMPSLib took 1 hour, 15 minutes to add 115K rules.
 
@@ -209,7 +209,7 @@ In digging around under the covers, I spent a lot of time watching arcane log fi
 
 Well, a gentleman never tells. What I will share though is the impressive speed.  Using this method to directly control collection membership, I was able to place 30K devices in a collection in 0:00:01.  One second.
 
-\[caption id="attachment\5646" align="alignnone" width="636"\]![](../assets/images/2018/07/images/pixelated.png) Code pixelated to protect you from yourself. Seriously, I'm not going to be the one arming you wild monkeys with razor bladed nunchuks
+![](../assets/images/2018/07/images/pixelated.png) Code pixelated to protect you from yourself. Seriously, I'm not going to be the one arming you wild monkeys with razor bladed nunchuks
 
 > But at what cost?
 
@@ -239,7 +239,7 @@ So, to summarize our data in a chart
 
 Basically any method is much, much better than the Old CM Cmdlets!
 
-\[caption id="attachment\5656" align="alignnone" width="636"\]![](../assets/images/2018/07/images/linear.png) Basically anything is faster than using the old Cmdlets
+![](../assets/images/2018/07/images/linear.png) Basically anything is faster than using the old Cmdlets
 
 If you're considering your options outside of the old cmdlets, I'd recommend giving CMPSLib a try.  Lovingly written by Keith Garner, with help from yours truly, we believe this is a very resilient method of adding devices to a collection, without the wonky-ness of the new Add-DeviceDirectRule cmdlets kind of odd syntax.
 

@@ -79,7 +79,7 @@ Here's how it would work, assume I want to make a change to this user.  I load 
 
 It simply `POSTS` back to the web server the contents of a form.  And you know what else?  Any website you visit can contain JavaScript that performs the exact same kind of AJAX Post to the web server.  There are even [JavaScript utilities that will automatically discover webservers on your network.](http://http.jameshfisher.com/2019/05/26/i-can-see-your-local-web-servers/)  So with this in mind, imagine visiting a webpage that looks pretty innocuous:
 
-\[caption id="attachment\_5763" align="alignnone" width="636"\]![](images/evil-black.png) Black mode = evil website\[/caption\]
+![](images/evil-black.png) Black mode = evil website\[/caption\]
 
 Clicking the Post button there will send an AJAX Post formatted like the following:
 

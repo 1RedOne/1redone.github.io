@@ -13,7 +13,7 @@ coverImage: "is-winrm-secure.png"
 
 One of the things I absolutely love about my job is being thrown into the deep end of the rapids with little to no time to prepare given the opportunity to try new things and new technologies, pushing me out of my comfort zone.  It normally goes _okay_.
 
-\[caption id="attachment\_4697" align="alignnone" width="600"\]![whitewater](images/whitewater.gif) actual camera footage of my last project\[/caption\]
+![whitewater](images/whitewater.gif) actual camera footage of my last project\[/caption\]
 
 Case in point: a client of ours recently was investigating WinRM and whether or not it was secure, leading me down a rabbit hole of Certificates, Enterprise CA's, SSL Handshakes, WireShark and more.
 

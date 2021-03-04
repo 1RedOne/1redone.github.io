@@ -38,7 +38,7 @@ With the stage set, and the cert was present on both machines, I ran `winrm quic
 
 #### Swimming with the Sharks
 
-\[caption id="attachment\_4626" align="alignnone" width="636"\]![sharks](../assets/images/2017/01/images/sharks.gif) How I felt looking at all of these packets
+![sharks](../assets/images/2017/01/images/sharks.gif) How I felt looking at all of these packets
 
 When you first open WireShark and start recording, you may be a bit dismayed...
 
@@ -78,15 +78,15 @@ Follow the arrows above, and click through to TLS, Handshake Protocol: Certifica
 
 Choose `Extract Packet Bytes` and then choose where to dump the file.
 
-\[caption id="attachment\_4636" align="alignnone" width="636"\]![08](../assets/images/2017/01/images/08-finding-cert-4.png) Make sure to save as .DER format
+![08](../assets/images/2017/01/images/08-finding-cert-4.png) Make sure to save as .DER format
 
 With this done, you can now double-click to open the cert and see what was transmitted over the wire.  Pretty crazy, huh?  This is one reason why man-in-the-middle attacks are so scary.  But then again, they'd have to worry about network timing, cert chains and name resolution too in order to really appear as you.  But anyway, lets look and see which cert was used to authenticate this WinRM Session.
 
-\[caption id="attachment\_4637" align="alignnone" width="601"\]![09](../assets/images/2017/01/images/09-click-details.png) Click over to the details tab
+![09](../assets/images/2017/01/images/09-click-details.png) Click over to the details tab
 
 In this next screen shot, on the left is the cert I recovered from WireShark.  The one on the right is the original cert from the MMC from the same computer.
 
-\[caption id="attachment\_4638" align="alignnone" width="636"\]![10](../assets/images/2017/01/images/10-finding-cert-5.png) Note that the Cert Thumbprint matches...this will become critical later
+![10](../assets/images/2017/01/images/10-finding-cert-5.png) Note that the Cert Thumbprint matches...this will become critical later
 
 So, now we've found out how we can recover certificates from a WireShark trace.  Now all that remains is to wait the four hours for this cert to expire, and see what happens!
 
@@ -127,7 +127,7 @@ This old thumbprint was listed EVERYWHERE.  Now, the moment of truth, to run a 
 
 Alright, here is what I saw when I opened the cert from the machine and saw what was listed in the MMC.  It's listed side by side with what you see in WinRM or WSMan
 
-\[caption id="attachment\_4643" align="alignnone" width="636"\]![How long are you going to drag this on...](../assets/images/2017/01/images/conclustion-1.png) How long are you going to drag this on...
+![How long are you going to drag this on...](../assets/images/2017/01/images/conclustion-1.png) How long are you going to drag this on...
 
 OK, the moment of truth.  Which actual cert was used for this communication?
 

@@ -58,7 +58,7 @@ Next, download and install the [ConfigMgr SDK](https://www.microsoft.com/en-us/d
 
 Your directory should look like this now.
 
-\[caption id="attachment\_5600" align="alignnone" width="679"\]![dir](images/dir.png) Yes, that IS a handdrawn icon\[/caption\]
+![dir](images/dir.png) Yes, that IS a handdrawn icon\[/caption\]
 
 At this point you're probably noticing the .exe file and wondering...
 

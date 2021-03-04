@@ -1,16 +1,17 @@
 ---
 title: "Backing up your Testlab with Altaro VM Backup"
 date: "2017-11-13"
-categories: 
-  - "other"
-  - "virtualization"
+redirect_from : /2017/11/13/backing-up-your-testlab-with-altaro-backup
 tags: 
   - "backup-testlab"
   - "hyper-v"
-coverImage: "backing-up-your-testlab.png"
+  - "other"
+  - "virtualization"
+coverImage: "../assets/images/2017/11/images/backing-up-your-testlab.png"
+excerpt: "Sponsored post.  This post shows off my shiney new home testlab specced to the gills with ridiculous hardware and walks you through configuring automatic hyper-v backup using Altaro, who sponsored this post."
 ---
 
-![](images/backing-up-your-testlab.png)
+![](../assets/images/2017/11/images/backing-up-your-testlab.png)
 
 To be a good engineer, you need a Testlab. End of sentence.
 
@@ -22,7 +23,7 @@ In consulting, I would get assigned to a project and have a month or so to come 
 
 If you have read this and are convinced that you too need a testlab, _and don't yet have one_, you can click here to read my guide here on [setting up a Domain Controller with one-click!](https://foxdeploy.com/2015/12/02/dsc-the-simplest-domain-controller-config-ever/)
 
-![](images/DSCPrompt.png) The one-click domain controller UI in action\[/caption\]
+![](../assets/images/2017/11/images/DSCPrompt.png) The one-click domain controller UI in action
 
 And what should we do with things that are important? We protect them. In this post I'll walk you through some of the options available to protect and backup your testlab.
 
@@ -33,8 +34,6 @@ _Disclaimer :  This blog has been supported by Altaro for a while now, but I've
 #### Your DR plan should not involve the word 'Hope'
 
 I built my first VM Lab years and years ago.  It was an Intel i7-2600k, with 16GB of RAM and LEDs out the whazoo.  I was so proud of this little guy that I gave him the name BEHEMOTH, which was all caps because of how cool the name was (and I'd also just read [House of Leaves](https://www.amazon.com/House-Leaves-Mark-Z-Danielewski/dp/0375703764/ref=sr_1_1?ie=UTF8&qid=1512243671&sr=8-1&keywords=house+of+leaves) which had some really interesting capitalization of words, not to mention bonkers type-setting.  The perfect /r/iAmVerySmart book for college kids)
-
-\[gallery type="slideshow" ids="5371,5372"\]
 
 I bought LED everything, because I needed to show that I was _serious about performance._   I then bought the cheapest monitors I could find, because Who needs eyeballs, am I right?
 
@@ -48,7 +47,7 @@ I decided to bone up on how real world people do it and quickly became prideful,
 
 So, for every write to the volume, Parity writes took place on each drive including the drastically slower spinning disk.  I got absolutely horrible performance (three minute boot times on a Win 8.1 image, 6 hour SCCM Site Install times) and eventually the strain of backups and prod use on the same volume and my moronic partitioning caused my second full loss of VMs and Backups.
 
-![](images/dunning-kruger-effect.jpg) I was flying down mount stupid without any brakes when I came up with that partitioning scheme\[/caption\]
+![](../assets/images/2017/11/images/dunning-kruger-effect.jpg) I was flying down mount stupid without any brakes when I came up with that partitioning scheme
 
 Not only did I lose the data on the Storage Space, but the spinning drive would never spin up again, I think I killed its spirit.  One of the SSDs quickly failed later (third loss of VMs, but at least I had backups.)
 
@@ -88,39 +87,39 @@ To get started, [download Altaro VM Backup here](https://www.altaro.com/vm-backu
 
 Setup is an absolute breeze, next, next finish practically the whole way.
 
-![](images/altaro-eetup.png)
+![](../assets/images/2017/11/images/altaro-eetup.png)
 
-![](images/setup02.png)
+![](../assets/images/2017/11/images/setup02.png)
 
 Altaro VM Backup should launch on its own and you simply need to choose to Connect to Local Instance.
 
-![](images/01.png)
+![](../assets/images/2017/11/images/01.png)
 
-Next, choose to Add Hyper-V / VMware Host.![](images/setupconsole00.png)
+Next, choose to Add Hyper-V / VMware Host.![](../assets/images/2017/11/images/setupconsole00.png)
 
 Click Add Host and then provide the name of the Hyper-V host (and credentials if you need to)
 
-![](images/setupconsole01.png) Serious props to anyone who knows what my Testlab is named after\[/caption\]
+(../assets/images/2017/11/images/setupconsole01.png) Serious props to anyone who knows what my Testlab is named after
 
 #### Configuring Backup Location
 
 Next, click on 'Backup Locations' to decide where to stick the VM Backups.
 
-![](images/setupconsole02.png)
+![](../assets/images/2017/11/images/setupconsole02.png)
 
 In my case, I have a big spinning disk on my VM Testlab, so I'm using that as my Physical Drive location.  You can also backup over the network too, or configure backup to use both a local disk and a network location for optimal redundancy.
 
-![](images/setupconsole03.png)
+![](../assets/images/2017/11/images/setupconsole03.png)
 
 Now to pick the actual drive.
 
-![](images/setupconsole04.png) To pick a subfolder, click 'Choose Folder'\[/caption\]
+![](../assets/images/2017/11/images/setupconsole04.png) To pick a subfolder, click 'Choose Folder'
 
-![](images/setupconsole05.png) One of the folders here is from another failed VM lab recovery. Care to guess which?\[/caption\]
+![](../assets/images/2017/11/images/setupconsole05.png) One of the folders here is from another failed VM lab recovery. Care to guess which?
 
 With this completed, click Finish and now you've configured this host for backups.  Now, to actually apply the backup location setting to all of the VMs.  This is really easy.  Just click the host, then drag over to the location, as demonstrated below.
 
-![](images/capture-1_gif_08-11-17.gif)
+![](../assets/images/2017/11/images/capture-1_gif_08-11-17.gif)
 
 Unfortunately, I haven't yet found a method to apply this setting to all VMs on a host using the GUI, so expect to come back here at least once for each new VM.
 
@@ -130,28 +129,28 @@ Taking a backup is a total breeze.  Click down to Virtual Machines and select a
 
 You can also just watch the GIF to see it in action.
 
-![](images/gif.gif)
+![](../assets/images/2017/11/images/gif.gif)
 
 At this point, you're safe!  Of course, you only have this one backup, so it's time to set up a schedule to backup your VMs regularly.
 
 #### Setting a Schedule
 
-I have the memory of a mantis shrimp, I don't want to remember to back things up.  Fortunately it only takes like two minutes to make a backup schedule.  First, click **Schedule,** then **Add Backup Schedule**.![](images/schedule-1.png)
+I have the memory of a mantis shrimp, I don't want to remember to back things up.  Fortunately it only takes like two minutes to make a backup schedule.  First, click **Schedule,** then **Add Backup Schedule**.![](../assets/images/2017/11/images/schedule-1.png)
 
 Why can't Recurring Calendars in Outlook be this easy!  Or Scheduled Tasks! Seriously, its so much easier to define a schedule here that I think this should be the new normal.
 
 I want to back these VMs up every Monday, Wednesday, Friday and Sunday, and I want it to happen at midnight.
 
-![](images/schedule-3.png) Click Save to Save...caption of the year\[/caption\]
+![](../assets/images/2017/11/images/schedule-3.png) Click Save to Save...caption of the year
 
 Now, for one last GIF.  Just drag the VMs (or the whole Host, or all of your Hosts, if you have more than one)) onto the schedule and you're done.
 
-![](images/makeaschedule.gif)
+![](../assets/images/2017/11/images/makeaschedule.gif)
 
 #### Wrapping Up
 
 That's it!  You're done.  Seriously  I did this one time like three months ago and it's been fire and forget ever since then.  It is super nice to get reminder e-mails like this one too.
 
-![](images/email.png)
+![](../assets/images/2017/11/images/email.png)
 
 Having difficulties getting up and running?  Let me know!  I can help you out, or introduce you to some folks who can.

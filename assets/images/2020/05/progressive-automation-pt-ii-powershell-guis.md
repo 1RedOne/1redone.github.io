@@ -67,7 +67,7 @@ https://gist.github.com/1RedOne/7ca9e036f29a97bbfafae2cbd485cc9b
 
 Which will look like this when rendered!
 
-\[caption id="attachment\_5909" align="alignnone" width="636"\]![Shows a pretty ugly UI](images/resultui.png) Easily the ugliest UI we've done so far\[/caption\]
+![Shows a pretty ugly UI](images/resultui.png) Easily the ugliest UI we've done so far\[/caption\]
 
 To wire up the buttons, I wrote a few helped functions for the logic for the buttons, which look like this.
 

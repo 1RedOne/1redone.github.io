@@ -23,7 +23,7 @@ As I have the typing skills of a preying mantis (why did I mention them...they'r
 
 Add to that the fact that I have lost a memory competition to a gold fish, and I REALLY Depend upon it.
 
-\[caption id="attachment\_4591" align="alignnone" width="530"\]![goldfish_1](images/goldfish_11.jpg) If you have a memory like me, and like this guy, you'll love Auto-complete\[/caption\]
+![goldfish_1](images/goldfish_11.jpg) If you have a memory like me, and like this guy, you'll love Auto-complete\[/caption\]
 
 PowerShell helps deeply flawed people like me by offering tons of built-in help and autocomplete practically everywhere.  Some of it is done for us, automatically, while others require a bit more work from us as toolmakers in order to enable the sweet sweet tab expansion.
 

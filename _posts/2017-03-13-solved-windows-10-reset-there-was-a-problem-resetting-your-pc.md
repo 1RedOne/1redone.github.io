@@ -28,7 +28,7 @@ However, sometimes things go awry, and from no fault of our own, we can end up w
 
 When trying to run the Refresh or Reset task, both of which call SystemReset.exe, you experience an error like the following
 
-\[caption id="attachment\_4672" align="alignnone" width="510"\]![There was a problem resetting your PC](../assets/images/2017/03/images/there-was-a-problem-resetting-your-pc.png) There was a problem resetting your PC
+![There was a problem resetting your PC](../assets/images/2017/03/images/there-was-a-problem-resetting-your-pc.png) There was a problem resetting your PC
 
 This one is pretty tricky to solve, as it doesn't log any messages in the Event Viewer.
 
@@ -42,7 +42,7 @@ This folder contains some log files which might help, specifically `C:\$SysReset
 
 In my case, the error points to either a missing or unsupported version of the recovery image, as seen here:
 
-\[caption id="attachment\_4673" align="alignnone" width="636"\]![Factory: No recovery image registered[gle=0x000000ea] Reset: Unsupported WinRE / OS versions[gle=0x000000ea]](../assets/images/2017/03/images/reset-issue.png) Factory: No recovery image registered\[gle=0x000000ea\]  
+![Factory: No recovery image registered[gle=0x000000ea] Reset: Unsupported WinRE / OS versions[gle=0x000000ea]](../assets/images/2017/03/images/reset-issue.png) Factory: No recovery image registered\[gle=0x000000ea\]  
 Reset: Unsupported WinRE / OS versions\[gle=0x000000ea\]If you see this, a good place to check next is your Windows Recovery configuration settings, found at `c:\windows\system32\Recovery\ReAgent.xml`. When you open this file, you should see something like this:
 
 ```xml

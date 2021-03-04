@@ -22,7 +22,7 @@ In consulting, I would get assigned to a project and have a month or so to come 
 
 If you have read this and are convinced that you too need a testlab, _and don't yet have one_, you can click here to read my guide here on [setting up a Domain Controller with one-click!](https://foxdeploy.com/2015/12/02/dsc-the-simplest-domain-controller-config-ever/)
 
-\[caption id="" align="alignnone" width="496"\]![](images/DSCPrompt.png) The one-click domain controller UI in action\[/caption\]
+![](images/DSCPrompt.png) The one-click domain controller UI in action\[/caption\]
 
 And what should we do with things that are important? We protect them. In this post I'll walk you through some of the options available to protect and backup your testlab.
 
@@ -48,7 +48,7 @@ I decided to bone up on how real world people do it and quickly became prideful,
 
 So, for every write to the volume, Parity writes took place on each drive including the drastically slower spinning disk.  I got absolutely horrible performance (three minute boot times on a Win 8.1 image, 6 hour SCCM Site Install times) and eventually the strain of backups and prod use on the same volume and my moronic partitioning caused my second full loss of VMs and Backups.
 
-\[caption id="attachment\_5387" align="alignnone" width="636"\]![](images/dunning-kruger-effect.jpg) I was flying down mount stupid without any brakes when I came up with that partitioning scheme\[/caption\]
+![](images/dunning-kruger-effect.jpg) I was flying down mount stupid without any brakes when I came up with that partitioning scheme\[/caption\]
 
 Not only did I lose the data on the Storage Space, but the spinning drive would never spin up again, I think I killed its spirit.  One of the SSDs quickly failed later (third loss of VMs, but at least I had backups.)
 
@@ -100,7 +100,7 @@ Next, choose to Add Hyper-V / VMware Host.![](images/setupconsole00.png)
 
 Click Add Host and then provide the name of the Hyper-V host (and credentials if you need to)
 
-\[caption id="attachment\_5395" align="alignnone" width="677"\]![](images/setupconsole01.png) Serious props to anyone who knows what my Testlab is named after\[/caption\]
+![](images/setupconsole01.png) Serious props to anyone who knows what my Testlab is named after\[/caption\]
 
 #### Configuring Backup Location
 
@@ -114,9 +114,9 @@ In my case, I have a big spinning disk on my VM Testlab, so I'm using that as my
 
 Now to pick the actual drive.
 
-\[caption id="attachment\_5398" align="alignnone" width="601"\]![](images/setupconsole04.png) To pick a subfolder, click 'Choose Folder'\[/caption\]
+![](images/setupconsole04.png) To pick a subfolder, click 'Choose Folder'\[/caption\]
 
-\[caption id="attachment\_5399" align="alignnone" width="611"\]![](images/setupconsole05.png) One of the folders here is from another failed VM lab recovery. Care to guess which?\[/caption\]
+![](images/setupconsole05.png) One of the folders here is from another failed VM lab recovery. Care to guess which?\[/caption\]
 
 With this completed, click Finish and now you've configured this host for backups.  Now, to actually apply the backup location setting to all of the VMs.  This is really easy.  Just click the host, then drag over to the location, as demonstrated below.
 
@@ -142,7 +142,7 @@ Why can't Recurring Calendars in Outlook be this easy!  Or Scheduled Tasks! Ser
 
 I want to back these VMs up every Monday, Wednesday, Friday and Sunday, and I want it to happen at midnight.
 
-\[caption id="attachment\_5408" align="alignnone" width="636"\]![](images/schedule-3.png) Click Save to Save...caption of the year\[/caption\]
+![](images/schedule-3.png) Click Save to Save...caption of the year\[/caption\]
 
 Now, for one last GIF.  Just drag the VMs (or the whole Host, or all of your Hosts, if you have more than one)) onto the schedule and you're done.
 

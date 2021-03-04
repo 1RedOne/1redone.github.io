@@ -72,7 +72,7 @@ I run the Pester test again now and...
 
 Wow, with one test, I have now covered 80% of the guts of this cmdlet, that was sweet. That's because for this one test to execute successfully, all of these lines in my cmdlet are involved.
 
-\[caption id="attachment\_5518" align="alignnone" width="636"\]![](../assets/images/2018/05/images/pester02.png) All of the lines in Blue were covered under just one test!
+![](../assets/images/2018/05/images/pester02.png) All of the lines in Blue were covered under just one test!
 
 #### Completing The Tests
 

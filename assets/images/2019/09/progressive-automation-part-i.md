@@ -36,7 +36,7 @@ You should always start your automation by finding the biggest pain points or wa
 
 Add them up and if you're over 10 then you should think about automating it. Hell, if it's over 6, you should automate it.
 
-\[caption id="attachment\_5797" align="alignnone" width="636"\]![A printable checklist of the points from the 'when to automate' list above](images/automationchecklist-1.png) Surely Stephen didn't really spend three hours on this thing. Or make a 'chillwave' version of it for basically no reason!\[/caption\]
+![A printable checklist of the points from the 'when to automate' list above](images/automationchecklist-1.png) Surely Stephen didn't really spend three hours on this thing. Or make a 'chillwave' version of it for basically no reason!\[/caption\]
 
 [😎🌴Alternate Super Synth Wave Version also available🌴😎](https://foxdeploy.files.wordpress.com/2019/09/automationchecklist-2.png)
 
@@ -86,7 +86,7 @@ The script will :
 
 Or, in flowchart form, complete with a little XKCD guy.
 
-\[caption id="attachment\_5791" align="alignnone" width="1544"\]![pictured is a flow diagram which repeats the bullet points of this process](images/flowchart.png) Guess how long it took to make this flowchart? Now multiply it by four. Now we're in the neighborhood of how long it took\[/caption\]
+![pictured is a flow diagram which repeats the bullet points of this process](images/flowchart.png) Guess how long it took to make this flowchart? Now multiply it by four. Now we're in the neighborhood of how long it took\[/caption\]
 
 Since we will only ever add a device once to the new collection, we could safely set this to run on a pretty aggressive schedule, maybe once every 15 minutes or so.  If the new CM were really under a lot of load, of course this could be altered greatly.
 

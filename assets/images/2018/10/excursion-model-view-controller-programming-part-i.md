@@ -39,7 +39,7 @@ If I lost you... Don't worry, the rest of the post will be talking through what 
 
 You've seen and been using MVCs forever (and it's not Marvel vs Capcom (but on to that topic I **love** fighting games, and I promise that my Ken and Gambit team would whip the floor with you!)).
 
-\[caption id="attachment\_5895" align="alignnone" width="500"\]![Depicts Ken, Ryu and Akuma, generally refered to as 'Palette Swap' or identical characters with different colors.  The joke is that I describe them as a 'Balanced team', when its effectively using three of the same characters in a team.](images/tumblr_mr5cfoc6ai1r9uuuso1_500.png) The most balanced team possible in Marvel Vs Capcom\[/caption\]
+![Depicts Ken, Ryu and Akuma, generally refered to as 'Palette Swap' or identical characters with different colors.  The joke is that I describe them as a 'Balanced team', when its effectively using three of the same characters in a team.](images/tumblr_mr5cfoc6ai1r9uuuso1_500.png) The most balanced team possible in Marvel Vs Capcom\[/caption\]
 
 If we are brand new to web design and only know HTML and CSS, when it comes to making a website we take a simple approach and just make our site by hand. You have your About Page, your Contact Page, your Home page, not much to do, you know?
 

@@ -1,32 +1,34 @@
 ---
 title: "Building a Windows 10 IoT C# traffic monitor: Part I"
 date: "2017-07-19"
+redirect_from : /2017/07/19/buildyourowniotmonitoringtool/
 categories: 
   - "scripting"
 tags: 
-  - "c"
+  - "c#"
   - "raspberry-pi"
   - "win10iot"
-coverImage: "1-millioncountdown.png"
+coverImage: "../assets/images/2017/07/images/1-millioncountdown.png"
+excerpt: "We're counting down here at FoxDeploy, about to reach a traffic milestone (1 Million hits!) , and because I am pretty excited and like to celebrate moments like this, I had an idea...let's get in WAY over my head and make a Windows IoT Traffic tracker"
 ---
 
-![](https://foxdeploy.files.wordpress.com/2017/07/1-millioncountdown.png?w=636)
+![](../assets/images/2017/07/images/1-millioncountdown.png?w=636)
 
 We're counting down here at FoxDeploy, about to reach a traffic milestone (1 Million hits!) , and because I am pretty excited and like to celebrate moments like this, I had an idea...
 
 I was originally inspired by [MKBHD's very cool YouTube subscriber tracker device](https://www.youtube.com/watch?v=hNWz9o6CSyM), which you can see in his video here, and thought, boy I would love one of these!
 
-![](images/lametrictime.png)
+![](../assets/images/2017/07/images/lametrictime.png)
 
 It turns out that this is the La Metric Time, a $200 'hackable Wi-Fi clock'.  It IS super cool, and if I had one, I could get this working in a few hours of work.  But $200 is $200.
 
-![](images/clockinc.gif)
+![](../assets/images/2017/07/images/clockinc.gif)
 
 I then remembered my poor neglected rPi sitting in its box with a bunch of liquid flow control dispensers and thought that I could probably do this with just a few dollars instead(spoiler:WRONG)!
 
 It's been a LONGGG time since I've written about Windows IoT and Raspberry Pi, and to be honest, that's mostly because I was getting lazy and hated switching my output on my monitor from the PC to the rPi.  I did some googling and found these displays which are available now, and mount directly to your Pi!
 
-![](images/w5-inch-displ.png)
+![](../assets/images/2017/07/images/w5-inch-displ.png)
 
 Join me on my journey as I dove into c# and buying parts on eBay from shady Chinese retailers and in the end, got it all working.  And try to do it spending less than $200 additional dollars!
 
@@ -46,17 +48,17 @@ There are MANY, many options for displays available with the Raspberry Pi and a 
 
 First out the gate, I saw this tiny little display, called the ["LCD MODULE DISPLAY PCB 1.8 " TFT SPI 128 x 160"](https://www.newegg.com/Product/Product.aspx?Item=9SIADG45V29374&ignorebbr=1&nm_mc=KNC-GoogleMKP-PC&cm_mmc=KNC-GoogleMKP-PC-_-pla-_-EC+-+Circuit+Protection-_-9SIADG45V29374&gclid=Cj0KCQjw7pHLBRDqARIsAFyKPa5wiG9_i-D0XuL2L1I15OPXqXDgUv833M5xTajbRDOhWUbH18dBiFcaAghjEALw_wcB&gclsrc=aw.ds).  I immediately slammed that 'BUY' button...then decided to look it up and see if it would work.
 
-![](https://foxdeploy.files.wordpress.com/2017/07/2017-07-06-23-06-48.jpg?w=636) It's literally the size of a postage stamp\[/caption\]
+![](../assets/images/2017/07/images/2017-07-06-23-06-48.jpg?w=636) It's literally the size of a postage stamp
 
 While it works in some Linux distros I could not make it work with Windows 10 IoT, as it just display a white screen.  It is well, well below the supported minimum resolution for Windows (it could barely render the start button and File Explorer icon on the start bar, in fact, if we could even get it working) so it was no surprise.  There's $10 down the drain.
 
-![](https://foxdeploy.files.wordpress.com/2017/07/piinv011.png?w=575)
+![](../assets/images/2017/07/images/piinv011.png?w=575)
 
 Kind of off to a rocky start, at 25% of the price of the bespoke solution...surely, spending more money is the way out of this mess.
 
 Next up, I found this guy, the [3.5" Inch Resistive Touch Screen TFT LCD Display 480x320](http://www.ebay.com/itm/3-5-Inch-Resistive-Touch-Screen-TFT-LCD-Display-480x320-For-Raspberry-Pi-B-2-3-/171882200433?_trksid=p2385738.m2548.l4275).
 
-![](https://foxdeploy.files.wordpress.com/2017/07/3-5rpi.jpg?w=636)
+![](../assets/images/2017/07/images/3-5rpi.jpg?w=636)
 
 This one easily worked in Raspian, but at such a low res, I could never get it to display a picture in Windows, just a white screen, indicating no driver.  I contacted the manufacturer and they confirmed support for Linux (via a driver written in Python!) but no Windows support.  At $35, it was more painful to box up,
 
@@ -64,7 +66,7 @@ From what I can tell, these are both Chinese counterfeits of displays made by Wa
 
 If you're doing the math, I was halfway there to the full solution already in pricing.
 
-![](images/piinv02.png) Wife: You spent HOW MUCH on this post?!\[/caption\]
+![](../assets/images/2017/07/images/piinv02.png) Wife: You spent HOW MUCH on this post?!
 
 #### Choosing the right monitor and a sigh of relief
 
@@ -72,7 +74,7 @@ I eventually ponied up the dough and bought the [5inch HDMI LCD V2 800x480 HDMI 
 
 It implements touch via a resistive touch panel rather than the standard capacitive touch.  And no one has written a driver for the touch panel  :(  So, it works, and it is a great size for a small project, but it doesn't have touch.  At this point, I decided that this was good enough.
 
-![](images/5inch.png)
+![](../assets/images/2017/07/images/5inch.png)
 
 When I connected this display, I saw scrolling lines which changed patterns as the content on the screen changed.
 
@@ -82,17 +84,19 @@ This is a great sign, as it means that Windows is rendering to the display, but 
 
 To fix this, remote in to your Raspberry Pi via the admin$ share, and change the Video section of your C:\\EFSIS\\Config.txt file.  Once you've made the change, reboot the device and display will _just work!_
 
-\[code\] # # Video #
+```
+ # # Video #
 
 framebuffer\_ignore\_alpha=1  # Ignore the alpha channel for Windows. framebuffer\_swap=1          # Set the frame buffer to be Windows BGR compatible. disable\_overscan=1          # Disable overscan
 
 hdmi\_cvt 800 480 60 6 0 0 0 # Add custom 800x480 resolution (group 2 mode 87) hdmi\_group=2                # Use VESA Display Mode Timing over CEA hdmi\_mode=87
 
-\[/code\]
+
+```
 
 What we're doing here is adding a new HDMI display mode and assigning it the numerical ID of 87 (since Windows ships with 86 HDMI modes, and none are 800 x 480!) and then telling windows to use that mode.  With all of these changes in place, simply restart your Pi and you should see the following
 
-![](https://foxdeploy.files.wordpress.com/2017/07/2017-07-07-22-09-26.jpg?w=636)
+![](../assets/images/2017/07/images/2017-07-07-22-09-26.jpg?w=636)
 
 At this point I decided that I ALSO wanted touch, so I bought the 7" model too (jeeze how much am I spending on this project??).  Here's that one [WaveShare 7inch HDMI LCD (C )](http://amzn.to/2uwHfZG).
 
@@ -100,7 +104,7 @@ I'll follow up on this later about how to get touch working. **Update: scroll do
 
  
 
-![](images/piinv03.png) Intentionally not adding the last display to this list (and hiding credit card statements now too)\[/caption\]
+![](images/piinv03.png) Intentionally not adding the last display to this list (and hiding credit card statements now too)
 
 So, now that we've got our Pi working, let's quietly set it off to the side, because we've got some other work to do first before we're ready to use it.
 
@@ -112,25 +116,30 @@ Here's the display I mentioned, the [WaveShare 7inch HDMI LCD (C )](http://amzn
 
 If you buy this one, you can actually enable support for the screen when you first record the Win10 IoT image.  To do this route, when you write the OS onto the SD Card, open explorer and go to the SD Card's EFIESP partition.
 
-![EFIESP](images/efiesp.png) If your Pi is on and the screen is off, or displaying scan-lines, you can hop in through the admin share instead.  Go to \\\\ipaddress\\c$\\EFIESP if you're in that situation\[/caption\]
+![EFIESP](../assets/images/2017/07/images/efiesp.png) If your Pi is on and the screen is off, or displaying scan-lines, you can hop in through the admin share instead.  Go to \\\\ipaddress\\c$\\EFIESP if you're in that situation
 
 Next, open Config.txt and add or change the final few lines to match this below.  Again **only if you bought the 7" display.** If you bought a different HDMI display, you can simply change the resolution to match.
 
-\[code collapse="true"\]
-
-init\_uart\_clock=16000000    # set uart clock to 16mhz kernel\_old=1                # load kernel.img at physical memory address 0x0
-
-safe\_mode\_gpio=8            # a temp firmware limitation workaround max\_usb\_current=1           # enable maximum usb current
-
-gpu\_mem=32 hdmi\_force\_hotplug=1        # enable hdmi display even if it is not connected core\_freq=250               # frequency of gpu processor core in mhz
-
-framebuffer\_ignore\_alpha=1  # ignore the alpha channel for windows. framebuffer\_swap=1          # set the frame buffer to be windows bgr compatible.
-
-disable\_overscan=1          # disable overscan hdmi\_cvt 1024 600 60 6 0 0 0 # Add custom 1024x600 resolution (group 2 mode 87)
-
-hdmi\_group=2                # Use VESA Display Mode Timing over CEA hdmi\_mode=87
-
-\[/code\]
+```
+init_uart_clock=16000000    # set uart clock to 16mhz
+kernel_old=1                # load kernel.img at physical memory address 0x0
+ 
+safe_mode_gpio=8            # a temp firmware limitation workaround
+max_usb_current=1           # enable maximum usb current
+ 
+gpu_mem=32
+hdmi_force_hotplug=1        # enable hdmi display even if it is not connected
+core_freq=250               # frequency of gpu processor core in mhz
+ 
+framebuffer_ignore_alpha=1  # ignore the alpha channel for windows.
+framebuffer_swap=1          # set the frame buffer to be windows bgr compatible.
+ 
+disable_overscan=1          # disable overscan
+hdmi_cvt 1024 600 60 6 0 0 0 # Add custom 1024x600 resolution (group 2 mode 87)
+ 
+hdmi_group=2                # Use VESA Display Mode Timing over CEA
+hdmi_mode=87
+```
 
 It's that simple.  Be careful using this method, because if you go to the Device Portal on the device and check the Resolution settings there, our custom HDMI mode will not be displayed.  Fiddling with the settings in Device Portal can force your Pi to reboot and erase your settings, forcing you to go through this process again.
 
@@ -140,13 +149,15 @@ Windows 10 IoT can run apps written in JavaScript, Python and C#.  It can also 
 
 Since I was just getting my toes wet, I decided to start super simply with a basic hello world console app in C#.  I followed [this guide here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).  Soon enough, I had my own hello world app! Launch **Visual Studio**, make a **new Project** and then choose **Visual C# \\ Console Application**. Then, erase everything and paste this in.
 
-\[code lang="csharp"\]// A Hello World! program in C#. using System; namespace HelloWorld { class Hello { static void Main() { Console.WriteLine("Hello Foxy!");
+```csharp
+// A Hello World! program in C#. using System; namespace HelloWorld { class Hello { static void Main() { Console.WriteLine("Hello Foxy!");
 
-// Keep the console window open in debug mode. Console.WriteLine("Press any key to exit."); Console.ReadKey(); } } } \[/code\]
+// Keep the console window open in debug mode. Console.WriteLine("Press any key to exit."); Console.ReadKey(); } } } 
+```
 
 If you look through the code, it's not THAT far away from PowerShell. Sure there are way more nested code blocks than we'd normally have in PowerShell, but essentially all we do is call `Console.WriteLine()` which is the c# equivalent of `Write-Host`, and provide an overload which is written to the screen.  Then we end this by waiting for the user to hit something with `Console.ReadKey();.` I hit Compile (F5) and boom!
 
-![](https://foxdeploy.files.wordpress.com/2017/07/helloworld.png?w=636)
+![](../assets/images/2017/07/images/helloworld.png?w=636)
 
 > What does `using` mean?
 
@@ -162,25 +173,35 @@ I copied and pasted the demo and hit F5, only to see that this is pretty boring,
 
 To spice things up a bit under the covers, I decided to instead hit the awesome JSONTest.com page, which has a bunch of nifty test endpoints like ip.JSONTest.com.  Hitting this endpoint will give you back your public IP address.  Nifty!  I simply changed the URL on line 18 to `string url ="http://ip.jsontest.com";` and BOOM smash that F5.
 
-\[code lang="csharp" collapse="true"\] using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.Net; using System.Web; using System.Threading.Tasks; using System.IO;
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Net;
+using System.Web;
+using System.Threading.Tasks;
+using System.IO;
 
-namespace WebHelloWorldGetIp { class Program { static void Main(string\[\] args) {
+namespace WebHelloWorldGetIp {
+  class Program {
+    static void Main(string\[\] args) {
 
-string url = "http://ip.jsontest.com/";
+        string url = "http://ip.jsontest.com/";
 
-HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+        HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
 
-request.Credentials = CredentialCache.DefaultCredentials; // Get the response. WebResponse response = request.GetResponse();
+        request.Credentials = CredentialCache.DefaultCredentials; // Get the response. WebResponse response = request.GetResponse();
 
-// Display the status. Console.WriteLine(((HttpWebResponse)response).StatusDescription); // Get the stream containing content returned by the server. Stream dataStream = response.GetResponseStream(); // Open the stream using a StreamReader for easy access. StreamReader reader = new StreamReader(dataStream); // Read the content. string responseFromServer = reader.ReadToEnd();
+        // Display the status. Console.WriteLine(((HttpWebResponse)response).StatusDescription); // Get the stream containing content returned by the server. Stream dataStream = response.GetResponseStream(); // Open the stream using a StreamReader for easy access. StreamReader reader = new StreamReader(dataStream); // Read the content. string responseFromServer = reader.ReadToEnd();
 
-// Write the response out to screen Console.WriteLine(responseFromServer);
+        // Write the response out to screen Console.WriteLine(responseFromServer);
 
-//clean up reader.Close(); response.Close();
+        //clean up reader.Close(); response.Close();
 
-//Wait for user response to close Console.WriteLine("Press any key to exit."); Console.ReadKey(); } } }
+        //Wait for user response to close Console.WriteLine("Press any key to exit."); Console.ReadKey(); } } }
 
-\[/code\]
+```
 
 #### How different things are...
 
@@ -188,7 +209,7 @@ A quickly little note here, as you may have noticed on line 19, when we created 
 
 We hit F5 and...
 
-![](images/getmyip.png)
+![](../assets/images/2017/07/images/getmyip.png)
 
 Sweet!  Now we've done a working webrequest, the next step is to swap in the URL for WordPress's REST API and see if we can get stats to load here in the console.  If we can, then we move the code over to Windows 10 IoT and try to iron out the bugs there too.
 
@@ -204,11 +225,13 @@ WordPress handles Authentication by adding an Authorization property to the head
 
 We are using the [System.Net.Http.Httpclient class](https://msdn.microsoft.com/en-us/library/system.net.http.httpclient(v=vs.118).aspx), which supports adding extra headers using this format as seen below.
 
-\[code lang="csharp" light="true"\] request.Headers\["Authorization"\] = "Bearer <YourKeyHere>"; \[/code\]
+```csharp 
+request.Headers\["Authorization"\] = "Bearer <YourKeyHere>"; 
+```
 
 Then I spiff things up [a bit more as seen here](https://gist.github.com/1RedOne/fbcfde8b17543ae4f14bc605b0e332e8#file-progam_v1-cs) (mostly adding a cool Fox ascii art), and get the following results:
 
-![](images/json.png)
+![](../assets/images/2017/07/images/json.png)
 
 This is nice, but it's JSON and I want just the numerical value for Hits.
 
@@ -216,11 +239,13 @@ Visual Studio 2013 and up integrates Nuget right into the IDE, so it's very easy
 
 With that in place, all we have to do is create a new `jObject` which has a nifty `.SelectToken()` method you use to pick an individual property when you parse JSON.
 
-\[code lang="csharp" light="true"\]JObject Stats = JObject.Parse(responseFromServer); Console.WriteLine(Stats.SelectToken("views")); \[/code\]
+```csharp
+JObject Stats = JObject.Parse(responseFromServer); Console.WriteLine(Stats.SelectToken("views")); 
+```
 
 [If you'd like to see the completed code.  It's here](https://gist.github.com/1RedOne/fbcfde8b17543ae4f14bc605b0e332e8#file-program_v2-cs), and here's the output.
 
-![](images/getfox.png)
+![](../assets/images/2017/07/images/getfox.png)
 
 Alright, now all I have to do is make a GUI, and port this over to Raspberry Pi--which runs on .netCore and only uses _some_ of the libraries that full dotnet supports--surely that will be very easy, right?
 

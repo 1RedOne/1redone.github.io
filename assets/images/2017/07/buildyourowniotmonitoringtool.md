@@ -46,7 +46,7 @@ There are MANY, many options for displays available with the Raspberry Pi and a 
 
 First out the gate, I saw this tiny little display, called the ["LCD MODULE DISPLAY PCB 1.8 " TFT SPI 128 x 160"](https://www.newegg.com/Product/Product.aspx?Item=9SIADG45V29374&ignorebbr=1&nm_mc=KNC-GoogleMKP-PC&cm_mmc=KNC-GoogleMKP-PC-_-pla-_-EC+-+Circuit+Protection-_-9SIADG45V29374&gclid=Cj0KCQjw7pHLBRDqARIsAFyKPa5wiG9_i-D0XuL2L1I15OPXqXDgUv833M5xTajbRDOhWUbH18dBiFcaAghjEALw_wcB&gclsrc=aw.ds).  I immediately slammed that 'BUY' button...then decided to look it up and see if it would work.
 
-\[caption id="attachment\_4902" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2017/07/2017-07-06-23-06-48.jpg?w=636) It's literally the size of a postage stamp\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2017/07/2017-07-06-23-06-48.jpg?w=636) It's literally the size of a postage stamp\[/caption\]
 
 While it works in some Linux distros I could not make it work with Windows 10 IoT, as it just display a white screen.  It is well, well below the supported minimum resolution for Windows (it could barely render the start button and File Explorer icon on the start bar, in fact, if we could even get it working) so it was no surprise.  There's $10 down the drain.
 
@@ -64,7 +64,7 @@ From what I can tell, these are both Chinese counterfeits of displays made by Wa
 
 If you're doing the math, I was halfway there to the full solution already in pricing.
 
-\[caption id="attachment\_4905" align="alignnone" width="574"\]![](images/piinv02.png) Wife: You spent HOW MUCH on this post?!\[/caption\]
+![](images/piinv02.png) Wife: You spent HOW MUCH on this post?!\[/caption\]
 
 #### Choosing the right monitor and a sigh of relief
 
@@ -100,7 +100,7 @@ I'll follow up on this later about how to get touch working. **Update: scroll do
 
  
 
-\[caption id="attachment\_4910" align="alignnone" width="575"\]![](images/piinv03.png) Intentionally not adding the last display to this list (and hiding credit card statements now too)\[/caption\]
+![](images/piinv03.png) Intentionally not adding the last display to this list (and hiding credit card statements now too)\[/caption\]
 
 So, now that we've got our Pi working, let's quietly set it off to the side, because we've got some other work to do first before we're ready to use it.
 
@@ -112,7 +112,7 @@ Here's the display I mentioned, the [WaveShare 7inch HDMI LCD (C )](http://amzn
 
 If you buy this one, you can actually enable support for the screen when you first record the Win10 IoT image.  To do this route, when you write the OS onto the SD Card, open explorer and go to the SD Card's EFIESP partition.
 
-\[caption id="attachment\_4982" align="alignnone" width="1353"\]![EFIESP](images/efiesp.png) If your Pi is on and the screen is off, or displaying scan-lines, you can hop in through the admin share instead.  Go to \\\\ipaddress\\c$\\EFIESP if you're in that situation\[/caption\]
+![EFIESP](images/efiesp.png) If your Pi is on and the screen is off, or displaying scan-lines, you can hop in through the admin share instead.  Go to \\\\ipaddress\\c$\\EFIESP if you're in that situation\[/caption\]
 
 Next, open Config.txt and add or change the final few lines to match this below.  Again **only if you bought the 7" display.** If you bought a different HDMI display, you can simply change the resolution to match.
 

@@ -113,7 +113,7 @@ The sweet spot to get super speed is like so:
 
 Note that we **are not using `-ResourceID`**, and furthermore we must pipe `IResultObject#SMS_Collection` object into Add-..Member to get it to work.  It's wonky, it's weird, and it's _always verbose_ too.
 
-\[caption id="attachment\_5641" align="alignnone" width="636"\]![Like, it's mega SUPER verbose](images/mega-verbose.png) Like, it's mega SUPER verbose (note that this is line thirty THOUSAND of the output)\[/caption\]
+![Like, it's mega SUPER verbose](images/mega-verbose.png) Like, it's mega SUPER verbose (note that this is line thirty THOUSAND of the output)\[/caption\]
 
 But you're allowed the be weird when you're fast as hell!  This cmdlet is the Usain Bolt of CM Cmdlets.
 
@@ -153,7 +153,7 @@ At this point, I knew 30K would be equally fast.
 
 This was required of me at this point, all 115K machines in my testlab would be added with massive IN queries to really test performance.
 
-\[caption id="attachment\_5639" align="alignnone" width="702"\]![](images/115k-machines.png) A weird screen shot. The PowerShell line reflects the total time to run the command (2:18 for 115K rules), while the bottom half is the relevant lines from Collection Evaluation\[/caption\]
+![](images/115k-machines.png) A weird screen shot. The PowerShell line reflects the total time to run the command (2:18 for 115K rules), while the bottom half is the relevant lines from Collection Evaluation\[/caption\]
 
 Only 2 minutes, 18 seconds to apply the rules, and two minutes to run the query!  Incredible!   This is a huge improvement compared to adding devices with direct rules, in which case using CMPSLib took 1 hour, 15 minutes to add 115K rules.
 
@@ -167,7 +167,7 @@ If you begin to use AD Groups for membership in CM, keep in mind that if you mak
 
 I've always kind of wondered _what_ Collection Evaluation was doing under the covers.  We know that when you add rules to a collection, they're processed in this order:
 
-\[caption id="" align="alignnone" width="1024"\]![](images/High-Level-Collection-Update-Process-with-Pictures-1024x442.png) Image from Scott's blog 'Collection Evaluation Overview'\[/caption\]
+![](images/High-Level-Collection-Update-Process-with-Pictures-1024x442.png) Image from Scott's blog 'Collection Evaluation Overview'\[/caption\]
 
 Which was covered in detail in [this awesome blog post by Scott Breen \[MSFT\] titled 'Collection Evaluation Overview'](https://blogs.technet.microsoft.com/scott/2017/09/13/collection-evaluation-overview-configuration-manager/).  But what does CollEval _do_ with this information?  Just keep it in memory?  Write it to a file?  E-mail it to DJam who is the furiously working Mechanical Turk inside the machine?  ...Or does it store the information in the CM Database somewhere?
 
@@ -179,7 +179,7 @@ In digging around under the covers, I spent a lot of time watching arcane log fi
 
 Well, a gentleman never tells. What I will share though is the impressive speed.  Using this method to directly control collection membership, I was able to place 30K devices in a collection in 0:00:01.  One second.
 
-\[caption id="attachment\_5646" align="alignnone" width="636"\]![](images/pixelated.png) Code pixelated to protect you from yourself. Seriously, I'm not going to be the one arming you wild monkeys with razor bladed nunchuks\[/caption\]
+![](images/pixelated.png) Code pixelated to protect you from yourself. Seriously, I'm not going to be the one arming you wild monkeys with razor bladed nunchuks\[/caption\]
 
 > But at what cost?
 
@@ -187,7 +187,7 @@ Well, if we don't actually add rules, but instead manipulate the collection via 
 
 Oh, and since we skipped CollEval, CollEval is going to have something to say about the weird ass stuff we've done to this poor innocent collection.  For instance, if we ever forget about the wonky, dark-magic joojoo we have performed on this poor collection and click 'Update Membership', CollEval will have its revenge.
 
-\[caption id="attachment\_5647" align="alignnone" width="636"\]![](images/updating-collection-membership-deleted-devices-frown.png) CollEval Checked, found no rules, then deleted everyone\[/caption\]
+![](images/updating-collection-membership-deleted-devices-frown.png) CollEval Checked, found no rules, then deleted everyone\[/caption\]
 
 CM will helpfully look at the collection, look at its rules and say 'WTF are you doing bro, are you drunk?' and then delete everyone from the collection.  Not a member via a valid rule?  You're not gonna stay in the collection.
 
@@ -195,7 +195,7 @@ CM will helpfully look at the collection, look at its rules and say 'WTF are you
 
 The speed of direct query rules is mindblowing enough, and the new CM Cmdlet aren't far behind them, so we have plenty of performance options.  Seriously, don't explore this route, if you do, the air conditioner will catch on fire with spiders coming out of it.
 
-\[caption id="attachment\_5648" align="alignnone" width="636"\]![](images/spiderairconditioner.png) Don't do this to your CM. And if you DO, don't ask MSFT for support.\[/caption\]
+![](images/spiderairconditioner.png) Don't do this to your CM. And if you DO, don't ask MSFT for support.\[/caption\]
 
 #### In Conclusion
 
@@ -205,7 +205,7 @@ So, to summarize our data in a chart
 
 Basically any method is much, much better than the Old CM Cmdlets!
 
-\[caption id="attachment\_5656" align="alignnone" width="636"\]![](images/linear.png) Basically anything is faster than using the old Cmdlets\[/caption\]
+![](images/linear.png) Basically anything is faster than using the old Cmdlets\[/caption\]
 
 If you're considering your options outside of the old cmdlets, I'd recommend giving CMPSLib a try.  Lovingly written by Keith Garner, with help from yours truly, we believe this is a very resilient method of adding devices to a collection, without the wonky-ness of the new Add-DeviceDirectRule cmdlets kind of odd syntax.
 

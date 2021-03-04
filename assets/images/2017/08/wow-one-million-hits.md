@@ -24,7 +24,7 @@ Hard to believe that just under four years ago, on August 21st I made my first p
 
 This post has done well over the years, accruing a little more than 1,000 hits over the years.  I'm not _why_ this might be, but this post on how to recover your password spikes every year after Cinco De Mayo.  What may have happened so that people accidentally locked themselves out?
 
-\[caption id="attachment\_4985" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2017/07/lockedout.png?w=636) The Monday after Cinco de Mayo had the greatest hits ever for this post. Looks like people all forgot their passwords for some reason...maybe Margaritas?\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2017/07/lockedout.png?w=636) The Monday after Cinco de Mayo had the greatest hits ever for this post. Looks like people all forgot their passwords for some reason...maybe Margaritas?\[/caption\]
 
 This post slowly gained some traffic and gave me confidence to focus on my writing in the evenings, but children would prove to make that a little bit difficult.
 
@@ -34,7 +34,7 @@ I tried writing on vacations, while my daughter played with sand.
 
 And writing while singing songs to my newborn son.
 
-\[caption id="attachment\_4988" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2017/07/2016-02-20.jpg?w=636) Blogging while bouncing my three week old son to sleep.\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2017/07/2016-02-20.jpg?w=636) Blogging while bouncing my three week old son to sleep.\[/caption\]
 
 Fortunately for me, the Internet loved me, and I knew I could count on their support.  Or so I thought...
 
@@ -42,7 +42,7 @@ Fortunately for me, the Internet loved me, and I knew I could count on their sup
 
 Oh boy.  I researched and researched this post comparing the performance of [Storage Space vs Raid](http://foxdeploy.com/2015/10/30/windows-vs-intel-raid-performance-smackdown/)...and then totally got it wrong.
 
-\[caption id="attachment\_4987" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2017/07/woosh.gif?w=636) Actual video footage of my understanding of how Storage Spaces are meant to work\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2017/07/woosh.gif?w=636) Actual video footage of my understanding of how Storage Spaces are meant to work\[/caption\]
 
 I knew I made an especially egregious error when I got an e-mail from people at Microsoft asking to meet with me, **in person**, when I was in Redmond the following week for the MVP Summit, hoping to explain the fundamentals of just how incorrect I'd been.  The comments from Reddit were...[not super supportive](https://www.reddit.com/r/sysadmin/comments/3qu8br/home_lab_performance_testing_windows_vs_intel/).
 

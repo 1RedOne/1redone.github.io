@@ -1,16 +1,18 @@
 ---
 title: "QuickStart PowerShell on Red Hat"
 date: "2017-08-16"
+redirect_from : /2017/08/16/quickstart-powershell-on-red-hat
 categories: 
   - "scripting"
 tags: 
   - "powershell"
   - "redhat"
   - "rhel"
-coverImage: "powershell-on-redhat-in-five-minutes-1.png"
+coverImage: "../assets/images/2017/08/images/powershell-on-redhat-in-five-minutes-1.png"
+excerpt: "In this post, I'll walk you through installing PowerShell on a RHEL 7 machine, assuming you are running a RHEL 7.4 VM on Hyper-V. There are a couple stumbling blocks you might run into, and I know, because I ran into ALL of them."
 ---
 
-![PowerShell On RedHat in five minutes (1)](images/powershell-on-redhat-in-five-minutes-1.png)
+![PowerShell On RedHat in five minutes (1)](../assets/images/2017/08/images/powershell-on-redhat-in-five-minutes-1.png)
 
 ## Configuring PowerShell on RHEL 7
 
@@ -18,7 +20,7 @@ Hey y'all. There are a lot of guides out there to installing PowerShell on Linux
 
 In this post, I'll walk you through installing PowerShell on a RHEL 7 machine, assuming you are running a RHEL 7.4 VM on Hyper-V. There are a couple stumbling blocks you might run into, and I know, because I ran into ALL of them.
 
-![200](images/200.gif) Real footage of my attempts\[/caption\]
+![200](../assets/images/2017/08/images/200.gif) Real footage of my attempts
 
 #### Downloading RHEL
 
@@ -28,11 +30,11 @@ You'll need to register here to download it.
 
 [RHEL Download Page](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 
-Once you have an account, choose to Continue to Red Hat Enterprise Linux Server![Download](images/download.png)
+Once you have an account, choose to Continue to Red Hat Enterprise Linux Server![Download](../assets/images/2017/08/images/download.png)
 
 You'll download this one here, the 7.4 binary DVD.
 
-![Download2](images/download2.png)
+![Download2](../assets/images/2017/08/images/download2.png)
 
 #### Installing RHEL in Hyper-V
 
@@ -48,11 +50,11 @@ Once you have the image, follow the standard process to create a Gen 2 Hyper-V V
 > 
 > However, I have witnessed many installs of Ubuntu and CentOS fail to complete, and in all cases, this was due to Dynamic Memory. So, don't enable Dynamic Memory until at least the install has completed.
 
-![NoDynamicMemory](images/nodynamicmemory.png)
+![NoDynamicMemory](../assets/images/2017/08/images/nodynamicmemory.png)
 
 The next hurdle you'll encounter is a failure to mount the ISO, as seen here.
 
-![CantBoot](images/cantboot.png)
+![CantBoot](../assets/images/2017/08/images/cantboot.png)
 
 The image's hash and certificate are not allowed (DB).
 
@@ -60,7 +62,7 @@ This is due to the Secure Boot feature of Hyper-V. Secure Boot keeps your system
 
 You'll need to disable Secure Boot in order to load the image. Right-click the VM, choose Settings \\ Security \\ Uncheck 'Enable Secure boot'
 
-![NOSecureBoot](images/nosecureboot.png)
+![NOSecureBoot](../assets/images/2017/08/images/nosecureboot.png)
 
 With these obstacles cleared, we can proceed through the install.
 
@@ -76,11 +78,11 @@ I stored it in a Gist, and you can download and execute it in one step by runnin
 
 The -L switch for curl allows it to traverse a redirector service like Bit.Ly, which I used to download the shell file in Gist, because Gist URLs are TOO damned long!
 
-![Download And Execute](images/download-and-execute.png)
+![Download And Execute](../assets/images/2017/08/images/download-and-execute.png)
 
 And that's it. Now you've got PowerShell installed on Red Hat and you're ready to go!
 
-![PSonRhel](images/psonrhel.png)
+![PSonRhel](../assets/images/2017/08/images/psonrhel.png)
 
 ### References
 

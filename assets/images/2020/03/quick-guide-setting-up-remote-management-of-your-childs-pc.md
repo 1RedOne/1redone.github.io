@@ -53,7 +53,7 @@ Next, under 'Other Users', click 'Add someone else to this PC'.
 
 Then select 'I don't have this persons sign-in information'
 
-\[caption id="attachment\_5883" align="alignnone" width="971"\]![remote03](images/remote03.png) I know, the UX is pretty weird here, because it's shuttling you into setting up a Microsoft account, which you don't need for this guide.\[/caption\]
+![remote03](images/remote03.png) I know, the UX is pretty weird here, because it's shuttling you into setting up a Microsoft account, which you don't need for this guide.\[/caption\]
 
 Finally, provide a user name and a password, if you'd like, for your new user.
 
@@ -73,17 +73,17 @@ On the computer we want to control, we'll going to launch the installer we just 
 
 This will bring us to image three below, where we choose **Custom Install** .
 
-\[caption id="attachment\_5885" align="alignnone" width="1481"\]![remote05](images/remote05.png) Next, Next, Custom, Next, Disable Viewer, Next Finish\[/caption\]
+![remote05](images/remote05.png) Next, Next, Custom, Next, Disable Viewer, Next Finish\[/caption\]
 
 Now, on screen four, **right-click 'TightVNC Viewer' and then choose 'This Feature will not be available', then click Next.**
 
 Next, on screen 5, make SURE to check 'Register TightVNC Server as a System Service' is selected.
 
-\[caption id="attachment\_5886" align="alignnone" width="729"\]![remote06](images/remote06.png) Configuring 'Register TightVNC Server as System Service' makes the remoting app launch when Windows boots, no matter who is using it.\[/caption\]
+![remote06](images/remote06.png) Configuring 'Register TightVNC Server as System Service' makes the remoting app launch when Windows boots, no matter who is using it.\[/caption\]
 
 And then click Next until at the below screen '**TightVNC Server : Set Passwords"**
 
-\[caption id="attachment\_5887" align="alignnone" width="676"\]![remote08](images/remote08.png) Do not leave a remote client open with no password.  Seriously, don't do it.\[/caption\]
+![remote08](images/remote08.png) Do not leave a remote client open with no password.  Seriously, don't do it.\[/caption\]
 
 **It is critically important to use a password.  This password is required any time you want to remote in to your child's PC.** Create a password and keep it safe, this is very important.
 
@@ -105,7 +105,7 @@ On the computer you are going to connect from -  run the same installer as abov
 
 The PC you're connecting from doesn't need and shouldn't have TightVNC Server running on it.
 
-\[caption id="attachment\_5885" align="alignnone" width="1481"\]![remote05](images/remote05.png) This time, on image 4, disable TightVNC Server, and only install Viewer\[/caption\]
+![remote05](images/remote05.png) This time, on image 4, disable TightVNC Server, and only install Viewer\[/caption\]
 
 To connect, hit Start -> TightVNC Viewer.  Then type in the name of your kid's computer and hit Connect. Bam, it's that easy.
 

@@ -1,12 +1,14 @@
 ---
 title: "Ignite, decompressed"
 date: "2017-10-09"
+redirect_from : /2017/10/09/ignite-decompressed
+coverImage: goes here...
 categories: 
   - "scripting"
 coverImage: "msftignite2017-1.png"
 ---
 
-![MSFTignite2017 (1)](images/msftignite2017-1.png)
+![MSFTignite2017 (1)](../assets/images/2017/10/images/msftignite2017-1.png)
 
 Ignite Orlando WAS AWESOME! In this post, I'll give you some of my fun memories and commentary about the event, and then end with a bunch of the best videos from Microsoft Ignite 2017.
 
@@ -14,7 +16,7 @@ Ignite Orlando WAS AWESOME! In this post, I'll give you some of my fun memories 
 
 We had a HUGE turn out for the PowerShell Community Event, in fact, it was so big that we had an overflow room with 200 people in it!
 
-![2017-09-26 15.07.11](images/2017-09-26-15-07-11.jpg)
+![2017-09-26 15.07.11](../assets/images/2017/10/images/2017-09-26-15-07-11.jpg)
 
 There were a lot of folks waiting outside who weren't able to attend, and at this point Adam Bertram and Simon Whalin were the REAL MVPs.  They left the room and lead an impromptu session to get the discussion going in the overflow room.
 
@@ -22,11 +24,13 @@ https://twitter.com/Johnny\_Radeck/status/912758204869865472
 
 Not pictured, Adam Bertram standing on a table, shouting into the crowd!  Oh, and did I mention that Jeffrey Snover came on stage as well?  Talk about a dream come true!
 
-![OnStageWJeffrey](images/onstagewjeffrey.jpg) Jeffrey is the four greenish pixels near the screen\[/caption\]
+![OnStageWJeffrey](../assets/images/2017/10/images/onstagewjeffrey.jpg) Jeffrey is the four greenish pixels near the screen
 
 Fortunately I was prepared and stammered through a terrible soft-ball question about Azure Cloud Shell.  Jeffrey said 'that's your question, Stephen?'
 
 My final session was at the end of the day on Thursday, which effectively maximized my stress for the entirety of Ignite.  Fortunately I had plenty of time to practice and work on my transitions and I felt that I really gave it my all.
+
+\[gallery ids="5225,5226,5227,5228,5229" type="rectangular"\]
 
 Next year, I'd like to lead a one hour session, or one focused on real world usage of PowerShell as a glue language.  We'll see if they get approved!
 

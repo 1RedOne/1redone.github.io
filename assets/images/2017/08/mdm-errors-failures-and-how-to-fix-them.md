@@ -26,7 +26,7 @@ Never fear though, for I have compiled the most common and frustating errors whi
 
 You can monitor the status of an enrollment in the Windows Event Viewer, under this area:
 
-\[caption id="attachment\_5020" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2017/08/errorsevent.png?w=636) Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2017/08/errorsevent.png?w=636) Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin\[/caption\]
 
 It is routine to see some errors here, so not all errors need to be solved, however when you're trying to troubleshoot why a machine won't enroll in MDM, then you should be looking here first.  
 

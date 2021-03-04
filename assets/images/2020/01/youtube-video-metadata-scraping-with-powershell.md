@@ -69,7 +69,7 @@ So, here is a word cloud of the two datasets, generated using this script.
 
 https://gist.github.com/1RedOne/8ceb22e662d6b75af2a956bec7407ad6
 
-\[caption id="attachment\_5871" align="alignnone" width="636"\]![A word cloud of the most commong tags for Weight loss videos traversed with this tool, including 'theStyleDiet', 'Commedy' Beauty', and 'Anna Saccone', who seems to be a YouTuber popular in this area](images/weightloss1.png) Anna Saccone has a LOT of fashion and weight videos, but seemed pretty positive from what I saw\[/caption\]
+![A word cloud of the most commong tags for Weight loss videos traversed with this tool, including 'theStyleDiet', 'Commedy' Beauty', and 'Anna Saccone', who seems to be a YouTuber popular in this area](images/weightloss1.png) Anna Saccone has a LOT of fashion and weight videos, but seemed pretty positive from what I saw\[/caption\]
 
 ![](images/girlsfashion.png)
 

@@ -1,44 +1,50 @@
 ---
 title: "MDM errors failures and how to fix them"
 date: "2017-08-04"
+redirect_from : /2017/08/04/mdm-errors-failures-and-how-to-fix-them
 categories: 
   - "sccm"
 tags: 
   - "enrollment"
   - "mdm"
   - "troubleshooting"
-coverImage: "enrollment-errors-and-how-to-fix-them.png"
+coverImage: "../assets/images/2017/08/images/enrollment-errors-and-how-to-fix-them.png"
+excerpt: "Over the course of this many month Air-Watch MDM project I've been conducting, I have run into WAY more than my fair share of MDM enrollment related issues.
+
+Troubleshooting MDM issues presents a whole new set of difficulties, because where SCCM provides glorious log files with tons of community engagement and answers, MDM gives you hard to locate Windows Event logs. Every SCCM error code is meticulously documented on the web, where MDM errors give you this result"
 ---
 
 Over the course of this many month Air-Watch MDM project I've been conducting, I have run into WAY more than my fair share of MDM enrollment related issues.
 
 Troubleshooting MDM issues presents a whole new set of difficulties, because where SCCM provides glorious log files with tons of community engagement and answers, MDM gives you hard to locate Windows Event logs. Every SCCM error code is meticulously documented on the web, where MDM errors give you this result:
 
-![](https://foxdeploy.files.wordpress.com/2017/08/errors01.png?w=636)
+![](../assets/images/2017/08/images/errors01.png?w=636)
 
 This is how you know you are WAY off the reservation!
 
 Never fear though, for I have compiled the most common and frustating errors which I have painstakingly worked through into this, very originally named volume
 
-![](images/enrollment-errors-and-how-to-fix-them.png)
+![](../assets/images/2017/08/images/enrollment-errors-and-how-to-fix-them.png)
 
 #### Where to find enrollment errors
 
 You can monitor the status of an enrollment in the Windows Event Viewer, under this area:
 
-![](https://foxdeploy.files.wordpress.com/2017/08/errorsevent.png?w=636) Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin\[/caption\]
+![](../assets/images/2017/08/images/errorsevent.png?w=636) Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
 
 It is routine to see some errors here, so not all errors need to be solved, however when you're trying to troubleshoot why a machine won't enroll in MDM, then you should be looking here first.  
 
 When you do find an error message, it's not going to look like 'Cannot find file', instead, it will look something like this:
 
-\[code\]MDM ConfigurationManager: Command failure status. Configuration Source ID: (f5a99910-eb59-4f19-89d2-4cab0fa591b8),
+```
+MDM ConfigurationManager: Command failure status. Configuration Source ID: (f5a99910-eb59-4f19-89d2-4cab0fa591b8),
 
 Enrollment Name: (Provisioning), Provider Name: (Provisioning),
 
 Command Type: (CmdType\_Add), CSP URI: ./Vendor/MSFT/Provisioning/Enrollments/staging@ITTT.com">./Vendor/MSFT/Provisioning/Enrollments/staging@FoxDeploy.com),
 
-Result: (Unknown Win32 Error code: 0x80192ee7).\[/code\]
+Result: (Unknown Win32 Error code: 0x80192ee7).
+```
 
 The error code at the very end is what we're looking for.
 
@@ -48,7 +54,7 @@ The error code at the very end is what we're looking for.
 
 You can always use the reliable and venerable SCCM Log File Viewer, CMtrace.exe to track down an error code. Simply open the app and hit Control+L
 
-![](https://foxdeploy.files.wordpress.com/2017/08/errorscmtrace-e1501860787167.png?w=300)
+![](../assets/images/2017/08/images/errorscmtrace-e1501860787167.png?w=300)
 
 This utility contains most Windows core error messages, and is particularly good when it comes to SCCM errors, but some are not documented here...
 
@@ -60,9 +66,11 @@ The tool was deployed along with Exchange 2007, but is still awesome and amazing
 
 Simply install it, and then add the folder to your path, or copy it into `C:\Windows\System32`. Then, call it like so
 
-\[code\]err 80192ee7 # as an HRESULT: Severity: FAILURE (1), Facility: 0x19, Code 0x2ee7
+```
+err 80192ee7 # as an HRESULT: Severity: FAILURE (1), Facility: 0x19, Code 0x2ee7
 
-\# for hex 0x2ee7 / decimal 12007 : ERROR\_INTERNET\_NAME\_NOT\_RESOLVED inetmsg.h ERROR\_INTERNET\_NAME\_NOT\_RESOLVED wininet.h # 2 matches found for "80192ee7"\[/code\]
+\# for hex 0x2ee7 / decimal 12007 : ERROR\_INTERNET\_NAME\_NOT\_RESOLVED inetmsg.h ERROR\_INTERNET\_NAME\_NOT\_RESOLVED wininet.h # 2 matches found for "80192ee7"
+```
 
 #### For the REALLY tough errors
 

@@ -44,7 +44,7 @@ Once you receive your key, paste it in and you're ready to go
 
  
 
-\[caption id="attachment\_5303" align="alignnone" width="636"\]![](images/02-image.png) A sign of a happily licensed PowerShell Pro Tools.\[/caption\]
+![](images/02-image.png) A sign of a happily licensed PowerShell Pro Tools.\[/caption\]
 
 Let's start customizing this badboy! 
 
@@ -52,7 +52,7 @@ Let's start customizing this badboy!
 
 For my project, I wanted to replace the somewhat aging ("_somewhat"_) front-end I put on my backup Dropbox script, covered here in this post : Automatically move old photos out of DropBox with PowerShell to free up space .  At the time, I thought it was the slickest think since really oiley sliced bread.
 
-\[caption id="attachment\_5304" align="alignnone" width="636"\]![](images/03-replace-this.png) I still think you look beautiful\[/caption\]
+![](images/03-replace-this.png) I still think you look beautiful\[/caption\]
 
 So, to kick things off, I copied and pasted the code [Adam shares on the PowerShell Universal Dashboard homepage](https://github.com/adamdriscoll/poshprotools/blob/master/examples/universal-dashboard/azure-dashboard.ps1), to recreate that dashboard.  Once it's pasted in, hit F5 and you should see the following, running locally on your machine:
 
@@ -78,7 +78,7 @@ New-UDColumn -Size 3 { \[/code\]
 
 I also created a new text file at `C:\temp\picSpace.txt` and added the value `1234` to it.  With those changes completed, I hit F5.
 
-\[caption id="attachment\_5313" align="alignnone" width="636"\]![](images/savedspace.png) Ohh this is a VERY nice start\[/caption\]
+![](images/savedspace.png) Ohh this is a VERY nice start\[/caption\]
 
 Now, to actually populate this value when my code runs.  Editing `Move-FilesOlderThan.ps1`(note: I'm very sorry about this name, I wrote [the script](http://foxdeploy.com/2015/02/02/dropbox-powershell-2/) when my daughter was not sleeping through the night yet...not clue why I choose that name), the function of that code is to accept a cut-off date, then search for files older than that date in a folder.  If it finds files that are too many days old, they get moved elsewhere. Here's the relevant snippet:
 
@@ -181,7 +181,7 @@ See, wasn't that easy?
 
 And it only took me ~100 tabs to finish it.
 
-\[caption id="attachment\_5307" align="alignnone" width="636"\]![](images/how-many-tabs.png) Actual screenshot of my Chrome tab situation after an hour of tweaking\[/caption\]
+![](images/how-many-tabs.png) Actual screenshot of my Chrome tab situation after an hour of tweaking\[/caption\]
 
 If you want to use my example and modify it, feel free to do so (and please share if you create something cool!)  Here are some ideas:
 

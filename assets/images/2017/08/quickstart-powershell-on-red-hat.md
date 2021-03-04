@@ -18,7 +18,7 @@ Hey y'all. There are a lot of guides out there to installing PowerShell on Linux
 
 In this post, I'll walk you through installing PowerShell on a RHEL 7 machine, assuming you are running a RHEL 7.4 VM on Hyper-V. There are a couple stumbling blocks you might run into, and I know, because I ran into ALL of them.
 
-\[caption id="attachment\_5053" align="alignnone" width="355"\]![200](images/200.gif) Real footage of my attempts\[/caption\]
+![200](images/200.gif) Real footage of my attempts\[/caption\]
 
 #### Downloading RHEL
 

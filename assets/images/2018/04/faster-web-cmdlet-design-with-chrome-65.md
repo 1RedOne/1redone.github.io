@@ -22,7 +22,7 @@ This doesn't have to be the case anymore!  With the new release of Chrome 65 co
 
 For a long time now if you load the Chrome Developer Tools by hitting `F12`, you've been able to go to the Network tab and copy a HTTP request as a `curl` statement.
 
-\[caption id="attachment\_5480" align="alignnone" width="636"\]![](images/copy-as-curl1.png) Image Credit : google developers blog\[/caption\]
+![](images/copy-as-curl1.png) Image Credit : google developers blog\[/caption\]
 
 This is super useful if you use a Linux or Mac machine, but cURL statements don't help us very much in the PowerShell Scripting world.  But as was recently brought to my attention on Twitter, Chrome now amazingly features the option to copy to a PowerShell statement instead!
 
@@ -60,7 +60,7 @@ So, to break that down:
 
 In my case, I ran through the steps of putting in my zip code, and then hitting enter to make the pollen count display.  I noticed on my dry run with the network tab open that a lot of the interesting looking stuff (**and importantly, none of the .js or images)** came from a subdomain with API in the name.  You can apply a filter at any point while recording or after using the filter box, so I added one.
 
-\[caption id="attachment\_5487" align="alignnone" width="1201"\]![](images/filtered-by-domain.png) Filtering out the cruft is a MUST. Use the filter box in the upper left to restrict which domains show up here.\[/caption\]
+![](images/filtered-by-domain.png) Filtering out the cruft is a MUST. Use the filter box in the upper left to restrict which domains show up here.\[/caption\]
 
 Now, to click through these in Chrome and see the response data.  Chrome does a good job of formatting it for you.
 
@@ -68,11 +68,11 @@ Now, to click through these in Chrome and see the response data.  Chrome does a
 
 Finally I found the right one which would give me today's pollen count (actually I'm being dramatic, I was amazingly able to find the right one in about a minute, from the start of this project!)
 
-\[caption id="attachment\_5489" align="alignnone" width="1103"\]![](images/found-it.png) All the values I need to know that it is the pine trees here which are making my nose run like a faucet.\[/caption\]
+![](images/found-it.png) All the values I need to know that it is the pine trees here which are making my nose run like a faucet.\[/caption\]
 
 All that remained was to see if this new stuff actually worked...
 
-\[caption id="attachment\_5490" align="alignnone" width="636"\]![](images/copying-as-powershell.png) Simply Right Click the Request - Copy - Copy Request as PowerShell!\[/caption\]
+![](images/copying-as-powershell.png) Simply Right Click the Request - Copy - Copy Request as PowerShell!\[/caption\]
 
 #### And now, the real test...
 
@@ -94,7 +94,7 @@ StatusCode : 200 StatusDescription : OK Content : {"id": "34.03,-84.69", "vt1pol
 
 I mean, you can see it right there, in the Content field, a beautiful little JSON object!  At this point, sure, you could pipe the output into `ConvertFrom-JSON` to get back a PowerShell object but I would be remiss (and get an ear-full from Mark Krauss) if I didn't mention that `Invoke-RESTMethod` automatically converts JSON into PowerShell objects!  I swapped that in place of  `Invoke-WebRequest` and stuffed the long values into variables and...
 
-\[caption id="attachment\_5481" align="alignnone" width="636"\]![](images/in-action.png) Wow, that 'Just worked'! That never happens!!\[/caption\]
+![](images/in-action.png) Wow, that 'Just worked'! That never happens!!\[/caption\]
 
 #### Let's make a cmdlet
 
@@ -106,7 +106,7 @@ We could make this into a cool `Get-PollenCount` cmdlet if we could find a way 
 
 A quick search lead me to [Geoco.io](https://geocod.io/docs/#geocoding), which is very easy to use and has superb Documentation.
 
-\[caption id="attachment\_5496" align="alignnone" width="636"\]![](images/geocodio.png) Zenoss, why can't you have docs like this?\[/caption\]
+![](images/geocodio.png) Zenoss, why can't you have docs like this?\[/caption\]
 
 Sign up was a breeze, and in just under a minute, I could convert a ZIP to Coords (among many other interesting things) in browser.
 

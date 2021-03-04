@@ -169,7 +169,7 @@ Next, click **Debug ** then specify the **Target Device** as a **Remote Mach
 
 ![](https://foxdeploy.files.wordpress.com/2017/07/rpi.png?w=636) Simply click your device and that's it!
 
-\[caption id="attachment\_4963" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2017/07/pickyourpi.png?w=636) You might not even be asked for credentials. Nope, I don't know why it doesn't need credentials...\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2017/07/pickyourpi.png?w=636) You might not even be asked for credentials. Nope, I don't know why it doesn't need credentials...\[/caption\]
 
 Now, finally, hit **F5**!
 
@@ -305,7 +305,7 @@ And now...it works.
 
 When we're finally done with the code (for now), publishing the finished version to the Pi is super easy.  Right click the solution in the right-hand side and choose properties.  In the windows that appears, go to the **Debug** tab and change the **Configuration dropdown** to **Release**.
 
-\[caption id="attachment\_4916" align="alignnone" width="1187"\]![](images/deploy-e1499885664978.png) Change the configuration to Release, and then F5 one last time.\[/caption\]
+![](images/deploy-e1499885664978.png) Change the configuration to Release, and then F5 one last time.\[/caption\]
 
 Once you do that, the app is written and configured to run without remote debug.  Our little Raspberry is almost ready to run on it's own!
 

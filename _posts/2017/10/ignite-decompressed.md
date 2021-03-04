@@ -22,7 +22,7 @@ https://twitter.com/Johnny\_Radeck/status/912758204869865472
 
 Not pictured, Adam Bertram standing on a table, shouting into the crowd!  Oh, and did I mention that Jeffrey Snover came on stage as well?  Talk about a dream come true!
 
-\[caption id="attachment\_5165" align="alignnone" width="2046"\]![OnStageWJeffrey](images/onstagewjeffrey.jpg) Jeffrey is the four greenish pixels near the screen\[/caption\]
+![OnStageWJeffrey](images/onstagewjeffrey.jpg) Jeffrey is the four greenish pixels near the screen\[/caption\]
 
 Fortunately I was prepared and stammered through a terrible soft-ball question about Azure Cloud Shell.  Jeffrey said 'that's your question, Stephen?'
 

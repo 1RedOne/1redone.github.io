@@ -75,29 +75,29 @@ Login to [https://ifttt.com](https://ifttt.com)/ and click on Create.
 
 Click on 'This' and choose 'Webhooks':
 
-\[caption id="attachment\_5953" align="alignnone" width="636"\]![](https://foxdeploy.files.wordpress.com/2020/07/create-01.png?w=636) You actually do click the plus sign or the word This!\[/caption\]
+![](https://foxdeploy.files.wordpress.com/2020/07/create-01.png?w=636) You actually do click the plus sign or the word This!\[/caption\]
 
 This is the icon you are looking for.
 
-\[caption id="attachment\_5955" align="alignnone" width="636"\]![Shows a textbox with the word 'webhook' entered and below it a large picture which also says webhook.](https://foxdeploy.files.wordpress.com/2020/07/create-02.png?w=636) The Webhook logo is so pretty!\[/caption\]
+![Shows a textbox with the word 'webhook' entered and below it a large picture which also says webhook.](https://foxdeploy.files.wordpress.com/2020/07/create-02.png?w=636) The Webhook logo is so pretty!\[/caption\]
 
 Select 'Recieve a web request'
 
-\[caption id="attachment\_5954" align="alignnone" width="636"\]![Show the IFTTT UI, and a box with the text 'Receieve a web request' is displayed, which says the automation will be triggered whenever a web request occurs](https://foxdeploy.files.wordpress.com/2020/07/create-02.2.png?w=636) This is so cool!\[/caption\]
+![Show the IFTTT UI, and a box with the text 'Receieve a web request' is displayed, which says the automation will be triggered whenever a web request occurs](https://foxdeploy.files.wordpress.com/2020/07/create-02.2.png?w=636) This is so cool!\[/caption\]
 
  
 
 Next, choose 'That', where we'll tell IFTTT what to do when this flow happens.
 
-\[caption id="attachment\_5957" align="alignnone" width="636"\]![Shows the If this then that logo again, but now the IF contains the webhook logo, showing this flow begins with a webhook](https://foxdeploy.files.wordpress.com/2020/07/create-03.png?w=636) The User interface speaks to me! See, it's the same logo but now it calls out that the flow begins with a Webhook. Excellent UX.\[/caption\]
+![Shows the If this then that logo again, but now the IF contains the webhook logo, showing this flow begins with a webhook](https://foxdeploy.files.wordpress.com/2020/07/create-03.png?w=636) The User interface speaks to me! See, it's the same logo but now it calls out that the flow begins with a Webhook. Excellent UX.\[/caption\]
 
 Search for Wemo Smart Plug and you'll have to login to an oAuth process to connect the services together.
 
-\[caption id="attachment\_5959" align="alignnone" width="636"\]![the IFTTT ui, now with the heading 'Choose action service', and in the text box to search, Wemo Smart was entered. The only option is the Wemo smart plug as the action to trigger.](https://foxdeploy.files.wordpress.com/2020/07/create-03.1.png?w=636) You'd pick your smart bulb, fan or crockpot if you were turning those on and off when entering a meeting...\[/caption\]
+![the IFTTT ui, now with the heading 'Choose action service', and in the text box to search, Wemo Smart was entered. The only option is the Wemo smart plug as the action to trigger.](https://foxdeploy.files.wordpress.com/2020/07/create-03.1.png?w=636) You'd pick your smart bulb, fan or crockpot if you were turning those on and off when entering a meeting...\[/caption\]
 
 Hm, maybe a flow to trigger my George Forman grill to make some bacon for me?
 
-\[caption id="attachment\_5960" align="alignnone" width="636"\]![Shows a list of possible wemo actions, including Turn On, Turn Off, Turn on then off, and Toggle back and forth](https://foxdeploy.files.wordpress.com/2020/07/create-03.2.png?w=636) There are a lot of possibilites here!\[/caption\]
+![Shows a list of possible wemo actions, including Turn On, Turn Off, Turn on then off, and Toggle back and forth](https://foxdeploy.files.wordpress.com/2020/07/create-03.2.png?w=636) There are a lot of possibilites here!\[/caption\]
 
 Now, pick the smart device we setup way back in section one to enact the action upon.
 
@@ -117,7 +117,7 @@ My two flows are named `meetingStart` and `meetingStop`.
 
 This part is so easy, still within IFTTT, click on 'Documentation' from the [Maker:Webhooks](https://ifttt.com/maker_webhooks) page.
 
-\[caption id="attachment\_5967" align="alignnone" width="636"\]![Depicts the maker\webhooks page and shows a box drawn around the large 'Documentation' button on the corner. ](https://foxdeploy.files.wordpress.com/2020/07/create-url-01.png?w=636) Clicking here on the Documentation button shows you how to formulate your requests to IFTTT.\[/caption\]
+![Depicts the maker\webhooks page and shows a box drawn around the large 'Documentation' button on the corner. ](https://foxdeploy.files.wordpress.com/2020/07/create-url-01.png?w=636) Clicking here on the Documentation button shows you how to formulate your requests to IFTTT.\[/caption\]
 
 I only drew a big box in the screen shot because I, embarrassingly, just couldn't find it!  The next page shows you your API key and how to trigger your events.
 
@@ -187,7 +187,7 @@ https://gist.github.com/1RedOne/d9284559742a832fdb2e7bd190a62da7
 
 And it works! When I join a call or a meeting, in just a few moments, the light outside my door turns on!
 
-\[caption id="attachment\_5973" align="alignnone" width="636"\]![Shows a make-shift 'on-air' light of the kind you would find in a news radio booth to indicate the host is live on air.](https://foxdeploy.files.wordpress.com/2020/07/20200728_112406.jpg?w=636) Ain't she a beaut!\[/caption\]
+![Shows a make-shift 'on-air' light of the kind you would find in a news radio booth to indicate the host is live on air.](https://foxdeploy.files.wordpress.com/2020/07/20200728_112406.jpg?w=636) Ain't she a beaut!\[/caption\]
 
 I realize that my instructions on how to actually make the On Air light fixture are akin to this.
 
