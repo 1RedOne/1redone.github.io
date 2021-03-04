@@ -8,6 +8,7 @@ categories:
 tags: 
   - "autocomplete"
   - "custom-types"
+excerpt: "You know how in PowerShell you can type a cmdlet, then pipe into `Select-Object` or another cmdlet and start tabbing through property names?  This is the type of Autocompletion we are going to add to our function in this post!"
 ---
 
 ![](../assets/images/2017/01/images/upgrade-your-code1.png)
