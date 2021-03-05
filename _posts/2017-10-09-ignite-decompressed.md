@@ -6,7 +6,6 @@ coverImage: ../assets/images/2017/10/images/msftignite2017-1.png
 categories: 
   - "scripting"
 excerpt: "Ignite Orlando WAS AWESOME! In this post, I'll give you some of my fun memories and commentary about the event, and then end with a bunch of the best videos from Microsoft Ignite 2017."
-gallery: igniteGallery
 ---
 
 ![MSFTignite2017 (1)](../assets/images/2017/10/images/msftignite2017-1.png)
