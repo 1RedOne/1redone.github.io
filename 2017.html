@@ -19,6 +19,7 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
   }
 </style>
 <ul>
+
   {% assign postsForYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" | where: "name", "2017" %} 
 
   Posts for year {{ postsForYear[0].name }}, total posts {{ postsForYear[0].size }} 

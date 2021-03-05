@@ -10,7 +10,11 @@ tags:
   - "azure-function"
   - "powershell"
   - "reddit"
-coverImage: "azure-function.png"
+excerpt: "Around the time I was celebrating my 100th post, I made a big to-do about opening my own subreddit at /r/FoxDeploy.
+
+I had great intentions, I would help people in an easier to read format than here in the comments...but then, I just kind of, you know, forgot to check the sub for four months.
+
+But no longer!  I decided to solve this problem with the only tool I know...code."
 ---
 
 ![](../assets/images/2018/01/images/azure-function.png)
@@ -31,7 +35,10 @@ With this in mind, I decided to think of how to attack this problem.
 
 I did some googling and found that you can get a list of the newest posts in a sub by just adding a `keyword.json` to the subreddit, like so: `https://www.reddit.com/r/FoxDeploy/new.json`, get's me a JSON response back with the newest posts.  You can also use `top.json`, `controversial.json`, etc.
 
-`$posts = Invoke-RestMethod https://www.reddit.com/r/FoxDeploy/new.json`, next I needed a way to track if I'd already processed the post or not.  That means a database of some kind.
+```powershell
+$posts = Invoke-RestMethod https://www.reddit.com/r/FoxDeploy/new.json`
+```
+, next I needed a way to track if I'd already processed the post or not.  That means a database of some kind.
 
 #### The best DB is a CSV
 
@@ -39,7 +46,9 @@ At first, I planned to use Azure's new Cosmos DB for this task, but I quickly go
 
 Making my schema was simple, just open Notepad and type:
 
-`PostName,Date`
+```cs
+PostName,Date
+```
 
 Done, Schema created in five seconds.  Now to write some logic to step through a post and see if it is in my 'database' .
 
@@ -48,8 +57,12 @@ Done, Schema created in five seconds.  Now to write some logic to step through 
 
 #process posts $posts = Invoke-RestMethod https://www.reddit.com/r/FoxDeploy/new.json
 
-ForEach ($post in $posts.data.children){ if ($Processed.PostName -notcontains $post.data.title){ #We need to send a message Write-output "We haven't seen $($post.data.title) before...breaking loop" break }
-
+ForEach ($post in $posts.data.children){ 
+	if ($Processed.PostName -notcontains $post.data.title){ 
+		#We need to send a message 
+		Write-output "We haven't seen $($post.data.title) before...breaking loop" 
+		break 
+		}
 } 
 ```
 
@@ -90,7 +103,9 @@ The Redirect URI doesn't need to go anywhere specifically (it's used because the
 Now, make note of and save each of these in PowerShell.  You'll need these to get your token, then we'll embed them in our script as well.
 
 ```powershell
-$ClientID = 'ClientIDIsHere12345' $ClientSecret = 'ThisLongStringIsYourSecret' $redirectURI = 'http://www.foxdeploy.com'
+$ClientID = 'ClientIDIsHere12345' 
+$ClientSecret = 'ThisLongStringIsYourSecret'
+$redirectURI = 'http://www.foxdeploy.com'
 
 
 #### Getting an oAuth Token
@@ -115,15 +130,20 @@ This part would not have been possible without the awesome help of the awesome [
 We hit the endpoint of `oauth.reddit.com/api/compose`, which has a few restrictions.  First off, you have to provide headers to prove who you are.  Also, reddit insists that you identify yourself with your reddit user name with every API call as well, so you have to provide that info too.  Here's how I handled that.
 
 ```powershell
-$headers = New-Object "System.Collections.Generic.Dictionary\[\[String\],\[String\]\]" 
-$headers.Add("User-Agent", 'AzureFunction-SubredditBot:0.0.2 (by /u/1RedOne)') 
+$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+$headers.Add("User-Agent", 'AzureFunction-SubredditBot:0.0.2 (by /u/1RedOne)')
 $headers.Add("Authorization", "bearer $AccessToken")
 ```
 
 Next, here's the body params you MUST pass along.
 
 ```powershell
-$body = @{ api\_type = 'json' to = '1RedOne' subject = 'Message sent via PowerShell' text= 'Hello World' }
+$body = @{
+	api_type = 'json'
+	to = '1RedOne'
+	subject = 'Message sent via PowerShell'
+	text= 'Hello World'
+}
 ```
 
 Finally, pass all of this along using `Invoke-RestMethod` and you'll see...
@@ -134,7 +154,10 @@ Finally, pass all of this along using `Invoke-RestMethod` and you'll see...
 
 I went ahead and prettied it all up and packaged it as a cmdlet.  Simply provide your values like so:
 
-``Send-RedditMessage -AccessToken $token.access_token -Recipient 1RedOne ` ``    `-subject 'New Post Alert!' -post $post`
+```powershell
+Send-RedditMessage -AccessToken $token.access_token -Recipient 1RedOne `
+   -subject 'New Post Alert!' -post $post
+```
 
 This function is highly customized to my needs, thus the kind of weird `-post` param.  You'll want to customize this for your own purposes, but the example usage describes how to pass in a JSON representation of a Reddit API Post object for a full featured body message.
 

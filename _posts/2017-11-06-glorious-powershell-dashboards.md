@@ -2,12 +2,14 @@
 title: "Glorious PowerShell Dashboards"
 date: "2017-11-06"
 redirect_from : /2017/11/06/glorious-powershell-dashboards
-coverImage: goes here...
 categories: 
   - "scripting"
 tags: 
   - "dashboard"
-coverImage: "glorious-powershell-dashboards.png"
+coverImage: "../assets/images/2017/11/images/glorious-powershell-dashboards.png"
+excerpt: "I've covered the topic of dashboards on this blog a few times before, from layering CSS on PowerShell's built-in HTML capabilities, to hacking together HTML 5 templates with PowerShell, as the hunt continues for the next great thing in PowerShell reporting. Guys, the hunt is OVER!  Time to ascend to the next level in reporting...
+
+It's the motherlode!  Adam Driscoll's AWESOME PowerShell Universal Dashboard, a gorgeous and dead-simple dashboard tool which makes it super easy to retrieve values from your environment and spin them into adaptive, animated dashboards full of sexy transitions and colors.  "
 ---
 
 I've covered the topic of dashboards on this blog a few times before, from [layering CSS on PowerShell's built-in HTML capabilities](http://foxdeploy.com/2014/05/23/using-html-formatting-to-create-useful-webpage-reports-from-powershell/), to [hacking together HTML 5 templates with PowerShell](http://foxdeploy.com/2016/04/11/building-better-powershell-dashboards/), as the hunt continues for the next great thing in PowerShell reporting. Guys, the hunt is OVER!  Time to ascend to the next level in reporting...
@@ -16,7 +18,7 @@ I've covered the topic of dashboards on this blog a few times before, from [laye
 
 It's the motherlode!  Adam Driscoll's AWESOME PowerShell Universal Dashboard, a gorgeous and dead-simple dashboard tool which makes it super easy to retrieve values from your environment and spin them into adaptive, animated dashboards full of sexy transitions and colors.   [Click here to see it in action.](http://www.poshud.com/Home) Or just look at these sexy animations and tasteful colors.  Deploy this and then show your boss.  It's guaranteed to impress, blow his pants off, and get you a huge raise or maybe a $5 Starbucks gift card.
 
-![1GIF](../assets/images/2017/11/../assets/images/2017/11/images/1gif.gif)
+![1GIF](../assets/images/2017/11/images/1gif.gif)
 
 In this post, we'll learn what the PowerShell Universal Dashboard is, how to quickly get setup, and I'll share my own TOTALLY PIMPED OUT CUSTOM Dashboard with you free, for you to modify to fit your environment, and get that free Pumpkin Spice, son!
 
@@ -62,9 +64,25 @@ So, to kick things off, I copied and pasted the code [Adam shares on the PowerSh
 
 First up, to delete the placeholder 'About Universal Dashboard', let's delete the `New-UDColumn` from lines 15~17.
 
-\[code lang="powershell" firstline="12" highlight="15-17"\] Start-UDDashboard -port $i -Content { New-UDDashboard -NavbarLinks $NavBarLinks -Title "PowerShell Pro Tools Universal Dashboard" -NavBarColor '#FF1c1c1c' -NavBarFontColor "#FF55b3ff" -BackgroundColor "#FF333333" -FontColor "#FFFFFFF" -Content { New-UDRow { New-UDColumn -Size 3 { New-UDHtml -Markup " <div class='card' style='background: rgba(37, 37, 37, 1); color: rgba(255, 255, 255, 1)'> <div class='card-content'> <span class='card-title'>About Universal Dashboard</span>
-
-Universal Dashboard is a cross-platform PowerShell module used to design beautiful dashboards from any available dataset. Visit GitHub to see some example dashboards.</div> <div class='card-action'><a href='https://www.github.com/adamdriscoll/poshprotools'>GitHub</a></div> </div> " } New-UDColumn -Size 3 { New-UDMonitor -Title "Users per second" -Type Line -DataPointHistory 20 -RefreshInterval 15 -ChartBackgroundColor '#5955FF90' -ChartBorderColor '#FF55FF90' @Colors -Endpoint { Get-Random -Minimum 0 -Maximum 100 | Out-UDMonitorData } 
+```powershell
+Start-UDDashboard -port $i -Content {
+    New-UDDashboard -NavbarLinks $NavBarLinks -Title "PowerShell Pro Tools Universal Dashboard" -NavBarColor '#FF1c1c1c' -NavBarFontColor "#FF55b3ff" -BackgroundColor "#FF333333" -FontColor "#FFFFFFF" -Content {
+        New-UDRow {
+            New-UDColumn -Size 3 {
+                New-UDHtml -Markup "
+<div class='card' style='background: rgba(37, 37, 37, 1); color: rgba(255, 255, 255, 1)'>
+<div class='card-content'>
+<span class='card-title'>About Universal Dashboard</span>
+ 
+Universal Dashboard is a cross-platform PowerShell module used to design beautiful dashboards from any available dataset. Visit GitHub to see some example dashboards.</div>
+<div class='card-action'><a href='https://www.github.com/adamdriscoll/poshprotools'>GitHub</a></div>
+</div>
+"
+}
+                New-UDColumn -Size 3 {
+                    New-UDMonitor -Title "Users per second" -Type Line -DataPointHistory 20 -RefreshInterval 15 -ChartBackgroundColor '#5955FF90' -ChartBorderColor '#FF55FF90' @Colors -Endpoint {
+Get-Random -Minimum 0 -Maximum 100 | Out-UDMonitorData
+}
 ```
 
 With that removed, the cell vanishes.
@@ -73,11 +91,14 @@ With that removed, the cell vanishes.
 
 I took a look at the [Components page](http://www.poshud.com/Components) on the PowerShell Universal Dashboard, and really liked the way the `Counter` design looked, so I decided to copy the example for `Total Bytes Downloaded` and use that in-place of the old introduction.  I added these lines:
 
-\[code lang="powershell" firstline="15" highlight="16-18"\]
-
-New-UDColumn -Size 4 { New-UDCounter -Title "Total Bytes Saved" -AutoRefresh -RefreshInterval 3 -Format "0.00b" -Icon cloud\_download @Colors -Endpoint { get-content c:\\temp\\picSpace.txt } }
-
-New-UDColumn -Size 3 { 
+```powershell
+New-UDColumn -Size 4 {
+    New-UDCounter -Title "Total Bytes Saved" -AutoRefresh -RefreshInterval 3 -Format "0.00b" -Icon cloud_download @Colors -Endpoint {
+            get-content c:\temp\picSpace.txt
+        }
+    }
+ 
+    New-UDColumn -Size 3 {
 ```
 
 I also created a new text file at `C:\temp\picSpace.txt` and added the value `1234` to it.  With those changes completed, I hit F5.
@@ -86,20 +107,26 @@ I also created a new text file at `C:\temp\picSpace.txt` and added the value `1
 
 Now, to actually populate this value when my code runs.  Editing `Move-FilesOlderThan.ps1`(note: I'm very sorry about this name, I wrote [the script](http://foxdeploy.com/2015/02/02/dropbox-powershell-2/) when my daughter was not sleeping through the night yet...not clue why I choose that name), the function of that code is to accept a cut-off date, then search for files older than that date in a folder.  If it finds files that are too many days old, they get moved elsewhere. Here's the relevant snippet:
 
-\[code lang="powershell" firstline="15"\]
+```powershell
 
-$MoveFilesOlderThanAge = "-18" ####End user params
-
-$cutoverDate = ((get-date).AddDays($MoveFilesOlderThanAge)) write-host "Moving files older than $cutoverDate, of which there are \`n\`t\`t\`t\`t" -nonewline $backupFiles = new-object System.Collections.ArrayList
-
-$filesToMove = Get-ChildItem $cameraFolder | Where-Object LastWriteTime -le $cutoverDate $itemCount = $filesToMove | Measure-Object | select -ExpandProperty Count $FileSize = $filesToMove | Measure-Object -Sum Length
+$MoveFilesOlderThanAge = "-18"
+####End user params
+ 
+$cutoverDate = ((get-date).AddDays($MoveFilesOlderThanAge))
+write-host "Moving files older than $cutoverDate, of which there are `n`t`t`t`t" -nonewline
+$backupFiles = new-object System.Collections.ArrayList
+ 
+$filesToMove = Get-ChildItem $cameraFolder | Where-Object LastWriteTime -le $cutoverDate
+$itemCount = $filesToMove | Measure-Object | select -ExpandProperty Count
+$FileSize = $filesToMove | Measure-Object -Sum Length
 
 
 ```
 
 In order to sum the file space saved every day, I only had to add these lines.  I also decided to add a tracking log of how many files are moved over time.  I decided to simply use a text file to track this.
 
-\[code lang="powershell" firstline="27"\] \[int\](gc c:\\temp\\picSpace.txt) + \[int\]$FileSize.Sum | Set-content c:\\temp\\picSpace.txt \[int\](gc c:\\temp\\totalmoved.txt) + \[int\]$itemCount | set-content c:\\temp\\totalmoved.txt 
+```powershell
+$itemCount | set-content c:\\temp\\totalmoved.txt 
 ```
 
 Now, after running the script a few times to move files, the card actually keeps track of how many files are moved!
@@ -116,10 +143,13 @@ I decided to also add a counter for how many files have been moved.  This was s
 
 To hook up the counter, I added this code right after the Byte Counter card.
 
-\[code lang="powershell" firstline="20"\] New-UDColumn -Size 4 { New-UDCounter -Title "Total Files Moved" -Icon file @colors -Endpoint { get-content C:\\temp\\totalmoved.txt } } 
+```powershell 
+New-UDColumn -Size 4 {
+  New-UDCounter -Title "Total Files Moved" -Icon file @colors -Endpoint {
+    get-content C:\temp\totalmoved.txt
+  }
+}
 ```
-
- 
 
 ![](../assets/images/2017/11/images/w-file-count.png)
 
@@ -129,13 +159,21 @@ Next up, I want to reuse the table we start with in the corner.  I wanted to tw
 
 Going back to `Move-FilesOlderThan.ps1` I added one line to output a `.csv` file of the files moved that day, excerpted below:
 
-\[code lang="powershell" firstline="55"\] $backupFiles | select BaseName,Extension,@{Name=‘FileSize‘;Expression={"$(\[math\]::Round($\_.Length / 1MB)) MB"}},Length,Directory | export-csv -NoTypeInformation "G:\\Backups\\FileList\_\_$((Get-Date -UFormat "%Y-%m-%d"))\_Log.csv" 
+```powershell
+$backupFiles |
+    select BaseName,Extension,@{Name=‘FileSize‘;Expression={"$([math]::Round($_.Length / 1MB)) MB"}},Length,Directory |
+        export-csv -NoTypeInformation "G:\Backups\FileList__$((Get-Date -UFormat "%Y-%m-%d"))_Log.csv"
 ```
 
 This results in a super simple CSV file that looks like this
 
 ```
- Day,Files,Jpg,MP4 0,15,13,2 1,77,70,7 2,23,20,3 3,13,10,3 4,8,7,1 
+Day,Files,Jpg,MP4
+0,15,13,2
+1,77,70,7
+2,23,20,3
+3,13,10,3
+4,8,7,1
 ```
 
 Next, to hook it up to the dashboard itself.  Adam gave us a really nice example of how to add a table, so I just modified that to match my file types.
@@ -164,8 +202,12 @@ This was daunting at first, but the flow isn't too bad in hindsight.
 Here's the code sample of what my finished chart looked like:
 
 ```powershell
- New-UDChart -Title "Files moved by Day" -Type Line -AutoRefresh -RefreshInterval 7 @Colors -Endpoint { import-csv C:\\temp\\movelog.csv | Out-UDChartData -LabelProperty "Day" -DataProperty "Files" -Dataset @( New-UDChartDataset -DataProperty "Jpg" -Label "Photos" -BackgroundColor "rgb(134,342,122)" New-UDChartDataset -DataProperty "MP4" -Label "Movies" -BackgroundColor "rgb(234,33,43)" ) }
-
+ New-UDChart -Title "Files moved by Day" -Type Line -AutoRefresh -RefreshInterval 7 @Colors -Endpoint {
+ import-csv C:\temp\movelog.csv | Out-UDChartData -LabelProperty "Day" -DataProperty "Files" -Dataset @(
+ New-UDChartDataset -DataProperty "Jpg" -Label "Photos" -BackgroundColor "rgb(134,342,122)"
+ New-UDChartDataset -DataProperty "MP4" -Label "Movies" -BackgroundColor "rgb(234,33,43)"
+)
+}
 
 ```
 
@@ -179,12 +221,14 @@ Now, the most important feature, branding this bad boy.
 
 Up on line 14, change the `-Title` property to match what you'd like to name your dashboard.
 
-\[code lang="powershell" startingline="14"\] New-UDDashboard -NavbarLinks $NavBarLinks -Title "FoxDeploy Space Management Dashboard - Photos"
+```powershell 
+New-UDDashboard -NavbarLinks $NavBarLinks -Title "FoxDeploy Space Management Dashboard - Photos"
 ```
 
 You can also add an image file with a single card.  In my experience, this image needs to already live on the web somewhere.  You could spin up a quick [Node http-server](https://stackoverflow.com/questions/16333790/node-js-quick-file-server-static-files-over-http) to serve up the files, leverage another online host, or use a standalone server like [Abyss](https://aprelium.com/abyssws/).  I always have an install of both Abyss and Node on my machines, so I tossed the file up and linked it.
 
-\[code lang="powershell" startingline="14"\] New-UDImage -Url http://localhost/Foxdeploy\_DEPLOY\_large.png
+```powershell 
+New-UDImage -Url http://localhost/Foxdeploy\_DEPLOY\_large.png
 ```
 
 Finally, to clean up all of the extra cards I didn't use, and fix some layout issues.

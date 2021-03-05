@@ -2,10 +2,11 @@
 title: "Ignite, decompressed"
 date: "2017-10-09"
 redirect_from : /2017/10/09/ignite-decompressed
-coverImage: goes here...
+coverImage: ../assets/images/2017/10/images/msftignite2017-1.png
 categories: 
   - "scripting"
-coverImage: "msftignite2017-1.png"
+excerpt: "Ignite Orlando WAS AWESOME! In this post, I'll give you some of my fun memories and commentary about the event, and then end with a bunch of the best videos from Microsoft Ignite 2017."
+gallery: igniteGallery
 ---
 
 ![MSFTignite2017 (1)](../assets/images/2017/10/images/msftignite2017-1.png)
@@ -16,11 +17,13 @@ Ignite Orlando WAS AWESOME! In this post, I'll give you some of my fun memories 
 
 We had a HUGE turn out for the PowerShell Community Event, in fact, it was so big that we had an overflow room with 200 people in it!
 
-![2017-09-26 15.07.11](../assets/images/2017/10/images/2017-09-26-15-07-11.jpg)
+![2017-09-26 15.07.11](../assets/images/igniteCrowd.jpg)
+
 
 There were a lot of folks waiting outside who weren't able to attend, and at this point Adam Bertram and Simon Whalin were the REAL MVPs.  They left the room and lead an impromptu session to get the discussion going in the overflow room.
 
-https://twitter.com/Johnny\_Radeck/status/912758204869865472
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The room for BRK1061 - Microsoft Ignite PowerShell Meetup got full so we “borrowed” the lunch area <a href="https://twitter.com/hashtag/MSIgnite?src=hash&amp;ref_src=twsrc%5Etfw">#MSIgnite</a> <a href="https://twitter.com/hashtag/PowerShell?src=hash&amp;ref_src=twsrc%5Etfw">#PowerShell</a> <a href="https://twitter.com/KFConsulting?ref_src=twsrc%5Etfw">@KFConsulting</a> <a href="https://t.co/4XKa4N9hi9">pic.twitter.com/4XKa4N9hi9</a></p>&mdash; Johnny Radeck (@Johnny_Radeck) <a href="https://twitter.com/Johnny_Radeck/status/912758204869865472?ref_src=twsrc%5Etfw">September 26, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 Not pictured, Adam Bertram standing on a table, shouting into the crowd!  Oh, and did I mention that Jeffrey Snover came on stage as well?  Talk about a dream come true!
 
@@ -30,13 +33,13 @@ Fortunately I was prepared and stammered through a terrible soft-ball question a
 
 My final session was at the end of the day on Thursday, which effectively maximized my stress for the entirety of Ignite.  Fortunately I had plenty of time to practice and work on my transitions and I felt that I really gave it my all.
 
-\[gallery ids="5225,5226,5227,5228,5229" type="rectangular"\]
+![2017-09-26 15.07.11](../assets/images/igniteCollage.png)
 
 Next year, I'd like to lead a one hour session, or one focused on real world usage of PowerShell as a glue language.  We'll see if they get approved!
 
 Don and Jeffrey filled a colossal 5300 person auditorium to capacity, in their PowerShell Unplugged session.
 
-https://twitter.com/FoxDeploy/status/913104259536887815
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Maximum occupancy is 5300, I think we needed every seat! <a href="https://twitter.com/concentrateddon?ref_src=twsrc%5Etfw">@concentrateddon</a> <a href="https://twitter.com/jsnover?ref_src=twsrc%5Etfw">@jsnover</a> <a href="https://twitter.com/hashtag/MSIgnite?src=hash&amp;ref_src=twsrc%5Etfw">#MSIgnite</a> <a href="https://twitter.com/hashtag/Powershell?src=hash&amp;ref_src=twsrc%5Etfw">#Powershell</a> <a href="https://t.co/BbJkwjiLMn">pic.twitter.com/BbJkwjiLMn</a></p>&mdash; Stephen Owen 🦊Deploy (@FoxDeploy) <a href="https://twitter.com/FoxDeploy/status/913104259536887815?ref_src=twsrc%5Etfw">September 27, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Even these two unflappable speakers looked a tiny bit overwhelmed (just for a moment) by the colossal turnout!
 
@@ -48,7 +51,7 @@ Getting to meet Brad in person was great, as I've seen him deliver presentations
 
 #### Other photos
 
-\[gallery ids="5192,5193,5195,5196,5197,5198,5199,5200,5201,5202,5203,5204,5205,5206,5207,5208,5209,5210,5211,5212,5213" type="slideshow"\]
+![2017-09-26 15.07.11](../assets/images/meAndAdam.jpeg)
 
 Spinners were...everywhere.
 

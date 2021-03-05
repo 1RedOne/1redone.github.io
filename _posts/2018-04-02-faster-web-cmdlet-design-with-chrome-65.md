@@ -5,7 +5,9 @@ redirect_from : /2018/04/02/faster-web-cmdlet-design-with-chrome-65
 coverImage: ../assets/images/2018/04/images/super-fast.png
 categories: 
   - "scripting"
-coverImage: "super-fast.png"
+excerpt: "If you've been following my blog for a while, you know that I LOVE making PowerShell cmdlets, especially ones that consume an API or scrape a web site.
+
+However when it comes to tools that peruse the web, this can get a bit tricky, especially if a site doesn't publish an API because then you're stuck parsing HTML or loading and manipulating an invisible `Internet Explorer -COMObject` __barfs in Japanese_._  And even this terrible approach is closed to us if the site uses AJAX or dynamically loads content."
 ---
 
 ![](../assets/images/2018/04/images/super-fast.png)

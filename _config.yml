@@ -27,6 +27,7 @@ permalink: /blog/:title.html
 disqus_shortname: foxdeploy-com.disqus.com
 google_analytics: UA-60348969-1
 fixed_navbar: top
+theme_color: '#333333'
 #permalink: /:year/:month:/:title.html
 # Build settings
 markdown: kramdown
