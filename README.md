@@ -14,7 +14,7 @@ Year | Posts | Migrated
 2020   | 6| ✔
 2019   | 6| ✔
 2018   | 7 |✔
-2017   | 21 |♻
+2017   | 21 |✔
 2016   | 40 |❌
 2015   | 44 |❌
 2014   | 63 |❌
@@ -34,6 +34,7 @@ domain cutover | ❌
 
 Post | Code Complete | Drafted | Ready 
 --| --|--|--
+April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍🐕
 PowerShell Lazy Caching | ✔ | ✔ | ✔
 GitHub Report Issue Link  | ✔ | ❌ | ❌
 PowerShell DVT Testing  | ✔ | ❌ | ❌
