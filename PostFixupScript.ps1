@@ -1,13 +1,17 @@
-﻿#to use, place a source year into the posts directory
+﻿if (-not((get-location).Path  -like "*1redone.github.io")){
+ throw "need to run from blogs directory"
+}
+#to use, place a source year into the posts directory
 $FixedPostsPath = gci .\_posts | ? Extension -In ('.md',".markdown")
 $FixedPostsPathBaseName = $FixedPostsPath | % { $_.Name.SubString(11) }
 $PostsToProcess = gci .\_posts -Recurse | 
     ? Extension -In ('.md',".markdown") | % {
-        if ( $FixedPostsPathBaseName -notcontains $_.Name `
+        try{if ( $FixedPostsPathBaseName -notcontains $_.Name `
         -and $FixedPostsPathBaseName -notcontains $_.Name.Substring(11)){
             write-host "need to fix [$($_.FullName)])"
             $_
-        }
+        }}
+        catch{"can't parse $($_.Name)"}
     }
 
 "found $($PostsToProcess.Count) files to process"

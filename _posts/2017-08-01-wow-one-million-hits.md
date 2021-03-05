@@ -35,7 +35,7 @@ This post slowly gained some traffic and gave me confidence to focus on my writi
 
 I tried writing on vacations, while my daughter played with sand.
 
-\[caption id="attachment\_4994" align="alignnone" width="636"\][![](https://foxdeploy.files.wordpress.com/2017/07/laptop-on-the-beach.png?w=636)](right after this was taken?) Care to guess how likely it was that sand got poured in my laptop
+![](https://foxdeploy.files.wordpress.com/2017/07/laptop-on-the-beach.png?w=636)](right after this was taken?) Care to guess how likely it was that sand got poured in my laptop
 
 And writing while singing songs to my newborn son.
 
