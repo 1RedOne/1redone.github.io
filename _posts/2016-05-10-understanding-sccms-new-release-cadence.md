@@ -8,7 +8,7 @@ categories:
 tags: 
   - "planning"
   - "sccm-current-branch"
-coverImage: "../assets/images/2015/05/images/sccm_lifecycle_foxdeploy.png"
+coverImage: "../assets/images/2016/05/images/sccm_lifecycle_foxdeploy.png"
 excerpt: "This is mostly an info dump of what we know and what we suspect about how Current Branch will play out for SCCM.  This plan is currently in place for a number of my customers, including some big enterprise customers. It's how I'm doing it, but I will admit that I don't have any secret info here (nothing NDA breaking :0 here)."
 ---
 
