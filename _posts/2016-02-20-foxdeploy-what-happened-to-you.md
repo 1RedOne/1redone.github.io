@@ -14,7 +14,7 @@ Hi guys!  I'm still alive, I promise!
 
 Recently I've gone a bit of a blog and twitter hiatus, because the FoxDeploy family just instantiated a new child-object!  Born February 2nd at 2:02 AM, I had my first son!
 
-[![12670121_10102062209093473_1149475081540864560_n](https://foxdeploy.files.wordpress.com/2016/02/12670121_10102062209093473_1149475081540864560_n.jpg?w=535)](../assets/images/2016/02/https://foxdeploy.files.wordpress.com/2016/02/12670121_10102062209093473_1149475081540864560_n.jpg)
+![](../assets/images/2016/02/https://foxdeploy.files.wordpress.com/2016/02/12670121_10102062209093473_1149475081540864560_n.jpg)
 
 I promise I've got some nice posts on the way, including the anticipated Part V of my GUI series, as well as Part V of the DSC guide...including a new tool I've been working on with some help from my friends in Redmond...
 

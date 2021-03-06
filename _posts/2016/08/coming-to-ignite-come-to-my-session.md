@@ -9,7 +9,7 @@ I am deeply humbled (and a bit scared) to be invited to deliver a session at Mic
 
 I'll be delivering the HubTalk for the topic of 'Intro to PowerShell' this year! By far my biggest audience yet, I'm super excited!
 
-[![](images/wp-1471197991802.png)](http://foxdeploy.files.wordpress.com/2016/08/wp-1471197991802.png)
+![](http://foxdeploy.files.wordpress.com/2016/08/wp-1471197991802.png)
 
 If you are coming to Ignite, [please sign up for my session, link is here](https://myignite.microsoft.com/sessions/20651)!
 

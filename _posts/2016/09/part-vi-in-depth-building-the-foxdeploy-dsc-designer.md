@@ -9,7 +9,7 @@ tags:
   - "visual-studio"
 ---
 
-[![series_PowerShellGUI](https://foxdeploy.files.wordpress.com/2015/04/series_powershellgui.png?w=705)](http://foxdeploy.com/resources/learning-gui-toolmaking-series/)
+![](http://foxdeploy.com/resources/learning-gui-toolmaking-series/)
 
 **This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 
@@ -76,11 +76,11 @@ With the elevator pitch and rough draft drawing completed, it was now time to ac
 
 The code part of this is simple. Running `Get-DSCResource` returns a list of all the resources. If I grabbed just the name property, I'd have a list of the names of all resources. If I made one checkbox for each, I'd be set.
 
-[![DSC01](https://foxdeploy.files.wordpress.com/2016/04/dsc01.png?w=636)](https://foxdeploy.files.wordpress.com/2016/04/dsc01.png)
+![](https://foxdeploy.files.wordpress.com/2016/04/dsc01.png)
 
 Now, to pipe this output over to `Get-DSCResource -Syntax`, which gives me the fields for each setting available in the Resource.
 
-[![DSC02](https://foxdeploy.files.wordpress.com/2016/05/dsc02.png?w=636)](https://foxdeploy.files.wordpress.com/2016/05/dsc02.png)
+![](https://foxdeploy.files.wordpress.com/2016/05/dsc02.png)
 
 I started with a brand new WPF application in Visual Studio,  there were a lot of different panel options to choose with WPF, here's a [super helpful site explaining them](http://www.wpftutorial.net/ListView.html). I used a combination of them.
 
@@ -104,7 +104,7 @@ And the code to lock my Tab to the right column
 
 All of this footwork result in this UI.
 
-[![initial grid](https://foxdeploy.files.wordpress.com/2016/08/initial-grid.png?w=636)](https://foxdeploy.files.wordpress.com/2016/08/initial-grid.png)
+![](https://foxdeploy.files.wordpress.com/2016/08/initial-grid.png)
 
 Next, I needed a way to create new checkboxes when my UI loads. I wanted it to run `Get-DSCResource` and grab the name of all the resources on my machine. I came up with this structure
 
@@ -120,11 +120,11 @@ ForEach ($resource in $resources){ $newCheckBox = New-Object System.Windows.Cont
 
 This seemed to work just fine, and gave me this nice looking UI.
 
-[![grid01](images/grid01.png)](https://foxdeploy.files.wordpress.com/2016/08/grid01.png)
+![](https://foxdeploy.files.wordpress.com/2016/08/grid01.png)
 
 However, when I clicked the checkbox on the side, instead of getting tabs for each resource, I instead...well, just look!
 
-[![grid02](images/grid02.png)](https://foxdeploy.files.wordpress.com/2016/08/grid02.png)
+![](https://foxdeploy.files.wordpress.com/2016/08/grid02.png)
 
 Only the very last item added to the list was getting added. That seemed like quite a clue...
 
@@ -146,7 +146,7 @@ I'd never encountered this before but it was precisely the tool for the job. I s
 
 And the issue was resolved. Now when I clicked a checkbox, it drew a new tab containing the name of the resource.
 
-[![grid03](https://foxdeploy.files.wordpress.com/2016/09/grid03.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/grid03.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/grid03.png)
 
 ### Loading the resource settings into the tab
 
@@ -170,7 +170,7 @@ $WPFtabControl.AddChild($tab) $WPFStatusText.Text = 'Ready...' })
 
 Here's the resultant GUI at this point:
 
-[![grid04](https://foxdeploy.files.wordpress.com/2016/09/grid04.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/grid04.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/grid04.png)
 
 Now, to add the rest of our GUI.
 
@@ -186,7 +186,7 @@ I also wanted my user to be able to resize the UI using sliders, so I added some
 
 These elements render up like so:
 
-[![row-2](https://foxdeploy.files.wordpress.com/2016/09/row-2.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/row-2.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/row-2.png)
 
 Finally, to add the resultant textbox. The only thing out of the ordinary here is that I knew our DSC Configuration would be long, and didn't want the UI to resize when the configuration loaded, so I added a ScrollViewer, which is just a wrapper class to add scrollbars.
 
@@ -194,7 +194,7 @@ Finally, to add the resultant textbox. The only thing out of the ordinary here i
 
 We also added a status bar to the very bottom, and with these changes in place, here is our current UI.
 
-[![complete-ui](https://foxdeploy.files.wordpress.com/2016/09/complete-ui.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/complete-ui.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/complete-ui.png)
 
 ### Compiling all tabs into one DSC Config
 
@@ -204,7 +204,7 @@ When a user makes changes to their DSC tabs, I want the Resultant Set of Configu
 
 This single change means that whenever the textChanged event fires off for any textbox, the event handler will trigger and recompile the `.Text` property of all tabs. Nifty!
 
-[![gif](https://foxdeploy.files.wordpress.com/2016/09/gif.gif?w=636)](https://foxdeploy.files.wordpress.com/2016/09/gif.gif)
+![](https://foxdeploy.files.wordpress.com/2016/09/gif.gif)
 
 ### Wiring up the Clear and Export Buttons
 
@@ -228,7 +228,7 @@ Last of all, I wanted a way to display a prompt to the user that the file was ex
 
 This is what I've been able to complete so far, and it WORKS! If you'd like to, feel free to pitch in and help me out, the project is available here.
 
-[![github-bb449e0ffbacbcb7f9c703db85b1cf0b](https://foxdeploy.files.wordpress.com/2015/12/github-bb449e0ffbacbcb7f9c703db85b1cf0b.png?w=300)](https://github.com/1RedOne/DSC-Designer)
+![](https://github.com/1RedOne/DSC-Designer)
 
 Here are my short-term design goals for the project from here on:
 

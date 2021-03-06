@@ -1,4 +1,15 @@
-﻿if (-not((get-location).Path  -like "*1redone.github.io")){
+﻿Function IsProbablyAnImage($string){
+    write-host "check $string to see if a link or image..."
+    if ( $string -like "*.png*" -or $string -like "*.jpg*" -or $string -like "*.gif*"){
+        write-host "this looks like an image, process"
+        return $true
+    }
+    else{
+        write-host "this looks like a URL, skipping"
+        return $false
+    }
+}
+if (-not((get-location).Path  -like "*1redone.github.io")){
  throw "need to run from blogs directory"
 }
 #to use, place a source year into the posts directory
@@ -65,16 +76,5 @@ coverImage: goes here...
     #pause to check
 }
 
-Function IsProbablyAnImage($string){
-    write-host "check $string to see if a link or image..."
-    if ( $string -like "*.png*" -or $string -like "*.jpg*" -or $string -like "*.gif*"){
-        write-host "this looks like an image, process"
-        return $true
-    }
-    else{
-        write-host "this looks like a URL, skipping"
-        return $false
-    }
-}
 
 #find this string ![remote-tightVNCUI](images/remote-tightvncui.png)

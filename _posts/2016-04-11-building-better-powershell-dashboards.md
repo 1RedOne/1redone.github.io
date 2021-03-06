@@ -1,6 +1,8 @@
 ---
 title: "Building Better PowerShell Dashboards"
 date: "2016-04-11"
+redirect_from : /2016/04/11/building-better-powershell-dashboards
+coverImage: ../assets/images/2016/04/images/phantombreakdowncode.png
 categories: 
   - "scripting"
 tags: 
@@ -9,14 +11,14 @@ tags:
   - "html"
   - "hyper-v"
   - "powershell"
-coverImage: "phantomdashboard.png"
+excerpt: "This post guides you through making cool HTML Dashboard directly with PowerShell"
 ---
 
 First off, YUUGE props to Flynn Bundy for shining lights on the possibility with his [post Making DSC Beautiful](https://flynnbundy.com/2016/04/06/making-dsc-beautiful/) and [@Neeco](https://twitter.com/n33co) of [HTML5Up.com](http://html5up.net/) for these gorgeous HTML5 and CSS templates.
 
 If you check out HTML5up.com, there are a ton of absolutely beautiful templates, for free! (Well, you have to leave a link to the site, unless you pay $20, then you can edit it to your heart's content).
 
-![templates](images/templates.png)
+![templates](../assets/images/2016/04/images/templates.png)
 
 Some of them REALLY lend themselves well to a dashboard system for consumption of data.
 
@@ -34,11 +36,23 @@ Let's take a look at Phantom.   It's got a nice set of fonts and a good layout,
 
 Let's take a look into the code and see how this is represented.
 
-![PhantomBreakdownCode](images/phantombreakdowncode.png)
+![PhantomBreakdownCode](../assets/images/2016/04/images/phantombreakdowncode.png)
 
 A few things jump out at me here.  Looking back at the image of the template itself, I see the first three squares/cards/cubes are red, blue and green.  Going back to the code, I don't see the colors listed there but I DO see a style, a different one for each.   It looks like the color of the tile is controlled by the style property in it's declaration, like this:
 
-\[code lang="html"\] <article class="style1"> <span class="image"> <img src="images/pic01.jpg" alt="" /> </span> <a href="generic.html"> <h2>Magna</h2> <div class="content"> <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p> </div> </a> </article> \[/code\]
+```html
+<article class="style1">
+  <span class="image">
+  <img src="images/pic01.jpg" alt="" />
+  </span>
+  <a href="generic.html">
+    <h2>Magna</h2>
+    <div class="content">
+      <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+    </div>
+  </a>
+</article>
+```
 
 If you see a property like class= or id= within a HTML element, that's a good clue that the Cascading Style Sheet (cascading meaning you can have a base one for the site, then special sub-sheets for specific pages, and overlap them all in a precise, _cascading_ order) CSS will do some special processing on it when it's displayed to the user.
 
@@ -52,7 +66,7 @@ For this and all web design work, I like to use [Visual Studio Code](https://cod
 
 The colors are down near line 2700.  (Hit Control+G to bring up the 'Go to line' box, and type in the number.)
 
-![CSS](images/css.png)
+![CSS](../assets/images/2016/04/images/css.png)
 
 So we can see that style1 is red, style2 is blue, style3 is green, etc.  Now I know what I want to do...
 
@@ -62,13 +76,26 @@ I'm going to make a dashboard to show the status of my Hyper-V VMs.
 
 As I tend to do, first I'll begin with a working PowerShell sample.  I'll run Get-VM to see all of my VMs.  If the status of the VM is running, I'll use the Green (style3) indicator.  If it's Stopped, I'll use the Red (style1), and if it's something else, I'll use style2.  This would include Critical or some other weird state.
 
-\[code lang="powershell" light="true"\] $VMS = get-vm | sort State
-
-ForEach ($VM in $VMS){ $Name=$vm.Name
-
-if ($vm.State -eq 'Off'){ $style = 'style1' } elseif($vm.state -eq 'Running'){ $style = &amp;quot;style3&amp;quot; } else{ #VM is haunted or something else $style = &amp;quot;style2&amp;quot; }
-
-#Now we know what state to pick } \[/code\]
+```powershell
+$VMS = get-vm | sort State 
+ 
+ForEach ($VM in $VMS){
+    $Name=$vm.Name
+ 
+    if ($vm.State -eq 'Off'){
+        $style = 'style1'
+        }
+        elseif($vm.state -eq 'Running'){
+        $style = &amp;quot;style3&amp;quot;
+        }
+        else{
+        #VM is haunted or something else
+        $style = &amp;quot;style2&amp;quot;
+        }
+ 
+    #Now we know what state to pick
+}
+```
 
 I know what I need to set for each square, but don't know how to add my squares to the actual index.html of this page.
 
@@ -78,15 +105,15 @@ I use an unorthodox approach that totally works well.  Once we understand how t
 
 Starting at the top of the document, let's visualize what each chunk of code represents when parsed by a browser...
 
-![](https://foxdeploy.files.wordpress.com/2016/04/breakingcode.png)
+![](../assets/images/2016/04/images/breakingcode.png)
 
 So, that's the top part.  After that, beginning with the `&lt;section class="tiles"&gt;` tag, we have a big repeating structure which gives us all of the squares/tiles.
 
-![](https://foxdeploy.files.wordpress.com/2016/04/breakingcode2.png)
+![](../assets/images/2016/04/images/breakingcode2.png)
 
 Finally, beginning with the closing </section> tag, we have the bottom of the page, with it's contact forms and all of that.
 
-![](https://foxdeploy.files.wordpress.com/2016/04/breakingcode3.png)
+![](../assets/images/2016/04/images/breakingcode3.png)
 
 To do this the easy way, let's just cut it into three files!
 
@@ -98,7 +125,7 @@ Now we need to make our cards
 
 Let's look into the structure of one of these tiles for a moment.
 
-![](https://foxdeploy.files.wordpress.com/2016/04/breakingcode4.png)
+![](../assets/images/2016/04/images/breakingcode4.png)
 
 I can see how this should look.  I've already got my code to say what style to use, so when I'm making a card for each VM, I'll set the style to change the color of the square for On/Off/Other.
 
@@ -108,35 +135,48 @@ If the machine is turned on, I'd also like to see it's CPU usage and RAM pressur
 
 I'll add another if{} scriptblock, and within this one, I'll test to see if the VM was online. If it was, I'm going to recast it's $name property, to add a new line after the name, with RAM and CPU.  I reuse $name, so that no matter if the machine is on or off, I can have the same block of code make a square for me.
 
-![PhantomDashboard](images/phantomdashboard.png)
+![PhantomDashboard](../assets/images/2016/04/../assets/images/2016/04/images/phantomdashboard.png)
 
-\[code lang="powershell"\]#if the VM is on, don't just show it's name, but it's RAM and CPU usage too if ($VM.State -eq 'Running'){
+```powershell
+#if the VM is on, don't just show it's name, but it's RAM and CPU usage too if ($VM.State -eq 'Running'){
 
 $Name="$($VM.Name)
 
 RAM: $($VM.MemoryAssigned /1mb)
 
-CPU: $($VM.CPUUsage)" }\[/code\]
+CPU: $($VM.CPUUsage)" }
+```
 
 I also want to have a little description of the VM, like where it's VHD files live, etc. So I'll set the value of $description like this:
 
-\[code lang="powershell"\]$description= @" Currently $($VM.Status.ToLower()) with a
+```powershell
+$description= @" Currently $($VM.Status.ToLower()) with a
 
 state of $($VM.State)
 
 It was created on $($VM.CreationTime)
 
-Its files are found in $($VM.Path) "@\[/code\]
+Its files are found in $($VM.Path) "@
+```
 
 We've got all the bits we need to make a card, we can now just drop in the HTML for a card in a here-string, and put the variables we've made here in place of the name and descrption.
 
-\[code lang="powershell"\]$tile = @" <article class="$style"> <span class="image"> <img src="images/pic01.jpg" alt="" /> </span> <a href="generic.html"> <h2>$Name</h2> <div class="content">
-
-$($description)</div> </a> </article>
+```powershell
+$tile = @"
+<article class="$style">
+  <span class="image">
+    <img src="images/pic01.jpg" alt="" />
+  </span>
+  <a href="generic.html">
+    <h2>$Name</h2>
+    <div class="content">
+    $($description)
+    </div>
+  </a>
+</article>
 
 "@
-
-\[/code\]
+```
 
 And now, repeat after me...
 
@@ -146,11 +186,13 @@ Because that's totally what we're about to do. We broke the file into three bits
 
 Then, we build our completed file, by adding $head + $main + $tail, and then we dump that into an HTML file. Easy peasey!
 
-\[code lang="powershell"\]$main += $tile #EndOfForEach }
+```powershell
+$main += $tile #EndOfForEach }
 
 $html = $head + $main + $tail
 
-$html > .\\VMReport.html\[/code\]
+$html > .\\VMReport.html
+```
 
 ### Final Touches
 
@@ -160,29 +202,38 @@ Now you'll probably want to open up head.html and replace the text there with yo
 
 To add in the current time the report was generated, add in a string we can replae when importing the file. I added the string %4 to line 4 in head.html, like so:
 
-\[code lang="html" highlight="5"\] <div class="inner"> <header> <h1>FoxDeploy Health Monitoring Dashboard</h1> At a glance monitoring of status of VMs in Hyper-V updated at %4 </header>
-
-\[/code\]
+```powershell
+ <div class="inner"> 
+  <header> 
+    <h1>FoxDeploy Health Monitoring Dashboard</h1> 
+    At a glance monitoring of status of VMs in Hyper-V updated at %4 </header>
+```
 
  this gives me an easy anchor to replace when I import the file, so I can use -replace %4 with the current time, like this:
 
-\[code lang="powershell"\]$head = (Get-Content .\\head.html) -replace '%4',(get-date).DateTime\[/code\]
+```powershell
+$head = (Get-Content .\\head.html) -replace '%4',(get-date).DateTime
+```
 
 ##### Auto refreshing the page
 
 I'd like to make the page automatically reload every 30 seconds, so add this line to your head.html page.
 
-\[code lang="html" light="true"\]<meta http-equiv="refresh" content="20"; URL="path to your report.html">\[/code\]
+```html
+<meta http-equiv="refresh" content="20"; URL="path to your report.html">
+```
 
 ##### Run forever
 
 It would also be nice to have this automatically run until the end of time, so I'll just add an open-ended for loop to the script, and then add a Start-Sleep timeout at the end. This way, the report will generate once every 15 seconds or so, and the browser will auto refresh every 20 seconds, so the two should be mostly in sync.
 
-\[code lang="powershell"\]#Add to first line of the script For(;;){
+```powershell
+#Add to first line of the script For(;;){
 
-#Last line of script Start-Sleep -Seconds 15}\[/code\]
+#Last line of script Start-Sleep -Seconds 15}
+```
 
-And the finished product![PhantomDashboard](images/phantomdashboard.png)
+And the finished product![PhantomDashboard](../assets/images/2016/04/../assets/images/2016/04/images/phantomdashboard.png)
 
 ### Next Steps
 

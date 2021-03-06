@@ -125,37 +125,37 @@ Since we're opening this stuff up to the whole web using Azure, we are going to 
 
 First, connect to a machine which has **Certificate Authority** with an account that has appropriate permissions.  Domain or Enterprise Admin will cut it. Launch the CA Console. Go down to Certificate Templates and choose Manage.
 
-[![00Make a new cert](https://foxdeploy.files.wordpress.com/2016/06/00make-a-new-cert.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/00make-a-new-cert.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/00make-a-new-cert.png)
 
 Scroll down to Web Server and choose duplicate.
 
-[![01 Duplicate WebServer](https://foxdeploy.files.wordpress.com/2016/06/01-duplicate-webserver.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/01-duplicate-webserver.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/01-duplicate-webserver.png)
 
 If you're prompted for **Compatibility**, always choose the oldest one.  Go with **Server 2003** if it doesn't default to that already.
 
-On the **General** tab, it will default to the name of 'Duplicate of WebServer' which is garbage, so change the **Template Display Name**  to something like '**SCCM Cloud Certificate**'.[![02 new cert](https://foxdeploy.files.wordpress.com/2016/06/02-new-cert.png?w=414)](https://foxdeploy.files.wordpress.com/2016/06/02-new-cert.png)
+On the **General** tab, it will default to the name of 'Duplicate of WebServer' which is garbage, so change the **Template Display Name**  to something like '**SCCM Cloud Certificate**'.![](https://foxdeploy.files.wordpress.com/2016/06/02-new-cert.png)
 
 Next on the Request Handling tab, **make sure to check the box for 'Allow private key to be exported'** .  If you miss this one, you have to start over.
 
-[![03 cert](https://foxdeploy.files.wordpress.com/2016/06/03-cert.png?w=399)](https://foxdeploy.files.wordpress.com/2016/06/03-cert.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/03-cert.png)
 
 Next, on the **Security Tab**, **remove** the check for **Enroll** for **Enterprise Admins**.  You can probably skip this step, but I'd do it anyway.
 
-[![04 remove ent admins enroll perm cert](https://foxdeploy.files.wordpress.com/2016/06/04-remove-ent-admins-enroll-perm-cert.png?w=404)](https://foxdeploy.files.wordpress.com/2016/06/04-remove-ent-admins-enroll-perm-cert.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/04-remove-ent-admins-enroll-perm-cert.png)
 
 Next, click **Add** and specify a security group which contains your SCCM servers, and make sure they have at a minimum the **Read** and **Enroll** Permission.
 
-[![05 add new group](https://foxdeploy.files.wordpress.com/2016/06/05-add-new-group.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/05-add-new-group.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/05-add-new-group.png)
 
 That's all the changes we have to make so hit **OK** and then close the **Certificate Templates** window.
 
 Back in the Certificate Authority console, click **Certificate Templates \\ New \\ Certificate Template to Issue**.
 
-[![06 issue this cert](https://foxdeploy.files.wordpress.com/2016/06/06-issue-this-cert.png?w=621)](https://foxdeploy.files.wordpress.com/2016/06/06-issue-this-cert.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/06-issue-this-cert.png)
 
 Choose the cert template we just created, **SCCM Cloud Certificate**.  (or whatever you called it)
 
-[![07 enableit](images/07-enableit.png)](https://foxdeploy.files.wordpress.com/2016/06/07-enableit.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/07-enableit.png)
 
 #### Request the cert from the CAS /primary
 
@@ -163,23 +163,23 @@ Now we've created a whole new type of Certificate and allowed our SCCM Servers t
 
 **On the SCCM Server to host the Cloud Proxy Connector Role**, launch the **MMC** and add the **Certificates Snap-in**, for the **Computer**.
 
-[![08 request cert](https://foxdeploy.files.wordpress.com/2016/06/08-request-cert.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/08-request-cert.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/08-request-cert.png)
 
 Now go to **Personal \\ Certificates \\ All Tasks \\ Request New Certificate**
 
-[![09 request cert](https://foxdeploy.files.wordpress.com/2016/06/09-request-cert.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/09-request-cert.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/09-request-cert.png)
 
 In this next window, you should see a fancy new cert available with the name we chose earlier, but it will say _More information is required to enorll for this certificate. _ Click that text.
 
-[![10 almost there](https://foxdeploy.files.wordpress.com/2016/06/10-almost-there.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/10-almost-there.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/10-almost-there.png)
 
 In the **Certificate Properties** wizard which appears, on the **General tab,** enter the name of our **SCCM Cloud Service.** Mine was FoxDeploySCCMProxy.foxdeploy.com, but yours is whatever you came up with in Azure.
 
-[![correct cert name req](images/correct-cert-name-req.png)](https://foxdeploy.files.wordpress.com/2016/06/correct-cert-name-req.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/correct-cert-name-req.png)
 
-Once you've put your name in, hit **OK** and then **Enroll.**[![12 yay](https://foxdeploy.files.wordpress.com/2016/06/12-yay.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/12-yay.png)
+Once you've put your name in, hit **OK** and then **Enroll.**![](https://foxdeploy.files.wordpress.com/2016/06/12-yay.png)
 
-And now we should see our brand new certificate in the console here, issued to our cloud service.  [![confirm our cert](https://foxdeploy.files.wordpress.com/2016/06/confirm-our-cert.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/confirm-our-cert.png)
+And now we should see our brand new certificate in the console here, issued to our cloud service.  ![](https://foxdeploy.files.wordpress.com/2016/06/confirm-our-cert.png)
 
 #### Export the certificate twice, once as a pfx and once as a .cer
 
@@ -187,15 +187,15 @@ One of the core tenants of PKI is validating who you're talking to and only trus
 
 On the SCCM Server, select the certificate for our Cloud Proxy Service and choose **All Tasks \\ Export.** 
 
-[![13 export the cert](https://foxdeploy.files.wordpress.com/2016/06/13-export-the-cert.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/13-export-the-cert.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/13-export-the-cert.png)
 
 On the first run through, choose **Yes, Export the private key.**
 
-[![14 yep](https://foxdeploy.files.wordpress.com/2016/06/14-yep.png?w=529)](https://foxdeploy.files.wordpress.com/2016/06/14-yep.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/14-yep.png)
 
 When you export the certificate with the private key, you must secure it with a password so pick something good. Don't forget this as you'll be prompted for it in about five minutes!
 
-[![15 best password](https://foxdeploy.files.wordpress.com/2016/06/15-best-password.png?w=533)](https://foxdeploy.files.wordpress.com/2016/06/15-best-password.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/15-best-password.png)
 
 Put the certificate somewhere safe and then run through the wizard again.  This time choose '**No, do not export the private key'** and choose the .cer file format (the default works fine).
 
@@ -213,15 +213,15 @@ If you don't want to constantly enter credentials for Azure, you can use managem
 
 In the next page, browse out to the .cer file you created and plop her in there.  Then hit **OK** and you're done.
 
-[![upload](https://foxdeploy.files.wordpress.com/2016/06/upload.png?w=419)](https://foxdeploy.files.wordpress.com/2016/06/upload.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/upload.png)
 
 #### Setup the proxy service in SCCM
 
 It only took 1700 words before we are ready to open the SCCM Console.  We're here!  Fire up the SCCM console and oh yeah, be sure you're running 1606 tech preview.  Browse over to **Administration \\ Cloud Services \\  Cloud Proxy Service** and choose '**Create Cloud Proxy Service**.'
 
-[![17 admin cloud services cloud prox serivce](images/17-admin-cloud-services-cloud-prox-serivce.png)](https://foxdeploy.files.wordpress.com/2016/06/17-admin-cloud-services-cloud-prox-serivce.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/17-admin-cloud-services-cloud-prox-serivce.png)
 
-On the next page, paste in your Azure Subscription ID, and browse to the **.pfx** certificate we exported.[![18 Setting up cloud proxy](https://foxdeploy.files.wordpress.com/2016/06/18-setting-up-cloud-proxy.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/18-setting-up-cloud-proxy.png)
+On the next page, paste in your Azure Subscription ID, and browse to the **.pfx** certificate we exported.![](https://foxdeploy.files.wordpress.com/2016/06/18-setting-up-cloud-proxy.png)
 
 Now, the most important page:
 
@@ -233,19 +233,19 @@ Now, the most important page:
 - Root Certificate File - this should probably say management certificate instead, it's the .cer file.
 - Verify Client Certificate Revocation - you would know if you needed to do this based on your organizational standards
 
-[![1 actually signing up for the cloud service!](https://foxdeploy.files.wordpress.com/2016/06/1-actually-signing-up-for-the-cloud-service.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/1-actually-signing-up-for-the-cloud-service.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/1-actually-signing-up-for-the-cloud-service.png)
 
 Alright you made it! Now verify everything looks cool in the summary page and hit **Next.**
 
-[![2 summary](https://foxdeploy.files.wordpress.com/2016/06/2-summary.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/2-summary.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/2-summary.png)
 
 And we're off.  You can monitor the install status by refreshing the SCCM  Console under **Administration \\ Cloud Services \\ Cloud Proxy Service**, or if you're a real man, open up CloudMgr.logs.  You should see nothing for a bit and then 'Starting to Deploy Service'
 
-[![3 seven seconds in heaven](images/3-seven-seconds-in-heaven.png)](https://foxdeploy.files.wordpress.com/2016/06/3-seven-seconds-in-heaven.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/3-seven-seconds-in-heaven.png)
 
 After a few minutes you will see 'Deployment instance status for service <ServiceName> is ReadyRole.'
 
-You can also monitor this installation within Azure by clicking to **Cloud Services** and watching your new Cloud Proxy Service appear here.  [![6 building instances](https://foxdeploy.files.wordpress.com/2016/06/6-building-instances.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/6-building-instances.png)
+You can also monitor this installation within Azure by clicking to **Cloud Services** and watching your new Cloud Proxy Service appear here.  ![](https://foxdeploy.files.wordpress.com/2016/06/6-building-instances.png)
 
  
 
@@ -257,31 +257,31 @@ With this completed, we now have our Proxy SCCM roles running in Azure.  The fi
 
 Back in the SCCM Console, go to **Administration \\ Sites and Roles** and choose to add a role to whichever SCCM Server you want to talk to clients on the internet via Azure.
 
-[![3.1 install the cloud proxy connector point role](https://foxdeploy.files.wordpress.com/2016/06/3-1-install-the-cloud-proxy-connector-point-role.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/3-1-install-the-cloud-proxy-connector-point-role.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/3-1-install-the-cloud-proxy-connector-point-role.png)
 
 In the next page, choose your Cloud Proxy Service from the drop down box. You can ignore the text about Manually installing the client cert, as we've already done so.
 
-[![3.2 install the cloud proxy connector point role 2](https://foxdeploy.files.wordpress.com/2016/06/3-2-install-the-cloud-proxy-connector-point-role-2.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/3-2-install-the-cloud-proxy-connector-point-role-2.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/3-2-install-the-cloud-proxy-connector-point-role-2.png)
 
 Now, open up SMS\_CLOUD\_PROXYCONNECTOR.log, and chances are you'll see this:
 
-[![4 add a dns alias](https://foxdeploy.files.wordpress.com/2016/06/4-add-a-dns-alias.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/4-add-a-dns-alias.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/4-add-a-dns-alias.png)
 
 `Text:ERROR: Failed to build Http connection f201bcf3-6fee-48d2-af38-0e7311588f23 with server FOXDEPLOYSCCMPROXY.FOXDEPLOY.COM:10125. Exception: System.Net.WebException: The remote name could not be resolved: 'foxdeploysccmproxy.foxdeploy.com'`
 
 If you see this error, this means that you need to add a CNAME record in DNS.  If you're using Windows DNS, the record should be setup like the following:
 
-[![DNS Record](images/dns-record.png)](https://foxdeploy.files.wordpress.com/2016/06/dns-record.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/dns-record.png)
 
 Once this is done, do an ipconfig /flushdns on your SCCM Server and you should see the log files clear up.
 
-[![5 service gets created](https://foxdeploy.files.wordpress.com/2016/06/5-service-gets-created.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/5-service-gets-created.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/5-service-gets-created.png)
 
 Now that SCCM can talk to Azure, we're in the money.  All that remains is to configure the roles we want to use the Cloud Proxy Service.
 
 **Browse to Administration \\ Site Configuration \\ Servers and Site Systems** and choose the server with the Cloud Proxy Role.  Go to **Management Point \\ General** and make sure that **HTTPS** and **Allow Configuration Manager Cloud Proxy Traffic** are selected.
 
-[![6.2 configure MP for cloud proxy](https://foxdeploy.files.wordpress.com/2016/06/6-2-configure-mp-for-cloud-proxy.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/6-2-configure-mp-for-cloud-proxy.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/6-2-configure-mp-for-cloud-proxy.png)
 
 Once you do this, it will trigger a reinstall of the Management Point if needed, to configure HTTPs.  Be sure to monitor the install from MPSetup and MPMsi.log for a healthy install.
 
@@ -289,7 +289,7 @@ Once you do this, it will trigger a reinstall of the Management Point if needed,
 
 And we're finished!  The final step is to refresh policy on some SCCM Clients and take them outside the boundaries of the network.  You'll know that the client is talking to Azure when you by monitoring ClientLocation.log and you should see the new Cloud Proxy Management Point appear as an Internet Management Point.
 
-[![Client get's new MP](https://foxdeploy.files.wordpress.com/2016/06/client-gets-new-mp.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/client-gets-new-mp.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/client-gets-new-mp.png)
 
 Additionally, from the Configuration Manager Control Panel, you'll see values filled out now under the Network tab for Internet Based Management Points.
 

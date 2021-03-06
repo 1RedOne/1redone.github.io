@@ -71,7 +71,7 @@ That being said, this post brought in my single highest day of traffic EVER and 
 
 By far, no contest, my [Creating PowerShell GUIs in Minutes using Visual Studio – A New Hope](https://foxdeploy.com/2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope/) post is my single most popular post ever written, representing more than 140K views since writing it back in April, 2015.
 
-[![](images/completed-best-post.png)](https://foxdeploy.com/2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope/)
+![](https://foxdeploy.com/2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope/)
 
 Since publishing, it has been viewed an average of 200 times a day.  Wow!
 
@@ -121,7 +121,7 @@ So, here's what we have to look forward to in the coming months at FoxDeploy!
 
 Commenting on WordPress is kind of hard to keep track of, particularly with the lack of threading and kind of iffy code-highlighting.  To solve this....
 
-[![](https://foxdeploy.files.wordpress.com/2017/07/reddit2fr.png?w=636)](https://www.reddit.com/r/FoxDeploy/)
+![](https://www.reddit.com/r/FoxDeploy/)
 
 I've opened [Reddit.com/R/FoxDeploy!](https://www.reddit.com/r/FoxDeploy/)  Yep!  It's our very own subreddit!
 

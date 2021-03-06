@@ -60,7 +60,7 @@ For instance, users will copy and paste from e-mails in Outlook, or from Spreads
 
 **That's why we need Confirmation.** If you provide UI without confirmation, users will hate you and e-mail (or worse, they might call you!!) for help, so be sure to do it the right way and think of their needs from the get go, or you will enjoy getting to hear from them a lot.
 
-Don't make UI that will make your users hate you, like this one [![depicts a Microsoft Windows 95 Era application with Volume Control as the title.  Instead of a volume dial as normally seen, this app in the screenshot has 100 different radio buttons to click on to change volume.](../assets/images/2020/05/images/twimage.png)](
+Don't make UI that will make your users hate you, like this one ![](
 
 https://twitter.com/FoxDeploy/status/1256953579186905090
 
@@ -71,7 +71,7 @@ With all of these components in mind, time to get started.
 
 We're going to open up Visual Studio, pick a WPF app and then do some drag and dropping. If you are getting a bit scared of how to do it, or what you should do to install it, check out some of the previous posts in my GUI Series, here!
 
-[![](../assets/images/2020/05/images/gui.png)](http://foxdeploy.com/series/learning-gui-toolmaking-series/)
+![](http://foxdeploy.com/series/learning-gui-toolmaking-series/)
 
 You should end up with something like this:
 {% gist 7ca9e036f29a97bbfafae2cbd485cc9b %}

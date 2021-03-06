@@ -18,29 +18,29 @@ We're gonna make a monitor, so launch SCOM, and go to Authoring->Management Pack
 
 Right click Monitors and choose add new Unit Monitor.
 
-[![00](images/00.png)](https://foxdeploy.files.wordpress.com/2016/02/00.png)
+![](https://foxdeploy.files.wordpress.com/2016/02/00.png)
 
 Pick Scripting - Generic, Timed Script Two State Monitor and find a Management Pack to put this bad boy in.
 
-[![01](https://foxdeploy.files.wordpress.com/2016/02/01.png?w=440)](https://foxdeploy.files.wordpress.com/2016/02/01.png)
+![](https://foxdeploy.files.wordpress.com/2016/02/01.png)
 
 Give it a name and a description, and then target it to Windows Server Operating System.
 
-[![02](https://foxdeploy.files.wordpress.com/2016/02/02.png?w=636)](https://foxdeploy.files.wordpress.com/2016/02/02.png) FOR GOD's SAKE DON'T CLICK **MONITOR IS ENABLED**.  If you do this, every instance of Windows Server OS in your company is going to start running this script.  You probably don't want that, and instead only want one or two machines to run the script.
+![](https://foxdeploy.files.wordpress.com/2016/02/02.png) FOR GOD's SAKE DON'T CLICK **MONITOR IS ENABLED**.  If you do this, every instance of Windows Server OS in your company is going to start running this script.  You probably don't want that, and instead only want one or two machines to run the script.
 
-[![03](https://foxdeploy.files.wordpress.com/2016/02/03.png?w=561)](https://foxdeploy.files.wordpress.com/2016/02/03.png)
+![](https://foxdeploy.files.wordpress.com/2016/02/03.png)
 
 Instead, we're going to create this in a disabled state, then override it to on in order to pick a single Server OS to be our watcher.  This means we'll pick a PC, and it will run this script for us in whatever frequency we specify later.
 
 Since SCOM is ancient, it still defaults to having an example VBScript, pretty silly, actually.
 
-[![04](https://foxdeploy.files.wordpress.com/2016/02/04.png?w=636)](https://foxdeploy.files.wordpress.com/2016/02/04.png) You can put in your own name up top, I'll call this "MonitorForTextFileChanges.Ps1'
+![](https://foxdeploy.files.wordpress.com/2016/02/04.png) You can put in your own name up top, I'll call this "MonitorForTextFileChanges.Ps1'
 
 First, we can provide a param to the script to execute. This is a good idea rather than dumping it into the body of the script, because we can create overrides to later re-use this and target other systems, watching other log files for changes!
 
 Here's how I'm providing the path to my file. Click Parameters at the bottom:
 
-[![05](https://foxdeploy.files.wordpress.com/2016/02/05.png?w=352)](https://foxdeploy.files.wordpress.com/2016/02/05.png)
+![](https://foxdeploy.files.wordpress.com/2016/02/05.png)
 
 \[code lang="powershell" light="true"\]$FileNetLog = \\\\someserver\\Somefile.txt\[/code\]
 
@@ -62,15 +62,15 @@ Finally, let's tell SCOM how to interpret the values this will be throwing. Proc
 
 In this window, we need to tell SCOM which value will be an unhealthy state for this monitor. The syntax is a bit odd. Click Parameter Name and put in `Property[@Name='State']`, then set the Operator to Equals, and finally for the value, put in `ERROR`, as seen below.
 
-[![06](images/06.png)](https://foxdeploy.files.wordpress.com/2016/02/06.png)
+![](https://foxdeploy.files.wordpress.com/2016/02/06.png)
 
 Next, do the same for Healthy Expression, but set the value to be `OK`, as seen here.
 
-[![07](https://foxdeploy.files.wordpress.com/2016/02/07.png?w=636)](https://foxdeploy.files.wordpress.com/2016/02/07.png)
+![](https://foxdeploy.files.wordpress.com/2016/02/07.png)
 
 Finally, verify that the Health Icons make sense, and then proceed to Alerts if you want to throw alerts when this monitor fails. You probably do, even though we disabled the monitor earlier (we DO want to configure alerts so that when we over-ride this to 'ON' for certain servers, we'll get alerts and not have to come revisit this process)
 
-[![08](https://foxdeploy.files.wordpress.com/2016/02/08.png?w=636)](https://foxdeploy.files.wordpress.com/2016/02/08.png)
+![](https://foxdeploy.files.wordpress.com/2016/02/08.png)
 
 And that's it! The final step is to simply find your monitor in the list, and then override it to enabled for a single instance of the Windows Server Operating System class, and just pick the server you'd like to monitor for changes.
 

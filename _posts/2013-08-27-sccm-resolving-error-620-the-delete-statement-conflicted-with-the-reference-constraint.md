@@ -5,7 +5,6 @@ redirect_from : /2013/08/27/sccm-resolving-error-620-the-delete-statement-confli
 excerpt: "Ah yes, who doesn't love these pretty red icons.  Like little Christmas ornaments.  Anyway, if you're like me, you want an all-green and all-happy SCCM Summary page, and not just because you have a scheduled task or Status Filter to reset counts every thirty minutes.  (If you're doing this, consider yourself admonished!).
 
 So, why does this happen and what does 'The DELETE statement conflicted with the REFERENCE constraint' mean?  We're not DBAs you know!"
-coverImage: goes here...
 tags: 
   - "sccm"
   - "sql"

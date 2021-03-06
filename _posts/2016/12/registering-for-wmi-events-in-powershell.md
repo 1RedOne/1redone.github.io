@@ -15,7 +15,7 @@ It was honestly too cool of a StackOverflow answer NOT to share, so here it goes
 
 If you want your code to trigger only when the System Power State changes, [as described here](https://msdn.microsoft.com/en-us/library/windows/desktop/aa373223(v=vs.85).aspx), use this code.
 
-\[code language="powershell"\]
+```powershell
 
 Register-WMIEvent -query "Select \* From Win32\_PowerManagementEvent" \` -sourceIdentifier "Power" \` -action { #YourCodeHere } \[/code\]
 
@@ -27,7 +27,7 @@ Fortunately we can use the WMI Class Win32\_BatteryStatus to detect if we're cha
 
 #### Locking the workstation when the system is unplugged
 
-\[code language="powershell"\]
+```powershell
 
 Register-WMIEvent -query "Select \* From Win32\_PowerManagementEvent" \` -sourceIdentifier "Power" \` -action { if (\[BOOL\](Get-WmiObject -Class BatteryStatus -Namespace root\\wmi).PowerOnLine ){ #Device is plugged in now, do this action write-host "Power on!" } else{ #Device is NOT plugged in now, do this action write-host "Now on battery, locking..." \[NativeMethods\]::LockWorkStation() } \[/code\]
 
@@ -39,7 +39,7 @@ https://twitter.com/FoxDeploy/status/809500159830818816
 
 It can also be useful to have your code wait for something to happen with devices, such as running an action when a device is added or removed. To do this, use this code.
 
-\[code language="powershell"\]
+```powershell
 
 #Register for power state change #Where TargetInstance ISA 'Win32\_Process'" Register-WMIEvent -query "Select \* From Win32\_DeviceChangeEvent where EventType = '2'" \` -sourceIdentifier "Power" \` -action {#Do Something when a device is added Write-host "Device added at $(Get-date)" } \[/code\]
 

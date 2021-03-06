@@ -83,7 +83,7 @@ The crowd packed in! But for my first session I had no mic so I had to yell! Ver
 
 For my second session of the day, I had a mic! Life was much better.
 
-[![](images/wp-image-1082346794jpg.jpg)](http://foxdeploy.files.wordpress.com/2016/10/wp-image-1082346794jpg.jpg)
+![](http://foxdeploy.files.wordpress.com/2016/10/wp-image-1082346794jpg.jpg)
 
 #### On being recorded
 
@@ -95,7 +95,7 @@ The morning of, I met the awesome [Jeremy Chapman](https://twitter.com/deployjer
 
 NOPE.
 
-[![](images/wp-image-821368427jpg.jpg)](http://foxdeploy.files.wordpress.com/2016/10/wp-image-821368427jpg.jpg)
+![](http://foxdeploy.files.wordpress.com/2016/10/wp-image-821368427jpg.jpg)
 
 All in all, I feel good about how my session went.  I think I'd even like to speak at more conferences!  Once the nerves died down, I found speaking to be very, very exciting and rewarding.  I know that at the end of the day, I did my absolute best to make this the highest quality twenty minute introduction to PowerShell that I could make it.
 

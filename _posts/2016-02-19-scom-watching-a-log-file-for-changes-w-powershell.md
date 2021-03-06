@@ -30,21 +30,21 @@ Pick Scripting - Generic, Timed Script Two State Monitor and find a Management P
 
 Give it a name and a description, and then target it to Windows Server Operating System.
 
-[![02](https://foxdeploy.files.wordpress.com/2016/02/02.png?w=636)](../assets/images/2016/02/images02.png) FOR GOD's SAKE DON'T CLICK **MONITOR IS ENABLED**.  If you do this, every instance of Windows Server OS in your company is going to start running this script.  You probably don't want that, and instead only want one or two machines to run the script.
+![](../assets/images/2016/02/images02.png) FOR GOD's SAKE DON'T CLICK **MONITOR IS ENABLED**.  If you do this, every instance of Windows Server OS in your company is going to start running this script.  You probably don't want that, and instead only want one or two machines to run the script.
 
-[![03](https://foxdeploy.files.wordpress.com/2016/02/03.png?w=561)](../assets/images/2016/02/images03.png)
+![](../assets/images/2016/02/images03.png)
 
 Instead, we're going to create this in a disabled state, then override it to on in order to pick a single Server OS to be our watcher.  This means we'll pick a PC, and it will run this script for us in whatever frequency we specify later.
 
 Since SCOM is ancient, it still defaults to having an example VBScript, pretty silly, actually.
 
-[![04](https://foxdeploy.files.wordpress.com/2016/02/04.png?w=636)](../assets/images/2016/02/images04.png) You can put in your own name up top, I'll call this "MonitorForTextFileChanges.Ps1'
+![](../assets/images/2016/02/images04.png) You can put in your own name up top, I'll call this "MonitorForTextFileChanges.Ps1'
 
 First, we can provide a param to the script to execute. This is a good idea rather than dumping it into the body of the script, because we can create overrides to later re-use this and target other systems, watching other log files for changes!
 
 Here's how I'm providing the path to my file. Click Parameters at the bottom:
 
-[![05](https://foxdeploy.files.wordpress.com/2016/02/05.png?w=352)](../assets/images/2016/02/images/05.png)
+![](../assets/images/2016/02/images/05.png)
 
 ```powershell
 $FileNetLog = \\\\someserver\\Somefile.txt

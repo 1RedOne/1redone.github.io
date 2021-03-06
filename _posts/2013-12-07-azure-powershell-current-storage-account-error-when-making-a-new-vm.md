@@ -13,7 +13,7 @@ I was trying to make a new Linux VM using the Azure PowerShell commandlet New-Az
 > New-AzureQuickVM : CurrentStorageAccountName is not accessible. Ensure the current storage account is accessible and in the same location or affinity group as your cloud service.
 <!--more-->
 
-Now, when you first create a VM in the Azure Web Console, you'll be prompted to create a Storage Account if you don't already have one.  Assuming you've done so, the first thing you should check is to see if the Storage Account is defined within your Azure Subscription.  From Powershell, run the \[code language="powershell" light="true"\]Get-AzureSubscription\[/code\] Command.
+Now, when you first create a VM in the Azure Web Console, you'll be prompted to create a Storage Account if you don't already have one.  Assuming you've done so, the first thing you should check is to see if the Storage Account is defined within your Azure Subscription.  From Powershell, run the ```powershellGet-AzureSubscription\[/code\] Command.
 
 ![NoStorageAccount01](images/nostorageaccount01.png)](../assets/images/2013/12/images/nostorageaccount01.png) Note that there is no CurrentStorageAccountSpecified
 

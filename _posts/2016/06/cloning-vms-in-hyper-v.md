@@ -25,7 +25,7 @@ To begin, create a new VM and name its VHD something like master or template. �
 
 So make sure you give it a name that will remind you to not delete this guy!
 
-[![master](images/master.png)](https://foxdeploy.files.wordpress.com/2016/06/master.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/master.png)
 
 Install Windows and whatever common apps you'll want your source machine to use, and when you've got it to the point that you're ready to copy it out...
 
@@ -35,7 +35,7 @@ In our scenario here, we've built a source image and want to put it on other VMs
 
 In the Windows world, particularly if machines are in an Active Directory Domain, you need to ensure that each machine has a globally unique identifier called a System Identifier, or SID.  This SID is created by Windows automatically during the OOBE process.  If you try joining two machines with the same SID to an AD Domain, you'll get an error and it won't be allowed, as a potential security risk.
 
-[![duplicateSID](images/duplicatesid.png)](https://foxdeploy.files.wordpress.com/2016/06/duplicatesid.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/duplicatesid.png)
 
 To avoid this, and because it's a best practice, we're gonna sysprep this badboy.
 
@@ -45,7 +45,7 @@ Also, I should note that there's no going back.  Once we sysprep this machine, 
 
 Once all of the software is installed, launch an administrative command prompt and browse to C:\\windows\\system32\\sysprep.exe, and then select 'Enter System Out of Box Experience' and Generalize.  Under Shutdown Options, choose 'Shutdown'
 
-[![sysprep](images/sysprep.png)](https://foxdeploy.files.wordpress.com/2016/06/sysprep.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/sysprep.png)
 
 When this completes, your VM will shutdown.
 
@@ -79,6 +79,6 @@ If you wanted to create five VMs, you'd just run this:
 
 New-vm -Name "ChildVM0$number" -MemoryStartupBytes 2048MB -VHDPath $newVHDPath } \[/code\]
 
-[![FiveVmsinFiveSecs](images/fivevmsinfivesecs.gif)](https://foxdeploy.files.wordpress.com/2016/06/fivevmsinfivesecs.gif)
+![](https://foxdeploy.files.wordpress.com/2016/06/fivevmsinfivesecs.gif)
 
 Let me know if this was helpful to you, and feel free to hit me up with any questions :)

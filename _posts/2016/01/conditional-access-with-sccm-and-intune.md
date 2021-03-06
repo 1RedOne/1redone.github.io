@@ -19,7 +19,7 @@ However, 10% of the devices don't have InTune, but still have manually configure
 
 The company wants to lock down mobile e-mail to only those with a healthy device, one with security policies being enforced. If you've got SCCM w/ InTune installed, you just go to the Microsoft Intune portal at (manage.microsoft.com) to enable Conditional Access.
 
-[![Enabling](https://foxdeploy.files.wordpress.com/2016/01/enabling.png?w=636)](https://foxdeploy.files.wordpress.com/2016/01/enabling.png)
+![](https://foxdeploy.files.wordpress.com/2016/01/enabling.png)
 
 We enabled the connector, and then applied a security policy to a custom group with our accounts in it.
 

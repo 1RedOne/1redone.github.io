@@ -12,7 +12,7 @@ tags:
 coverImage: "winrm-https.png"
 ---
 
-[![winrm-https](https://foxdeploy.files.wordpress.com/2016/09/winrm-https.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/winrm-https.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/winrm-https.png)
 
 ### Follow-up!
 
@@ -80,17 +80,17 @@ Finally,I took a look at my candidate machine (named SCOM.FoxDeploy.com), and ra
 
 I took a quick peek to see if there was a Listener already created for HTTPs, and there wasn't.
 
-[![04-validate-no-listener](images/04-validate-no-listener.png)](https://foxdeploy.files.wordpress.com/2016/09/04-validate-no-listener.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/04-validate-no-listener.png)
 
-So I ran `winrm quickconfig -transport:https` and then checked again.[![05-winrm-https-exists](https://foxdeploy.files.wordpress.com/2016/09/05-winrm-https-exists.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/05-winrm-https-exists.png)
+So I ran `winrm quickconfig -transport:https` and then checked again.![](https://foxdeploy.files.wordpress.com/2016/09/05-winrm-https-exists.png)
 
-To validate which certificate is being used, you can compare the output of `dir wsman:\localhost\Services'` to what you see under `MMC->Certificates->Local Computer->Personal`, as seen below.[![06-validate-cert](https://foxdeploy.files.wordpress.com/2016/09/06-validate-cert.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/06-validate-cert.png)
+To validate which certificate is being used, you can compare the output of `dir wsman:\localhost\Services'` to what you see under `MMC->Certificates->Local Computer->Personal`, as seen below.![](https://foxdeploy.files.wordpress.com/2016/09/06-validate-cert.png)
 
 And for the magic, if both computers trust the same CA, all you have to do is run the following to have a fully encrypted SSL tunnel between the two PCs.
 
 `Enter-PSSession -ComputerName RemotePC.FQDN.COM -UseSSL`
 
-[![07-connecting-over-ssl](https://foxdeploy.files.wordpress.com/2016/09/07-connecting-over-ssl.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/07-connecting-over-ssl.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/07-connecting-over-ssl.png)
 
 Now, I had merely to play the waiting game...only three hours to go!
 
@@ -98,7 +98,7 @@ Now, I had merely to play the waiting game...only three hours to go!
 
 I walked away from the PC at this point and came back after dinner, diapers and begging my children to sleep.
 
-[![threehourslater](https://foxdeploy.files.wordpress.com/2016/09/threehourslater.jpg?w=636)](https://foxdeploy.files.wordpress.com/2016/09/threehourslater.jpg)
+![](https://foxdeploy.files.wordpress.com/2016/09/threehourslater.jpg)
 
 I left the PSSesson open, and was surprised to see the following message appear when I tried to run a command
 
@@ -112,7 +112,7 @@ Once the cert expires, you can't run ANY commands on the remote computer, until 
 
 All attempts at future reconnections also fail with the same error.
 
-[![cert-expired2](https://foxdeploy.files.wordpress.com/2016/09/cert-expired2.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/cert-expired2.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/cert-expired2.png)
 
 In short summary:
 

@@ -1,13 +1,15 @@
 ---
 title: "Planning for SCCM Current Branch"
 date: "2016-05-10"
+redirect_from : /2016/05/10/understanding-sccms-new-release-cadence.
 categories: 
   - "consulting"
   - "sccm"
 tags: 
   - "planning"
   - "sccm-current-branch"
-coverImage: "sccm_lifecycle_foxdeploy.png"
+coverImage: "../assets/images/2015/05/images/sccm_lifecycle_foxdeploy.png"
+excerpt: "This is mostly an info dump of what we know and what we suspect about how Current Branch will play out for SCCM.  This plan is currently in place for a number of my customers, including some big enterprise customers. It's how I'm doing it, but I will admit that I don't have any secret info here (nothing NDA breaking :0 here)."
 ---
 
 I write about PowerShell and automation tools a LOT.  However, I pay my bills as a Consultant by designing, installing and supporting System Center products; most often SCCM (ConfigMgr).
@@ -50,13 +52,13 @@ Here's the super cool thing, with Current Branch, updating **SCCM is really, _re
 
 Nothing extraneous to download, all updating happens right in the SCCM console via this new node 'Servicing and Updating'
 
-![Just right click and hit install to apply the new Current Branch build](https://foxdeploy.files.wordpress.com/2016/05/sccmservicing.png?w=636)](https://foxdeploy.files.wordpress.com/2016/05/sccmservicing.png) Just right click and hit install to apply the new Current Branch build\[/caption\]
+![Just right click and hit install to apply the new Current Branch build](https://foxdeploy.files.wordpress.com/2016/05/sccmservicing.png?w=636)](../assets/images/2016/05/https://foxdeploy.files.wordpress.com/2016/05/sccmservicing.png) Just right click and hit install to apply the new Current Branch build
 
 All you do is enable a new role in your environment and then refresh this view and you should see the update bits start trickling down (more on that process here).
 
 It used to be a big pain to upgrade SCCM, with needing to hit every primary, and then all the clients and run SQL actions as well.  Things are much easier now.  We already got the awesome feature of SCCM Client Auto Upgrade from 2012 SP2, while 1602 added a brand new feature of SCCM Console Auto Upgrade as well.  Super simple!  No more tracking down Admin Console users to push Console upgrades anymore.  It now happens automatically when you launch the console after an upgrade.
 
-![](https://foxdeploy.files.wordpress.com/2016/05/image1631.png)
+![](../assets/images/2016/05/https://foxdeploy.files.wordpress.com/2016/05/image1631.png)
 
 ### What can I expect from support?
 
@@ -72,7 +74,7 @@ If you really want to, you could install 1602 and sit on your butt for five year
 
 For Service Packs, this is nothing new.  Support for the initial release falls off a year after a Service Pack ships.  If SP2 comes out, SP1 is dropped after a year as well. Now we're doing the same thing with all releases, which honestly is how it should have been all along.
 
-![SCCM Lifecycle](images/sccm-lifecycle.png)
+![SCCM Lifecycle](../assets/images/2016/05/images/sccm-lifecycle.png)
 
 Beyond this, should we see regular quarterly releases of the Current Branch, this will only reinforce the notion of 'stay current or support yourself'.  This is actually a pretty common refrain from Redmond these days (Windows 10 Upgrade Prompts anybody?)
 
@@ -82,7 +84,7 @@ We have confirmation on this front, SCCM 2012 was released as a milestone produc
 
 To help us keep all of these dates in mind, I made this graphic.
 
-![SCCM_Lifecycle_FoxDeploy](images/sccm_lifecycle_foxdeploy.png)
+![SCCM_Lifecycle_FoxDeploy](../assets/images/2016/05/images/sccm_lifecycle_foxdeploy.png)
 
 ## Key takeaways
 

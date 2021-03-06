@@ -1,11 +1,17 @@
 ---
 title: "Coding for speed"
 date: "2016-03-23"
-categories: 
+redirect_from : /2016/03/23/coding-for-speed
+coverImage: ../assets/images/2016/03/images/coding-for-speed.png
+tags: 
   - "scripting"
+  - "contests"
+excerpt: "In this post, we review some of the things we learned about coding for speed in the [Hadoop PowerShell challenge](http://foxdeploy.com/2016/03/01/powershell-challenge-beating-hadoop-with-posh/). The winners are at the end of this post, so zip down there to see if you won!
+
+We'll use the post to cover some of what we learned from the entries here.  Here's our top three tips for making your PowerShell scripts run just that much faster!"
 ---
 
-![CODING FOR SPEED](images/coding-for-speed.png)
+![CODING FOR SPEED](../assets/images/2016/03/images/coding-for-speed.png)
 
 In this post, we review some of the things we learned about coding for speed in the [Hadoop PowerShell challenge](http://foxdeploy.com/2016/03/01/powershell-challenge-beating-hadoop-with-posh/). The winners are at the end of this post, so zip down there to see if you won!
 
@@ -15,11 +21,13 @@ We'll use the post to cover some of what we learned from the entries here.  Her
 
 As it turns out Select-String (PowerShell's text searching cmdlet) is capable of mounting a file in memory, no need to gc it first. It's also MUCH slimmer too, and has speed for days.  Look at the performance difference in this common scenario, searching 10 directories of files using `Select-String` , and then stark contract compared to `Get-Content`.
 
-```powershell #Get-Content | Select-String example dir $pgnfiles | select -first 10 | get-content | Select-String "Result"
+```powershell 
+Get-Content | Select-String example dir $pgnfiles | select -first 10 | get-content | Select-String "Result"
 
 #Select-String Only example dir $pgnfiles | select -first 10 | Select-String "Result"
 
-Testing GC | Select-String...3108.5527 MS Testing Select-String Only...99.1534 MS \[/code\]
+Testing GC | Select-String...3108.5527 MS Testing Select-String Only...99.1534 MS 
+```
 
 **Using Select-String alone is a 31x Speed Increase!** This is pretty much a no-brainer.  If you need to look inside of files, definitely dump your `Get-Content`  steps.  Credit goes to [Chris Warwick](https://twitter.com/cjwarwickps) for this find.
 
@@ -29,7 +37,8 @@ https://twitter.com/cjwarwickps/status/706831084374327296
 
 We see this structure a LOT in PowerShell:
 
-```powershell#init my collection $collection = @()
+```powershell
+#init my collection $collection = @()
 
 ForEach ($file in $pgnfiles) {
 
@@ -37,39 +46,41 @@ $collection += $file | Select-String "Result"
 
 }
 
-$collection\[/code\]
+$collection
+```
 
 This structure sets up a 'master list', then does some processing for each object, eventually adding it to our master list, then at the end, display the list.
 
 > _Why shouldn't I do this?_
 
-PowerShell is based off of dotnet and **some dotnet variable types including our beloved string and array are immutable.**  This means that PowerShell _can't simply tack your entry to the end of $collection_, like you'd think.
+PowerShell is based off of dotnet and **some dotnet types including our beloved string and array are immutable.**  This means that PowerShell _can't simply tack your entry to the end of $collection_, like you'd think.
 
 No, instead PowerShell has to make a new variable equal to the whole of the old one, add our new entry to the end, and then throws away the old variable. This has almost no impact on small datasets, but look at the difference when we go through 100k GUID here!
 
-\[code lang="powershell"\]Write-Output "testing ArrayList.."
+```powershell
+Write-Output "testing ArrayList.."
 
-(measure-command -ex {$guid = new-object System.Collections.ArrayList 1..100000 | % { $guid.Add(\[guid\]::NewGuid().guid) | out-null
-
-}
-
+(measure-command -ex {$guid = new-object System.Collections.ArrayList
+    1..100000 | % {
+      $guid.Add([guid]::NewGuid().guid) | out-null
+  }
 }).TotalMilliseconds
 
-Write-Output "testing \`$collection+=..."
+Write-Output "testing `$collection+=..."
 
 (measure-command -ex {
-
-$guid = @() 1..100000 | % { $guid += \[guid\]::NewGuid().guid }
-
+  $guid = @()
+    1..100000 | % {
+      $guid += [guid]::NewGuid().guid
+    }
 }).TotalMilliseconds
 
-testing ArrayList... 7784.5875 MS testing $collection+=...465156.249 MS\[/code\]
+testing ArrayList...    7784.5875  MS
+testing $collection+=...465156.249 MS
+```
 
 **Sixty times faster!!!** The really crazy part, you can watch PowerShell's RAM usage jump all over the place, as it doubles up the variable in memory, commits it, and then runs GarbageCollection.  Watch how the RAM keeps doubling, then halfing!
 
-
-
- 
 
 #### How do I not use $collection += structure in my code?
 
@@ -77,15 +88,19 @@ testing ArrayList... 7784.5875 MS testing $collection+=...465156.249 MS\[/code\]
 
 Array list is a bit different from a regular string; here's how you do it. First you have to make a new array list (which developers call instantiating an instance of a class, sounds so cool to say it!), like so:
 
-\[code lang="powershell" light="true"\] $collection = New-Object System.Collections.ArrayList \[/code\]
+```powershell
+ $collection = New-Object System.Collections.ArrayList 
+```
 
 Next, we iterate through each object, and here's the real difference.
 
 We call the ArrayLists .Add() method, instead of using the += syntax. Finally at the end, we get the whole list back out by using return, or just putting the variable name in again.
 
-\[code lang="powershell" light="true"\] ForEach ($file in $pgnfiles) { $result = $file | Select-String "Result" $collection.Add($result)
+```powershell
+ ForEach ($file in $pgnfiles) { $result = $file | Select-String "Result" $collection.Add($result)
 
-} return $collection \[/code\]
+} return $collection 
+```
 
 You might notice when you run this that you see something like this:
 
@@ -93,7 +108,9 @@ You might notice when you run this that you see something like this:
 
 ArrayList is a bit weird.  when you add an entry to it, ArrayList responds back with the index position of the new item you added.  In some use case in the world, this might be helpful, but not really to us.  So, we just pipe our .Add() statement into null, like so:
 
-```powershell$collection.Add($result) | Out-Null\[/code\]
+```powershell
+$collection.Add($result) | Out-Null
+```
 
 Some people put \[void\] on the front of the line instead, same result.
 
@@ -109,23 +126,40 @@ This is VERY SLOW on big files.  If you'd like to know a bit more, read [Don's 
 
 When we're working with large files, or lots of small files, we have a better, option, and that is the StreamReader from .Net. It IS fundamentally different in how it presents the content from the file, so here's a comparison.
 
-```powershell#Working with Get-Content
+```powershell
+#Working with Get-Content
 
-#Read our file into File $file = Get-Content $fullname
+#Read our file into File 
+$file = Get-Content $fullname
 
-#Step through each line foreach ($line in $file){ #Do something with our line here #ex: if($line -like "\[Re\*") { $results\[$line\]+=1 } } \[/code\]
+#Step through each line 
+foreach ($line in $file){ 
+    #Do something with our line here #ex: if($line -like "\[Re\*") { $results\[$line\]+=1 } 
+    } 
+```
 
 And now, with StreamReader
 
-```powershell#Same concept but with StreamReader
+```powershell
+#Same concept but with StreamReader
 
-#Setup a streamreader to process the file $file = New-Object System.IO.StreamReader -ArgumentList $Fullname
+#Setup a streamreader to process the file 
+$file = New-Object System.IO.StreamReader -ArgumentList $Fullname
 
-:loop while ($true ) { #Read this line $line = $file.ReadLine() if ($line -eq $null) { #If the line was $null, we're at the end of the file, let's break $file.close() break loop } #Do something with our line here if($line.StartsWith('\[Re')) { $results\[$line\]+=1 }
+:loop while ($true ) { 
+  #Read this line 
+  $line = $file.ReadLine() 
+    if ($line -eq $null) { 
+        #If the line was $null, we're at the end of the file, let's break 
+        $file.close() 
+        break loop 
+    } 
+    #Do something with our line here 
+    if($line.StartsWith('[Re')) { $results[$line]+=1 }
 
 }
 
-\[/code\]
+```
 
 So, now that you've seen how it works, how much faster and better is it?
 
@@ -141,11 +175,17 @@ StreamReader is 26 times faster!
 
 I thought so too! So here you go.  Load this into the ISE and run it once.  After that, you can hit `Ctrl+J` and have a nice sample StreamReader code structure.
 
-```powershell$snippet = @{ Title = 'StreamReader Snippet' Description = 'Use this to quickly have a working StreamReader' Text = @" $fullname = #FilePathHere begin { $results = @{} }
+```powershell
+$snippet = @{ Title = 'StreamReader Snippet' 
+  Description = 'Use this to quickly have a working StreamReader' 
+  Text = @" $fullname = #FilePathHere begin { $results = @{} }
 
 process { $file = New-Object System.IO.StreamReader -ArgumentList $Fullname
 
-:loop while ($true ) { $line = $file.ReadLine() if ($line -eq $null) { $file.close() break loop } if($line.StartsWith('\[Re')) { #do something with the line here $results\[$line\]+=1 } } } end { return $results } } "@ } New-IseSnippet @snippet\[/code\] This syntax comes to us by way of [u/evetsleep](https://www.reddit.com/user/evetsleep), [/u/Vortex100](https://www.reddit.com/user/vortex100) and Kevin Marquette, from [Reddit/r/powershell](http://reddit.com/r/powershell)!
+:loop while ($true ) { $line = $file.ReadLine() if ($line -eq $null) { $file.close() break loop } if($line.StartsWith('\[Re')) { #do something with the line here $results\[$line\]+=1 } } } end { return $results } } "@ } New-IseSnippet @snippet
+``` 
+
+This syntax comes to us by way of [u/evetsleep](https://www.reddit.com/user/evetsleep), [/u/Vortex100](https://www.reddit.com/user/vortex100) and Kevin Marquette, from [Reddit/r/powershell](http://reddit.com/r/powershell)!
 
 ### Other ways to speed up your code
 
@@ -155,7 +195,9 @@ I know I said my top three tips, but I also want to give a little extra.  Here 
 
 **Taking out your own Trash** - This cool tip comes to us from [Kevin Marquette](https://twitter.com/KevinMarquette).  If PowerShell has some monster objects in memory, or you just want to clean things up, you can call a System Garbage Collection method to take out your trash, like so:
 
-\[code lang="powershell" light="true"\]\[GC\]::Collect()\[/code\]
+```powershell
+[GC]::Collect()
+```
 
 **True Speed comes from going native** - The fastest of the fast approaches used native c# code which powershell has supported since v 3. Using this, you gain a whole slew (that's a technical term) of new dotnet goodness to play with. For examples of this technique, check out what [Tore](https://gist.github.com/torgro/4b8aa80ad5b9b2da351b), [Oysind](https://gist.github.com/gravejester/6c9a1bdd12ba413590c9) and [Mathias](https://gist.github.com/IISResetMe/1cb193f9473906d03277) did.
 
@@ -163,7 +205,7 @@ I know I said my top three tips, but I also want to give a little extra.  Here 
 
 From the original post that started this whole thing, [Adam Drake's Can command line tools be faster than your Hadoop cluster](http://aadrake.com/command-line-tools-can-be-235x-faster-than-your-hadoop-cluster.html)?
 
-> \[using Amazon Web Services hosting...\] with 7 x c1.medium machine\[s\] in the cluster took 26 minutes...processing data at ~ 1.14MB/sec
+> [using Amazon Web Services hosting...] with 7 x c1.medium machine in the cluster took 26 minutes...processing data at ~ 1.14MB/sec
 
 All of these entrants can proudly say that their code DID beat the Hadoop cluster.  Boe Prox , Craig Duff, Martin Pugh, /u/evetsleep /u/Vortex100 and kevin Marquette, Irwin Strachan, Flynn Bundy, David Kuehn, and /u/LogicalDiagram from Reddit, and @IisResetme!  All eleven averaged a minimum of 10.76 MB/sec.  Their code all completed in less than six minutes, much faster than the 26 minutes of the mighty seven node Hadoop cluster!
 

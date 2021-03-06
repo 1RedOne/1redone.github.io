@@ -39,7 +39,7 @@ Huh, that don't look good.  Even though my install of SCCM Completed, WMI was s
 
 I wanted to see how WMI was doing, so I tired running a few WMI queries with PowerShell, and all errored out.  So I checked out Services.msc and sure enough, the WMI Service was in the 'stopping' state.
 
-[![ohno03](https://foxdeploy.files.wordpress.com/2016/06/ohno03.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/ohno03.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/ohno03.png)
 
 I tried my normal tricks, like looking up the process for this service in task manager, then killing the process.
 

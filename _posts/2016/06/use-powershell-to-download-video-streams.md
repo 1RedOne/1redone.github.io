@@ -60,7 +60,7 @@ However, some sites use insidious methods to make it nearly impossible to save f
 
 I have been all about learning Chef recently.  I see it as the evolution of what I do for a living, and I think in two or three years, I'll be spending a lot of time in its kitchen.  So I've been consuming learning materials like a fiend.  I found this great video on demand session by Steven Murawski.
 
-[![preview_1460658919](images/preview_1460658919.png)](https://www.brighttalk.com/webcast/11349/196441)
+![](https://www.brighttalk.com/webcast/11349/196441)
 
 And I [signed up for the presentation](https://www.brighttalk.com/webcast/11349/196441).  I watched the talk but was sad to see no link to download the video (which I would need, with no reception later that day). So I used the same Developer Tools trick I showed below and hopped into the tab, only to see this.
 
@@ -98,7 +98,7 @@ Put them all together to get:
 
 Finally, to put the number in the right format, we just need to use $i.ToString("00000"), which will render a 1 as 00001, for instance. Now to test in the console
 
-[![download](images/download.png)](https://foxdeploy.files.wordpress.com/2016/06/download.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/download.png)
 
 #### Downloading the files
 
@@ -112,7 +112,7 @@ break } write-host "\[OK\]" Start-Sleep -Seconds 2 $i++ } until ($request.Status
 
 After dropping in the right base URL and specifying your file naming convention, hit F5 and you should see the following.
 
-[![GIF1](images/gif1.gif)](https://foxdeploy.files.wordpress.com/2016/06/gif1.gif)
+![](https://foxdeploy.files.wordpress.com/2016/06/gif1.gif)
 
 #### Joining the files back together
 

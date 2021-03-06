@@ -21,7 +21,7 @@ If this doesn't work (it didn't work for me, the services hung at 'stopping'), y
 
 From the Task manager, look at the process ID for your SMS component manager service, and then run
 
-[![ohno5](https://foxdeploy.files.wordpress.com/2016/06/ohno5.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/ohno5.png)
+![](https://foxdeploy.files.wordpress.com/2016/06/ohno5.png)
 
 `Stop-Process -ID SMSExecID,SMS_SITE_COMPONENT_MGRID`
 

@@ -1,11 +1,15 @@
 ---
 title: "PowerShell Challenge - Beating Hadoop with Posh"
 date: "2016-03-01"
+redirect_from : /2016/03/01/powershell-challenge-beating-hadoop-with-posh
+coverImage: ../assets/images/2016/03/images/coding-for-speed.png
 categories: 
   - "other"
   - "scripting"
 tags: 
   - "powershell-challenge"
+  - "contests"
+excerpt: "This post sets the stage for the PowerShell Hadoop Challenge!"
 ---
 
 ### Update
@@ -59,7 +63,7 @@ This will decide the speed winner. The other two will be hand selected, by me. I
 
 Winners will get their pick from this pile of github and PowerShell stickers!
 
-![](http://foxdeploy.files.wordpress.com/2016/02/wp-1456789783952.jpg)
+![](../assets/images/2016/03/http://foxdeploy.files.wordpress.com/2016/02/wp-1456789783952.jpg)
 
 I'll mail it to you unless you live in the middle of nowhere Europe and shipping will kill me.
 

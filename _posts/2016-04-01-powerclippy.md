@@ -1,6 +1,7 @@
 ---
 title: "PowerClippy"
 date: "2016-04-01"
+redirect_from : /2016/04/01/powerclippy
 categories: 
   - "quickies"
   - "scripting"
@@ -12,9 +13,9 @@ tags:
 
 Back with the release of Office '97 in November of 1996, Microsoft introduced a beloved new helper tool to assist users in navigating through the daunting changes in Microsoft Office,
 
-Microsoft Clippy!
+## Microsoft Clippy!
 
-![Copyright : Microsoft](https://foxdeploy.files.wordpress.com/2016/03/clippy.png?w=300)](https://foxdeploy.files.wordpress.com/2016/03/clippy.png) Copyright : Microsoft\[/caption\]
+![](../assets/images/2016/04/images/clippy.png) Copyright : Microsoft
 
 Clippy was wildly beloved by end-users and IT Professionals alike, just checkout it's many accomplishments!
 
@@ -28,9 +29,9 @@ For too many years, Clippy has gone missing in Windows, and admins were left wit
 
 I am proud to share with you my newest slap-dash project,  '[Invoke-Clippy!](https://github.com/1RedOne/Invoke-Clippy/)'
 
-![](https://foxdeploy.files.wordpress.com/2016/03/clippy01.png)
+![](../assets/images/2016/04/images/clippy01.png)
 
-![Clippy, how I've missed you!](https://foxdeploy.files.wordpress.com/2016/03/clippy02.png?w=201)](https://foxdeploy.files.wordpress.com/2016/03/clippy02.png) Clippy, how I've missed you!\[/caption\]
+![](../assets/images/2016/04/images/clippy02.png) Clippy, how I've missed you!
 
 Today, it pretty much just pops up the familiar character.  Being a very lazy retreading of [Chrissy's code from her 'Hey Scripting Guy' article](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/02/creating-pop-ups-by-using-powershell/), it also features the PowerShell logo in the system tray to end the code!  AND it runs hidden!
 

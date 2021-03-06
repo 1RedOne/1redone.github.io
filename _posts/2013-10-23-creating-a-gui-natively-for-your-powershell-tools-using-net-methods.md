@@ -10,7 +10,7 @@ tags:
 excerpt: The first post in the FoxDeploy GUI Creating series, this post is focused on making a GUI using Windows Forms!
 ---
 
-[![series_PowerShellGUI](../series/images/series_gui.png)](/series/LearningGUIs)
+![](/series/LearningGUIs)
 
 **This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 

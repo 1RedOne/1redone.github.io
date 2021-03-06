@@ -21,7 +21,7 @@ If you've been scripting for a while, you're probably very accustomed to making 
 
 Why, because I want to, that's why! It normally looks like this.
 
-\[code language="powershell"\]
+```powershell
 
 #code go here!
 
@@ -55,7 +55,7 @@ If you REALLY need classes on WMF 4 or earlier machines, you can access them usi
 
 It's easy to get started with classes. In fact, you're probably used to working with them in PowerShell. For instance, if you've ever rounded a number in PowerShell, you've used the `[Math]` class, which has many helpful operations available.
 
-\[code language="powershell"\]
+```powershell
 
 $pi = 3.14159 \[Math\]::Round($pi,2) 3.14
 
@@ -71,7 +71,7 @@ What we're doing there is calling a Static Method.
 
 Normally when we call methods, we're used to doing something like this.
 
-\[code language="powershell"\]
+```powershell
 
 $date = Get-Date $date.AddDays(7) \[/code\]
 
@@ -83,13 +83,13 @@ Conversely, when a class is loaded into memory, its methods are always available
 
 For example, if I want to round a number I just run
 
-\[code language="powershell"\]
+```powershell
 
 \[Math\]::Round(3.14141,2) >3.14 \[/code\]
 
 I don't have to make an instance of it first, like this.
 
-\[code language="powershell"\] #What we won't do $math = new-object -TypeName System.Math
+```powershell #What we won't do $math = new-object -TypeName System.Math
 
 \>new-object : A constructor was not found. Cannot find an appropriate constructor for type System.Math. \[/code\]
 
@@ -99,7 +99,7 @@ This error message of 'No constructor is telling us that we are not meant to try
 
 Defining a class is easy! It involves using a new keyword, like `Function` or `Resource`. In this case, the keyword is `Class`. We then splat down some squiggles and we're done.
 
-\[code language="powershell"\]
+```powershell
 
 Class FoxFile
 
@@ -113,13 +113,13 @@ Breaking this down, at the start, we call the keyword of `Class` to prime PowerS
 
 If I run this as it is...I don't get much out of it.
 
-\[code language="powershell"\] PS > \[FoxFile\]
+```powershell PS > \[FoxFile\]
 
 IsPublic IsSerial Name BaseType -------- -------- ---- -------- True False FoxFile System.Object \[/code\]
 
 However, using Tab Expansion, I see that I have a StaticMethod of `New()` available. For free! If I run it, I get a new FoxFile object, but it doesn't have anything defined.
 
-\[code language="powershell"\] PS > \[FoxFile\]::new()
+```powershell PS > \[FoxFile\]::new()
 
 Name Size Age ---- ---- --- \[/code\]
 
@@ -131,7 +131,7 @@ Adding a method is pretty easy. It can be thought of as defining a mini-function
 
 Going back to our class definition before, all we do is add a few lines of space and add the following:
 
-\[code language="powershell"\] FoxFile ($file)
+```powershell FoxFile ($file)
 
 {$this.Name = $file.Name $this.size = $file.Length /1kb $this.Age = \[int\]((get-date)-($file.LastWriteTime)).Days } \[/code\]
 
@@ -145,7 +145,7 @@ We do the same for `.Size` and `.Age` as well.
 
 Now, let's reload into memory...
 
-\[code language="powershell"\] Class FoxFile
+```powershell Class FoxFile
 
 {
 
@@ -159,7 +159,7 @@ Now, let's reload into memory...
 
 And let's see what happens when I run this on a file.
 
-\[code language="powershell"\]
+```powershell
 
 $a = Get-Item .\\Something.ps1xml
 
@@ -171,13 +171,13 @@ Yay it worked!!! But I feel like the elements of this are in my head, however, t
 
 Let's add a Crystal method!
 
-\[code language="powershell"\] Crystal ()
+```powershell Crystal ()
 
 {start https://youtu.be/hfUSyoJcbxU?t=45} \[/code\]
 
 Finally, to test it out, run the following.
 
-\[code language="powershell"\] $a = \[FoxFile\]::((Get-item .\\Somefile.tla)) $a.Crystal() \[/code\]
+```powershell $a = \[FoxFile\]::((Get-item .\\Somefile.tla)) $a.Crystal() \[/code\]
 
 And that's pretty much it.  You can get very deep with Classes, for instance, I wrote an example, available here, of a VirtualMachine class you could use in Hyper-V, which is capable of creating a new VM.  In a lot of use cases, I might instead just write a module with a few PowerShell functions to handle the tasks of many methods for a class, but it's always good to know how to use the tools in your toolbag.
 

@@ -39,7 +39,7 @@ Finally, this will take a LONG, LONG time.  We had ~3,000 drivers and it took a
 
 Output looks like this:
 
-[![IMG_3827](https://foxdeploy.files.wordpress.com/2016/01/img_3827.jpg?w=636)](../assets/images/2016/01/https://foxdeploy.files.wordpress.com/2016/01/img_3827.jpg)
+![](../assets/images/2016/01/https://foxdeploy.files.wordpress.com/2016/01/img_3827.jpg)
 
 \[code language="powershell" highlight="8,16,24"\] Set-CMQueryResultMaximum -Maximum 5000
 

@@ -20,7 +20,7 @@ And some of us explore code.
 
 In this post, I'll outline my own such PowerShell adventure, and show you the tools I used to come out the other side with a working solution. We'll meet in basecamp to prepare ourselves with the needed gear, plan our scaling strategy and climb the crags of an unknown PowerShell module. We'll belay into treacherous canyons, using our torch to reveal the DLLs that make Windows work, then chart new ground using DotPeek and eventually arrive on the summit, victorious and armed with new tools.
 
-_[![](images/alexander-andrews-247193.jpg)](../assets/images/2017/05/https://foxdeploy.files.wordpress.com/2017/05/alexander-andrews-247193.jpg)_
+_![](../assets/images/2017/05/https://foxdeploy.files.wordpress.com/2017/05/alexander-andrews-247193.jpg)_
 
 #### Basecamp - The Background
 

@@ -11,7 +11,7 @@ tags:
   - "wmf"
 ---
 
-[![IntroToDsc](https://foxdeploy.files.wordpress.com/2015/03/introtodsc.jpg?w=705)](http://foxdeploy.com/learning-dsc-series/)
+![](http://foxdeploy.com/learning-dsc-series/)
 
 This post is part of the Learning DSC Series here on FoxDeploy.com. To see the other articles, click the banner above!
 
@@ -23,7 +23,7 @@ My main problem with DSC today is that there is no tooling out there to help me 
 
 So I made my own.
 
-[![imaage base layer designed Designed by Freepik](https://foxdeploy.files.wordpress.com/2016/09/dsc-designer-3.png?w=636)](https://foxdeploy.files.wordpress.com/2016/09/dsc-designer-3.png)
+![](https://foxdeploy.files.wordpress.com/2016/09/dsc-designer-3.png)
 
 ### Release Version 1.0
 

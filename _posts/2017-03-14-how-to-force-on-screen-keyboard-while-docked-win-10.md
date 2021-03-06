@@ -95,7 +95,7 @@ Unfortunately, when a device is docked or undocked, Windows recalculates the va
 
 Nothing prevents us from changing the value right back though!  To sum it up in GIF form, this is what we're about to do here:
 
-[![](images/wp-1489444187634.gif)](../assets/images/2017/03/http://foxdeploy.files.wordpress.com/2017/03/wp-1489444187634.gif)
+![](../assets/images/2017/03/http://foxdeploy.files.wordpress.com/2017/03/wp-1489444187634.gif)
 
 #### The Fix
 
