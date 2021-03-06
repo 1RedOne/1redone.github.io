@@ -8,7 +8,7 @@ tags:
   - "skype"
   - "Microsoft Teams"
   - "hacking"
-coverImage: "../assets/images/2020/07/images/teams-on-airlight.png"
+coverImage: "../assets/images/2020/07/images/teams-on-airlight.webp"
 excerpt: "Children. You love them. They in turn, run into your meetings all the time. Sometimes wearing pants.
 
 Wouldn't it be great to have a way to keep them informed of when Daddy or Mommy is in a meeting? Something nice and big and obvious that they can just totally ignore, right?"

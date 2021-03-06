@@ -4,7 +4,7 @@ date: "2020-05-18"
 tags: 
   - "azure"
   - "life"
-coverImage: "../assets/images/2020/05/images/azureatl.png"
+coverImage: "../assets/images/2020/05/images/azureatl.webp"
 excerpt: "I have really loved these last three years with #BigBank #SpoilersItWasWellsFargoAllAlong and made some great friends and had some awesome experiences creating and sharing sessions at MMS with my friends I made along the way."
 redirect_from: /2020/05/18/joining-microsoft/
 ---

@@ -2,7 +2,7 @@
 title: "Quick Guide - Setting up Remote Management of your child's PC"
 date: "2020-03-18"
 tags: other
-header: "../assets/images/2020/03/images/managing-your.png"
+header: "../assets/images/2020/03/images/managing-your.webp"
 excerpt: "With everyone working remote now, it's really helpful to have a method to remote control your kid's computers, _especially_ if they are hard to keep on task like mine.
 
 So I wrote this short guide to help you get a handle. **This guide expects you to have two computers, one for you, one for your kids to use.**"

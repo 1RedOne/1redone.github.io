@@ -1,7 +1,7 @@
 ---
 title: "PowerShell quickie - function to make your Mocks faster"
 date: "2020-08-14"
-header: "../assets/images/2020/08/images/quicker-auto-mocking-in-c.png"
+header: "../assets/images/2020/08/images/quicker-auto-mocking-in-c.webp"
 layout: post
 excerpt: "In C#, writing unit tests is king, and Moq is the hotness we use to Mock objects and methods, like the MockObjects we get with Pester in PowerShell."
 tags: [powershell, mstest, moq, mocking]
