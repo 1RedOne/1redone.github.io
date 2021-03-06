@@ -1,6 +1,8 @@
 ---
 title: "SCCM 1602 nightmare upgrade"
 date: "2016-06-25"
+redirect_from : /2016/06/25/sccm-1602-nightmare-upgrade
+coverImage: goes here...
 categories: 
   - "sccm"
 ---
@@ -19,31 +21,27 @@ _Note :We saw this before with [this same instance of SCCM when we upgraded to 1
 
 So when the install froze again, we gave it ten minutes before manually stopping the SMS exec service. Install proceeded like normally and all looked fine in the logs until we tried to open the console.
 
-![ohno01](images/ohno01.png?w=636)](images/ohno01.png) Configuration Manager cannot connect to the site\[/caption\]
+![](../assets/images/2016/06/images/ohno01.png) Configuration Manager cannot connect to the site
 
-When I see errors like this, I immediately thing SMS Provider.
+When I see errors like this, I immediately think SMS Provider.
 
 > **What's the SMS Provider?** Good question!  While we tend to think SQL when we think SCCM, in reality ConfigMgr really stores a lot of information in the WMI repository on the Primary sites and the CAS.  Additionally, WMI plays a role in how data is stored in the SQL Database for ConfigMgr as well.
 > 
 > The SMS Provider is critical for allowing this interaction between the SCCM Console, WMI and SQL.  If you don't have any working SMS Providers you can't use the ConfigMgr console!
 
- 
-
 So we knew the SMS provider (which does a bunch of WMI stuff) likely couldn't be reached, so I opened up the primary sites SMSProvider log \\primary\\SMS\_SiteCode\\logs\\SMSProv.log and check out this nasty looking message!
-
  
-
-![ohno02](images/ohno02.png)](images/ohno02.png) Relevant piece: Failed with error "WBEM\_E\_SHUTTING\_DOWN"\[/caption\]
+![](../assets/images/2016/06/images/ohno02.png) Relevant piece: Failed with error "WBEM\_E\_SHUTTING\_DOWN"
 
 Huh, that don't look good.  Even though my install of SCCM Completed, WMI was shutting down, so far as the SMS Provider was concerned?  Huh....
 
 I wanted to see how WMI was doing, so I tired running a few WMI queries with PowerShell, and all errored out.  So I checked out Services.msc and sure enough, the WMI Service was in the 'stopping' state.
 
-![](images/ohno03.png)
+![](../assets/images/2016/06/images/ohno03.png)
 
 I tried my normal tricks, like looking up the process for this service in task manager, then killing the process.
 
-![the ultimate trick up my sleeve, manually killing processes for services](images/ohno4.png?w=636)](images/ohno4.png) the ultimate trick up my sleeve, manually killing processes for services\[/caption\]
+![](../assets/images/2016/06/images/ohno4.png) the ultimate trick up my sleeve, manually killing processes for services
 
 But even this failed, giving me an error of 'process not in valid state', which was really weird.
 

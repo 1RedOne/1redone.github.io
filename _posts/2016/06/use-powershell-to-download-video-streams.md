@@ -98,7 +98,7 @@ Put them all together to get:
 
 Finally, to put the number in the right format, we just need to use $i.ToString("00000"), which will render a 1 as 00001, for instance. Now to test in the console
 
-![](https://foxdeploy.files.wordpress.com/2016/06/download.png)
+![](images/download.png)
 
 #### Downloading the files
 
@@ -112,7 +112,7 @@ break } write-host "\[OK\]" Start-Sleep -Seconds 2 $i++ } until ($request.Status
 
 After dropping in the right base URL and specifying your file naming convention, hit F5 and you should see the following.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/gif1.gif)
+![](images/gif1.gif)
 
 #### Joining the files back together
 

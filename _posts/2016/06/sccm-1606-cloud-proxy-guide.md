@@ -105,15 +105,15 @@ This needs to route to <serviceName>.cloudapp.net, which is Microsoft Azure's ro
 
 **This means that our ConfigMgr Cloud Proxy Service MUST be unique in the world.** If you fail to do this, you'll get errors like this one later on in the process.
 
-![Unable to create service, the name already exists](https://foxdeploy.files.wordpress.com/2016/06/error.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/error.png) Unable to create service, the name already exists\[/caption\]
+![Unable to create service, the name already exists](images/error.png?w=636)](images/error.png) Unable to create service, the name already exists\[/caption\]
 
 To avoid this, let's find a good name for our service using a built-in feature for Azure that will only show us valid addresses.   Still in the Azure Portal, click **New, Compute \\ Cloud Service \\ Quick Create** and then use the box which appears here to test out the name for your Cloud Service.
 
-![test the cloud service name](https://foxdeploy.files.wordpress.com/2016/06/test-the-cloud-service-name.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/test-the-cloud-service-name.png) Every permutation of 'cloud', 'SCCM' and 'Slow Moving Software' I could think of was already taken\[/caption\]
+![test the cloud service name](images/test-the-cloud-service-name.png?w=636)](images/test-the-cloud-service-name.png) Every permutation of 'cloud', 'SCCM' and 'Slow Moving Software' I could think of was already taken\[/caption\]
 
 As we can see, SCCMCloud was already taken, but after enough permutation, I found a good one.
 
-![test the cloud service name 1](images/test-the-cloud-service-name-1.png)](https://foxdeploy.files.wordpress.com/2016/06/test-the-cloud-service-name-1.png) Rolls right off the tongue\[/caption\]
+![test the cloud service name 1](images/test-the-cloud-service-name-1.png)](images/test-the-cloud-service-name-1.png) Rolls right off the tongue\[/caption\]
 
 **Don't create the service!  We just did this to make sure our name wasn't taken yet!**
 
@@ -125,37 +125,37 @@ Since we're opening this stuff up to the whole web using Azure, we are going to 
 
 First, connect to a machine which has **Certificate Authority** with an account that has appropriate permissions.  Domain or Enterprise Admin will cut it. Launch the CA Console. Go down to Certificate Templates and choose Manage.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/00make-a-new-cert.png)
+![](images/00make-a-new-cert.png)
 
 Scroll down to Web Server and choose duplicate.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/01-duplicate-webserver.png)
+![](images/01-duplicate-webserver.png)
 
 If you're prompted for **Compatibility**, always choose the oldest one.  Go with **Server 2003** if it doesn't default to that already.
 
-On the **General** tab, it will default to the name of 'Duplicate of WebServer' which is garbage, so change the **Template Display Name**  to something like '**SCCM Cloud Certificate**'.![](https://foxdeploy.files.wordpress.com/2016/06/02-new-cert.png)
+On the **General** tab, it will default to the name of 'Duplicate of WebServer' which is garbage, so change the **Template Display Name**  to something like '**SCCM Cloud Certificate**'.![](images/02-new-cert.png)
 
 Next on the Request Handling tab, **make sure to check the box for 'Allow private key to be exported'** .  If you miss this one, you have to start over.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/03-cert.png)
+![](images/03-cert.png)
 
 Next, on the **Security Tab**, **remove** the check for **Enroll** for **Enterprise Admins**.  You can probably skip this step, but I'd do it anyway.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/04-remove-ent-admins-enroll-perm-cert.png)
+![](images/04-remove-ent-admins-enroll-perm-cert.png)
 
 Next, click **Add** and specify a security group which contains your SCCM servers, and make sure they have at a minimum the **Read** and **Enroll** Permission.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/05-add-new-group.png)
+![](images/05-add-new-group.png)
 
 That's all the changes we have to make so hit **OK** and then close the **Certificate Templates** window.
 
 Back in the Certificate Authority console, click **Certificate Templates \\ New \\ Certificate Template to Issue**.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/06-issue-this-cert.png)
+![](images/06-issue-this-cert.png)
 
 Choose the cert template we just created, **SCCM Cloud Certificate**.  (or whatever you called it)
 
-![](https://foxdeploy.files.wordpress.com/2016/06/07-enableit.png)
+![](images/07-enableit.png)
 
 #### Request the cert from the CAS /primary
 
@@ -163,23 +163,23 @@ Now we've created a whole new type of Certificate and allowed our SCCM Servers t
 
 **On the SCCM Server to host the Cloud Proxy Connector Role**, launch the **MMC** and add the **Certificates Snap-in**, for the **Computer**.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/08-request-cert.png)
+![](images/08-request-cert.png)
 
 Now go to **Personal \\ Certificates \\ All Tasks \\ Request New Certificate**
 
-![](https://foxdeploy.files.wordpress.com/2016/06/09-request-cert.png)
+![](images/09-request-cert.png)
 
 In this next window, you should see a fancy new cert available with the name we chose earlier, but it will say _More information is required to enorll for this certificate. _ Click that text.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/10-almost-there.png)
+![](images/10-almost-there.png)
 
 In the **Certificate Properties** wizard which appears, on the **General tab,** enter the name of our **SCCM Cloud Service.** Mine was FoxDeploySCCMProxy.foxdeploy.com, but yours is whatever you came up with in Azure.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/correct-cert-name-req.png)
+![](images/correct-cert-name-req.png)
 
-Once you've put your name in, hit **OK** and then **Enroll.**![](https://foxdeploy.files.wordpress.com/2016/06/12-yay.png)
+Once you've put your name in, hit **OK** and then **Enroll.**![](images/12-yay.png)
 
-And now we should see our brand new certificate in the console here, issued to our cloud service.  ![](https://foxdeploy.files.wordpress.com/2016/06/confirm-our-cert.png)
+And now we should see our brand new certificate in the console here, issued to our cloud service.  ![](images/confirm-our-cert.png)
 
 #### Export the certificate twice, once as a pfx and once as a .cer
 
@@ -187,15 +187,15 @@ One of the core tenants of PKI is validating who you're talking to and only trus
 
 On the SCCM Server, select the certificate for our Cloud Proxy Service and choose **All Tasks \\ Export.** 
 
-![](https://foxdeploy.files.wordpress.com/2016/06/13-export-the-cert.png)
+![](images/13-export-the-cert.png)
 
 On the first run through, choose **Yes, Export the private key.**
 
-![](https://foxdeploy.files.wordpress.com/2016/06/14-yep.png)
+![](images/14-yep.png)
 
 When you export the certificate with the private key, you must secure it with a password so pick something good. Don't forget this as you'll be prompted for it in about five minutes!
 
-![](https://foxdeploy.files.wordpress.com/2016/06/15-best-password.png)
+![](images/15-best-password.png)
 
 Put the certificate somewhere safe and then run through the wizard again.  This time choose '**No, do not export the private key'** and choose the .cer file format (the default works fine).
 
@@ -209,19 +209,19 @@ If you don't want to constantly enter credentials for Azure, you can use managem
 
 **Log back into Azure** \\ **Settings \\ Management Certificates \\ Upload**
 
-![16 upload a cert](https://foxdeploy.files.wordpress.com/2016/06/16-upload-a-cert.png?w=636)
+![16 upload a cert](images/16-upload-a-cert.png?w=636)
 
 In the next page, browse out to the .cer file you created and plop her in there.  Then hit **OK** and you're done.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/upload.png)
+![](images/upload.png)
 
 #### Setup the proxy service in SCCM
 
 It only took 1700 words before we are ready to open the SCCM Console.  We're here!  Fire up the SCCM console and oh yeah, be sure you're running 1606 tech preview.  Browse over to **Administration \\ Cloud Services \\  Cloud Proxy Service** and choose '**Create Cloud Proxy Service**.'
 
-![](https://foxdeploy.files.wordpress.com/2016/06/17-admin-cloud-services-cloud-prox-serivce.png)
+![](images/17-admin-cloud-services-cloud-prox-serivce.png)
 
-On the next page, paste in your Azure Subscription ID, and browse to the **.pfx** certificate we exported.![](https://foxdeploy.files.wordpress.com/2016/06/18-setting-up-cloud-proxy.png)
+On the next page, paste in your Azure Subscription ID, and browse to the **.pfx** certificate we exported.![](images/18-setting-up-cloud-proxy.png)
 
 Now, the most important page:
 
@@ -233,23 +233,23 @@ Now, the most important page:
 - Root Certificate File - this should probably say management certificate instead, it's the .cer file.
 - Verify Client Certificate Revocation - you would know if you needed to do this based on your organizational standards
 
-![](https://foxdeploy.files.wordpress.com/2016/06/1-actually-signing-up-for-the-cloud-service.png)
+![](images/1-actually-signing-up-for-the-cloud-service.png)
 
 Alright you made it! Now verify everything looks cool in the summary page and hit **Next.**
 
-![](https://foxdeploy.files.wordpress.com/2016/06/2-summary.png)
+![](images/2-summary.png)
 
 And we're off.  You can monitor the install status by refreshing the SCCM  Console under **Administration \\ Cloud Services \\ Cloud Proxy Service**, or if you're a real man, open up CloudMgr.logs.  You should see nothing for a bit and then 'Starting to Deploy Service'
 
-![](https://foxdeploy.files.wordpress.com/2016/06/3-seven-seconds-in-heaven.png)
+![](images/3-seven-seconds-in-heaven.png)
 
 After a few minutes you will see 'Deployment instance status for service <ServiceName> is ReadyRole.'
 
-You can also monitor this installation within Azure by clicking to **Cloud Services** and watching your new Cloud Proxy Service appear here.  ![](https://foxdeploy.files.wordpress.com/2016/06/6-building-instances.png)
+You can also monitor this installation within Azure by clicking to **Cloud Services** and watching your new Cloud Proxy Service appear here.  ![](images/6-building-instances.png)
 
  
 
-![6.1 Service is running 2](https://foxdeploy.files.wordpress.com/2016/06/6-1-service-is-running-2.png?w=636)](https://foxdeploy.files.wordpress.com/2016/06/6-1-service-is-running-2.png) Elapsed time between pictures is roughly ten minutes\[/caption\]
+![6.1 Service is running 2](images/6-1-service-is-running-2.png?w=636)](images/6-1-service-is-running-2.png) Elapsed time between pictures is roughly ten minutes\[/caption\]
 
 With this completed, we now have our Proxy SCCM roles running in Azure.  The final step is to install the connector locally and then configure which roles we want to use the service.
 
@@ -257,31 +257,31 @@ With this completed, we now have our Proxy SCCM roles running in Azure.  The fi
 
 Back in the SCCM Console, go to **Administration \\ Sites and Roles** and choose to add a role to whichever SCCM Server you want to talk to clients on the internet via Azure.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/3-1-install-the-cloud-proxy-connector-point-role.png)
+![](images/3-1-install-the-cloud-proxy-connector-point-role.png)
 
 In the next page, choose your Cloud Proxy Service from the drop down box. You can ignore the text about Manually installing the client cert, as we've already done so.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/3-2-install-the-cloud-proxy-connector-point-role-2.png)
+![](images/3-2-install-the-cloud-proxy-connector-point-role-2.png)
 
 Now, open up SMS\_CLOUD\_PROXYCONNECTOR.log, and chances are you'll see this:
 
-![](https://foxdeploy.files.wordpress.com/2016/06/4-add-a-dns-alias.png)
+![](images/4-add-a-dns-alias.png)
 
 `Text:ERROR: Failed to build Http connection f201bcf3-6fee-48d2-af38-0e7311588f23 with server FOXDEPLOYSCCMPROXY.FOXDEPLOY.COM:10125. Exception: System.Net.WebException: The remote name could not be resolved: 'foxdeploysccmproxy.foxdeploy.com'`
 
 If you see this error, this means that you need to add a CNAME record in DNS.  If you're using Windows DNS, the record should be setup like the following:
 
-![](https://foxdeploy.files.wordpress.com/2016/06/dns-record.png)
+![](images/dns-record.png)
 
 Once this is done, do an ipconfig /flushdns on your SCCM Server and you should see the log files clear up.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/5-service-gets-created.png)
+![](images/5-service-gets-created.png)
 
 Now that SCCM can talk to Azure, we're in the money.  All that remains is to configure the roles we want to use the Cloud Proxy Service.
 
 **Browse to Administration \\ Site Configuration \\ Servers and Site Systems** and choose the server with the Cloud Proxy Role.  Go to **Management Point \\ General** and make sure that **HTTPS** and **Allow Configuration Manager Cloud Proxy Traffic** are selected.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/6-2-configure-mp-for-cloud-proxy.png)
+![](images/6-2-configure-mp-for-cloud-proxy.png)
 
 Once you do this, it will trigger a reinstall of the Management Point if needed, to configure HTTPs.  Be sure to monitor the install from MPSetup and MPMsi.log for a healthy install.
 
@@ -289,11 +289,11 @@ Once you do this, it will trigger a reinstall of the Management Point if needed,
 
 And we're finished!  The final step is to refresh policy on some SCCM Clients and take them outside the boundaries of the network.  You'll know that the client is talking to Azure when you by monitoring ClientLocation.log and you should see the new Cloud Proxy Management Point appear as an Internet Management Point.
 
-![](https://foxdeploy.files.wordpress.com/2016/06/client-gets-new-mp.png)
+![](images/client-gets-new-mp.png)
 
 Additionally, from the Configuration Manager Control Panel, you'll see values filled out now under the Network tab for Internet Based Management Points.
 
-![Client WORKS](images/client-works.png)](https://foxdeploy.files.wordpress.com/2016/06/client-works.png) You'll also see the site listed as 'Currently Internet' on the General tab as well\[/caption\]
+![Client WORKS](images/client-works.png)](images/client-works.png) You'll also see the site listed as 'Currently Internet' on the General tab as well\[/caption\]
 
 ### What's next
 

@@ -1,6 +1,7 @@
 ---
 title: "Cloning VMs in Hyper-V"
 date: "2016-06-08"
+redirect_from : /2016/06/08/cloning-vms-in-hyper-v
 categories: 
   - "scripting"
 ---
@@ -25,7 +26,7 @@ To begin, create a new VM and name its VHD something like master or template. �
 
 So make sure you give it a name that will remind you to not delete this guy!
 
-![](images/master.png)
+![](../assets/images/2016/06/images/master.png)
 
 Install Windows and whatever common apps you'll want your source machine to use, and when you've got it to the point that you're ready to copy it out...
 
@@ -35,7 +36,7 @@ In our scenario here, we've built a source image and want to put it on other VMs
 
 In the Windows world, particularly if machines are in an Active Directory Domain, you need to ensure that each machine has a globally unique identifier called a System Identifier, or SID.  This SID is created by Windows automatically during the OOBE process.  If you try joining two machines with the same SID to an AD Domain, you'll get an error and it won't be allowed, as a potential security risk.
 
-![](images/duplicatesid.png)
+![](../assets/images/2016/06/images/duplicatesid.png)
 
 To avoid this, and because it's a best practice, we're gonna sysprep this badboy.
 
@@ -43,9 +44,9 @@ Also, I should note that there's no going back.  Once we sysprep this machine, 
 
 ###### How to sysprep a machine
 
-Once all of the software is installed, launch an administrative command prompt and browse to C:\\windows\\system32\\sysprep.exe, and then select 'Enter System Out of Box Experience' and Generalize.  Under Shutdown Options, choose 'Shutdown'
+Once all of the software is installed, launch an administrative command prompt and browse to `C:\windows\system32\sysprep.exe`, and then select 'Enter System Out of Box Experience' and Generalize.  Under Shutdown Options, choose 'Shutdown'
 
-![](images/sysprep.png)
+![](../assets/images/2016/06/images/sysprep.png)
 
 When this completes, your VM will shutdown.
 
@@ -61,24 +62,33 @@ Change line 4 `$newVHDPath` to point to where you want the new disk to go.  Th
 
 Finally, change line 8 `-Name NewName` to be the name of a VM you'd like to create.
 
-\[code lang="powershell"\] #Path to our source VHD $srcVHDPath = "D:\\Virtual Hard Disks\\Master.vhdx"
+```powershell
+ #Path to our source VHD 
+ $srcVHDPath = "D:\Virtual Hard Disks\Master.vhdx"
 
-#Path to create new VHDs $newVHDPath = "D:\\Virtual Hard Disks\\ChildVM.vhdx" New-VHD -Differencing -Path $newVHDPath -ParentPath $srcVHDPath
+#Path to create new VHDs 
+$newVHDPath = "D:\Virtual Hard Disks\ChildVM.vhdx" New-VHD -Differencing -Path $newVHDPath -ParentPath $srcVHDPath
 
 New-vm -Name "NewName" -MemoryStartupBytes 2048MB -VHDPath $newVHDPath
 
-\[/code\]
+```
 
 That's all folks!
 
 If you wanted to create five VMs, you'd just run this:
 
-\[code lang="powershell"\] ForEach ($number in 1..5){ #Path to our source VHD $srcVHDPath = "D:\\Virtual Hard Disks\\Master.vhdx"
+```powershell
+ ForEach ($number in 1..5){ 
+  #Path to our source VHD 
+  $srcVHDPath = "D:\Virtual Hard Disks\Master.vhdx"
 
-#Path to create new VHDs $newVHDPath = "D:\\Virtual Hard Disks\\ChildVM0$number.vhdx" New-VHD -Differencing -Path $newVHDPath -ParentPath $srcVHDPath
+  #Path to create new VHDs 
+  $newVHDPath = "D:\Virtual Hard Disks\ChildVM0$number.vhdx" 
+  New-VHD -Differencing -Path $newVHDPath -ParentPath $srcVHDPath
 
-New-vm -Name "ChildVM0$number" -MemoryStartupBytes 2048MB -VHDPath $newVHDPath } \[/code\]
+New-vm -Name "ChildVM0$number" -MemoryStartupBytes 2048MB -VHDPath $newVHDPath } 
+```
 
-![](images/fivevmsinfivesecs.gif)
+![](../assets/images/2016/06/images/fivevmsinfivesecs.gif)
 
 Let me know if this was helpful to you, and feel free to hit me up with any questions :)
