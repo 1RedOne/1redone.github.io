@@ -22,8 +22,10 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 
   {% assign postsForYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" | where: "name", "2016" %} 
 
-  Posts for year {{ postsForYear[0].name }}, total posts {{ postsForYear[0].size }} / 40 
-  
+  Posts for year {{ postsForYear[0].name }}, total posts {{ postsForYear[0].size }} / 40 migrated
+  <meter id="myMeter" min="0" low="10" max="40" value="{{ postsForYear[0].size }}"></meter></p>
+
+
   
   <h2>All Posts for {{ postsForYear[0].name }}</h2>
     {% for post in postsForYear[0].items %}
