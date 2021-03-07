@@ -65,11 +65,11 @@ So I got started doing it on my own.  With step one of the design process --ele
 
 This is the actual sketch I drew on my Surface to show Hemant while in Redmond for the 2015 MVP Summit. It felt so right, drawing on my Windows 10 tablet in OneNote, with guys from Microsoft…it was just a cool moment of Kool-Aid Drinking.  In that moment, my very blood was blue, if not my badge.
 
-![RoughDraft](images/roughdraft.png)](../assets/images/2016/09/images/roughdraft.png) 'oh, now I know why you didn't pursue a career in art'
+![](../assets/images/2016/09/images/roughdraft.png) 'oh, now I know why you didn't pursue a career in art'
 
 What will be immediately apparent is that I lack both handwriting and drawing skills…but this is at least a start. Here's the second design document, where I tried to explain how the user will actually use it.
 
-![RoughDraft2](../assets/images/2016/09/images/roughdraft2.png?w=636)
+![RoughDraft2](../assets/images/2016/09/images/roughdraft2.png)
 
 Stepping through the design, a list of all DSC resources on the left.  Clicking a Resource name adds a new tab to the 'config design' section of the app, in which a user would have radio buttons for Present/Absent, Comboboxes for multiple choice, and textboxes for text input.  On the bottom, the current 'sum' of all tabs would be displayed, a working DSC configuration.
 
@@ -105,39 +105,49 @@ You do this by adding in a Grid definition for either rows, columns or both. The
 
 Since I want my DSC Resources to appear on the left side, I'll add a GroupBox with the header of 'Resources' and a button on the left side. In the GroupBox, I simply add `Grid.Column="0"` to bind this container to the that Column.
 
-\[code language="xml" light="true"\] <GroupBox x:Name="groupBox" Header="Resources" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,0,0,5"> <DockPanel x:Name="Resources" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Column="0"> <Button Content="Remove All" Width="137" /> </DockPanel> </GroupBox>
+```xml 
+<GroupBox x:Name="groupBox" Header="Resources" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,0,0,5"> <DockPanel x:Name="Resources" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Column="0"> <Button Content="Remove All" Width="137" /> </DockPanel> </GroupBox>
 ```
 
 And the code to lock my Tab to the right column
 
-\[code language="xml" light="true"\] <TabControl x:Name="tabControl" Grid.Column="1" > <TabItem Header="TabItem"> <Grid Background="#FFE5E5E5"/> </TabItem>
+```xml 
+<TabControl x:Name="tabControl" Grid.Column="1" > <TabItem Header="TabItem"> <Grid Background="#FFE5E5E5"/> </TabItem>
 ```
 
 All of this footwork result in this UI.
 
-![](../assets/images/2016/09/https://foxdeploy.files.wordpress.com/2016/08/initial-grid.png)
+![](../assets/images/2016/09/images/initial-grid.png)
 
 Next, I needed a way to create new checkboxes when my UI loads. I wanted it to run `Get-DSCResource` and grab the name of all the resources on my machine. I came up with this structure
 
 ```powershell
-
-
 $resources = Get-DscResource
 
-ForEach ($resource in $resources){ $newCheckBox = New-Object System.Windows.Controls.CheckBox $newCheckBox.Name = $resource.Name $newCheckBox.Content = $resource.Name $newCheckBox.Background = "White" $newCheckBox.Width = '137' $newCheckBox.Add\_click({ $TabName = $resource.Name $tab = New-Object System.Windows.Controls.TabItem $tab.Name = "$($TabName)Tab" $tab.Header = $TabName $WPFtabControl.AddChild($tab) }) \[void\]$WPFResources.Children.Add($newCheckBox)
-
+ForEach ($resource in $resources){ 
+    $newCheckBox = New-Object System.Windows.Controls.CheckBox 
+    $newCheckBox.Name = $resource.Name 
+    $newCheckBox.Content = $resource.Name 
+    $newCheckBox.Background = "White" 
+    $newCheckBox.Width = '137' 
+    $newCheckBox.Add_click({ 
+        $TabName = $resource.Name 
+        $tab = New-Object System.Windows.Controls.TabItem 
+        $tab.Name = "$($TabName)Tab" 
+        $tab.Header = $TabName $WPFtabControl.AddChild($tab) 
+    }) 
+    [void]$WPFResources.Children.Add($newCheckBox)
 }
-
 
 ```
 
 This seemed to work just fine, and gave me this nice looking UI.
 
-![](../assets/images/2016/09/https://foxdeploy.files.wordpress.com/2016/08/grid01.png)
+![](../assets/images/2016/09/images/grid01.png)
 
 However, when I clicked the checkbox on the side, instead of getting tabs for each resource, I instead...well, just look!
 
-![](../assets/images/2016/09/https://foxdeploy.files.wordpress.com/2016/08/grid02.png)
+![](../assets/images/2016/09/images/grid02.png)
 
 Only the very last item added to the list was getting added. That seemed like quite a clue...
 
@@ -178,10 +188,22 @@ Next, because I want to make a TextBox fill up this whole `$tab`, we make a new 
 Finally, we set this `$text` as the Content value for the TabItem, and add the TabItem to our parent container, `$WPFTabControl`.
 
 ```powershell
- $newCheckBox.Add\_checked({ $WPFStatusText.Text = 'Loading resource...' $TabName = $this.Name $tab = New-Object System.Windows.Controls.TabItem $tab.Name = "$($TabName)Tab" $tab.Header = $TabName $text = New-Object System.Windows.Controls.TextBox $text.AcceptsReturn = $true $text.Text = ((Get-DscResource $this.Name -Syntax).Split("\`n") -join "\`n") $text.FontFamily = 'Consolas' $tab.Content = $text
-
-$WPFtabControl.AddChild($tab) $WPFStatusText.Text = 'Ready...' })
-
+ $newCheckBox.Add_checked({
+                $WPFStatusText.Text = 'Loading resource...'
+                $TabName = $this.Name
+                $tab = New-Object System.Windows.Controls.TabItem
+                $tab.Name = "$($TabName)Tab"
+                $tab.Header = $TabName
+                 
+                $text = New-Object System.Windows.Controls.TextBox
+                $text.AcceptsReturn = $true
+                $text.Text = ((Get-DscResource $this.Name -Syntax).Split("`n") -join "`n")
+                $text.FontFamily = 'Consolas'
+                $tab.Content =  $text
+ 
+                $WPFtabControl.AddChild($tab)
+                $WPFStatusText.Text = 'Ready...'
+                })
 
 ```
 
@@ -195,12 +217,32 @@ Now, to add the rest of our GUI.
 
 Any DSC Configuration should have a name, so I wanted to add a new row to contain a label, a TextBox for the Configuration Name, a button to Export the Config, and finally a button to clear everything. I also knew I would need another row to contain my big compiled DSC configuration too, so I added another row for that.
 
-\[code language="xml" light="true"\] <Grid.RowDefinitions> <RowDefinition Height="5\*" MinHeight="150" /> <RowDefinition Name="GridSplitterRow" Height="Auto"/> <RowDefinition Height="2\*" MaxHeight="30" MinHeight="30"/> <RowDefinition Name="GridSplitterRow2" Height="Auto"/> <RowDefinition Height ="Auto" MaxHeight="80"/> <RowDefinition Name="GridSplitterRow3" Height="Auto"/> <RowDefinition Height ="Auto" MaxHeight="30"/> </Grid.RowDefinitions>
+```xml 
+<Grid.RowDefinitions>
+<RowDefinition Height="5*" MinHeight="150" />
+<RowDefinition Name="GridSplitterRow" Height="Auto"/>
+<RowDefinition Height="2*" MaxHeight="30" MinHeight="30"/>
+<RowDefinition Name="GridSplitterRow2" Height="Auto"/>
+<RowDefinition Height ="Auto" MaxHeight="80"/>
+<RowDefinition Name="GridSplitterRow3" Height="Auto"/>
+<RowDefinition Height ="Auto" MaxHeight="30"/>
+</Grid.RowDefinitions>
 ```
 
 I also wanted my user to be able to resize the UI using sliders, so I added some GridSplitters as well. Below you'll see the GridSplitters on either side of another dock panel, which is set to appear below the rest of the UI, based on the `Grid.Row` property.
 
-\[code language="xml" light="true"\] <GridSplitter Grid.Row="2" Height="5"> <GridSplitter.Background> <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/> </GridSplitter.Background> </GridSplitter> <DockPanel Grid.ColumnSpan="2" Grid.Row="2"> <Label Content="Configuration name"/> <TextBox Name="ConfName" Text="SampleConfig" VerticalContentAlignment="Center" Width='180'/> <Button Name="Export" Content="Export Config"/> <Button Name="Clearv2" Content="Clear All"/> </DockPanel> 
+```xml 
+<GridSplitter Grid.Row="2" Height="5">
+<GridSplitter.Background>
+<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+</GridSplitter.Background>
+</GridSplitter>
+<DockPanel Grid.ColumnSpan="2" Grid.Row="2">
+<Label Content="Configuration name"/>
+<TextBox Name="ConfName" Text="SampleConfig" VerticalContentAlignment="Center" Width='180'/>
+<Button Name="Export" Content="Export Config"/>
+<Button Name="Clearv2" Content="Clear All"/>
+</DockPanel>
 ```
 
 These elements render up like so:
@@ -209,7 +251,7 @@ These elements render up like so:
 
 Finally, to add the resultant textbox. The only thing out of the ordinary here is that I knew our DSC Configuration would be long, and didn't want the UI to resize when the configuration loaded, so I added a ScrollViewer, which is just a wrapper class to add scrollbars.
 
-\[code language="xml" light="true"\] <DockPanel Grid.ColumnSpan="2" Grid.Row="3"> <ScrollViewer Height="239" VerticalScrollBarVisibility="Auto"> <TextBox x:Name="DSCBox" AcceptsReturn="True" TextWrapping="Wrap" Text="Compiled Resource will appear here"/> </ScrollViewer> </DockPanel>
+```xml <DockPanel Grid.ColumnSpan="2" Grid.Row="3"> <ScrollViewer Height="239" VerticalScrollBarVisibility="Auto"> <TextBox x:Name="DSCBox" AcceptsReturn="True" TextWrapping="Wrap" Text="Compiled Resource will appear here"/> </ScrollViewer> </DockPanel>
 ```
 
 We also added a status bar to the very bottom, and with these changes in place, here is our current UI.
@@ -221,7 +263,12 @@ We also added a status bar to the very bottom, and with these changes in place, 
 When a user makes changes to their DSC tabs, I want the Resultant Set of Configuration (RSOC!) to appear below in the textbox. This ended up being very simple, we only need to modify the code that creates the Textbox, and register another event listener for it, like so:
 
 ```powershell
- $text.Add\_TextChanged({ $WPFDSCBox.Text = @" configuration $($WpfconfName.Text) { $($WPFtabControl.Items.Content.Text) } "@
+ $text.Add_TextChanged({
+$WPFDSCBox.Text = @"
+configuration $($WpfconfName.Text) {
+$($WPFtabControl.Items.Content.Text)
+}
+"@
 ```
 
 This single change means that whenever the textChanged event fires off for any textbox, the event handler will trigger and recompile the `.Text` property of all tabs. Nifty!
@@ -239,7 +286,9 @@ $WPFClearv2.Add\_Click({ $WPFResources.Children | ? Name -ne Clear | % {$\_.IsCh
 And finally add some code to the export button, so that it makes a .mof file.  Here I used the System.windows.Forms.FolderBrowserDialog class to display a folder picker, and I access the value the user chooses, which persists once the picker is closed as `.SelectedPath`.
 
 ```powershell
- $FolderDialog = New-Object System.Windows.Forms.FolderBrowserDialog $FolderDialog.ShowDialog() | Out-Null $outDir = $FolderDialog.SelectedPath 
+$FolderDialog = New-Object System.Windows.Forms.FolderBrowserDialog
+$FolderDialog.ShowDialog() | Out-Null
+$outDir = $FolderDialog.SelectedPath
 ```
 
 This results in this nice UI experience.
