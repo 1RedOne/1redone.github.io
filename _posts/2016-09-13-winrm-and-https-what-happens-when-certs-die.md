@@ -2,7 +2,7 @@
 title: "WinRM and HTTPs - What happens when certs die"
 date: "2016-09-13"
 redirect_from : /2016/09/13/winrm-and-https-what-happens-when-certs-die
-coverImage: goes here...
+coverImage: ../assets/images/2016/09/images/winrm-https.png
 categories: 
   - "scripting"
 tags: 
@@ -11,7 +11,6 @@ tags:
   - "pki"
   - "powershell"
   - "winrm"
-coverImage: "winrm-https.png"
 excerpt: "Further diving into what happens with WinRM when certs expire"
 ---
 
