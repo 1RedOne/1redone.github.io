@@ -2,7 +2,7 @@
 title: "Hands-off deployments"
 date: "2016-12-12"
 redirect_from : /2016/12/12/hands-off-deployments
-coverImage:../assets/images/2016/12/images/handsoff2.gif
+coverImage: ../assets/images/2016/12/images/handsoff2.gif
 tags: 
   - "scripting"
   - "deployingWindows"
