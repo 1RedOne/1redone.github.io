@@ -2,9 +2,11 @@
 title: "SCCM 1602 nightmare upgrade"
 date: "2016-06-25"
 redirect_from : /2016/06/25/sccm-1602-nightmare-upgrade
-coverImage: goes here...
 categories: 
   - "sccm"
+excerpt: "This week, we had a scary ConfigMgr 1602 upgrade.
+
+Of course, as a consultant you have to be cool like a fighter pilot in the face of adversity, as crying is generally frowned upon by customers when they see your hourly rate.  So when everything falls over, and there are spiders coming out of the air conditioner, you say 'hmm, that's strange' and then whip out your laptop to begin opening log files like a fiend..."
 ---
 
 This week, we had a scary ConfigMgr 1602 upgrade.

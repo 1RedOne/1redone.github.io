@@ -91,7 +91,7 @@ The code ends on line 171, triggering this runspace to launch off into its own w
 
 Let's look inside $pscmd to see what's happening there.
 
-![unnamed (1)](../assets/images/2016/05/images/unnamed-1.png)
+![](../assets/images/2016/05/images/unnamed-1.png)
 
 Finally, something familiar!  Within $pscmd on lines 10-47, we begin with our XAML, laying out the UI.  Using this [great tip from Boe](https://learn-powershell.net/2012/10/14/powershell-and-wpf-writing-data-to-a-ui-from-a-different-runspace/), we have a new and nicer approach to scraping the XAML and search for everything with a name and mount it as a variable.
 
@@ -113,7 +113,7 @@ So we're up to thread two.  Thread 1 contains all of our code, Thread 2 is with
 
 Now, things should start to look a little more familiar as we finally see an event listener:
 
-![unnamed (2)](../assets/images/2016/05/images/unnamed-2.png)
+![](../assets/images/2016/05/images/unnamed-2.png)
 
  
 

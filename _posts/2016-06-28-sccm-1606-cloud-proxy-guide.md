@@ -109,15 +109,15 @@ This needs to route to <serviceName>.cloudapp.net, which is Microsoft Azure's ro
 
 **This means that our ConfigMgr Cloud Proxy Service MUST be unique in the world.** If you fail to do this, you'll get errors like this one later on in the process.
 
-![Unable to create service, the name already exists](images/error.png?w=636)](../assets/images/2016/06/images/error.png) Unable to create service, the name already exists
+![](../assets/images/2016/06/images/error.png) Unable to create service, the name already exists
 
 To avoid this, let's find a good name for our service using a built-in feature for Azure that will only show us valid addresses.   Still in the Azure Portal, click **New, Compute \\ Cloud Service \\ Quick Create** and then use the box which appears here to test out the name for your Cloud Service.
 
-![test the cloud service name](images/test-the-cloud-service-name.png?w=636)](../assets/images/2016/06/images/test-the-cloud-service-name.png) Every permutation of 'cloud', 'SCCM' and 'Slow Moving Software' I could think of was already taken
+![](../assets/images/2016/06/images/test-the-cloud-service-name.png) Every permutation of 'cloud', 'SCCM' and 'Slow Moving Software' I could think of was already taken
 
 As we can see, SCCMCloud was already taken, but after enough permutation, I found a good one.
 
-![test the cloud service name 1](images/test-the-cloud-service-name-1.png)](../assets/images/2016/06/images/test-the-cloud-service-name-1.png) Rolls right off the tongue
+![](../assets/images/2016/06/images/test-the-cloud-service-name-1.png) Rolls right off the tongue
 
 **Don't create the service!  We just did this to make sure our name wasn't taken yet!**
 
@@ -253,7 +253,7 @@ You can also monitor this installation within Azure by clicking to **Cloud Serv
 
  
 
-![6.1 Service is running 2](images/6-1-service-is-running-2.png?w=636)](../assets/images/2016/06/images/6-1-service-is-running-2.png) Elapsed time between pictures is roughly ten minutes
+![](../assets/images/2016/06/images/6-1-service-is-running-2.png) Elapsed time between pictures is roughly ten minutes
 
 With this completed, we now have our Proxy SCCM roles running in Azure.  The final step is to install the connector locally and then configure which roles we want to use the service.
 
@@ -297,7 +297,7 @@ And we're finished!  The final step is to refresh policy on some SCCM Clients a
 
 Additionally, from the Configuration Manager Control Panel, you'll see values filled out now under the Network tab for Internet Based Management Points.
 
-![Client WORKS](images/client-works.png)](../assets/images/2016/06/images/client-works.png) You'll also see the site listed as 'Currently Internet' on the General tab as well
+![](../assets/images/2016/06/images/client-works.png) You'll also see the site listed as 'Currently Internet' on the General tab as well
 
 ### What's next
 

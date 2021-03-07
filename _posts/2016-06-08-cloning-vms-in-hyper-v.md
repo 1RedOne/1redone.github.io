@@ -4,6 +4,10 @@ date: "2016-06-08"
 redirect_from : /2016/06/08/cloning-vms-in-hyper-v
 categories: 
   - "scripting"
+excerpt: "
+It's a common enough scenario: build one template machine and then mirror that to make a testlab, so you'd think this would be a built-in feature of Hyper-V, but its not.
+
+Luckily, it's not too hard to do once you know how, and I'll guide you through the tough parts"
 ---
 
 It's a common enough scenario: build one template machine and then mirror that to make a testlab, so you'd think this would be a built-in feature of Hyper-V, but its not.

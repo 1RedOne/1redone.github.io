@@ -4,11 +4,12 @@ date: "2016-06-10"
 redirect_from : /2016/06/10/sccm-1511-upgrade-hangs-fix
 tags: 
   - "sccm"
+excerpt: "Recently for a customer, we ran into an issue in which the SCCM 1511 upgrade was hanging at the following screen. 'Backing  Files for Upgrade'"
 ---
 
 Recently for a customer, we ran into an issue in which the SCCM 1511 upgrade was hanging at the following screen.
 
-![](../assets/images/2016/06/images/sccm1511hangs.png)
+!["Depicts 'Backing  Files for Upgrade'"](../assets/images/2016/06/images/sccm1511hangs.png)
 
 If we open the SCCM install log file on the primary site, found at C:\\ConfigMgrSetup.log, we will see the following message:
 
