@@ -16,7 +16,7 @@ Recently in a project, we needed a way to reapply ACLs to user's roaming profile
 
 Somehow someone in the service desk noted that a user was missing permission to his share, and decided to resolve this by forcing permissions down from the top folder object all the way down.  They of course opted to choose the option to 'replace all properties with inherited properties from this object.'  You know, the one which displayed a scary 'Are you really sure you want to do this?' alert.
 
-![](https://foxdeploy.files.wordpress.com/2014/08/picard.jpg)
+[![picard](images/picard.jpg)](https://foxdeploy.files.wordpress.com/2014/08/picard.jpg)
 
 This really caused a lot of issues, as we were in a project migrating users from Domain A to Domain B.
 

@@ -18,7 +18,7 @@ If you'd like me to touch on a particular topic, or think I've made a mistake, p
 
 We've all had that creeping sensation when we hit enter, and the system takes just a little too long.  Our hands get clammy, we may start to sweat, you get that taste of metal in your mouth.  For instance, when you meant to update one row and see this instead
 
-![](https://foxdeploy.files.wordpress.com/2014/11/runawayquery.png) "Uhm, honey...I might be late for dinner..."\[/caption\]
+\[caption id="attachment\_946" align="alignnone" width="705"\][!["Uhm, honey...I might be late for dinner..."](images/runawayquery.png)](https://foxdeploy.files.wordpress.com/2014/11/runawayquery.png) "Uhm, honey...I might be late for dinner..."\[/caption\]
 
  
 

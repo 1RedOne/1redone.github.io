@@ -24,7 +24,7 @@ Realizing my mistake, I then dilligently reread my syntax, then accidentally hit
 
 This issue clarified forever the need for good error proofing and validation in my tools. In my work, I've come up with the following tips for properly implementing Try/Catch in your PowerShell functions and tools.
 
-![](https://foxdeploy.files.wordpress.com/2014/07/failsafe1.jpg)
+[![failsafe](images/failsafe1.jpg)](https://foxdeploy.files.wordpress.com/2014/07/failsafe1.jpg)
 
 ## Tip 1 Be lazy
 

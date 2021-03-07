@@ -11,7 +11,7 @@ I put out some calls for help on Twitter and Facebook, and was ecstatic to get a
 
  
 
-![](https://foxdeploy.files.wordpress.com/2014/08/2014-08-04-18-27-001.jpg)
+[![2014-08-04 18.27.00](images/2014-08-04-18-27-001.jpg)](https://foxdeploy.files.wordpress.com/2014/08/2014-08-04-18-27-001.jpg)
 
  
 

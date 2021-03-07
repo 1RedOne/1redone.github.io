@@ -13,7 +13,7 @@ http://www.reddit.com/r/PowerShell/comments/2jitvn/help\_with\_screen\_scraping\
 
 If you don't care about how this is done, skip to the bottom for the code, here is a preview of the finished product:
 
-![](https://foxdeploy.files.wordpress.com/2014/10/weather_00.png) 
+[![weather_00](https://foxdeploy.files.wordpress.com/2014/10/weather_00.png?w=660)](https://foxdeploy.files.wordpress.com/2014/10/weather_00.png) 
 
 Reading the OP's question, he basically wanted to get a weather alert if it was going to rain. I thought this a nice goal, but expanded further to wanting to get certain weather information like the temp, forecast and wind speed, right in the console when I started it up.
 
@@ -25,7 +25,7 @@ One thing to keep in mind when setting up a tool like this is that you'll need t
 
 **Don't give people your API key unless you'd feel safe giving them your physical or digital wallet.**
 
-![weather_01](https://foxdeploy.files.wordpress.com/2014/10/weather_01.png?w=660) Make note of your API Key on this page.\[/caption\]
+\[caption id="attachment\_873" align="alignnone" width="660"\]![weather_01](https://foxdeploy.files.wordpress.com/2014/10/weather_01.png?w=660) Make note of your API Key on this page.\[/caption\]
 
 If you're OK with all of this,
 
@@ -43,7 +43,7 @@ https://api.forecast.io/forecast/$API\_key/37.8267,-122.423
 
 If you run Invoke-WebRequest, then convert From JSON, you'll have a nice PowerShell object.
 
-!\[/caption\]
+\[caption id="attachment\_872" align="alignnone" width="660"\]![weather_02](https://foxdeploy.files.wordpress.com/2014/10/weather_02.png?w=660) Um, the weather looks to be very bad in Alkatraz. Let's cancel our vacation!\[/caption\]
 
 Now, if you want to look up your own city, you can [get your latitude and longitude here](http://developer.mapquest.com/web/tools/lat-long-finder).
 

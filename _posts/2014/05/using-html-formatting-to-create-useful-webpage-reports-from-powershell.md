@@ -17,7 +17,7 @@ Using a few calculated properties, we were set.
 
 ###  Phase 1; Console Only
 
-![](https://foxdeploy.files.wordpress.com/2014/05/mig_webtool_0.png) It works and has a nice utilitarian vibe going on, but it isn't really something you'd want to put up on the big screen...\[/caption\]
+\[caption id="attachment\_550" align="alignnone" width="1105"\][![Mig_webtool_0](images/mig_webtool_0.png)](https://foxdeploy.files.wordpress.com/2014/05/mig_webtool_0.png) It works and has a nice utilitarian vibe going on, but it isn't really something you'd want to put up on the big screen...\[/caption\]
 
 It could be so much better! This is a solid phase one tool. It does its job but really no one will be impressed too much. I had to do more!
 
@@ -37,7 +37,7 @@ This is what I would define as a phase two offering. It shows a lot of potential
 
 ### Phase 3; Polish!
 
-![](https://foxdeploy.files.wordpress.com/2014/05/mig_webtool_011.png)
+[![Mig_webtool_01](images/mig_webtool_011.png)](https://foxdeploy.files.wordpress.com/2014/05/mig_webtool_011.png)
 
 Of course, the links are just for appearances, but with a bit of work, it could all be functional. This is where I would call this a phase three deliverable and begin looking for my next project. It can serve well in the field, looking good and getting the job done, and won't embarrass me later.
 

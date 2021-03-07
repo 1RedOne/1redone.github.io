@@ -47,17 +47,17 @@ NDIS Commands…smells like networking. Finally, the output of the analyze comma
 
 **Cause:** VMswitch.sys does not like me installing a VPN on my Hyper-V host. This makes sense, as in Hyper-V's Type 1 Hypervisor, the host machine is treated as an elevated VM, which is exposed to both the virtual and the physical hardware on the machine. This is the reason you'll see so many network and other devices listed in device manager:
 
-!\[/caption\]
+\[caption id="attachment\_656" align="alignnone" width="636"\][![VPNBbsod1](images/vpnbbsod1.png)](https://foxdeploy.files.wordpress.com/2014/08/vpnbbsod1.png) The Blue entries are actually Hypervisor related NICs. Don't touch them!\[/caption\]
 
  
 
 And also why you'll see so many network devices appear in Network Devices within the host. One for each Virtual Switch.
 
-![VPNBbsod2](images/vpnbbsod2.png) Again, some of these are only placeholders for VMswitch network devices, which you're exposed to only from within the parent partition (that special sort of VM which can see physical and virtual devices).\[/caption\]
+\[caption id="attachment\_657" align="alignnone" width="524"\]![VPNBbsod2](images/vpnbbsod2.png) Again, some of these are only placeholders for VMswitch network devices, which you're exposed to only from within the parent partition (that special sort of VM which can see physical and virtual devices).\[/caption\]
 
 And to illustrate the correlation, here are the matching virtual switches from within Hyper-V.
 
-![VPNBbsod3](https://foxdeploy.files.wordpress.com/2014/08/vpnbbsod3.png?w=660) If you note the names, these are the same as the entries from the above two pictures.\[/caption\]
+\[caption id="attachment\_655" align="alignnone" width="660"\]![VPNBbsod3](https://foxdeploy.files.wordpress.com/2014/08/vpnbbsod3.png?w=660) If you note the names, these are the same as the entries from the above two pictures.\[/caption\]
 
 When a Hyper-V guest requests access to a network resource, its request goes to the VM queue which is passed along to the Virtual Switch agent within the Hypervisor (which is running on the hardware, not your parent partition / Host VM).
 

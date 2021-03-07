@@ -27,7 +27,7 @@ $Form.Controls.Add($textbox)
 
 There we go, basic-basic.
 
-![](https://foxdeploy.files.wordpress.com/2014/09/autocomplete_01.png)
+[![autocomplete_01](images/autocomplete_01.png)](https://foxdeploy.files.wordpress.com/2014/09/autocomplete_01.png)
 
 The difference is simply adding the following lines starting on line 20:
 
@@ -45,6 +45,6 @@ Or you could add individual entries, or the output of a script
 
 \[code language="powershell" light="true"\] #Adding single entries to the inherited AutoCompleteSource object of the textbox "1","blam","foxdeploy","stephen.owen" | % {$textbox.AutoCompleteCustomSource.AddRange($\_) } \[/code\]
 
-!\[/caption\]
+\[caption id="attachment\_753" align="alignnone" width="313"\]![autocomplete_03](images/autocomplete_03.png) Voila, Magnifique!\[/caption\]
 
 As always, feel free to modify for your own purposes, and I hope that this helps you in the future.

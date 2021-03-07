@@ -29,15 +29,15 @@ New to PowerShell ISE v5 is the ability to hit Ctrl+B (yes, B, not C!) to jump i
 
 It's easy to miss in the ISE. When you launch any code, the status bar on the bottom of the window of the ISE will change from 'Stopped' or 'Ready' to the below
 
-![](https://foxdeploy.files.wordpress.com/2014/10/v5isechanges011.png) Running script / selection. Press Ctrl+Break to Stop. Press Ctrl+B to break into debugger.\[/caption\]
+\[caption id="attachment\_811" align="alignnone" width="705"\][![Running script / selection. Press Ctrl+Break to Stop. Press Ctrl+B to break into debugger.](images/v5isechanges011.png)](https://foxdeploy.files.wordpress.com/2014/10/v5isechanges011.png) Running script / selection. Press Ctrl+Break to Stop. Press Ctrl+B to break into debugger.\[/caption\]
 
 Hitting **Ctrl+B** while our code is running changes our prompt too. We get a standard Write-Debug style display of which line the code was processing when we interuppted, and our prompt shifts into '\[DBG\]>>' mode, signaling that we are paused within execution of a script, and can access the variables available within script execution.
 
-![](https://foxdeploy.files.wordpress.com/2014/10/v5isechanges02.png)
+[![v5ISEchanges02](images/v5isechanges02.png)](https://foxdeploy.files.wordpress.com/2014/10/v5isechanges02.png)
 
 It now becomes very easy to access the current variable, making it very easy to troubleshoot why code fails in a particular situation.
 
-!\[/caption\]
+\[caption id="attachment\_806" align="alignnone" width="572"\]![v5ISEchanges03](images/v5isechanges03.png) Officially no excuse not to debug our code now!\[/caption\]
 
 This is a killer feature, in my opinion, and one I'll highlight in my PowerShell teaching from now on.
 
@@ -49,7 +49,7 @@ I always found it hard to remember what the names or properties were of various 
 
 Now, there's no forgetting.  When within a Configuration Scriptblock in the ISE, simply hit **Ctrl+Space** to display AutoComplete hints for the various resources available.
 
-![](https://foxdeploy.files.wordpress.com/2014/10/v5isechanges04.png)
+[![v5ISEchanges04](images/v5isechanges04.png)](https://foxdeploy.files.wordpress.com/2014/10/v5isechanges04.png)
 
 You can even select one and hit **Ctrl+Space** again to see a reminder of which properties are available for that Configuration Resource.
 

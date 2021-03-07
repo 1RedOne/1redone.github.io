@@ -28,6 +28,7 @@ archives work | ✔
 video quality test | ❌
 New logo? | ❌
 final review | ❌
+Verify all series pages work | ❌
 domain cutover | ❌
 
 ### New Posts to do

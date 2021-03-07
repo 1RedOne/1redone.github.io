@@ -7,7 +7,7 @@ categories:
 
 The WordPress.com stats helper monkeys prepared a 2014 annual report for this blog.
 
-![](http://foxdeploy.com/2014/annual-report/)
+[![](images/2014-emailteaser.png)](http://foxdeploy.com/2014/annual-report/)
 
 Here's an excerpt:
 

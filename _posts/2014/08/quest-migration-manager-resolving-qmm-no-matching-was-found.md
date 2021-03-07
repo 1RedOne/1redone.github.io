@@ -7,7 +7,7 @@ categories:
 
 If in Baretail (or your log file of choice) you see something similar to the following when attempting to Switch a mailbox.
 
-![](https://foxdeploy.files.wordpress.com/2014/08/quest_nomatching.png)
+[![Quest_NoMatching](images/quest_nomatching.png)](https://foxdeploy.files.wordpress.com/2014/08/quest_nomatching.png)
 
 Text:
 

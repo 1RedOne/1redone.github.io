@@ -35,7 +35,7 @@ If we run this code in PowerShell and then pipe $ListBox to Get-Member, we'll se
 
 ![](http://foxdeploy.files.wordpress.com/2014/01/two_method_of_input_02.png)
 
-[caption id="" align="alignnone" width="295"]![](http://foxdeploy.files.wordpress.com/2014/01/two_method_of_input_02-5.png) Maybe it should say 'Something we want to eat'[/caption]
+[](http://foxdeploy.files.wordpress.com/2014/01/two_method_of_input_02-5.png) Maybe it should say 'Something we want to eat'[/caption]
 
 Now, that we know it is so easy to add items to a list or combo box, if we want to add the results of a query or function, we just use a ForEach function!
 
@@ -67,7 +67,7 @@ $x = $users | Select Name | Out-GridView -PassThru -Title 'Pick a user' | % {$_}
 
 Surely that can't be it.  Lets just give it a try...
 
-[caption id="" align="alignnone" width="375"]![](http://foxdeploy.files.wordpress.com/2014/01/two_method_of_input_04.png) No fliiping way![/caption]
+[](http://foxdeploy.files.wordpress.com/2014/01/two_method_of_input_04.png) No fliiping way![/caption]
 
 And the objects are available for you to act on at the end as well, stored in $x.
 

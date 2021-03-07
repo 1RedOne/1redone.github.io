@@ -19,9 +19,9 @@ I can see my object, but when I open it, I only see a subset of the available pr
 
 Normally the next step is to look at the object path and browse out to it in AD, which wastes a lot of time.  However, we'll never waste that time again, once you're armed with this tip!
 
-![ADUC - Workaround - 03](images/aduc-workaround-03.png) I normally shudder more and more as I see how deep I have to search to find this object I need to edit.\[/caption\]
+\[caption id="attachment\_563" align="alignnone" width="424"\]![ADUC - Workaround - 03](images/aduc-workaround-03.png) I normally shudder more and more as I see how deep I have to search to find this object I need to edit.\[/caption\]
 
-![ADUC - Workaround - 04](images/aduc-workaround-04.png) Slogging all the way down into a deep or complex tree is one of those minor things that can make you hate your life.\[/caption\]
+\[caption id="attachment\_564" align="alignnone" width="585"\]![ADUC - Workaround - 04](images/aduc-workaround-04.png) Slogging all the way down into a deep or complex tree is one of those minor things that can make you hate your life.\[/caption\]
 
  
 
@@ -31,13 +31,13 @@ Normally the next step is to look at the object path and browse out to it in AD,
 
 We'll not do it the old way again.  So, from the Search window, find your user or computer you'd like to alter, then click Member Of.  Open one of the groups the object is in and then close the original object window.
 
-![ADUC - Workaround - 05](images/aduc-workaround-05.png) Click 'Member Of' for the object you'd like to edit, then pick a group that contains them.\[/caption\]
+\[caption id="attachment\_562" align="alignnone" width="421"\]![ADUC - Workaround - 05](images/aduc-workaround-05.png) Click 'Member Of' for the object you'd like to edit, then pick a group that contains them.\[/caption\]
 
-![ADUC - Workaround - 06](images/aduc-workaround-06.png) Be sure to Close the original Object once the group has loaded. This will prompt ADUC to redraw the object from the groups window, forcing more properties to appear\[/caption\]
+\[caption id="attachment\_561" align="alignnone" width="585"\]![ADUC - Workaround - 06](images/aduc-workaround-06.png) Be sure to Close the original Object once the group has loaded. This will prompt ADUC to redraw the object from the groups window, forcing more properties to appear\[/caption\]
 
 Now, go to the Members tab for this group and find the object you'd like to edit.  Double-click it and…
 
-!\[/caption\]
+\[caption id="attachment\_560" align="alignnone" width="585"\]![ADUC - Workaround - 07](images/aduc-workaround-07.png) You'll never do it the old way again!\[/caption\]
 
 Enjoy this workaround!  I've got no idea why you can't just edit Attributes directly from Search without these extra steps, but it so much faster than manually browsing to objects that I'd wager you'll never go back to the old way again.
 

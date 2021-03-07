@@ -78,7 +78,7 @@ ToString Method string ToString()
 
 So, this helpful output lets us see some interesting Methods() available, all centered around Changing Length Units. Let's take a peek at the .ChangeLengthUnit() method.
 
-![](https://foxdeploy.files.wordpress.com/2014/11/methods.png)
+[![methods](images/methods.png)](https://foxdeploy.files.wordpress.com/2014/11/methods.png)
 
 Those definition types are super long! It basically abbreviates down to ("NumberOfUnits","StartingLengthUnit","EndingLengthUnit")
 
@@ -120,7 +120,7 @@ Here's an example.
 
 If you want to test that it worked, you can open up the full URL in a browser, and see something like this.
 
-![](https://foxdeploy.files.wordpress.com/2014/11/posttestweb.png)
+[![PostTestweb](images/posttestweb.png)](https://foxdeploy.files.wordpress.com/2014/11/posttestweb.png)
 
 Now to pull the data back down from there, we'll do an use the 'Get' method instead.
 

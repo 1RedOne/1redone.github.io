@@ -15,7 +15,7 @@ One issue we encountered was that because of certain underlying settings conflic
 
 The problem with this approach is that if the computer is offline or doesn't allow remote procedure calls (a tell-tale for being in the wrong domain, as WinRM should be enabled if the PC is in the right place via Group Policy) emerges in the form of nasty error messages.
 
-![](https://foxdeploy.files.wordpress.com/2014/08/trycatchbetteroutput01.png)
+[![TryCatchBetterOutput01](images/trycatchbetteroutput01.png)](https://foxdeploy.files.wordpress.com/2014/08/trycatchbetteroutput01.png)
 
 To 'get the job done' I told people just to ignore this message…but the dev inside of me couldn't handle the ugliness of this whole process. With just a few small edits, I was able to get this much better output.
 

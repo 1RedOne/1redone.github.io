@@ -25,7 +25,7 @@ Yep, it's not very nice and I'm deeply, deeply ashamed.
 
 I mean, it worked:
 
-![](https://foxdeploy.files.wordpress.com/2014/09/dontdowhatif_thisway_1.png)
+[![DontDoWhatIf_thisway_1](images/dontdowhatif_thisway_1.png)](https://foxdeploy.files.wordpress.com/2014/09/dontdowhatif_thisway_1.png)
 
 It's almost an example of what not to do! This little snippet has been simplified to be as easy to read as it gets, the thing would get VERY nasty when working with a complex script, as I'd pretty much have to write all of my code twice. Once to actually do the thing, and another to describe what I was doing in this pseudo-WhatIf message.
 

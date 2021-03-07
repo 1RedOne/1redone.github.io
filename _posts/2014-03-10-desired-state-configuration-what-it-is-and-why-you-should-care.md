@@ -1,10 +1,12 @@
 ---
 title: "Desired State Configuration - What it is and why you should care"
 date: "2014-03-10"
+redirect_from : /2014/03/10/desired-state-configuration-what-it-is-and-why-you-should-care
 categories: 
   - "scripting"
 tags: 
   - "dsc"
+excerpt: "f you've been following Microsoft management news, you've no doubt heard of Desired State Configuration.  You might be wondering what it is."
 ---
 
 If you've been following Microsoft management news, you've no doubt heard of Desired State Configuration.  You might be wondering what it is.
@@ -15,7 +17,7 @@ Let's start with what it's not.  Many believe that DSC is a feature of PowerShe
 
 I hope to explain that and by the end give you a practical example that isn't the typical 'install a web server' sample you've probably seen elsewhere.   I'm writing this to expand my own knowledge, and to help share with any who may stumble upon this.  If you catch an error I've made, please let me know.
 
-> \[Desired State Configuration is\] Microsoft's Fresh Start for Configuration… -Don Jones
+> [Desired State Configuration is] Microsoft's Fresh Start for Configuration… -Don Jones
 
 When Don Jones makes a pronouncement like this, I tend to listen.  The idea behind DSC is to simplify the configuration of Windows, and to eliminate the overlap that exists between GPO, SCCM's Desired Configuration Manager, Logon Scripts, and other options, and to make it all easy.   In the end, ensuring your server configuration doesn't deviate away from the company standard should be easy, and should be reliable.
 
@@ -39,7 +41,7 @@ You need to install Bob's monitoring app on your servers, and it has a number of
 
 Oh yeah, and you have to do it tonight and you have 60 servers. One last thing, the presence of Bob's Monitoring app is from this moment forward considered mission critical and must always be present.
 
-#### Doing this the old way
+### Doing this the old way
 
 Well, You could start off writing a number of declarative scripts saying if this then that if this; then this and on and on. This would quickly become quite a script to create.   Those comfortable with PowerShell can probably think of how to write such a script, I know that I could.  Then there's the thing about ensure that the setting persist, you might set up a scheduled task to rerun your complex script every so often, or do the same thing with a GPO.
 
@@ -51,69 +53,94 @@ Yep, Star Trek. It's all about make it so. From Jeffrey Snover to Donn Jones, ev
 
 In this scenario, we've got two machines, our desktop and a server.  This server is standing in for the farm of sixty I mentioned above, and has been configured to have RDS ahead of time.  I'll be showing a screen cap of my machine running the test for components and the monitoring app (7Zip is standing in for our bespoke monitoring app).  To start with, here's a screen shot of a few lines of code to get the status of a few windows features and the install status of an application.
 
-\[caption id="attachment\_475" align="alignnone" width="1087"\][![DSC_00_features_On_Configure_me](images/dsc_00_features_on_configure_me.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_00_features_on_configure_me.png) Running from my machine, this shows that the target machine has RDS (which it shouldn't), and doesn't have the services it needs or our app installed.\[/caption\]
+![](../assets/images/2014/03/images/dsc_00_features_on_configure_me.png) Running from my machine, this shows that the target machine has RDS (which it shouldn't), and doesn't have the services it needs or our app installed.
 
 So, now to create our first configuration and then to enforce it.  The basic flow of this is to check for the roles that are needed using the WindowsFeature resource to name the roles that we need and then specify the value of 'present' for the  'ensure' parameter to make sure these things are there.  We'll then remove RDS if its present by specifying 'absent' for the same parameter for that.  Next, we'll test if the install files are there using the File resource, and if not put them there.  Finally, if the application hasn't been installed, we'll install it using the Package resource, which works for MSI and Windows Installer Setup.exe files.  We'll actually work our way back from the end, doing the file copy and package install first, then adding on the Role/Feature install and removal.
 
 ### Creating our First DSC Configuration
 
 Creating our First Configuration is as simple as typing Configuration MonitoringSoftware {}.  I should mention that DSC brings a new keyword to PowerShell, Configuration.  The syntax is similar to a Function, you can define parameters and validation, and the overall flow looks very reminiscent of a Function, so it doesn't feel too out of place.  Of course, we'll need to fill this in with some content, so we'll start with a basic file copy.  We'd also like to be able to apply this configuration (in our example, we'll call this InstallMonitoringSoftware) to many machines at once, so we'll add the ability to specify parameters. 
-
-Configuration MonitoringSoftware {  param(\[string\[\]\]$MachineName\="localhost") Node $MachineName { File MonitoringInstallationFiles {                 Ensure \="Present" SourcePath\="\\\\dc01\\Software\\Monitoring" DestinationPath\="C:\\Temp\\Monitoring" Type \="Directory" Recurse\=$true } } }
-
+```powershell
+Configuration MonitoringSoftware {  
+    param([string[]]$MachineName="localhost") 
+    
+    Node $MachineName { 
+      File MonitoringInstallationFiles {                 Ensure ="Present"
+          SourcePath="\\dc01\Software\Monitoring"
+          DestinationPath="C:\Temp\Monitoring" 
+          Type ="Directory" 
+          Recurse=$true 
+          } 
+        }
+    }
+```
 What this is doing is creating a new Configuration, that will be processed on the Node (system or system names provided), stating that for this configuration use the File resource, and Ensure that Destination Path exists.  If not, copy recursively the contents of SourcePath.
 
 **Running this creates a .mof file, which the system will evaluate from now on.**
 
-Once we run this, we'll have a .mof file--that is, the instructions of what the machine should look like, which we'll convey to the end machines through a number of methods-- created in C:\\Windows\\System32\\YourConfigurationName.  We can run this from the command line with the following command, in my example I'm running this on a VM titled 'ConfigureMe', though you could easily run this on five, twenty or more machines:
+Once we run this, we'll have a .mof file--that is, the instructions of what the machine should look like, which we'll convey to the end machines through a number of methods-- created in C:\Windows\System32\YourConfigurationName.  We can run this from the command line with the following command, in my example I'm running this on a VM titled 'ConfigureMe', though you could easily run this on five, twenty or more machines:
 
-MonitoringSoftware \-MachineName ConfigureMe
-
+```
+MonitoringSoftware -MachineName ConfigureMe
+```
 If at this point you're running into this error message, make sure you've either specified an output directory or are running ISE as an Admin:
-
+```
 Write-NodeMOFFile : Invalid MOF definition for node 'localhost': Exception calling "ValidateInstanceText" with "1" argument(s)
 
-Followed by:
+PSDesiredStateConfiguration\Configuration : Access to the path 'ConfigurationName' is denied.' errors)
+```
 
-PSDesiredStateConfiguration\\Configuration : Access to the path 'ConfigurationName' is denied.' errors)
-
-This is because the ISE's default path is C:\\windows\\system32 path and if you don't specify an output directory when you run enact a Configuration, the file will be created in the current path.   To resolve this, either run ISE as an admin, or make sure to specify the output directory for the .MOF configuration files.
+This is because the ISE's default path is C:\`windows\system32 path and if you don't specify an output directory when you run enact a Configuration, the file will be created in the current path.   To resolve this, either run ISE as an admin, or make sure to specify the output directory for the .MOF configuration files.
 
 Now we have a .MOF configuration file created.  Running this command should Ensure that a directory exists at DestinationPath and that it contains the entire contents of SourcePath; if not, make it so.  We can enact this configuration on a computer by running the following command, you'll see the output below:
 
-Start-DscConfiguration \-Path $env:windir\\system32\\MonitoringSoftware \-Wait \-Verbose \-Force 
+```
+Start-DscConfiguration -Path $env:windir\system32\MonitoringSoftware -Wait -Verbose -Force 
+```
 
-\[caption id="" align="alignnone" width="1104"\][![DSC_02_files_copied](images/dsc_02_files_copied.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_02_files_copied.png) DSC detects that the files are not where they should be and just fixes it! We need this so our install files will be where we need them for the next step.\[/caption\]
+![](../assets/images/2014/03/images/dsc_02_files_copied.png)
+
+We need this so our install files will be where we need them for the next step.
 
 According to DSC, the files are there!  Let's confirm on the system itself.
 
-\[caption id="" align="alignnone" width="539"\][![DSC_02_files_copied_explorer](images/dsc_02_files_copied_explorer.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_02_files_copied_explorer.png) Yep, there's our install files!\[/caption\]
+![](../assets/images/2014/03/images/dsc_02_files_copied_explorer.png)
 
 Now to install the program, we just add an extra configuration resource, specifying the type of Package.  This snippet will go right behind the Files resource in our configuration.
 
-Package MonitoringSoftware { Ensure \="Present" \# You can also set Ensure to "Absent" Path \="$Env:SystemDrive\\Temp\\Monitoring\\7z920-x64.msi" Name \= "7-Zip" ProductId \= "23170F69-40C1-2702-0920-000001000000"             DependsOn\= "\[File\]MonitoringInstallationFiles"             }
+```powershell
+Package MonitoringSoftware { 
+    Ensure ="Present" 
+    # You can also set Ensure to "Absent" 
+    Path ="$Env:SystemDrive\Temp\Monitoring\7z920-x64.msi" 
+    Name = "7-Zip" 
+    ProductId = "23170F69-40C1-2702-0920-000001000000"           
+    DependsOn= "[File]MonitoringInstallationFiles"      
+```
 
-Two things to note here, one we're using the DependsOn parameter as a method of chaining dependencies.  Pretty neat.  The syntax is "\[ResourceType\]Resourcename", , if you'd like to depend on multiple resources, simply place the resources in a here string like so: DependsOn= @("\[WindowsFeature\]HyperV", "\[File\]VHDFolder")\[Thanks to [Tore Goreng](https://twitter.com/ToreGroneng) for this tip!\].  Also, the ProductId, that value can be grabbed by installing the application and looking for the program GUID in the registry, or through Win32\_Product WMI class under IndentifyNumber:
-
+Two things to note here, one we're using the DependsOn parameter as a method of chaining dependencies.  Pretty neat.  The syntax is "[ResourceType]Resourcename", , if you'd like to depend on multiple resources, simply place the resources in a here string like so: DependsOn= @("[WindowsFeature]HyperV", "[File]VHDFolder")[Thanks to [Tore Goreng](https://twitter.com/ToreGroneng) for this tip!].  Also, the ProductId, that value can be grabbed by installing the application and looking for the program GUID in the registry, or through Win32\_Product WMI class under IndentifyNumber:
+```
 IdentifyingNumber : {23170F69-40C1-2702-0920-000001000000} Name              : 7-Zip 9.20 (x64 edition) Vendor            : Igor Pavlov Version           : 9.20.00.0 Caption           : 7-Zip 9.20 (x64 edition)
-
+```
 Alright, now that we've added this, lets rerun the Configuration name (Command line : MonitoringSoftware -MachineName ConfigureMe) and then Start-DscConfiguration again  This time, it should ensure the files are there, and then install the application if its not there  Lets see what happens when its enacted.
 
-\[caption id="" align="alignnone" width="870"\][![DSC_03_monitoring_installed_dsc_output](images/dsc_03_monitoring_installed_dsc_output.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_03_monitoring_installed_dsc_output.png) The application is automagically installed!\[/caption\]
+![DSC_03_monitoring_installed_dsc_output](../assets/images/2014/03/images/dsc_03_monitoring_installed_dsc_output.png)
+ The application is automagically installed!
 
-\[caption id="" align="alignnone" width="506"\][![DSC_03_monitoring_installed_StartScreen](images/dsc_03_monitoring_installed_startscreen.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_03_monitoring_installed_startscreen.png) Double-checking and...yep, 7-Zip--er, our monitoring app is there!\[/caption\]
+![DSC_03_monitoring_installed_StartScreen](../assets/images/2014/03/images/dsc_03_monitoring_installed_startscreen.png)
+
+Double-checking and...yep, 7-Zip--er, our monitoring app is there!
 
 Handling services is a bit easier, so I'll just paste one here as an example, this one ensures BITs is present, and if not, puts it there with IncludeAllSubFeature, to make sure it works.  I also gave the Resource a colorful name, to illustrate that you can do whatever you wish with resource names.
-
+```
   WindowsFeature GotdemBITS #you can name these whatever you like,remember the best practices and pick a good name
 
  {
-
- Ensure \="Present"  Name \="BITS"             IncludeAllSubFeature\=$true          }
-
+ Ensure ="Present"  Name ="BITS"             IncludeAllSubFeature=$true          }
+```
 Because adding on the other Roles and Features gets to be quite repetitive, and the script and output take up a good bit of space, I'll spare you the suspense and show you the final script,  [available here](http://foxdeploy.com/code-and-scripts/dsc-script-and-output/ "DSC Script and Output").  After enacting this on our system running the test in PowerShell again should show all of the features are installed as they should be.
 
-\[caption id="" align="alignnone" width="712"\][![DSC_05_configuration_gasm](images/dsc_05_configuration_gasm.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_05_configuration_gasm.png) Take this concept and scale it out over fifty servers and this becomes very compelling.\[/caption\]
+![](../assets/images/2014/03/images/dsc_05_configuration_gasm.png) Take this concept and scale it out over fifty servers and this becomes very compelling.
 
 Amazing.
 
