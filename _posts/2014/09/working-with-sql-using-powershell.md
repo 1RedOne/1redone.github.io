@@ -18,7 +18,7 @@ Because many PowerShell enthusiasts may not be familiar with SQL, in this post I
 
 First things first, we'll create our SQL Test DB. I'll start with Sql Server express 2008 with tools, since it is so common and easy.  Get the bits here http://www.microsoft.com/en-us/download/details.aspx?id=22973.  Once it finished downloading, run the install, selecting Installation and then 'New SQL Server Stand-alone installation or add features to an existing installation"
 
-\[caption id="attachment\_691" align="alignnone" width="705"\]![sql01](images/sql01.png) You want the top option\[/caption\]
+[]![sql01](images/sql01.png) You want the top option\[/caption\]
 
 The SQL install wizard will check system state before getting you too deeply into the install.
 
@@ -28,7 +28,7 @@ If you run into this 'Need to Restart' rule, you can bypass the restart by delet
 
 HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager and delete all items under PendingFileRenameOperations (Taken from http://www.sqlcoffee.com/Troubleshooting051.htm).  You can then rerun the Rule Check by clicking re-run.
 
-\[caption id="attachment\_693" align="alignnone" width="582"\][![sql03](images/sql03.png)](https://foxdeploy.files.wordpress.com/2014/09/sql03.png) All systems are go!\[/caption\]
+![sql03](images/sql03.png)](https://foxdeploy.files.wordpress.com/2014/09/sql03.png) All systems are go!\[/caption\]
 
  
 
@@ -40,15 +40,15 @@ On the next screen, pick where you want your DB to go, and specify an instance n
 
 For Accounts, select NT Authority System and local service, as this is just our test.  If you're setting up production SQL, you should know that many applications which run on SQL won't install if you leave the barn-doors open from a security standpoint.
 
-\[caption id="attachment\_695" align="alignnone" width="705"\]![sql05](images/sql05.png) Good enough for a test environment, but not recommended when going production\[/caption\]
+[]![sql05](images/sql05.png) Good enough for a test environment, but not recommended when going production\[/caption\]
 
 Click Next
 
-\[caption id="attachment\_696" align="alignnone" width="705"\]![sql06](images/sql06.png) Ensure you specify Add Current User to SQL Server Administrators\[/caption\]
+[]![sql06](images/sql06.png) Ensure you specify Add Current User to SQL Server Administrators\[/caption\]
 
 next next next next next next next, and then when this loading bar shows up, go ahead and grab a sandwich.
 
-\[caption id="attachment\_697" align="alignnone" width="705"\]![sql07](images/sql07.png) It will pause at this screen until roughly the heat-death of the universe.\[/caption\]
+[]![sql07](images/sql07.png) It will pause at this screen until roughly the heat-death of the universe.\[/caption\]
 
 Once the wizard finally completes, you should have SQL Installed!
 
@@ -66,7 +66,7 @@ Pick whatever you'd like for a name. I choose FoxDeploy.  You can safely leave 
 
 Pick a name for the table on the far right side, and then add some columns to your sheet. In my screen shot, I've selected the datatype of nchar(10), but I would recommend picking a type such as MAXVARCHAR or something similar in your own test. The nchar(10) datatype will limit the number of characters you can input, and can give you some puzzling errors.
 
-\[caption id="attachment\_700" align="alignnone" width="640"\]![sql10](images/sql10.png) On the right side, select the name of the table, I choose Powershell,\[/caption\]
+[]![sql10](images/sql10.png) On the right side, select the name of the table, I choose Powershell,\[/caption\]
 
  
 
@@ -76,7 +76,7 @@ Finally, click this button to generate a change script you'll execute which will
 
 A box should appear, offering you the option to create a Save Change Script.  This is incredibly strongly recommended if ever touching production SQL.
 
-\[caption id="attachment\_702" align="alignnone" width="532"\]![sql12](images/sql12.png) You can copy the query out of this window and run it directly, which saves a step of running the transaction log file created\[/caption\]
+[]![sql12](images/sql12.png) You can copy the query out of this window and run it directly, which saves a step of running the transaction log file created\[/caption\]
 
  
 
@@ -86,7 +86,7 @@ Click New Query, paste the script in, and hit f5! And hold on to your butts!
 
 If everything worked correctly, you should receive confirmation in the messages window below.
 
-\[caption id="attachment\_704" align="alignnone" width="296"\]![sql14](images/sql14.png) Most of the time in SQL you won't see this message….\[/caption\]
+[]![sql14](images/sql14.png) Most of the time in SQL you won't see this message….\[/caption\]
 
  
 
@@ -156,7 +156,7 @@ Now, let's use a practical example. In this situation, let's list out the ten bi
 
 For a preview, these are the files in the directory I'm listing out:
 
-\[caption id="attachment\_708" align="alignnone" width="705"\]![sql16](images/sql16.png) If all goes well, these should appear as entries in our DB\[/caption\]
+[]![sql16](images/sql16.png) If all goes well, these should appear as entries in our DB\[/caption\]
 
 What we'll do is setup variables to simplify our command structure (and let us re-use this code in the future).  We'll then get  and sort a list of the files, and then pull values from each record, which we'll store in a variable.  We'll then use Invoke-SQLCmd to act on this data, and insert one row for each item:
 
@@ -176,7 +176,7 @@ Invoke-Sqlcmd -Database $database -ServerInstance $server -Query "select \* from
 
  
 
-\[caption id="attachment\_709" align="alignnone" width="705"\]![sql17](images/sql17.png) Blam! We're pulling this data that we just added into SQL back from our database!\[/caption\]
+[]![sql17](images/sql17.png) Blam! We're pulling this data that we just added into SQL back from our database!\[/caption\]
 
 It worked!  To round things out, here is a screen shot from SQL management studio which shows that the entries now exist within the table from that side too.
 

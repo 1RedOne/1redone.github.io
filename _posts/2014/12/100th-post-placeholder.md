@@ -64,7 +64,7 @@ Assuming you have a newly imaged Server 2012 R2 server, you'll need to install:
 
 Blam, you've got a DSC Server.
 
-\[caption id="attachment\_1005" align="alignnone" width="992"\][![Pull-ServerDSCInstalled](images/pull-serverdscinstalled.png)](https://foxdeploy.files.wordpress.com/2014/12/pull-serverdscinstalled.png) No way, that was too easy! Message Text: Warning \[DC01\] : WindowsFeaturesDSCServiceFeature Windows Automatic Updating is not enabled. To ensure your newly-installed role or feature is automatically updated, turn on Windows Updates.\[/caption\]
+![Pull-ServerDSCInstalled](images/pull-serverdscinstalled.png)](https://foxdeploy.files.wordpress.com/2014/12/pull-serverdscinstalled.png) No way, that was too easy! Message Text: Warning \[DC01\] : WindowsFeaturesDSCServiceFeature Windows Automatic Updating is not enabled. To ensure your newly-installed role or feature is automatically updated, turn on Windows Updates.\[/caption\]
 
 It was deceptively easy, right? What happened under the covers was that an instance of IIS was spun up and configured to be running a webapp of the Desired State Configuration Pull Service, with a source directory for configs set up as PROGRAMFILES\\WindowsPowerShell\\DscService\\Configuration, and also an instance of the DSC Compliance server (which we'll get into in a later post...once I can understand it!). This script from Jason's blog post configured IIS to listen on port 8080, so we'll need to keep that in mind by directing any requests to our DSC server to that port, using this syntax http://ServerName:PortName. You can change the bindings in IIS, if you'd like, or change it in the script before you launch it.
 
@@ -107,7 +107,7 @@ And here is the [code for the script](http://foxdeploy.com/code-and-scripts/dsc-
 
 Now, what will happen here is that your system will build and then run the remote PowerShell commands to create the .mof for it. Then, it will use DSC to configure itself as a Pull Client, and proceed with the Task Sequence. When the TS finished, within about 30 minutes, the Local Configuration Manager will attempt it's first Pull, and grab the .mof file then enact the configuration. What we're doing in our demo is simply copying down the source files for an .MSI, and then when it gets here ensure the MSI is installed. Assuming you've got a MSI for 7Zip sitting on a share and you run this script, you should see this!
 
-\[caption id="attachment\_1008" align="alignnone" width="250"\][![Our old stand-by, installing 7Zip](images/pull-serverinstalled.png)](https://foxdeploy.files.wordpress.com/2014/12/pull-serverinstalled.png) Our old stand-by, installing 7Zip\[/caption\]
+![Our old stand-by, installing 7Zip](images/pull-serverinstalled.png)](https://foxdeploy.files.wordpress.com/2014/12/pull-serverinstalled.png) Our old stand-by, installing 7Zip\[/caption\]
 
 ### Wrapping up
 

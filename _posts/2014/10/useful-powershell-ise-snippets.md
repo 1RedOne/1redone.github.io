@@ -11,7 +11,7 @@ Hi guys,
 
 One of the best features of the PowerShell ISE is the presence of Snippets, a great engine to fill in code-snippets for common tasks.  I pretty much use this every single day!
 
-\[caption id="attachment\_854" align="alignnone" width="705"\][![Snippets0Negative1](images/snippets0negative1.png)](https://foxdeploy.files.wordpress.com/2014/10/snippets0negative1.png) Hit Control+J to display the snippet menu. You can hover over for more info and detailed syntax.\[/caption\]
+![Snippets0Negative1](images/snippets0negative1.png)](https://foxdeploy.files.wordpress.com/2014/10/snippets0negative1.png) Hit Control+J to display the snippet menu. You can hover over for more info and detailed syntax.\[/caption\]
 
  
 
@@ -27,7 +27,7 @@ From <[http://sqldbawithabeard.com/2014/09/09/powershell-snippets-a-great-learni
 
 What does it do? Well, after running this in the ISE, you can hit Control+J and bam, an easy to fill in form to create a nice new Snippet.
 
-\[caption id="attachment\_855" align="alignnone" width="705"\]![Snippets00](images/snippets00.png) You'll use this on a weekly basis!\[/caption\]
+[]![Snippets00](images/snippets00.png) You'll use this on a weekly basis!\[/caption\]
 
 Fill in the values and hit F5 to create the snippet.
 

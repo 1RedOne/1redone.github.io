@@ -23,7 +23,7 @@ So, a big prerequisite to this whole process that can keep you from moving a use
 
 Here's the general flowchart of when it is OK to migrate a user account.
 
-\[caption id="attachment\_653" align="alignnone" width="250"\][![Get-SwitchedStatus FlowChart](images/get_switchedstatus-2.png)](https://foxdeploy.files.wordpress.com/2014/08/get_switchedstatus-2.png) Get-SwitchedStatus FlowChart\[/caption\]
+![Get-SwitchedStatus FlowChart](images/get_switchedstatus-2.png)](https://foxdeploy.files.wordpress.com/2014/08/get_switchedstatus-2.png) Get-SwitchedStatus FlowChart\[/caption\]
 
 You'll have Exchange server pairs setup for each of your core Exchange DAG's and these will handle syncing mailboxes from Source to Target. Once a mailbox is synced, it can then be Switched, a process which handles mail routing and ensures that new mail is delivered to the mailbox the user is using. Essentially, Switching the mailbox will direct all new mail to the user's new mailbox in the target, at which point you can safely unprovision and disable their mailbox from the source.
 

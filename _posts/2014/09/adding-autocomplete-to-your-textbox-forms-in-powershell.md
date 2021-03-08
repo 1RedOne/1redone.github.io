@@ -45,6 +45,6 @@ Or you could add individual entries, or the output of a script
 
 \[code language="powershell" light="true"\] #Adding single entries to the inherited AutoCompleteSource object of the textbox "1","blam","foxdeploy","stephen.owen" | % {$textbox.AutoCompleteCustomSource.AddRange($\_) } \[/code\]
 
-\[caption id="attachment\_753" align="alignnone" width="313"\]![autocomplete_03](images/autocomplete_03.png) Voila, Magnifique!\[/caption\]
+[]![autocomplete_03](images/autocomplete_03.png) Voila, Magnifique!\[/caption\]
 
 As always, feel free to modify for your own purposes, and I hope that this helps you in the future.

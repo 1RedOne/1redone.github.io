@@ -26,6 +26,6 @@ Now, to put it all together.  We'll first enumerate all of the PackageIDs, and 
 
 \[code language="powershell"\]Get-CMPackage | Select -ExpandProperty PackageID | ForEach-Object { $package = $\_ Write-host "Adding Package: $package" if (((Get-WMIObject -NameSpace "Root\\SMS\\Site\_YOUR-THREE-DIGIT-SITE-CODE" -Class SMS\_DistributionPointGroup).AddPackages($package)).ReturnValue -ne 0) { Write-host -ForegroundColor DarkRed "Possible error processing $package" } ELSE{ Write-Host -ForegroundColor GREEN "Success!" } } \[/code\] And here it is in action.
 
-\[caption id="attachment\_416" align="alignnone" width="201"\][![04_add_all_packages_to_distribution_point_group](images/04_add_all_packages_to_distribution_point_group.png)](http://foxdeploy.files.wordpress.com/2014/01/04_add_all_packages_to_distribution_point_group.png) Happy Green makes me feel alright!\[/caption\]
+![04_add_all_packages_to_distribution_point_group](images/04_add_all_packages_to_distribution_point_group.png)](http://foxdeploy.files.wordpress.com/2014/01/04_add_all_packages_to_distribution_point_group.png) Happy Green makes me feel alright!\[/caption\]
 
 I hope this helped you out.  You could also distribute drivers, operating system images, updates or any other content that uses a PackageID using this same syntax.

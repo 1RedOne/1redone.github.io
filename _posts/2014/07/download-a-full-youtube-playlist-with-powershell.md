@@ -17,7 +17,7 @@ You should make sure your link loads in Playlist form.  It should look like thi
 
 [https://www.youtube.com/playlist?list=PL8B03F998924DA45B](https://www.youtube.com/playlist?list=PL8B03F998924DA45B)
 
-\[caption id="attachment\_579" align="alignnone" width="585"\][![ You can get your playlist by selecting the URL from a page that will generally look like this.](images/youtube_dl_00.png)](https://foxdeploy.files.wordpress.com/2014/07/youtube_dl_00.png) You can get your playlist by selecting the URL from a page that will generally look like this.\[/caption\]
+![ You can get your playlist by selecting the URL from a page that will generally look like this.](images/youtube_dl_00.png)](https://foxdeploy.files.wordpress.com/2014/07/youtube_dl_00.png) You can get your playlist by selecting the URL from a page that will generally look like this.\[/caption\]
 
 If it doesn't contain a playlist, this method won't work for you.  Once you have your URL, provide it in the $PlayListURL in the top line of the code:
 
@@ -37,13 +37,13 @@ We begin by Invoking a WebRequest for our URL and selecting all of the links. Ne
 
 Next, we remove items with a title with less than three characters, to remove duplicate entries, then we move on down the pipeline to set up a calculated property to perform some adjustment to the URL property.  We finally remove all items that survived to this point, which have 'Play All' in their name (which is typically reserved for the first entry in a playlist.
 
-\[caption id="attachment\_581" align="alignnone" width="585"\][![Sample output of a playlist](images/youtube_dl_01.png)](https://foxdeploy.files.wordpress.com/2014/07/youtube_dl_01.png) Sample output of a playlist\[/caption\]
+![Sample output of a playlist](images/youtube_dl_01.png)](https://foxdeploy.files.wordpress.com/2014/07/youtube_dl_01.png) Sample output of a playlist\[/caption\]
 
 This gets saved and then fed to the binary one by one!
 
 \[code language="powershell"\] ForEach ($video in $VideoUrls){ Write-Host "Downloading $($video.innerText)" .\\youtube-dl.exe $video.URL } \[/code\]
 
-\[caption id="attachment\_580" align="alignnone" width="585"\]![](images/youtube_dl_02.png) This process supports WGET, so your downloads can even resume!\[/caption\]
+[]![](images/youtube_dl_02.png) This process supports WGET, so your downloads can even resume!\[/caption\]
 
 ### Completed Code
 

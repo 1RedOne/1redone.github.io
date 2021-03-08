@@ -25,7 +25,7 @@ One thing to keep in mind when setting up a tool like this is that you'll need t
 
 **Don't give people your API key unless you'd feel safe giving them your physical or digital wallet.**
 
-\[caption id="attachment\_873" align="alignnone" width="660"\]![weather_01](https://foxdeploy.files.wordpress.com/2014/10/weather_01.png?w=660) Make note of your API Key on this page.\[/caption\]
+[]![weather_01](https://foxdeploy.files.wordpress.com/2014/10/weather_01.png?w=660) Make note of your API Key on this page.\[/caption\]
 
 If you're OK with all of this,
 
@@ -43,7 +43,7 @@ https://api.forecast.io/forecast/$API\_key/37.8267,-122.423
 
 If you run Invoke-WebRequest, then convert From JSON, you'll have a nice PowerShell object.
 
-\[caption id="attachment\_872" align="alignnone" width="660"\]![weather_02](https://foxdeploy.files.wordpress.com/2014/10/weather_02.png?w=660) Um, the weather looks to be very bad in Alkatraz. Let's cancel our vacation!\[/caption\]
+[]![weather_02](https://foxdeploy.files.wordpress.com/2014/10/weather_02.png?w=660) Um, the weather looks to be very bad in Alkatraz. Let's cancel our vacation!\[/caption\]
 
 Now, if you want to look up your own city, you can [get your latitude and longitude here](http://developer.mapquest.com/web/tools/lat-long-finder).
 

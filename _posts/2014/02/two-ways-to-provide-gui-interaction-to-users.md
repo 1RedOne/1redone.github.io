@@ -21,7 +21,7 @@ First, the System.Windows.Forms .Net way of building a form.  In this case, we'
 
 One thing to keep in mind when choosing between the two is that only a ListBox allows for the selection of more than one object.
 
-\[caption id="attachment\_423" align="alignnone" width="379"\][![two_method_of_input_01](images/two_method_of_input_01.png)](http://foxdeploy.files.wordpress.com/2014/01/two_method_of_input_01.png) ListBox v. ComboBox - Bitter Enemies\[/caption\]
+![two_method_of_input_01](images/two_method_of_input_01.png)](http://foxdeploy.files.wordpress.com/2014/01/two_method_of_input_01.png) ListBox v. ComboBox - Bitter Enemies\[/caption\]
 
 Assume we have a ListBox defined and added to our Form.  This is the code you'd need to do so.
 

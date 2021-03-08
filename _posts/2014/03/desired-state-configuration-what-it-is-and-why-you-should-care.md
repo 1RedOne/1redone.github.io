@@ -51,7 +51,7 @@ Yep, Star Trek. It's all about make it so. From Jeffrey Snover to Donn Jones, ev
 
 In this scenario, we've got two machines, our desktop and a server.  This server is standing in for the farm of sixty I mentioned above, and has been configured to have RDS ahead of time.  I'll be showing a screen cap of my machine running the test for components and the monitoring app (7Zip is standing in for our bespoke monitoring app).  To start with, here's a screen shot of a few lines of code to get the status of a few windows features and the install status of an application.
 
-\[caption id="attachment\_475" align="alignnone" width="1087"\][![DSC_00_features_On_Configure_me](images/dsc_00_features_on_configure_me.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_00_features_on_configure_me.png) Running from my machine, this shows that the target machine has RDS (which it shouldn't), and doesn't have the services it needs or our app installed.\[/caption\]
+![DSC_00_features_On_Configure_me](images/dsc_00_features_on_configure_me.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_00_features_on_configure_me.png) Running from my machine, this shows that the target machine has RDS (which it shouldn't), and doesn't have the services it needs or our app installed.\[/caption\]
 
 So, now to create our first configuration and then to enforce it.  The basic flow of this is to check for the roles that are needed using the WindowsFeature resource to name the roles that we need and then specify the value of 'present' for the  'ensure' parameter to make sure these things are there.  We'll then remove RDS if its present by specifying 'absent' for the same parameter for that.  Next, we'll test if the install files are there using the File resource, and if not put them there.  Finally, if the application hasn't been installed, we'll install it using the Package resource, which works for MSI and Windows Installer Setup.exe files.  We'll actually work our way back from the end, doing the file copy and package install first, then adding on the Role/Feature install and removal.
 
@@ -83,11 +83,11 @@ Now we have a .MOF configuration file created.  Running this command should Ens
 
 Start-DscConfiguration \-Path $env:windir\\system32\\MonitoringSoftware \-Wait \-Verbose \-Force 
 
-\[caption id="" align="alignnone" width="1104"\][![DSC_02_files_copied](images/dsc_02_files_copied.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_02_files_copied.png) DSC detects that the files are not where they should be and just fixes it! We need this so our install files will be where we need them for the next step.\[/caption\]
+![DSC_02_files_copied](images/dsc_02_files_copied.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_02_files_copied.png) DSC detects that the files are not where they should be and just fixes it! We need this so our install files will be where we need them for the next step.\[/caption\]
 
 According to DSC, the files are there!  Let's confirm on the system itself.
 
-\[caption id="" align="alignnone" width="539"\][![DSC_02_files_copied_explorer](images/dsc_02_files_copied_explorer.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_02_files_copied_explorer.png) Yep, there's our install files!\[/caption\]
+![DSC_02_files_copied_explorer](images/dsc_02_files_copied_explorer.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_02_files_copied_explorer.png) Yep, there's our install files!\[/caption\]
 
 Now to install the program, we just add an extra configuration resource, specifying the type of Package.  This snippet will go right behind the Files resource in our configuration.
 
@@ -99,9 +99,9 @@ IdentifyingNumber : {23170F69-40C1-2702-0920-000001000000} Name        �
 
 Alright, now that we've added this, lets rerun the Configuration name (Command line : MonitoringSoftware -MachineName ConfigureMe) and then Start-DscConfiguration again  This time, it should ensure the files are there, and then install the application if its not there  Lets see what happens when its enacted.
 
-\[caption id="" align="alignnone" width="870"\][![DSC_03_monitoring_installed_dsc_output](images/dsc_03_monitoring_installed_dsc_output.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_03_monitoring_installed_dsc_output.png) The application is automagically installed!\[/caption\]
+![DSC_03_monitoring_installed_dsc_output](images/dsc_03_monitoring_installed_dsc_output.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_03_monitoring_installed_dsc_output.png) The application is automagically installed!\[/caption\]
 
-\[caption id="" align="alignnone" width="506"\][![DSC_03_monitoring_installed_StartScreen](images/dsc_03_monitoring_installed_startscreen.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_03_monitoring_installed_startscreen.png) Double-checking and...yep, 7-Zip--er, our monitoring app is there!\[/caption\]
+![DSC_03_monitoring_installed_StartScreen](images/dsc_03_monitoring_installed_startscreen.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_03_monitoring_installed_startscreen.png) Double-checking and...yep, 7-Zip--er, our monitoring app is there!\[/caption\]
 
 Handling services is a bit easier, so I'll just paste one here as an example, this one ensures BITs is present, and if not, puts it there with IncludeAllSubFeature, to make sure it works.  I also gave the Resource a colorful name, to illustrate that you can do whatever you wish with resource names.
 
@@ -113,7 +113,7 @@ Handling services is a bit easier, so I'll just paste one here as an example, th
 
 Because adding on the other Roles and Features gets to be quite repetitive, and the script and output take up a good bit of space, I'll spare you the suspense and show you the final script,  [available here](http://foxdeploy.com/code-and-scripts/dsc-script-and-output/ "DSC Script and Output").  After enacting this on our system running the test in PowerShell again should show all of the features are installed as they should be.
 
-\[caption id="" align="alignnone" width="712"\][![DSC_05_configuration_gasm](images/dsc_05_configuration_gasm.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_05_configuration_gasm.png) Take this concept and scale it out over fifty servers and this becomes very compelling.\[/caption\]
+![DSC_05_configuration_gasm](images/dsc_05_configuration_gasm.png)](http://foxdeploy.files.wordpress.com/2014/02/dsc_05_configuration_gasm.png) Take this concept and scale it out over fifty servers and this becomes very compelling.\[/caption\]
 
 Amazing.
 

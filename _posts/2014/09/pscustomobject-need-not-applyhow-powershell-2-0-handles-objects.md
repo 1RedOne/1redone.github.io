@@ -17,11 +17,11 @@ Function Get-MarkInfo { ForEach ($user in $users){ $mbx = Get-Mailbox $user $mbx
 
 This shouldn't export these sorts of things
 
-\[caption id="attachment\_726" align="alignnone" width="437"\]![PSObjectWeirdness](images/psobjectweirdness1.png) Oh no...why is my glorious \[PSCustomObject\] master race appearing as a hash table? No one asked for key:value pairs!\[/caption\] 
+[]![PSObjectWeirdness](images/psobjectweirdness1.png) Oh no...why is my glorious \[PSCustomObject\] master race appearing as a hash table? No one asked for key:value pairs!\[/caption\] 
 
 A hashtable? I never ordered a hashtable!  The CSV output was even worse
 
-\[caption id="attachment\_724" align="alignnone" width="705"\]![PSObjectWeirdness01](images/psobjectweirdness01.png) No properties? This is what happens when you export a hashtable and don't enumerate\[/caption\]
+[]![PSObjectWeirdness01](images/psobjectweirdness01.png) No properties? This is what happens when you export a hashtable and don't enumerate\[/caption\]
 
 This was very puzzling. I tried everything under the sun to try and determine why my beautiful little PSCustomObject was coming out as an ugly hashtable. Surely there is an explanation somewhere!  I tried adding Format-Table commands everywhere you could think of, and sorts of craziness with using accelerators to try and force my PSCustomObject to be treated with the respect it deserves.
 
@@ -31,7 +31,7 @@ I ended up digging through old blogposts about 'Whats New In PowerShell v2' and 
 
 A quick check…
 
-\[caption id="attachment\_723" align="alignnone" width="353"\]![PSObjectWeirdness02](images/psobjectweirdness02.png) There It was, right in front of me\[/caption\]
+[]![PSObjectWeirdness02](images/psobjectweirdness02.png) There It was, right in front of me\[/caption\]
 
 I'd been workign on a 2.0 version server all along! :(
 

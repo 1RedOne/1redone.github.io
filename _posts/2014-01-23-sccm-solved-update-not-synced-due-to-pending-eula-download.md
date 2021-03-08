@@ -3,7 +3,7 @@ title: "SCCM: Solved Update not synced due to pending EULA Download."
 date: "2014-01-23"
 redirect_from : /2014/01/23/sccm-solved-update-not-synced-due-to-pending-eula-download
 categories: 
-  - "sccm"****
+  - "sccm"
 ---
 
 Today while attempting to deploy certain Windows Updates (namely IE 9 and IE 11) in a new 2012 R2 environment, I noticed that the two updates would not appear while doing a search for them within SCCM. After checking my product classifications to ensure the update should be there, I then c  hecked WSUS on the server for the update, saw them.

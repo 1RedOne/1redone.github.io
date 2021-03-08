@@ -24,4 +24,4 @@ $batteryReport = \[pscustomobject\]@{'Charging'=$batteryStatus.Charging\[0\];'Pl
 
 if ($batteryReport.ActualCapacity -gt $batteryReport.ListedCapacity){Write-Warning "Battery Reports greater than possible capacity, try rerunning this code when unit is not plugged in to AC power"} if ($batteryReport.MissingCapacity -eq 'ReRunOnBattery'){Write-Warning "Can't obtain missing power, rerun while unit is not plugged in to AC power"}ELSE{"You're missing out on $missing percent of your battery, time to replace!"} } \[/code\]
 
-\[caption id="attachment\_718" align="alignnone" width="705"\][![Time to buy a new battery!](images/get-batterystats.png)](https://foxdeploy.files.wordpress.com/2014/09/get-batterystats.png) Time to buy a new battery!\[/caption\]
+![Time to buy a new battery!](images/get-batterystats.png)](https://foxdeploy.files.wordpress.com/2014/09/get-batterystats.png) Time to buy a new battery!\[/caption\]

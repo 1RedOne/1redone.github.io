@@ -27,7 +27,7 @@ For this example, I wanted to make a full backup of my family Wordpress Photo si
 
 So, there's no option to download all of the media, but there is the option to download a Blogtitle.XML file, which you can then import into other blog providers.  Go to your Blog Dashboard, then Settings->Export.
 
-\[caption id="attachment\_1057" align="alignnone" width="525"\]![howToExport](images/howtoexport.png) At the time I took this screen shot, I had a different working title for this post\[/caption\]
+[]![howToExport](images/howtoexport.png) At the time I took this screen shot, I had a different working title for this post\[/caption\]
 
  
 
@@ -51,13 +51,13 @@ Instead, to import those files, we'll simply take the content of the XML file, s
 
 And once that’s done a quick, Get-Member will show us that now PowerShell is parsing the content of this file successfully.
 
-\[caption id="attachment\_1061" align="alignnone" width="705"\][![XMl Props](images/xml-props.png)](http://foxdeploy.com/?attachment_id=1061) So many methods! Thank you PowerShell for making this easy!\[/caption\]
+![XMl Props](images/xml-props.png)](http://foxdeploy.com/?attachment_id=1061) So many methods! Thank you PowerShell for making this easy!\[/caption\]
 
 We're looking for a method to let us find certain elements based on the name of their tag  (the 'wp:attachment\_url' tag).  Looking through the list, one jumps out at me.  The method in question we'll use is $\_.GetElementsByTagName().  Our next step is to take a look at the XML file itself and see which tag contains the data we're interested in.
 
 Here's a screen shot of my .xml file, I've highlighted the tagname we're interested in.
 
-\[caption id="attachment\_1056" align="alignnone" width="705"\]![FindingContent](images/findingcontent.png) Yep, same screen shot as before. A rarely seen example of code reuse in the wild!\[/caption\]
+[]![FindingContent](images/findingcontent.png) Yep, same screen shot as before. A rarely seen example of code reuse in the wild!\[/caption\]
 
  
 
@@ -81,7 +81,7 @@ I totally couldn't figure out how to do this next part in PowerShell.
 
 I tried every variation under the sun to do this natively in PowerShell, and was never able to succeed past the WordPress logon page to download these images.  I could logon (Using the FB example), but maintaining my session and using that to execute a download as an authenticated user?  No workey.  I tried the FaceBook method from the Invoke-WebRequest help, I tried making a local $Form.Fields object and populating the values, I tried the System.Net.WebCLient class.  Like Thomas Edison, I merely found 24 ways that wouldn't work.
 
-\[caption id="attachment\_1062" align="alignnone" width="761"\][![XML-Fails](images/xml-fails.png)](http://foxdeploy.com/?attachment_id=1062) Each of these tabs contains a thing that didn't work…\[/caption\]
+![XML-Fails](images/xml-fails.png)](http://foxdeploy.com/?attachment_id=1062) Each of these tabs contains a thing that didn't work…\[/caption\]
 
 I even went so far as to install Fiddler and proxy my Invoke-WebRequests through it to see why in the world I couldn't maintain my session after passing authentication.  I gave the form my username and password, what more could it want from me?
 
@@ -95,7 +95,7 @@ From previous experience, I knew that you could provide a cookies.txt file to wG
 
 Basically, enable the plug-in, go to WordPress and login. Then hit alt on the keyboard to display the toolbar, and choose the 'Export Cookies' option.
 
-\[caption id="attachment\_1055" align="alignnone" width="705"\]![ExportCookies](images/exportcookies.png) Awww one of the many photos I wanted to download!\[/caption\]
+[]![ExportCookies](images/exportcookies.png) Awww one of the many photos I wanted to download!\[/caption\]
 
 You'll get a cookies.txt.  Now, pass this in your wGet --load-cookies parameter, and watch the magic.  To execute this command, you'll need to provide the following params to wget.
 

@@ -48,27 +48,27 @@ Sending a PushBullet Message if a particular error comes up in the Event Log
 
 \[code language="powershell" light="true"\]get-winevent -LogName System | Select -first 1500 | ? Id -eq '1074' | % {Send-PushMessage -Title "Reboot detected on System" -msg ("Reboot detected on " + $\_.MachineName + "@ " + $\_.TimeCreated) -Type Message}\[/code\]
 
-\[caption id="attachment\_908" align="alignnone" width="361"\]![03](images/03.png) In this case, look for event 1074, which is a reboot.  This is the Chrome desktop client for PushBullet.\[/caption\]
+[]![03](images/03.png) In this case, look for event 1074, which is a reboot.  This is the Chrome desktop client for PushBullet.\[/caption\]
 
 Sending a message containing PowerShell objects
 
 \[code language="powershell" light="true"\] Send-PushMessage -Type Message -Title "OMG server explode!" -msg "Um, time to come back into the office $Env:COMPUTERNAME died"\[/code\]
 
-\[caption id="attachment\_909" align="alignnone" width="365"\]![04](images/04.png) The $env:ComputerName variable will be automatically swapped for its value. Again in the desktop client.\[/caption\]
+[]![04](images/04.png) The $env:ComputerName variable will be automatically swapped for its value. Again in the desktop client.\[/caption\]
 
 Send a file which already exists on the web.
 
 \[code language="powershell" light="true"\]Send-PushMessage -FileName "FoxDeploy Logo" -FileType "image/png" -Type File -title "A nice picture" -msg "The FoxDeploy Logo, made by my good friend, Nick Milevsky" -url $url -Verbose VERBOSE: Sending a file VERBOSE: POST https://api.pushbullet.com/v2/pushes with -1-byte payload VERBOSE: received -1-byte response of content type application/json; charset=utf-8 VERBOSE: OK \[/code\]
 
-\[caption id="attachment\_913" align="alignnone" width="313"\][![SendingAnImage](images/sendinganimage.png)](https://foxdeploy.files.wordpress.com/2014/10/sendinganimage.png) Here's an example from the Android Client.\[/caption\]
+![SendingAnImage](images/sendinganimage.png)](https://foxdeploy.files.wordpress.com/2014/10/sendinganimage.png) Here's an example from the Android Client.\[/caption\]
 
 Sending a link
 
 \[code language="powershell" light="true"\]PS C:\\temp&gt; Send-PushMessage -Type Link -title "A pretty decent blog" -msg "Some random guys blog" -url http://www.foxdeploy.com -Verbose VERBOSE: Sending a link VERBOSE: POST https://api.pushbullet.com/v2/pushes with -1-byte payload VERBOSE: received -1-byte response of content type application/json; charset=utf-8 VERBOSE: OK\[/code\]
 
-\[caption id="attachment\_911" align="alignnone" width="372"\]![06](images/06.png) Showing the results in the Chrome client. Clicking the button takes you to...\[/caption\]
+[]![06](images/06.png) Showing the results in the Chrome client. Clicking the button takes you to...\[/caption\]
 
-\[caption id="attachment\_912" align="alignnone" width="300"\][![07](https://foxdeploy.files.wordpress.com/2014/10/07.png?w=300)](https://foxdeploy.files.wordpress.com/2014/10/07.png) Some random guy's website\[/caption\]
+![07](https://foxdeploy.files.wordpress.com/2014/10/07.png?w=300)](https://foxdeploy.files.wordpress.com/2014/10/07.png) Some random guy's website\[/caption\]
 
 Finally, here is an example of embedding PowerBullet within another function. In this case, we'll make a quick function with a number-indexed hashtable, and invoke Get-Random to get a number. We'll call this 'Simulate-DataCenterFault.  If all goes well, this should come up with a random number, then pull the address from the appropriate key-value pair, and then send a PushBullet message with a working address link.
 

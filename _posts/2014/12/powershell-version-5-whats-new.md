@@ -35,7 +35,7 @@ You can see a full catalog of software here, http://chocolatey.org/packages.
 
 First and foremost, you'll need to temporarily allow remote script execution in order to use this version of OneGet.  That is because behind the scenes to install a program using OneGet, PowerShell will download a Chocolatey install script and execute it, and if your execution policy prohibits it from running, you won't be having any fun. To get started, first install WMF 5.0, available [here](http://www.microsoft.com/en-us/download/details.aspx?id=42316).  This may or may not require a restart for you.  Now, launch PowerShell and check out the version of PowerShell you're running with Get-Host.
 
-\[caption id="518" align="alignnone" width="652"\][![01](images/01.png)](http://foxdeploy.files.wordpress.com/2014/04/01.png) Aw, yeah...Upgrayedd\[/caption\]
+![01](images/01.png)](http://foxdeploy.files.wordpress.com/2014/04/01.png) Aw, yeah...Upgrayedd\[/caption\]
 
 Now, let's Import the OneGet module and see what new commands are available. ![02](images/02.png)   PowerShell exposes some very nice functionality here.  Out of the box, we're able to add our own corporate PackageSource repository, and do some other interesting things:
 
@@ -43,11 +43,11 @@ Now, let's Import the OneGet module and see what new commands are available. ![0
 
 Let's say that we needed a tool to work with PDFs, and had never heard of Adobe before.  We might run Find-Package, and pipe that into Where-Object to filter.
 
-\[caption id="520" align="alignnone" width="754"\]![03](images/03.png) You could potentially discover software to install from the command line.\[/caption\]
+[]![03](images/03.png) You could potentially discover software to install from the command line.\[/caption\]
 
 Let's choose Foxit Reader.  Remember when I said to allow script execution?  Well this is why.  If you try to install without specifying this, you'll get the following error.
 
-\[caption id="521" align="alignnone" width="840"\]![04](images/04.png) The install script can't run if you don't allow for UnSigned Scripts during your Install-Package session\[/caption\]
+[]![04](images/04.png) The install script can't run if you don't allow for UnSigned Scripts during your Install-Package session\[/caption\]
 
 This is what is really happening when you use OneGet to install FoxitReader.  PowerShell first downloads the configuration script (C:\\Chocalatey\\lib\\FoxitReader\\tools\\ChocolateyInstall.ps1) that looks like this:
 

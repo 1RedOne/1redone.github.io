@@ -18,7 +18,7 @@ In addition to being a PowerShell and System Center guy, I also LOVE me some And
 
 ### The Problem
 
-\[caption id="attachment\_820" align="alignnone" width="360"\][![omgNoBattery](images/omgnobattery.jpg)](https://foxdeploy.files.wordpress.com/2014/10/omgnobattery.jpg) OMG where's my battery?!\[/caption\]
+![omgNoBattery](images/omgnobattery.jpg)](https://foxdeploy.files.wordpress.com/2014/10/omgnobattery.jpg) OMG where's my battery?!\[/caption\]
 
 The reason for this is that for the last year or so, Google has been recommending developers use Google Play Services for Android Device location GPS functionality which allows for Google Play Services to batch GPS requests, hopefully preserving battery life. However, developers still have access to the native Android location APIs which they could leverage to request device location.
 

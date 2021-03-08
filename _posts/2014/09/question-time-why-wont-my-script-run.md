@@ -21,7 +21,7 @@ He sent me a copy of the file, which looked like this:
 
 Running the command would give him (And me too!) the same output!
 
-\[caption id="attachment\_772" align="alignnone" width="775"\][![NoParam_02](images/noparam_02.jpg)](https://foxdeploy.files.wordpress.com/2014/09/noparam_02.jpg) Invalid parameter, TestConnectionException.Microsoft.PowerShell.Commands\[/caption\]
+![NoParam_02](images/noparam_02.jpg)](https://foxdeploy.files.wordpress.com/2014/09/noparam_02.jpg) Invalid parameter, TestConnectionException.Microsoft.PowerShell.Commands\[/caption\]
 
  
 
@@ -47,7 +47,7 @@ And the text looks good…what about the length, is something off?
 
 Wait…ALBFX3 is only five letters. So I jumped into the text file itself and…
 
-\[caption id="attachment\_775" align="alignnone" width="343"\][![NoParam_03](images/noparam_03.jpg)](https://foxdeploy.files.wordpress.com/2014/09/noparam_03.jpg) With Spaces, no one can hear you scream\[/caption\]
+![NoParam_03](images/noparam_03.jpg)](https://foxdeploy.files.wordpress.com/2014/09/noparam_03.jpg) With Spaces, no one can hear you scream\[/caption\]
 
  
 

@@ -18,7 +18,7 @@ Instead of developers giving out an install script and binaries, they can provid
 
 This graphic from Docker does a great job of explaining why it is becoming so popular. Note the size difference between a system with many docked containers versus the system load of a system with many VMs.
 
-\[caption id="attachment\_893" align="alignnone" width="620"\][![Traditional VM vs Docker Containers](images/docker-vm-container-620x3501.png)](https://foxdeploy.files.wordpress.com/2014/10/docker-vm-container-620x3501.png) Traditional VM vs Docker Containers\[/caption\]
+![Traditional VM vs Docker Containers](images/docker-vm-container-620x3501.png)](https://foxdeploy.files.wordpress.com/2014/10/docker-vm-container-620x3501.png) Traditional VM vs Docker Containers\[/caption\]
 
 Early adopters are reporting four to six times increases in density!
 
