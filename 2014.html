@@ -20,11 +20,11 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 </style>
 <ul>
   {% assign postsForYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" | where: "name", "2014" %} 
-  Posts for year {{ postsForYear[0].name }}, total posts {{ postsForYear[0].size }} / 63 migrated
-  <meter id="myMeter" min="0" low="20" high="45" max="63" value="{{ postsForYear[0].size }}"></meter></p>
+  Posts for year {{ postsForYear[0].name }}, total posts {{ postsForYear[0].size }} / 59 migrated
+  <meter id="myMeter" min="0" low="20" high="45" max="59" value="{{ postsForYear[0].size }}"></meter></p>
   
   <h2>All Posts for {{ postsForYear[0].name }}</h2>
-    {% for post in postsForYear[0].items %}
+    {% for post in postsForYear[0].items limit:5 %}
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <div class="meta"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}
           <i class="fa fa-user" aria-hidden="true"></i> FoxDeploy

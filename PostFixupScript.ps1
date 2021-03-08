@@ -59,7 +59,7 @@ forEach ($file in $PostsToProcess){
     $addRedirect = @"
 $($dateLine.Line)
 redirect_from : $redirectPayload
-coverImage: goes here...
+coverImage: ..\assets\images\foxPlaceHolder.webp
 "@
 
     $fileContent = $fileContent -replace $dateLine.Line, $addRedirect
