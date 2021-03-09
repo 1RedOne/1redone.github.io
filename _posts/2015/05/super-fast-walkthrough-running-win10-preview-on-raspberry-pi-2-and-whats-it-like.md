@@ -77,7 +77,7 @@ Remoting performance to the Reaspberry Pi is very, very slow.  VERY slow.  But
 
 My transcript of how I connected:
 
-\[code language="powershell"\] set-Item WSMan:\\localhost\\Client\\TrustedHosts 10.63.30.54
+```powershell    set-Item WSMan:\\localhost\\Client\\TrustedHosts 10.63.30.54
 
 WinRM Security Configuration. This command modifies the TrustedHosts list for the WinRM client. The computers in the TrustedHosts list might not be authenticated. The client might send credential information to these computers. Are you sure that you want to modify this list? \[Y\] Yes \[N\] No \[S\] Suspend \[?\] Help (default is "Y"): y PS C:\\WINDOWS\\system32> get-Item WSMan:\\localhost\\Client\\TrustedHosts WSManConfig: Microsoft.WSMan.Management\\WSMan::localhost\\Client Type Name SourceOfValue Value ---- ---- ------------- ----- System.String TrustedHosts 10.63.30.54
 

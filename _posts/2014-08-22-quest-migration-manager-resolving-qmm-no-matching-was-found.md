@@ -17,7 +17,7 @@ Starting to process collection 'SPEEDITUP' (Source server 'FOXXC04', target serv
 
 If you run into this issue, first verify that a Quest AD Account Migration Completed Successfully. If not, then verify that the Exchange Quest service has permission to the mailbox in the source by using the following PowerShell Commandlette
 
-\[code language="powershell"\]
+```powershell   
 
 Function Fix-MailboxPerms { $ServiceQMMAccount = "foxdeploy\\\_svcQMM"
 
@@ -34,7 +34,7 @@ param(\[Alias("SamAccountName","DisplayName")\]\[Parameter(Mandatory=$True,Value
 
 If this still doesn't work, search in the Target Domain to verify that a mailbox exists for the user account. If not, this may signify that Calendar Sync agent isn't configured to run regularly (possibly indicating a new user account). You can quickly resolve the matter by Mail enabling the user's account in the target domain with the following syntax:
 
-\[code language="powershell"\] Get-User Test.User1 | Enable-Mailbox -Database Region\_db01 
+```powershell    Get-User Test.User1 | Enable-Mailbox -Database Region\_db01 
 ```
 
 Once completed, run another AD Object migration session, and then watch Calendar Sync (CSA.log) or Mail Source Agent (EMWMSA.log) to see if the changes are noted. You can also directly compare attributes within AD from the source and target accounts.

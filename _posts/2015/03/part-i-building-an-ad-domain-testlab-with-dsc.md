@@ -40,7 +40,7 @@ In the ISE, we can run the Get-DSCResource cmdlet to see if PowerShell detects o
 
 Now deeply under the covers, we can see that making a PowerShell configuration is really quite similar to creating a Function. All we've got to do is use the Configuration Keyword in a format that should look quite familiar.
 
-\[code language="powershell"\] Configuration TestLab { Param($nodeName) Import-DscResource -Module xComputerManagement
+```powershell    Configuration TestLab { Param($nodeName) Import-DscResource -Module xComputerManagement
 
 Node $nodeName {
 
@@ -70,13 +70,13 @@ We see that we can configure a lot of things:
 
 So, for part I of our DSC walk-through, we only want to change the MachineName and the WorkGroupName, lets drop these values in under $nodeName.  I want to name my new system DSCDC01, and my new WorkGroup to be called TestLab
 
-\[code language="powershell"\] xComputer NewNameAndWorkgroup { Name = DSCDC01 WorkGroupName = TestLab } \[/code\]
+```powershell    xComputer NewNameAndWorkgroup { Name = DSCDC01 WorkGroupName = TestLab } \[/code\]
 
 ### The Next step...wait, That's all!
 
 Just to reiterate, this is our total script, making some small changes to add parameter support.
 
-\[code language="powershell"\] configuration TestLab { param ( \[string\[\]\]$NodeName ='localhost', \[Parameter(Mandatory)\]\[string\]$MachineName, \[Parameter(Mandatory)\]\[string\]$WorkGroupName )
+```powershell    configuration TestLab { param ( \[string\[\]\]$NodeName ='localhost', \[Parameter(Mandatory)\]\[string\]$MachineName, \[Parameter(Mandatory)\]\[string\]$WorkGroupName )
 
 #Import the required DSC Resources Import-DscResource -Module xComputerManagement
 

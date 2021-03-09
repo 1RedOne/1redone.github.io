@@ -21,7 +21,7 @@ So, building on our DSC Config from last week; when we want to add a new DSC Res
 
 Based on what we see above, we should be good to add the following under xComputer
 
-\[code language="powershell"\]
+```powershell   
 
 User LocalAdmin { UserName = $UserName DependsOn = '\[xComputer\]NewNameAndWorkGroup' Description = 'Our new local admin' Disabled = $false Ensure = 'Present' FullName = 'Stephen FoxDeploy' Password = '$Password' PasswordChangeRequired = $false PasswordNeverExpires = $true
 
@@ -31,7 +31,7 @@ You can see that we added a few variables there, so let's go add them all to our
 
 Change our params block in this script to the following
 
-\[code language="powershell"\] param ( \[string\[\]\]$NodeName ='localhost', \[Parameter(Mandatory)\]\[string\]$MachineName, \[Parameter(Mandatory)\]\[string\]$WorkGroupName, \[Parameter()\]\[string\]$UserName, \[Parameter()\]\[string\]$Password ) \[/code\]
+```powershell    param ( \[string\[\]\]$NodeName ='localhost', \[Parameter(Mandatory)\]\[string\]$MachineName, \[Parameter(Mandatory)\]\[string\]$WorkGroupName, \[Parameter()\]\[string\]$UserName, \[Parameter()\]\[string\]$Password ) \[/code\]
 
 Now let's invoke it…
 

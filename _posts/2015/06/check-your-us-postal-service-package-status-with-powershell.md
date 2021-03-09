@@ -42,7 +42,7 @@ Here's an image of what it looks like!
 
 Here's the code!
 
-\[code language="powershell"\] <# .Synopsis Use this tool to query the US Postal Service to find out where your packages are! .DESCRIPTION Use this tool to query the US Postal Service to find out where your packages are! .EXAMPLE Get-USPSPackageStatus -UserID 578FOXDEPLOY -pkgID 94HAMHAMHAMHAM95621412407
+```powershell    <# .Synopsis Use this tool to query the US Postal Service to find out where your packages are! .DESCRIPTION Use this tool to query the US Postal Service to find out where your packages are! .EXAMPLE Get-USPSPackageStatus -UserID 578FOXDEPLOY -pkgID 94HAMHAMHAMHAM95621412407
 
 EventTime EventDate Event EventCity EventState EventZIPCode EventCountry FirmName Name AuthorizedAgent --------- --------- ----- --------- ---------- ------------ ------------ -------- ---- --------------- 8:45 am June 15, 2015 Out for Delivery MARIETTA GA 30066 false 8:35 am June 15, 2015 Sorting Complete MARIETTA GA 30066 false 6:00 am June 15, 2015 Arrived at Post Office MARIETTA GA 30066 false 1:28 am June 15, 2015 Departed USPS Facility ATLANTA GA 30320 false 2:43 pm June 14, 2015 Arrived at USPS Facility ATLANTA GA 30320 false 4:44 am June 13, 2015 Departed USPS Facility ANAHEIM CA 92899 false 9:31 pm June 12, 2015 Arrived at USPS Origin Facility ANAHEIM CA 92899 false 8:16 pm June 12, 2015 Accepted at USPS Origin Sort Facility SANTA ANA CA 92704 false
 

@@ -48,7 +48,7 @@ Taking a glance at the file, it is pretty obvious that our Company records are i
 
 Now, we use the tags above to mark out our Company name like this {Company:} and the AccountNumber like so {AccountNumber:}. We'll take a snippet of our input doc then 'highlight' a few of the entries we care about using the tags. We'll store this in a here-string called $template (but you could save it as a template file as well and use the -TemplateFile param instead)
 
-\[code language="PowerShell"\] $template = @' <html> <body> <table> <tr><td>{Company\*:AppleCorp}</td><td>{AccountCode:ABC}</td></tr> </table> '@ \[/code\]
+```powershell    $template = @' <html> <body> <table> <tr><td>{Company\*:AppleCorp}</td><td>{AccountCode:ABC}</td></tr> </table> '@ \[/code\]
 
 See what we're doing? We're marking out with one sample row the data we care about, the Company with an asterisk, to signal to FlashExtract to return multiple instances of these. If we left off the \*, we'd get back the first match, which would literally be the word Company from the header of the table. Adding a star gives us back multiple matches.
 
@@ -104,7 +104,7 @@ To refresh our memory, we had an input file like this: \[code\] \\\\fox\_app2.fo
 
 Using the new tricks we've learned with ConvertFrom-String, we can reduce our code to input from 60 lines, down to this!
 
-\[code language="powershell"\] $Template = @' {ShareName\*:\\\\fox\_app2.foxdeploy.com\\apps\\FinanceTeam} {perm\*:\*} {user:\*} {ShareName\*:\\\\fox\_app2.foxdeploy.com\\apps\\\*} {perm\*:RW} {user:BUILTIN\\Administrators} {perm\*:RW} {user:AMER\\Domain Admins} {perm\*:\*} {user:Everyone} {ShareName\*:\\\\\*} '@
+```powershell    $Template = @' {ShareName\*:\\\\fox\_app2.foxdeploy.com\\apps\\FinanceTeam} {perm\*:\*} {user:\*} {ShareName\*:\\\\fox\_app2.foxdeploy.com\\apps\\\*} {perm\*:RW} {user:BUILTIN\\Administrators} {perm\*:RW} {user:AMER\\Domain Admins} {perm\*:\*} {user:Everyone} {ShareName\*:\\\\\*} '@
 
 $testme = ConvertFrom-String -InputObject $filecontents -TemplateContent $Template -OutVariable TestMe "Parent Objects found $($testme.Count)" "-Child objects found $($testme.ShareName.Items.Count)"
 

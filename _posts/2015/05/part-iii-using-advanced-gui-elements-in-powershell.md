@@ -60,7 +60,7 @@ To save space, I'll only show you the PowerShell behind making this work. Check 
 
 This got a bit confusing, making the second skybison only appear when the first was visible and then checking for the checkbox IsChecked when the 'show bisons' button is clicked.
 
-\[code language="powershell"\] $WPFbutton.Add\_Click({ if ($WPFimage.Visibility -ne 'Visible'){ if ($WPFcheckBox.IsChecked -eq $true){$WPFimage.Visibility,$WPFimage\_Copy.Visibility = 'Visible','Visible'} else {$WPFimage.Visibility = 'Visible'} } elseif ($WPFimage.Visibility -ne 'Visible' -and {$WPFcheckBox.IsChecked -eq $false}) {$WPFimage.Visibility = 'Visible'} else{$WPFimage.Visibility,$WPFimage\_Copy.Visibility = 'Hidden','Hidden'} })
+```powershell    $WPFbutton.Add\_Click({ if ($WPFimage.Visibility -ne 'Visible'){ if ($WPFcheckBox.IsChecked -eq $true){$WPFimage.Visibility,$WPFimage\_Copy.Visibility = 'Visible','Visible'} else {$WPFimage.Visibility = 'Visible'} } elseif ($WPFimage.Visibility -ne 'Visible' -and {$WPFcheckBox.IsChecked -eq $false}) {$WPFimage.Visibility = 'Visible'} else{$WPFimage.Visibility,$WPFimage\_Copy.Visibility = 'Hidden','Hidden'} })
 
 $WPFcheckBox.Add\_Checked({if ($WPFimage.Visibility -eq 'Visible'){$WPFimage\_Copy.Visibility = 'Visible'}else{$WPFimage\_Copy.Visibility = 'Hidden'}}) \[/code\] And the result :
 

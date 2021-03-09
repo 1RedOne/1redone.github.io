@@ -174,7 +174,7 @@ When I said earlier that every object in our GUI has a slew of events, that incl
 
 Below that, we'll give our Verify button some code to run when it throws a click event (when the user clicks the button), via the .Add\_Click({}) event handler method.  The code will try to ping the computer in the ComputerName box; if it replies, it will then enable each of the tabs for the user to click them by stepping through each item in the TabControl, and setting the 'IsEnabled' property of each to $True, to turn the lights on.
 
-\[code language="powershell"\] $Form.Add\_Loaded({$WPFComputerName.Text = $env:COMPUTERNAME})
+```powershell    $Form.Add\_Loaded({$WPFComputerName.Text = $env:COMPUTERNAME})
 
 $WPFVerify.Add\_Click({if (Test-Connection $WPFComputerName.Text -Count 1 -Quiet){ write-host "$($WPFComputerName.Text ) responded, unlocking" $WPFtabControl.Items\[1..3\] | % {$\_.IsEnabled = $true} } else{ write-host "$($WPFComputerName.Text ) did not respond, staying locked" $WPFtabControl.Items\[1..3\] | % {$\_.IsEnabled = $false} } }) \[/code\]
 

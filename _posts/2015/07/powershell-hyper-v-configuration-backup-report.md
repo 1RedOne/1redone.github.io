@@ -17,7 +17,7 @@ Pretty much everything you'll need to know when rebuilding VMs and you still hav
 
 This depends on the [.css source file found here in my DropBox](https://dl.dropboxusercontent.com/u/6268163/style.css), to give us pretty colors :)
 
-\[code language="powershell"\] $Switches = Get-VMSwitch | Select Name,SwitchType,AllowManagementOS,NetAdapterInterfaceDescription
+```powershell    $Switches = Get-VMSwitch | Select Name,SwitchType,AllowManagementOS,NetAdapterInterfaceDescription
 
 $VMs = get-vm | % { $VMXML = gci $\_.Path -Recurse -Include \*xml | ? baseName -like "$($\_.VMId)\*" $VMDisk = Get-VMHardDiskDrive -VMName $\_.Name | Select -expand Path $VMNics = Get-VMNetworkAdapter -VMName $\_.Name | select -expand SwitchName \[pscustomobject\]@{VMName=$\_.Name; VMPath=$VMXML; Drives = $VMDisk -join "\`n" NICs = $VMNics -join ";" DynamicMemory = $\_.DynamicMemoryEnabled; StartupMemory = $\_.MemoryStartup/1mb } } | ConvertTo-Html -Fragment
 

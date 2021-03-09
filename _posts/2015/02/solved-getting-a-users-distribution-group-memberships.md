@@ -14,7 +14,7 @@ It's surprisingly hard to get back a listing of all of a particular user's Excha
 
 . If this works for your purposes, great, but if what you really need is a report of all of a user's / mailbox or resource mailbox Distribution Group membership, I've come up with the following.
 
-\[code language="powershell"\] get-distributiongroup | ForEach-Object { $groupName = $\_ Get-DistributionGroupMember -Identity $groupname.Name | ForEach-Object{ \[pscustomObject\]@{GroupName=$groupname;groupMember=$\_.Name} } } | Group-Object -Property GroupMember | Select-object Name, @{Name=‘Groups‘;Expression={$\_.Group.GroupName}} \[/code\]
+```powershell    get-distributiongroup | ForEach-Object { $groupName = $\_ Get-DistributionGroupMember -Identity $groupname.Name | ForEach-Object{ \[pscustomObject\]@{GroupName=$groupname;groupMember=$\_.Name} } } | Group-Object -Property GroupMember | Select-object Name, @{Name=‘Groups‘;Expression={$\_.Group.GroupName}} \[/code\]
 
 Whoa! What's happening there?
 

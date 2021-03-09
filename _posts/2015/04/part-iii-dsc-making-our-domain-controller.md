@@ -43,7 +43,7 @@ In order to progress this DSC Configuration from making just a local user, makin
 
 We'll also need to add some new parameters as well,
 
-\[code language="powershell"\] \[Parameter(Mandatory)\]\[string\]$DomainName, \[Parameter()\]$firstDomainAdmin, \[Parameter()\]$SafeModePW, \[/code\]
+```powershell    \[Parameter(Mandatory)\]\[string\]$DomainName, \[Parameter()\]$firstDomainAdmin, \[Parameter()\]$SafeModePW, \[/code\]
 
 These parameters are used to configure the following values:
 
