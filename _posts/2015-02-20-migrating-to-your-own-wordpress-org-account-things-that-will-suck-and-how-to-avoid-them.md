@@ -1,6 +1,8 @@
 ---
 title: "Migrating to your own WordPress.org account - things that will suck and how to avoid them"
 date: "2015-02-20"
+redirect_from : /2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them
+coverImage: ..\assets\images\foxPlaceHolder.webp
 categories: 
   - "other"
 tags: 
@@ -16,7 +18,7 @@ I've recently been in the process of migrating my blog off of WordPress.com host
 
 This one is super annoying.  You'll basically see a message like this whenever you try to install a new plug-in, and have to put in your  Linux credentials.
 
-![Whoa whoa whoa, contact my host?  I am the host.  Uh-oh.](images/update-plugins-wordpress-password-prompt.png) Whoa whoa whoa, contact my host? I am the host. Uh-oh.\[/caption\]
+![Whoa whoa whoa, contact my host?  I am the host.  Uh-oh.](../assets/images/2015/02/images/update-plugins-wordpress-password-prompt.png) Whoa whoa whoa, contact my host? I am the host. Uh-oh.
 
 **\--Whats going wrong**
 
@@ -30,11 +32,9 @@ This is simple.  In your Linux/Ubuntu system, open terminal.  If you've got an
 
 Run the following commands
 
-\[code\]
-
-chown www-data \* chown www-data \*/\* chown www-data \*/\*/\*
-
-\[/code\]
+```
+chown www-data * chown www-data */* chown www-data */*/*
+```
 
 Thanks to [fkoosna for this answer](https://wordpress.org/support/topic/failed-to-connect-to-ftp-server-localhost21-3).
 
@@ -56,12 +56,11 @@ Login to the [Azure porta](https://manage.windowsazure.com/#Workspaces/WebsiteEx
 
  
 
-[![blog_UpgradingToBasicInstance](images/blog_upgradingtobasicinstance.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_upgradingtobasicinstance/)
+![blog_UpgradingToBasicInstance](../assets/images/2015/02/images/blog_upgradingtobasicinstance.png)]
 
 On this page, keep in mind your budget.  As soon as we click from Free/Shared and move up to Basic, we're talking about a full VM tier here.  This can run about $35 bucks a month.  That's more than twenty dollars (which is my '_uh, maybe I should pay attention to this_' threshold).  If you're on a totally free account, you'll have to remove the spending limit, or you'll basically have a VM immediately turn off and not work anymore.  Goodbye website.
 
-[![blog_UpgradingToBasicInstance1](images/blog_upgradingtobasicinstance1.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_upgradingtobasicinstance1/)
-
+[[blog_UpgradingToBasicInstance1](../assets/images/2015/02/images/blog_upgradingtobasicinstance1.png)]
  
 
 On this page, we can also configure Autoscaling, if we want to allow our site to scale up and out as needed.  Keep in mind that you'll have to do a bit of work to make this function.  Azure can't magically code-in scale-out support for you.
@@ -70,15 +69,15 @@ On this page, we can also configure Autoscaling, if we want to allow our site to
 
 This one took me a while to figure out.  I was creating blog sites for my wife, and in the process of spinning one up in the Azure portal, I would point them to an existing MySql (or SQL Server, if you're using Brandoo Wordpress) db, expecting to colocate all of my blogs in one instance of SQL that I keep clean.
 
-![I'm creating this little guy just for you](images/blog_whatiswrongwiththis.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis/) I'm creating this little guy just for you\[/caption\]
+![I'm creating this little guy just for you](../assets/images/2015/02/images/blog_whatiswrongwiththis.png)
 
 So, I'm making a new WordPress site just to show this to you.
 
-![Alright, lets see if it happens again.](images/blog_whatiswrongwiththis1.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis1/) Alright, lets see if it happens again.\[/caption\]
+![Alright, lets see if it happens again.](../assets/images/2015/02/images/blog_whatiswrongwiththis1.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis1/) Alright, lets see if it happens again.
 
 The site is built, let's see what happens when I go to the URL.
 
-![Um, shouldn't there be something here?](images/blog_whatiswrongwiththis2.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis2/) Um, shouldn't there be something here?\[/caption\]
+![Um, shouldn't there be something here?](../assets/images/2015/02/images/blog_whatiswrongwiththis2.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis2/) Um, shouldn't there be something here?
 
 **\--What's going wrong?** 
 
@@ -90,31 +89,32 @@ This was one I never would have solved if not for this blog post (insert link he
 
 Assuming you're using Azure Websites, we'll use the very, very very useful Webmatrix tool to work with an online copy of our site.  From the Website window, click WebMatrix
 
-[![blog_WhatIsWrongWithThis3](images/blog_whatiswrongwiththis3.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis3/)
+[![blog_WhatIsWrongWithThis3](../assets/images/2015/02/images/blog_whatiswrongwiththis3.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis3/)
 
 Now, choose Edit Live Site Directly.
 
-[![blog_WhatIsWrongWithThis4](images/blog_whatiswrongwiththis4.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis4/)
+[![blog_WhatIsWrongWithThis4](../assets/images/2015/02/images/blog_whatiswrongwiththis4.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis4/)
 
 This gives us a nice way to upload files without resorting to FTP, and can be used to backup your site as well!  You can even run the site off of your laptop or PC if you choose to 'Edit Local Copy'. We need to edit the wp-config.php file, which executes and sets up our blog for us by running the WordPress installer.
 
 Skip down to about line 62, and look for the line beginning
 
-\[code lang="php" light="true"\]$table\_prefix = 'wp\_';\[/code\]
+```php
+$table\_prefix = 'wp\_';
+```
 
- 
 
 Change this prefix to be anything else in the world, and you're set!
 
-![I'm changing it to 'GuineaPig_'](images/blog_whatiswrongwiththis5.png)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis5/) I'm changing it to 'GuineaPig\_'\[/caption\]
+![I'm changing it to 'GuineaPig_'](../assets/images/2015/02/images/blog_whatiswrongwiththis5.png)
 
 Hit Control+S to save the change...
 
-[![blog_WhatIsWrongWithThis6](images/blog_whatiswrongwiththis6.png?w=605)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis6/)
+[![blog_WhatIsWrongWithThis6](../assets/images/2015/02/images/blog_whatiswrongwiththis6.png?w=605)](http://foxdeploy.com/2015/02/20/migrating-to-your-own-wordpress-org-account-things-that-will-suck-and-how-to-avoid-them/blog_whatiswrongwiththis6/)
 
 then hit F5 in your browser
 
-![blog_WhatIsWrongWithThis7](images/blog_whatiswrongwiththis7.png)
+![blog_WhatIsWrongWithThis7](../assets/images/2015/02/images/blog_whatiswrongwiththis7.png)
 
 ## But wait, there's more!
 

@@ -23,13 +23,13 @@ By now the process should be familiar:
 
 Being that we want to configure Groups, we'll search for Groups...
 
-\[code language="powershell" light="true"\] Get-DscResource Group | select -expand Properties | Select -expand Name | ForEach { '$\_=\`'\`'' } GroupName='' Credential='' DependsOn='' Description='' Ensure='' Members='' MembersToExclude='' MembersToInclude='' \[/code\]
+```powershell   Get-DscResource Group | select -expand Properties | Select -expand Name | ForEach { '$\_=\`'\`'' } GroupName='' Credential='' DependsOn='' Description='' Ensure='' Members='' MembersToExclude='' MembersToInclude='' \[/code\]
 
 And we see all of the items for the Group Resource. We'll lazily copy and paste this as a new configuration item, to add that at the bottom of our Node $NodeName {#confirguration block}
 
 Now, here are the values you'll want to include.
 
-\[code language="powershell" light="true"\] Group AddToAdmin{ GroupName='Administrators' #we want to add the user to the built-in Admin group DependsOn= '\[User\]LocalAdmin' #we want this to execute after the user is created Ensure= 'Present' #the other alternative is Absent, which would remove this user MembersToInclude=$UserName #we can reuse the same value for our User creation config, \[/code\]
+```powershell   Group AddToAdmin{ GroupName='Administrators' #we want to add the user to the built-in Admin group DependsOn= '\[User\]LocalAdmin' #we want this to execute after the user is created Ensure= 'Present' #the other alternative is Absent, which would remove this user MembersToInclude=$UserName #we can reuse the same value for our User creation config, \[/code\]
 
 So, we've updated our Configuration. Now we select the whole configuration to reload it into memory by highlighting the whole thing and hitting F8.
 
@@ -37,7 +37,7 @@ So, we've updated our Configuration. Now we select the whole configuration to re
 
 Alright, let's invoke it...
 
-\[code language="powershell" light="true"\]TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Password (Get-Credential -UserName 'FoxDeploy' -Message 'Enter New Password') -UserName 'FoxDeploy' -ConfigurationData $configData
+```powershell  TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Password (Get-Credential -UserName 'FoxDeploy' -Message 'Enter New Password') -UserName 'FoxDeploy' -ConfigurationData $configData
 
 Start-DscConfiguration -ComputerName localhost -Wait -Force -Verbose -path .\\TestLab \[/code\]
 

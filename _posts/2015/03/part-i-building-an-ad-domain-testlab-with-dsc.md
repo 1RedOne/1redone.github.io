@@ -84,7 +84,7 @@ Node $NodeName { xComputer NewNameAndWorkgroup { Name = $MachineName WorkGroupNa
 
 To implement this, all that we have to do is go to our new DSC client, and execute the code, just like we would with a Function. We then run it like we do a cmdlet and provide some params.
 
-\[code language="powershell" light="true"\] TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Verbose\[/code\]
+```powershell   TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Verbose\[/code\]
 
 That will create an output file in .mof format
 
@@ -96,7 +96,7 @@ Mode LastWriteTime Length Name ---- ------------- ------ ---- -a---- 3/19/2015 2
 
 The final step here is to apply the configuration to our machine and see what happens.
 
-\[code language="powershell" light="true"\] Start-DscConfiguration -ComputerName localhost -Path .xComputer \` -Wait -Force -Verbose\[/code\]
+```powershell   Start-DscConfiguration -ComputerName localhost -Path .xComputer \` -Wait -Force -Verbose\[/code\]
 
 And watch the beautiful colors scroll by
 

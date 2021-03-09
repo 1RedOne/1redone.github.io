@@ -48,7 +48,7 @@ This is the method I used.
     ![redupe4](images/redupe4.png)](http://foxdeploy.com/2015/07/31/recovering-your-dedeuped-files-on-windows-10/redupe4/) Say goodbye to all of this optimized space...\[/caption\]
 6. For each drive, run the following Cmdlet.
     
-    \[code language="powershell" light="true"\]Start-DedupJob -Volume &quot;D:&quot; -Type Unoptimization\[/code\]
+    ```powershell  Start-DedupJob -Volume &quot;D:&quot; -Type Unoptimization\[/code\]
     
     If you only have one drive, run the cmdlet with -Wait so you can see how incredibly long this is going to take.
 7. Wait forever.  It takes a REALLY, REALLY REALLY really super long time to 'redupe' your files.
@@ -57,7 +57,7 @@ This is the method I used.
     
     If you want to know how long it will take if you didn't run this in -Wait mode, you can run
     
-    \[code language="powershell" light="true"\]Get-DedupJob\[/code\]
+    ```powershell  Get-DedupJob\[/code\]
     
     to see how long it will take, but don't sit around.  It will take forever.
 8. Send Microsoft an e-mail or [vote for this issue on User Voice](https://windows.uservoice.com/forums/265757-windows-feature-suggestions/suggestions/6530781-put-data-deduplication-dedup-into-windows-client).  I've been to Redmond, and I can confidently say that they really do pay attention to user feedback on issues like this.  Seriously, Windows Desktop Enterprise and Pro could use some more distinguishing features.  Vote this up and hopefully we'll get Dedupe as a standard feature with Threshold in October.

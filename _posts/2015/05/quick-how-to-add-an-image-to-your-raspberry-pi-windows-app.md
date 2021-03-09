@@ -28,7 +28,7 @@ Now that I've got a folder of some high quality jpegs ready
 
 Using the toolbox image control, you can draw the outline for an image to put it wherever you'd like and then you'll get a…uh…
 
-\[caption id="attachment\_2317" align="alignnone" width="670"\]![UglyX](images/uglyx.gif) Wait, it's an X, what gives?\[/caption\]
+![UglyX](images/uglyx.gif) Wait, it's an X, what gives?\[/caption\]
 
 Previously, we were using PowerShell implementing .net classes to draw WPF forms, meaning we could put together a GUI in real time using bits and pieces from all over our system, including files stored in relative paths.
 

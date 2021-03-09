@@ -50,7 +50,7 @@ Interested?  Let's begin!
 
 Start by launching Visual Studio
 
-\[caption id="attachment\_2233" align="alignnone" width="693"\]![00-VisualStudio image](images/00-visualstudio-image.png) it's so purple and creepy! Like a Gore Magala!\[/caption\]
+![00-VisualStudio image](images/00-visualstudio-image.png) it's so purple and creepy! Like a Gore Magala!\[/caption\]
 
 ![gore_magala](images/gore_magala.jpg)
 
@@ -68,7 +68,7 @@ This is what you'll see, the fully blown Visual Studio UI.
 
 [![VisualStudio](images/visualstudio.png?w=660)](images/visualstudio.png) There is a lot of cruft we can disable though, so lets hide some elements.  For now, we don't need Solution Explorer, which holds all of the files related to our project (since we won't actually be publishing this project, just building its UI here) and we won't need Properties until we add some items.
 
-\[caption id="attachment\_2237" align="alignnone" width="320"\]![You can bring these items back by hitting F4, F6 or choosing them from the Alt-View menu up top](images/00-visualstudio_hidestuff.png) You can bring these items back by hitting F4, F6 or choosing them from the Alt-View menu up top\[/caption\]
+![You can bring these items back by hitting F4, F6 or choosing them from the Alt-View menu up top](images/00-visualstudio_hidestuff.png) You can bring these items back by hitting F4, F6 or choosing them from the Alt-View menu up top\[/caption\]
 
 Now, we will want to display and then pin the toolbox on the left side, to give us our goods we can drag and move around.
 
@@ -89,7 +89,7 @@ Before we dig in deeper, you should remember these tennants:
 
 Let's name this bad boy: click the title bar of your GUI, then hit F4 to show Properties
 
-\[caption id="attachment\_2239" align="alignnone" width="280"\]![You could also just click the text and hit F2](images/00-visualstudio_givemeaname.png) You could also just click the text and hit F2\[/caption\]
+![You could also just click the text and hit F2](images/00-visualstudio_givemeaname.png) You could also just click the text and hit F2\[/caption\]
 
 Let's start with our GUI by adding an image first, then some text. The elements we want to grab from the tool box are Image, and a TextBlock object.
 
@@ -101,7 +101,7 @@ Now's a good time to hit F4 to bring back some of the stuff we hid earlier, beca
 
 Go to explorer, find an image you like, and then copy its path and paste it here (pro-tip, don't use quotes).
 
-\[caption id="attachment\_2240" align="alignnone" width="351"\]![Put the file path in the Source field. Pro-tip: no quotes](images/00-visualstudio_imageproperty.png) Put the file path in the Source field. Pro-tip: no quotes\[/caption\]
+![Put the file path in the Source field. Pro-tip: no quotes](images/00-visualstudio_imageproperty.png) Put the file path in the Source field. Pro-tip: no quotes\[/caption\]
 
 ![00-VisualStudio_toolbox_textblock](images/00-visualstudio_toolbox_textblock.png?w=270)Now we'll do the same again for a TextBlock.
 

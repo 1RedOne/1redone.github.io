@@ -144,7 +144,7 @@ Now, when we run our code, we'll be prompted by line 23 to Halt, Continue or Sus
 
 **Using Suspend while in a code loop is awesomely powerful!** It allows you near Neo-level powers to jump into the command line and access the $\_ object in real time, and see which objects exist in the pipeline. Instead of assigning an outside object the values of a point-in-time slice of your script, you can play with the results in real time!
 
-\[caption id="attachment\_5130" align="alignnone" width="500"\]![tumblr_lqmd84dp741qglnd4o1_500](images/tumblr_lqmd84dp741qglnd4o1_500.gif) How it feels to 'pause time' via Suspend\[/caption\]
+![tumblr_lqmd84dp741qglnd4o1_500](images/tumblr_lqmd84dp741qglnd4o1_500.gif) How it feels to 'pause time' via Suspend\[/caption\]
 
 PowerShell v5 preview allows you to jump directly into debug mode while using the ISE by hitting  **Control+B,** so you don't even have to set a Write-Debug breakpoint.  However, for ease and backwards compatibility, I like to leave Write-Debug statements liberally left in my code, which I can access using either the -Debug switch on a function or bound script, or by setting my $DebugPreference manually.  There are nearly limitless options to the troubleshooting and outcomes you can create when using Suspend.
 
@@ -176,7 +176,7 @@ We need to get rid of the leading spaces with a .Trim() sub-expression method ca
 
 When we're done with the permissions loop above, we'll collect all of them into another Custom Object, this one having a $sharename, and $permissions property.
 
-\[code language="powershell" light="true"\] $permissions += \[pscustomobject\]@{User=$user;Permissions=$access} \[/code\]
+```powershell   $permissions += \[pscustomobject\]@{User=$user;Permissions=$access} \[/code\]
 
 There is a pitfall you would run into with this particular example.  When you get to the last permission entry and there are no ending entries in the list (e.g. when you get to the last entry and it goes to look for the next delimiter after itself, there won't be one) the code would dump out on you and give you a mangled final object  that contains every object in the list, with bad formatting. To get away from that, I added an extra piece of logic on line 20, that if this is the last delimiter in the list, then grab every non-whitespace line in the remainder of the list and return that for $ThisPermissionsList.
 

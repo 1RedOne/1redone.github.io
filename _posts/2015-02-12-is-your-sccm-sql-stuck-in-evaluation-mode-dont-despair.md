@@ -1,6 +1,8 @@
 ---
 title: "Is your SCCM SQL stuck in Evaluation mode?  Don't despair!"
 date: "2015-02-12"
+redirect_from : /2015/02/12/is-your-sccm-sql-stuck-in-evaluation-mode-dont-despair
+coverImage: ..\assets\images\foxPlaceHolder.webp
 categories: 
   - "sccm"
 tags: 
@@ -9,7 +11,7 @@ tags:
 
 Have you ever wondered what happens when you install SCCM 2012 or 2007 on top of SQL and choose 'Evaluation mode', then forget to enter the SQL key?
 
-### SQL will turn off the SQL Database Service on day 180, and never turn back on until you license it
+## SQL will turn off the SQL Database Service on day 180, and never turn back on until you license it
 
 How's _that_ for getting your attention?
 
@@ -31,7 +33,7 @@ Your System Center license from Microsoft includes SQL install rights, but you'v
 
 Setup a clean VM or other server and run the installer, using the special ISO you'll get from your volume license account under System Center 2012 R2 Client License (or something similar). This time, when the installer runs and gets to the product key, you can see your special embedded key!
 
-![Thank God for this embedded key!](images/sql-saved.png) Thank God for this embedded key!\[/caption\]
+![Thank God for this embedded key!](../assets/images/2015/02/images/sql-saved.png) Thank God for this embedded key!
 
 I'm not certain how it's done, but somehow when you download your ISO from Volume Licensing, your unique key is embedded into the ISO. Very cool technology.
 

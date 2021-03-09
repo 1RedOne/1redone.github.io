@@ -52,7 +52,7 @@ Our tool has scanned through the GUI and created hooks associated with every int
 
 As you see above, if we want to run the GUI, we just type in
 
-\[code language="powershell" light="true"\] >$Form.ShowDialog() | Out-Null
+```powershell   >$Form.ShowDialog() | Out-Null
 
 \[/code\]
 
@@ -64,11 +64,11 @@ Now, what if we wanted to do something a bit more complex, like change the value
 
 We need to hook into the properties that the tool displayed to us earlier. In this case, the name is $WPFTextBox. This is an object which this refers to the object on our form. That means we can change the text just by looking for a .text property on this object.
 
-\[code language="powershell" light="true"\]$WPFtextBox.Text >TextBox\[/code\]
+```powershell  $WPFtextBox.Text >TextBox\[/code\]
 
 If we change this with a simple equals statement…
 
-\[code language="powershell" light="true"\]$WPFtextbox.Text = 'Hello World'\[/code\]
+```powershell  $WPFtextbox.Text = 'Hello World'\[/code\]
 
 [![Hello World](images/hello-world.png)](http://foxdeploy.com/2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio/hello-world/)
 

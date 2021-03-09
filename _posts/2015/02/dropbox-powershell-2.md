@@ -36,7 +36,7 @@ Simply download the .ps1 file, then modify the few highlighted lines below.
 
 Save the code below as a Move-DropBoxFiles.ps1. Next, to setup a scheduled task using the below code. (Borrowed liberally from the King of Code himself, Ed Wilson, [in this blog post on Scheduled Jobs](http://blogs.technet.com/b/heyscriptingguy/archive/2012/09/18/create-a-powershell-scheduled-job.aspx).
 
-\[code language="powershell" light="true"\] $dailyTrigger = New-JobTrigger -Daily -At "2:00 PM"
+```powershell   $dailyTrigger = New-JobTrigger -Daily -At "2:00 PM"
 
 $option = New-ScheduledJobOption -StartIfOnBattery –StartIfIdle
 

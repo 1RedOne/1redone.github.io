@@ -156,7 +156,7 @@ According to this, I just need to query the URL listed and provide my Authorizat
 
 In PowerShell, this looks something like this:
 
-\[code language="powershell" light="true"\] Invoke-RestMethod https://public-api.wordpress.com/rest/v1.1/me -Method Get -Headers @{"Authorization" = "Bearer $accessToken"}
+```powershell   Invoke-RestMethod https://public-api.wordpress.com/rest/v1.1/me -Method Get -Headers @{"Authorization" = "Bearer $accessToken"}
 
 \[/code\]
 
@@ -168,7 +168,7 @@ That's really all there is to it!  The data will come back already serialized, 
 
 At this point, all you need to do to make a slue of cmdlets is to look at the endpoints, find nifty ones, and then just setup functions that ask for the right info. This is the fruit of my labors, right here.
 
-\[code language="powershell" light="true"\]
+```powershell  
 
 Function Get-WordPressStats { \[Cmdletbinding()\] param( \[Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true, Position=0)\] \[Alias("domainName")\] $ID, $accessToken=$Global:accessToken)
 

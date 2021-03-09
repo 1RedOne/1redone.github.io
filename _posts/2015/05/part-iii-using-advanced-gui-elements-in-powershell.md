@@ -44,7 +44,7 @@ The XAML
 
 This will give us a form with an image, and a button. To hook the button up to the image, we just need to add a few snippets of code:
 
-\[code language="powershell" light="true"\] $WPFbutton.Add\_Click({ if ($WPFimage.Visibility -ne 'Visible'){$WPFimage.Visibility = 'Visible'} else {$WPFimage.Visibility = 'Hidden'} }) \[/code\]
+```powershell   $WPFbutton.Add\_Click({ if ($WPFimage.Visibility -ne 'Visible'){$WPFimage.Visibility = 'Visible'} else {$WPFimage.Visibility = 'Hidden'} }) \[/code\]
 
 And…that's it!
 
@@ -64,7 +64,7 @@ This got a bit confusing, making the second skybison only appear when the first 
 
 $WPFcheckBox.Add\_Checked({if ($WPFimage.Visibility -eq 'Visible'){$WPFimage\_Copy.Visibility = 'Visible'}else{$WPFimage\_Copy.Visibility = 'Hidden'}}) \[/code\] And the result :
 
-\[caption id="attachment\_2323" align="alignnone" width="496"\]![Clicking the checkbox makes TWO Appa's appear!](images/checkbox-doublebison.png) Clicking the checkbox makes TWO Appa's appear!\[/caption\]
+![Clicking the checkbox makes TWO Appa's appear!](images/checkbox-doublebison.png) Clicking the checkbox makes TWO Appa's appear!\[/caption\]
 
 ### Use Radio Buttons and auto-populate a Combo Box/Dropdown Box
 
@@ -76,7 +76,7 @@ For the components we'll use: • Checkbox - click the checkbox to specify the u
 
 You can drag and drop them however you'd like, here's what I came up with:
 
-\[caption id="attachment\_2324" align="alignnone" width="571"\]![Ohhh, so gooey!](images/contractortool.png) Ohhh, so gooey!\[/caption\]
+![Ohhh, so gooey!](images/contractortool.png) Ohhh, so gooey!\[/caption\]
 
 So, here we go. We've got a first name, last name, logon name and password textboxes. You'll use those as you would, expect to use them. At first, we'll be displaying the PW in plaintext but on the next revision, we'll add the feature to display asterisks and require you to click to reveal the PW. Finally, we have two new classes here, the combo box and the radio button.
 
@@ -88,23 +88,23 @@ So, here we go. We've got a first name, last name, logon name and password textb
 
 I wrote a few chunks of code here. First, when the user clicks the checkbox to enable a limited timespan user, I needed to add some logic to enable the radio buttons and pick one of them, which you see here. This is done by adding a script block to the Checkbox using the Add\_Checked and Add\_Unchecked methods:
 
-\[code language="powershell" light="true"\] #Add logic to the checkbox to enable items when checked $WPFcheckBox.Add\_Checked({ $WPFradioButton\_7.IsEnabled=$true $WPFradioButton\_30.IsEnabled=$true $WPFradioButton\_90.IsEnabled=$true $WPFradioButton\_7.IsChecked=$true }) #when this box is unchecked, make sure that none of the option bubbles are selected $WPFcheckBox.Add\_UnChecked({ $WPFradioButton\_7.IsEnabled=$false $WPFradioButton\_30.IsEnabled=$false $WPFradioButton\_90.IsEnabled=$false $WPFradioButton\_7.IsChecked,$WPFradioButton\_30.IsChecked,$WPFradioButton\_90.IsChecked=$false,$false,$false})
+```powershell   #Add logic to the checkbox to enable items when checked $WPFcheckBox.Add\_Checked({ $WPFradioButton\_7.IsEnabled=$true $WPFradioButton\_30.IsEnabled=$true $WPFradioButton\_90.IsEnabled=$true $WPFradioButton\_7.IsChecked=$true }) #when this box is unchecked, make sure that none of the option bubbles are selected $WPFcheckBox.Add\_UnChecked({ $WPFradioButton\_7.IsEnabled=$false $WPFradioButton\_30.IsEnabled=$false $WPFradioButton\_90.IsEnabled=$false $WPFradioButton\_7.IsChecked,$WPFradioButton\_30.IsChecked,$WPFradioButton\_90.IsChecked=$false,$false,$false})
 
 \[/code\]
 
 Next, we need to link the Create User button up to the code to make a new user. Because the user may or may not be set to expire, I wanted a method to easily end up with an object called $Hash that contains the needed settings to make a new user account. I ended up writing a helper function called Get-FormField which will gather all of the settings the user specifies into the form, which is then used later on when you click the 'Create User' button like so:
 
-\[code language="powershell" light="true"\] $WPFMakeUserbutton.Add\_Click({ #Resolve Form Settings $hash = Get-FormFields New-ADUser @hash -PassThru $Form.Close()}) \[/code\]
+```powershell   $WPFMakeUserbutton.Add\_Click({ #Resolve Form Settings $hash = Get-FormFields New-ADUser @hash -PassThru $Form.Close()}) \[/code\]
 
 Finally,  populating the combo box, it's actually super easy. The combo box name in this example is targetOu\_ComboBox, which ends up becoming the PowerShell object $WPFtargetOU\_ComboBox. We call its AddChild method to add entries to the list. I ran a quick LDAP query [(thanks to this post on SuperUser for showing me the way!](http://serverfault.com/questions/453864/how-can-i-retrieve-the-default-user-computer-ou)) to get the default OU for a new user and stored that in $defaultOU, and then manually typed in the Distinguished Name of the other OU I wanted to provide as an option.
 
-\[code language="powershell" light="true"\] $defaultOU = (get-adobject -filter 'ObjectClass -eq "domain"' -Properties wellKnownObjects).wellknownobjects.Split("\`n")\[-1\].Split(':') | select -Last 1
+```powershell   $defaultOU = (get-adobject -filter 'ObjectClass -eq "domain"' -Properties wellKnownObjects).wellknownobjects.Split("\`n")\[-1\].Split(':') | select -Last 1
 
 $defaultOU,"OU=Contractors,DC=FOXDEPLOY,DC=local" | ForEach-object {$WPFtargetOU\_comboBox.AddChild($\_)} \[/code\]
 
 This results in both names pre-populating our dropdown box, like so:
 
-\[caption id="attachment\_2325" align="alignnone" width="660"\]![Just use $WPFCombo.AddChild() to add more items to the dropdown](images/dropdownbox.png) Just use $WPFCombo.AddChild() to add more items to the dropdown\[/caption\]
+![Just use $WPFCombo.AddChild() to add more items to the dropdown](images/dropdownbox.png) Just use $WPFCombo.AddChild() to add more items to the dropdown\[/caption\]
 
 The radio buttons are used to pick 7, 30 or 90 days as the expiration date for this account. We first check to see if the Checkbox for temporary user account is checked, and if so, we then check to see which bubble/radio button is checked. We then reset $Expiration date to equal get-date.AddDays($expirationDate) and pass that along too, using Get-FormFields, this is done in lines 7-10 below.
 
@@ -130,11 +130,11 @@ $WPFcheckBox.Add\_UnChecked({ $WPFradioButton\_7.IsEnabled=$false $WPFradioButto
 
 Let's use my favorite test-user, I like Ham.
 
-\[caption id="attachment\_2327" align="alignnone" width="566"\]![My wife HATES ham](images/ilikeham.png) My wife HATES ham\[/caption\]
+![My wife HATES ham](images/ilikeham.png) My wife HATES ham\[/caption\]
 
 And in testing this in my environment…it works!
 
-\[caption id="attachment\_2326" align="alignnone" width="420"\]![I titled this picture 'The Expiration of Ham', it cracks me  up](images/hamexpiration.png) I titled this picture 'The Expiration of Ham', it cracks me up\[/caption\]
+![I titled this picture 'The Expiration of Ham', it cracks me  up](images/hamexpiration.png) I titled this picture 'The Expiration of Ham', it cracks me up\[/caption\]
 
 ### What's next?
 

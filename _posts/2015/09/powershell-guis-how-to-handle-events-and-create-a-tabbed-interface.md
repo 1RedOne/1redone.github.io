@@ -128,13 +128,13 @@ One of those shortcuts is that the compiler snorts through our GUI like a pig lo
 
 There are a metric pant load of events, for every element. You can see them by piping one of your objects into Get-Member like so:
 
-\[code language="powershell" light="true"\] &nbsp;$WPFComputerName | Get-member Add\* -MemberType Method -force\[/code\]
+```powershell   &nbsp;$WPFComputerName | Get-member Add\* -MemberType Method -force\[/code\]
 
 ![All we have to do is add some code after the event we want to handle, and that's it. Sugar baby, SUGAR!](https://foxdeploy.files.wordpress.com/2017/09/08.png?w=660)](https://foxdeploy.files.wordpress.com/2017/09/08.png) All we have to do is add some code after the event we want to handle, and that's it. Sugar baby, SUGAR!\[/caption\]
 
 So, let's say you want to run a chunk of code when the user moves over to another element in your form (which is called LosingFocus, which happens to me constantly during the day...hey I wonder what's on reddit...). For example, let's echo out the value of a box when a user moves away from the box.
 
-\[code language="powershell" light="true"\] &nbsp;$WPFComputerNameBox.Add\_LostFocus({Write-Host $WPFComputerName.Text})\[/code\]
+```powershell   &nbsp;$WPFComputerNameBox.Add\_LostFocus({Write-Host $WPFComputerName.Text})\[/code\]
 
 I'll stage this in the context of a little mini GUI, here's the XAML, and then below, the PowerShell code.
 
@@ -144,7 +144,7 @@ I'll stage this in the context of a little mini GUI, here's the XAML, and then b
 
 Method Code
 
-\[code language="powershell" light="true"\]$WPFbutton.add\_MouseEnter({Write-host 'Yay, the mouse is over me!'}) $WPFbutton.Add\_MouseLeave({Write-host 'he didnt click me...:('})
+```powershell  $WPFbutton.add\_MouseEnter({Write-host 'Yay, the mouse is over me!'}) $WPFbutton.Add\_MouseLeave({Write-host 'he didnt click me...:('})
 
 $WPFTextBox.Add\_TextChanged({Write-host "the user typed something, something like this $($WPFtextBox.Text)"})\[/code\]
 

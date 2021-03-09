@@ -53,7 +53,7 @@ In order to use xADDomain, we have to import the xActiveDirectory module, so if 
 
 . To make use of this resource, we also have to import it.
 
-\[code language="powershell" light="true"\] Import-DscResource -Module xActiveDirectory \[/code\]
+```powershell   Import-DscResource -Module xActiveDirectory \[/code\]
 
 The major tasks we're accomplishing here are Installing the Windows Features of AD Domain Services, the AD Server Administration tools like ADUC, DHCP and DNS consoles, and finally making an AD Domain.
 
@@ -63,13 +63,13 @@ The major tasks we're accomplishing here are Installing the Windows Features of 
 
 Configuring the server to add Domain Services and the RSAT tools is pretty easy, all that we have to do is add two WindowsFeature resources, specifying the Name of the feature needed (get the feature from Get-WindowsFeature, and look at the Name property). We specify Ensure = Present, and IncludeAllSubFeature to get all of the juicy bits.
 
-\[code language="powershell" light="true"\] WindowsFeature ADDSInstall { DependsOn= '\[Group\]AddToAdmin' Ensure = 'Present' Name = 'AD-Domain-Services' IncludeAllSubFeature = $true } WindowsFeature RSATTools { DependsOn= '\[WindowsFeature\]ADDSInstall' Ensure = 'Present' Name = 'RSAT-AD-Tools' IncludeAllSubFeature = $true } \[/code\]
+```powershell   WindowsFeature ADDSInstall { DependsOn= '\[Group\]AddToAdmin' Ensure = 'Present' Name = 'AD-Domain-Services' IncludeAllSubFeature = $true } WindowsFeature RSATTools { DependsOn= '\[WindowsFeature\]ADDSInstall' Ensure = 'Present' Name = 'RSAT-AD-Tools' IncludeAllSubFeature = $true } \[/code\]
 
 Suprisingly, it is also very easy to configure our domain using the xADDomain resource. These are seriously the only values we have to provide. Running through the values we're configuring:
 
 • DomainAdministratorCredential - Our first additional domain admin creds • DomainName - the unique name for our new domain • SafeModeAdminPassword - the password you'll use to recover your domain on the dark day when you nuked the domain • DomainNetbiosName - we can actually derive this from the -DomainName the user provides
 
-\[code language="powershell" light="true"\] xADDomain SetupDomain { DomainAdministratorCredential= $firstDomainAdmin DomainName= $DomainName SafemodeAdministratorPassword= $SafeModePW DomainNetbiosName = $DomainName.Split('.')\[0\] DependsOn='\[WindowsFeature\]RSATTools' }
+```powershell   xADDomain SetupDomain { DomainAdministratorCredential= $firstDomainAdmin DomainName= $DomainName SafemodeAdministratorPassword= $SafeModePW DomainNetbiosName = $DomainName.Split('.')\[0\] DependsOn='\[WindowsFeature\]RSATTools' }
 
 \[/code\]
 
@@ -77,23 +77,23 @@ Suprisingly, it is also very easy to configure our domain using the xADDomain re
 
 As before, applying the configuration is just as simple as loading the config into memory then running it like a cmdlet. Finally, we invoke the configuration using Start-DSCConfig
 
-\[code language="powershell" light="true"\] TestLab -MachineName DSCDC01 -DomainName Fox.test -Password $localuser \` -UserName 'FoxDeploy' -SafeModePW $SafeModePW \` -firstDomainAdmin (Get-Credential -UserName 'FoxDeploy' -Message 'Specify Credentials for first domain admin') -ConfigurationData $configData Start-DscConfiguration -ComputerName localhost -Wait -Force -Verbose -path .\\TestLab -Debug \[/code\]
+```powershell   TestLab -MachineName DSCDC01 -DomainName Fox.test -Password $localuser \` -UserName 'FoxDeploy' -SafeModePW $SafeModePW \` -firstDomainAdmin (Get-Credential -UserName 'FoxDeploy' -Message 'Specify Credentials for first domain admin') -ConfigurationData $configData Start-DscConfiguration -ComputerName localhost -Wait -Force -Verbose -path .\\TestLab -Debug \[/code\]
 
 I've talked through this enough, now time for some pretty pictures!
 
-\[caption id="attachment\_2201" align="alignnone" width="705"\]![Checking to see if Active Directory Domain Services is installed](images/02.png?w=705) Checking to see if Active Directory Domain Services is installed\[/caption\]
+![Checking to see if Active Directory Domain Services is installed](images/02.png?w=705) Checking to see if Active Directory Domain Services is installed\[/caption\]
 
-\[caption id="attachment\_2202" align="alignnone" width="705"\]![Making sure our system is a domain controller](images/03.png?w=705) Making sure our system is a domain controller\[/caption\]
+![Making sure our system is a domain controller](images/03.png?w=705) Making sure our system is a domain controller\[/caption\]
 
-\[caption id="attachment\_2203" align="alignnone" width="630"\]![Cool juicy bits about Domain Services being installed...](images/04.png) Cool juicy bits about Domain Services being installed...\[/caption\]
+![Cool juicy bits about Domain Services being installed...](images/04.png) Cool juicy bits about Domain Services being installed...\[/caption\]
 
-\[caption id="attachment\_2204" align="alignnone" width="705"\]![DNS and DHCP...online!](images/05.png?w=705) DNS and DHCP...online!\[/caption\]
+![DNS and DHCP...online!](images/05.png?w=705) DNS and DHCP...online!\[/caption\]
 
-\[caption id="attachment\_2205" align="alignnone" width="705"\]![Pre-reboot, our domain settings are listed in server manager](images/06.png?w=705) Pre-reboot, our domain settings are listed in server manager\[/caption\]
+![Pre-reboot, our domain settings are listed in server manager](images/06.png?w=705) Pre-reboot, our domain settings are listed in server manager\[/caption\]
 
-\[caption id="attachment\_2206" align="alignnone" width="705"\]![After a reboot, Server Manager shows DHCP, DNS, and AD DS all healthy and online](images/07.png?w=705) After a reboot, Server Manager shows DHCP, DNS, and AD DS all healthy and online\[/caption\]
+![After a reboot, Server Manager shows DHCP, DNS, and AD DS all healthy and online](images/07.png?w=705) After a reboot, Server Manager shows DHCP, DNS, and AD DS all healthy and online\[/caption\]
 
-\[caption id="attachment\_2207" align="alignnone" width="647"\]![RSAT Tools are ready and loaded!](images/08.png) RSAT Tools are ready and loaded!\[/caption\]
+![RSAT Tools are ready and loaded!](images/08.png) RSAT Tools are ready and loaded!\[/caption\]
 
 #### What's next?
 

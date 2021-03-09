@@ -54,7 +54,7 @@ See what we're doing? We're marking out with one sample row the data we care abo
 
 Let's see what happens when we run this through ConvertFrom-String. A note: I like to use this syntax to get an output of how many objects were detected, and then leave me with a string I can play with.
 
-\[code language="powershell" light="true"\] ConvertFrom-String -InputObject $import -TemplateContent $template -OutVariable TestMePlz | Out-Null "Parent Objects found $($testmePlz.Count)" "-Child objects found $($testmePlz.Company.Items.Count)" $TestMePlz | select Company \[/code\]
+```powershell   ConvertFrom-String -InputObject $import -TemplateContent $template -OutVariable TestMePlz | Out-Null "Parent Objects found $($testmePlz.Count)" "-Child objects found $($testmePlz.Company.Items.Count)" $TestMePlz | select Company \[/code\]
 
 [![CFS_01](images/cfs_01.png)](images/cfs_01.png)
 
@@ -74,7 +74,7 @@ Better, now we're getting back at least the first three companies AND we have th
 
 **Calculated Properties will save us all!** In case you haven't noticed thus far, I'm mapping a custom object using calculated properties to get some more meaningful results. I'm doing this because currently in WMF 5.0 preview, there is a LOT of debug info returned when you run ConvertFrom-String, including the column 'ExtentText' which is great for troubleshooting but not needed for most use cases. I suspect (but have no secret knowledge) this will change as time passes, because CFS also doesn't do a great job of mapping objects back for you, which I suspect will also be remedied in a future version. In any case, FlashExtract/ConvertFrom-String will do it's best to assign leaf/branches as makes sense for your input file. As you can see below, we get back a Company.Value property, while the AccountNumber becomes a sub-property @ Company.AccountNumber.Value.
 
-\[code language="powershell" light="true"\] $TestMePlz | Select-Object @{Name=‘Company‘;Expression={$\_.Company.Value}},@{Name=‘AccountNumber’;Expression={$\_.Company.AccountNumber.Value}} \[/code\]
+```powershell   $TestMePlz | Select-Object @{Name=‘Company‘;Expression={$\_.Company.Value}},@{Name=‘AccountNumber’;Expression={$\_.Company.AccountNumber.Value}} \[/code\]
 
 [![CFS_03](images/cfs_03.png)](images/cfs_03.png)
 
@@ -86,7 +86,7 @@ We're running into an issue here…we're only getting back 3 of our five inputs!
 
 One thing jumps out though, the accountNumber for the other two entries are numeric, not alphabetical. We basically told FlashExtract that 'gosh, we must only want letters for the Account field'. Let's add one more entry to our template and see what happens. Here's our complete code for this example, including the debug output and the item mapping:
 
-\[code language="powershell" light="true"\]$template = @' <html> <body> <table> <tr><td>{!Company\*:Company}</td><td>AccountNumber</td></tr> <tr><td>{Company\*:AppleCorp}</td><td>{AccountNumber\*:ABC}</td></tr> <tr><td>{Company\*:BananaInc}</td><td>{AccountNumber\*:DEF}</td></tr> <tr><td>{Company\*:DaquiriInc}</td><td>{AccountNumber\*:123}</td><tr> </table> '@
+```powershell  $template = @' <html> <body> <table> <tr><td>{!Company\*:Company}</td><td>AccountNumber</td></tr> <tr><td>{Company\*:AppleCorp}</td><td>{AccountNumber\*:ABC}</td></tr> <tr><td>{Company\*:BananaInc}</td><td>{AccountNumber\*:DEF}</td></tr> <tr><td>{Company\*:DaquiriInc}</td><td>{AccountNumber\*:123}</td><tr> </table> '@
 
 ConvertFrom-String -InputObject $import -TemplateContent $template -OutVariable TestMePlz | Out-Null "Parent Objects found $($testmePlz.Count)" "-Child objects found $($testmePlz.Company.Items.Count)"
 

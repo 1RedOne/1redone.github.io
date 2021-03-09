@@ -47,7 +47,7 @@ To put those side-by-side, here's the difference you can expect when comparing h
 
 ##### SIDE BY SIDE, INTEL % CHANGE VS SOFTWARE RAID 0
 
-\[caption id="attachment\_2615" align="alignnone" width="268"\]![Raid0 testing](images/raid0-testing.png) Intel Performance Increase over Microsoft\[/caption\]
+![Raid0 testing](images/raid0-testing.png) Intel Performance Increase over Microsoft\[/caption\]
 
 **Winner - Intel** There is quite a performance edge to gain by using a hardware controller, even nowadays. I was very surprised to see such a disparity here.  In every regard there were noticeable speed gains, at least on paper.
 
@@ -75,7 +75,7 @@ We can compare this to our single disk performance though, and see something els
 
 ##### Side by side, intel % change vs software raid 1
 
-\[caption id="attachment\_2616" align="alignnone" width="239"\]![Raid1 testing](images/raid1-testing.png) Intel % increase over Microsoft Software Raid\[/caption\]
+![Raid1 testing](images/raid1-testing.png) Intel % increase over Microsoft Software Raid\[/caption\]
 
 **Winner - Windows** If you need super fast sequential reads, like you're working with a single big file that happens to be on one contiguous area of disk, if you could control that, then you'd want the Intel Controller. If not, Windows looks to be good enough, and takes the lead in most categories.
 
@@ -103,7 +103,7 @@ Now, after that length pre-amble, let's hop to it.
 
 ##### three DISKS, SATA 3, HARDWARE RAID 5
 
-\[caption id="attachment\_2608" align="alignnone" width="486"\]![ThreedrivesIntelRaid5](images/threedrivesintelraid5.png) Hardware Raid 5\[/caption\]
+![ThreedrivesIntelRaid5](images/threedrivesintelraid5.png) Hardware Raid 5\[/caption\]
 
 As expected from hardware Raid 5, we receive roughly 100% read speed from all drives, for some truly mammoth read speeds.  Writes hang out around 2/3rd's of the total write speed for all drives, making this the power-user's option.  It should be noted that I had to specify a custom disk policy for this Raid 5 volume to enable write caching and disable flush operations.  This is definitely a power-mode configuration, but depends on battery backup to ensure there is no data loss.
 
@@ -145,7 +145,7 @@ You need to archive monstrous amounts of data across insane configurations of di
 
 Finally, some random charts.
 
-\[caption id="attachment\_2614" align="alignnone" width="236"\]![raid 5](images/raid-5.png) Intel RAID-5 performance over Single Disk\[/caption\]
+![raid 5](images/raid-5.png) Intel RAID-5 performance over Single Disk\[/caption\]
 
 ![raid 1 vs single drive](images/raid-1-vs-single-drive.png)
 

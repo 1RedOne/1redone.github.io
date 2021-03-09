@@ -35,11 +35,11 @@ Change our params block in this script to the following
 
 Now let's invoke it…
 
-\[code language="powershell" light="true"\]TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Password 'myRootPw' -UserName 'Stephen FoxDeploy'\[/code\]
+```powershell  TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Password 'myRootPw' -UserName 'Stephen FoxDeploy'\[/code\]
 
 ERROR :(
 
-\[code language="powershell" light="true"\] Write-NodeMOFFile : Invalid MOF definition for node 'localhost': Exception calling 'ValidateInstanceText' with '1' argument(s): 'Convert property 'Password' value from type 'STRING' to type 'INSTANCE' failed At line:37, char:2 Buffer: onName = 'TestLab'; };^ \[/code\]
+```powershell   Write-NodeMOFFile : Invalid MOF definition for node 'localhost': Exception calling 'ValidateInstanceText' with '1' argument(s): 'Convert property 'Password' value from type 'STRING' to type 'INSTANCE' failed At line:37, char:2 Buffer: onName = 'TestLab'; };^ \[/code\]
 
 #### Fix: Convert property value from type string to type instance failed
 
@@ -63,13 +63,13 @@ Hmm…I converting from a string failed, and TechNet says it needs to be a Crede
 
 So, let's replace our -PassWord 'RootPW' with a parenthesis with Get-Credential and see what happens...
 
-\[code language="powershell" light="true"\] TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Password (Get-Credential -UserName 'FoxDeploy' -Message 'Enter New Password') -UserName 'FoxDeploy'\[/code\]
+```powershell   TestLab -MachineName DSCDC01 -WorkGroupName TESTLAB -Password (Get-Credential -UserName 'FoxDeploy' -Message 'Enter New Password') -UserName 'FoxDeploy'\[/code\]
 
 #### Fix: Storing passwords as plain text is not recommended
 
 Running the cmd above gives us...some more blood in the water, but this is great because we've solved the first problem!
 
-\[code language="powershell" light="true"\] ConvertTo-MOFInstance : System.InvalidOperationException error processing property 'Password' OF TYPE 'User': Converting and storing encrypted passwords as plain text is not recommended. For more information on securing credentials in MOF file, please refer to MSDN blog: http://go.microsoft.com/fwlink/?LinkId=393729 \[/code\]
+```powershell   ConvertTo-MOFInstance : System.InvalidOperationException error processing property 'Password' OF TYPE 'User': Converting and storing encrypted passwords as plain text is not recommended. For more information on securing credentials in MOF file, please refer to MSDN blog: http://go.microsoft.com/fwlink/?LinkId=393729 \[/code\]
 
 Hey, at least we're getting somewhere! This is probably one of the most informative error messages I've ever had in PowerShell! It's saying hey, you can't do this, here is a link with more info. I like it! Much better than before.
 
@@ -77,7 +77,7 @@ I did some googling and [found this article on the topic](http://newdelhipowersh
 
 Let's throw this bad boy on there…
 
-\[code language="powershell" light="true"\]
+```powershell  
 
 $configData = @{ AllNodes = @( @{ NodeName = 'localhost'; PSDscAllowPlainTextPassword = $true } ) } \[/code\]
 
@@ -101,7 +101,7 @@ Ok, that's damned sexy
 
 This DSC config will rename our PC, join it to a workgroup, and then add a new local user to the machine. When you run this, you'll be prompted to provide the PW for the new local user. Make sure to change the -Username value to a name you'd like to use.
 
-\[code language="powershell" light="true"\] configuration TestLab { param ( \[string\[\]\]$NodeName ='localhost', \[Parameter(Mandatory)\]\[string\]$MachineName, \[Parameter(Mandatory)\]\[string\]$WorkGroupName, \[Parameter()\]\[string\]$UserName, \[Parameter()\]$Password )
+```powershell   configuration TestLab { param ( \[string\[\]\]$NodeName ='localhost', \[Parameter(Mandatory)\]\[string\]$MachineName, \[Parameter(Mandatory)\]\[string\]$WorkGroupName, \[Parameter()\]\[string\]$UserName, \[Parameter()\]$Password )
 
 #Import the required DSC Resources Import-DscResource -Module xComputerManagement
 
