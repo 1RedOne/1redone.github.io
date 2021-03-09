@@ -37,12 +37,12 @@ For this test, I modified my previous template and now set an eight hour lifespa
 
 To handle cert renewal and make sure one happened successfully, I wrote this PowerShell one-liner to sit and wait and then try to pulse for certs once an hour.
 
-\[code lang="powershell" quiet="true"\] while ($true){ "$(get-date | select -expand DateTime) pulsing the cert store"| tee -append C:\\temp\\Winrm.log start-sleep (60\*60) }
+```powershell while ($true){ "$(get-date | select -expand DateTime) pulsing the cert store"| tee -append C:\\temp\\Winrm.log start-sleep (60\*60) }
 ```
 
 Now, I wanted a good way to capture certificate changes, so first I set about capturing the thumbprint of the currently valid cert, since this would be changing while my test ran.  Since I only had one cert, I simply grabbed the ThumbPrint value from the only cert issued to this machine.  I embedded this also within my log file output.
 
-\[code lang="powershell" quiet="true"\] "--current valid thumbprint $(get-childitem Cert:\\LocalMachine\\My | select -ExpandProperty ThumbPrint)"| tee -append C:\\temp\\Winrm.log 
+```powershell "--current valid thumbprint $(get-childitem Cert:\\LocalMachine\\My | select -ExpandProperty ThumbPrint)"| tee -append C:\\temp\\Winrm.log 
 ```
 
 And finally, I also needed to see which cert thumbprint WinRM was presenting, or thought it was presenting.  These kinds of settings are stored within the `wsman:` PSDrive, under listener the HTTPS listener.  I parsed out this value (your listener name **will** be different, so remember to change this if you use this code).

@@ -1,4 +1,5 @@
-﻿Function IsProbablyAnImage($string){
+﻿$i = 1
+Function IsProbablyAnImage($string){
     write-host "check $string to see if a link or image..."
     if ( $string -like "*.png*" -or $string -like "*.jpg*" -or $string -like "*.gif*"){
         write-host "this looks like an image, process"
@@ -70,10 +71,11 @@ coverImage: ..\assets\images\foxPlaceHolder.webp
     Write-host -ForegroundColor Cyan "---new name determined to be `n`t`t$newName"
     #move to base dir
     set-content -Path "$newName" -Value $fileContent -Force 
-    #copy to fixed
+    
     #exit
-    read-host "check the file!"
+    read-host "$i of $($PostsToProcess.Count)"
     #pause to check
+    $i++
 }
 
 

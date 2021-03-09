@@ -29,6 +29,4 @@ iVision, a long time community sponsor,  has graciously agreed to allow to hold
 
 Directions: [http://ivision.com/company/directions](http://ivision.com/company/directions/) Parking: **The venue does not have free parking. It should cost you about $5 to park.**
 
-
-
 Have questions about Atlanta PowerShell User Group September Meeting?[Contact Atlanta PowerShell User Group](https://www.eventbrite.com/e/atlanta-powershell-user-group-september-meeting-tickets-13037013057#lightbox_contact)
