@@ -52,11 +52,13 @@ Pick a good starting size for your form (I'll do 345x450), then add a Tab contro
 
 I like to draw a somewhat wide tab, like this.
 
-[![00_Fill all](images/00_fill-all.png?w=300)](../assets/images/2015/09/images/00_fill-all.png)
+[![00_Fill all](../assets/images/2015/09/images/00_fill-all.png)
 
 Then, right-click the top of the tab...uh, holder, right next to your last tab and choose Layout-Fill All. I do this because it's actually surprisingly hard to drag your tab to fill the window, so this is the easy shortcut.
 
-[![01_Fill all](images/01_fill-all.png?w=300)](../assets/images/2015/09/images/01_fill-all.png) This will expand the tabs to fill the whole UI.
+[![01_Fill all](../assets/images/2015/09/images/01_fill-all.png) 
+
+This will expand the tabs to fill the whole UI.
 
 Now that we have our tabs taking up the whole window, we can add more by right-clicking the background and choosing 'Add Tab Item'. We can also rename the tabs by clicking one and using their properties, or going down to the XAML and changing the name property there.
 
@@ -70,7 +72,7 @@ No, instead, I like to make a new window (right click the project in Solution Ex
 
 This way, I make a good `ComputerConnection.XAML` window once, then I can copy it and paste it as many times as needed, and reuse it later on down the line. If the code's already embedded into a tabcontrol, pulling it out to reuse later can be tricky.
 
-![](images/03_newwindow.png?w=660)
+![](../assets/images/2015/09/images/03_newwindow.png?w=660)
 
 Making a new window for each tab is much easier for development
 
