@@ -82,11 +82,11 @@ Now with a new window created, I pick the tools I need, build it here, and then 
 
 This is what a blank window looks like. Time to put some clothes on this naked baby!
 
-So I've got my new window which I've named and titled ComputerName\_Tab. I'm going to drop in an image, a textblock, a button, and a textbox, and change the background color to something dark and moody looking.
+So I've got my new window which I've named and titled ComputerName_Tab. I'm going to drop in an image, a textblock, a button, and a textbox, and change the background color to something dark and moody looking.
 
 ## Important tip
 
-This is a time to make sure we're using good naming conventions for our UI elements. When we paste our XAML over to PowerShell snippet, we'll have a lot of $WPFButtons to keep track of, if we're not careful. From now on, when we add elements, **lets take the time to give them a logical name**, like 'VerifyOnline\_Button' and 'ComputerName\_textbox', etc.
+This is a time to make sure we're using good naming conventions for our UI elements. When we paste our XAML over to PowerShell snippet, we'll have a lot of $WPFButtons to keep track of, if we're not careful. From now on, when we add elements, **lets take the time to give them a logical name**, like 'VerifyOnline_Button' and 'ComputerName_textbox', etc.
 
 [![](../assets/images/2015/09/images/04_e.png)
 
@@ -139,7 +139,7 @@ Alright, pasting that in to our UI, we should see the following.
 
 ![06](../assets/images/2015/09/images/06.png)
 
-This is a great time to take this code and try and run it in PowerShell. If it works...you're in business, and the next step is to hook up some of the UI elements with some Add\_ methods.
+This is a great time to take this code and try and run it in PowerShell. If it works...you're in business, and the next step is to hook up some of the UI elements with some Add_ methods.
 
 ![Copied and paste and it worked in PowerShell!](../assets/images/2015/09/images/07.png) 
 
@@ -165,7 +165,7 @@ Every GUI element in a form has a collection of Events that get triggered on cer
 
 When we're loading this our form code into memory, the c# compiler is transforming our XAML into intermediate language code, another phrase for code on it's way to becoming machine executable code. When that happens, we get a whole lot of what developers call 'syntax sugar'--which sounds awfully diabetic--but means that the tools help us do work and give us shortcuts.
 
-One of those shortcuts is that the compiler snorts through our GUI like a pig looking for truffles, finds all of the events associated with the objects on our form, and sets up handlers for each of the events, in the form of methods that begin with Add\_.  We can use these to setup a handler, so that when an event is triggered, something cool happens.
+One of those shortcuts is that the compiler snorts through our GUI like a pig looking for truffles, finds all of the events associated with the objects on our form, and sets up handlers for each of the events, in the form of methods that begin with Add_.  We can use these to setup a handler, so that when an event is triggered, something cool happens.
 
 There are a metric pant load of events, for every element. You can see them by piping one of your objects into Get-Member like so:
 
@@ -216,13 +216,24 @@ With that done, I'm now going to go back and set the tabs for tabs 2, 3 and 4 as
 
 We're going to plug some logic in at the bottom of our XAML/WPF Snippet. When the user launches this form, we want the $WPFComputerName.Text to default to the user's computer name. When the user clicks the $WPFVerify button, we're going to ping the system, if it replies, we'll activate the rest of the tabs.
 
-When I said earlier that every object in our GUI has a slew of events, that includes the form (background) of our app itself.  We'll use the Form's own Add\_Loaded({}) event handler to tell our form to run a snip of code when it finishes loading, which is a useful way to set a default value for a box, for instance.
+When I said earlier that every object in our GUI has a slew of events, that includes the form (background) of our app itself.  We'll use the Form's own Add_Loaded({}) event handler to tell our form to run a snip of code when it finishes loading, which is a useful way to set a default value for a box, for instance.
 
-Below that, we'll give our Verify button some code to run when it throws a click event (when the user clicks the button), via the .Add\_Click({}) event handler method.  The code will try to ping the computer in the ComputerName box; if it replies, it will then enable each of the tabs for the user to click them by stepping through each item in the TabControl, and setting the 'IsEnabled' property of each to $True, to turn the lights on.
+Below that, we'll give our Verify button some code to run when it throws a click event (when the user clicks the button), via the .Add_Click({}) event handler method.  The code will try to ping the computer in the ComputerName box; if it replies, it will then enable each of the tabs for the user to click them by stepping through each item in the TabControl, and setting the 'IsEnabled' property of each to $True, to turn the lights on.
 
 ```powershell    
-$Form.Add\_Loaded({$WPFComputerName.Text = $env:COMPUTERNAME})
-$WPFVerify.Add\_Click({if (Test-Connection $WPFComputerName.Text -Count 1 -Quiet){ write-host "$($WPFComputerName.Text ) responded, unlocking" $WPFtabControl.Items\[1..3\] | % {$\_.IsEnabled = $true} } else{ write-host "$($WPFComputerName.Text ) did not respond, staying locked" $WPFtabControl.Items\[1..3\] | % {$\_.IsEnabled = $false} } }) 
+$Form.Add_Loaded(
+    {$WPFComputerName.Text = $env:COMPUTERNAME}
+)
+$WPFVerify.Add_Click(
+    {if (Test-Connection $WPFComputerName.Text -Count 1 -Quiet){
+        write-host "$($WPFComputerName.Text ) responded, unlocking" $WPFtabControl.Items[1..3] | % {
+            $_.IsEnabled = $true} 
+        } 
+        else{
+            write-host "$($WPFComputerName.Text ) did not respond, staying locked" $WPFtabControl.Items[1..3] | % {
+                $_.IsEnabled = $false} 
+        } 
+    }) 
 ```
 
 Now when the form loads, the user has to interact with tab 1 before they can go on to the rest of the UI.
@@ -232,15 +243,13 @@ Now when the form loads, the user has to interact with tab 1 before they can go 
 For our System / Disk Info panel, I'm liberally applying the principle of code reuse to recycle the code from Part II of this series.  There we covered how to instruct PowerShell to assign certain properties to certain columns in a GridView table, using Binding.  This code will grab the hard drive info, and display it in a table on tab II.
 
 ```POWERSHELL
-$WPFLoad\_diskinfo\_button.Add\_Click({ Function Get-DiskInfo { param($computername =$env:COMPUTERNAME)
+$WPFLoad_diskinfo_button.Add_Click({ Function Get-DiskInfo { param($computername =$env:COMPUTERNAME)
 
-Get-WMIObject Win32\_logicaldisk -ComputerName $computername | Select-Object @{Name='ComputerName';Ex={$computername}},\` @{Name=‘Drive Letter‘;Expression={$\_.DeviceID}},\` @{Name=‘Drive Label’;Expression={$\_.VolumeName}},\` @{Name=‘Size(MB)’;Expression={\[int\]($\_.Size / 1MB)}},\` @{Name=‘FreeSpace%’;Expression={\[math\]::Round($\_.FreeSpace / $\_.Size,2)\*100}} }
+Get-WMIObject Win32_logicaldisk -ComputerName $computername | Select-Object @{Name='ComputerName';Ex={$computername}},\` @{Name=‘Drive Letter‘;Expression={$_.DeviceID}},\` @{Name=‘Drive Label’;Expression={$_.VolumeName}},\` @{Name=‘Size(MB)’;Expression={\[int\]($_.Size / 1MB)}},\` @{Name=‘FreeSpace%’;Expression={\[math\]::Round($_.FreeSpace / $_.Size,2)\*100}} }
 
-Get-DiskInfo -computername $WPFComputerName.Text | % {$WPFdisk\_listView.AddChild($\_)}
+Get-DiskInfo -computername $WPFComputerName.Text | % {$WPFdisk_listView.AddChild($_)}
 
 })
-
-
 ```
 
 With all of these changes in place, when the user provides a valid computer name, the other tabs will all unlock, then they can click the Get-DiskInfo button and...get some disk info.
@@ -258,12 +267,12 @@ Should you come up with something you're particularly proud of, please sanitize 
 ## Complete XAML
 
 ```xml
-<Window x:Class="Tab\_Me\_baby\_one\_more\_time.TabMe"
+<Window x:Class="Tab_Me_baby_one_more_time.TabMe"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:Tab\_Me\_baby\_one\_more\_time" mc:Ignorable="d" Title="TabMe" Height="258.4" Width="486.4">
+    xmlns:local="clr-namespace:Tab_Me_baby_one_more_time" mc:Ignorable="d" Title="TabMe" Height="258.4" Width="486.4">
     <Grid>
     <TabControl x:Name="tabControl">
         <TabItem Header="ComputerName">
@@ -271,13 +280,13 @@ Should you come up with something you're particularly proud of, please sanitize 
                 <TextBlock TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Height="89" Width="314" Background="#00000000" Foreground="#FFFFF7F7" Margin="10,10,150.4,0" > This is the FoxDeploy official Awesome Tool. To begin using this tool, first verify that a system if online, and then progress to any of the above tabs. </TextBlock>
                 <TextBox x:Name="ComputerName" TextWrapping="Wrap" HorizontalAlignment="Left" Height="32" Margin="20,67,0,0" Text="TextBox" VerticalAlignment="Top" Width="135" FontSize="14.667"/>
                 <Button x:Name="Verify" Content="Verify Online" HorizontalAlignment="Left" Margin="173,67,0,0" VerticalAlignment="Top" Width="93" Height="32"/>
-                <Image x:Name="image1" Stretch="UniformToFill" HorizontalAlignment="Left" Height="98" Margin="9,99,0,0" VerticalAlignment="Top" Width="245" Source="C:\\Users\\Stephen\\Dropbox\\Speaking\\Demos\\module 13\\Foxdeploy\_DEPLOY\_large.png"/>
+                <Image x:Name="image1" Stretch="UniformToFill" HorizontalAlignment="Left" Height="98" Margin="9,99,0,0" VerticalAlignment="Top" Width="245" Source="C:\\Users\\Stephen\\Dropbox\\Speaking\\Demos\\module 13\\Foxdeploy_DEPLOY_large.png"/>
             </Grid>
         </TabItem>
         <TabItem Header="System Info" IsEnabled="False">
             <Grid Background="#FF0B4A80">
-                <Button x:Name="Load\_diskinfo\_button" Content="get-DiskInfo" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="77"/>
-                <ListView x:Name="disk\_listView" HorizontalAlignment="Left" Height="115" Margin="10,40,0,0" VerticalAlignment="Top" Width="325" RenderTransformOrigin="0.498,0.169">
+                <Button x:Name="Load_diskinfo_button" Content="get-DiskInfo" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="77"/>
+                <ListView x:Name="disk_listView" HorizontalAlignment="Left" Height="115" Margin="10,40,0,0" VerticalAlignment="Top" Width="325" RenderTransformOrigin="0.498,0.169">
         <ListView.View>
             <GridView>
                 <GridViewColumn Header="Drive Letter" DisplayMemberBinding ="{Binding 'Drive Letter'}" Width="80"/>
@@ -292,8 +301,8 @@ Should you come up with something you're particularly proud of, please sanitize 
         </TabItem>
         <TabItem Header="Services" IsEnabled="False">
             <Grid Background="#FF0B4A80">
-                <Button x:Name="Load\_services" Content="Load Services" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="77"/>
-                <ListView x:Name="service\_listView" HorizontalAlignment="Left" Height="115" Margin="10,40,0,0" VerticalAlignment="Top" Width="355">
+                <Button x:Name="Load_services" Content="Load Services" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="77"/>
+                <ListView x:Name="service_listView" HorizontalAlignment="Left" Height="115" Margin="10,40,0,0" VerticalAlignment="Top" Width="355">
                     <ListView.View>
                         <GridView>
               <GridViewColumn Header="Name" DisplayMemberBinding ="{Binding ServiceName}" Width="80"/>
@@ -303,13 +312,13 @@ Should you come up with something you're particularly proud of, please sanitize 
                         </GridView>
                     </ListView.View>
                 </ListView>
-                <Button x:Name="Stop\_service" Content="Stop Service" HorizontalAlignment="Left" Height="24" Margin="129,10,0,0" VerticalAlignment="Top" Width="77"/>
-                <Button x:Name="Start\_service" Content="Start Service" HorizontalAlignment="Left" Height="24" Margin="258,10,0,0" VerticalAlignment="Top" Width="77"/>
+                <Button x:Name="Stop_service" Content="Stop Service" HorizontalAlignment="Left" Height="24" Margin="129,10,0,0" VerticalAlignment="Top" Width="77"/>
+                <Button x:Name="Start_service" Content="Start Service" HorizontalAlignment="Left" Height="24" Margin="258,10,0,0" VerticalAlignment="Top" Width="77"/>
             </Grid>
         </TabItem>
         <TabItem Header="Processes" IsEnabled="False">
             <Grid Background="#FF0B4A80">
-                <TextBlock Name="processes\_text" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Height="89" Width="314" Background="#00000000" Foreground="#FFFFF7F7" Margin="10,10,150.4,0" > Do something cool :) </TextBlock>
+                <TextBlock Name="processes_text" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Height="89" Width="314" Background="#00000000" Foreground="#FFFFF7F7" Margin="10,10,150.4,0" > Do something cool :) </TextBlock>
             </Grid>
         </TabItem>
     </TabControl>
