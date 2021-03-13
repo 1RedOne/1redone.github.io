@@ -1,0 +1,47 @@
+Helpful tags for markdown and jekyll
+
+#youtube link
+
+{% include youtube.html video=YJfkNCqGPZc %}
+
+## anchor link
+
+[![series_PowerShellGUI](../series/images/series_gui.png)](/series/LearningGUIs)
+
+<!--more-->
+
+swap
+
+http://foxdeploy.files.wordpress.com/2013/08
+
+with images
+
+
+-------------
+
+fix broken links
+
+\[.*\] swap with []
+
+
+swap image links for just images
+\[.*\]\(images/.*\)\]\(\.\.
+
+get rid of caption
+\[caption.*\]\[
+
+- name: Random Code Samples              
+      link: /series/snippet-randomSamples
+    - name: Random SQL Snippets
+      link: /series/snippet-randomSql
+
+[![IntroToIoT](../series/images/series_iot.webp)](/series/learningRaspberryPi)
+
+[![IntroToDsc](../series/images/series_gui.webp)](/series/LearningGUIs)
+[![IntroToDsc](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
+
+../assets/images/2015/05/images
+
+convert image to webm 
+cwebp -strong Caching-For-Speed.png -o Caching-For-Speed.webp
+reducde png from 560 KB to only 30kb!
