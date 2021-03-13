@@ -9,6 +9,11 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 
 To do : 
 
+* Next, Verify Series Pages
+* Then, manual re-check 
+* Then, fix videos
+* Then, finish Report Image blog post
+
 Year | Posts | Migrated
 ------ | ------ | ----
 2020   | 6| ✔
@@ -16,28 +21,34 @@ Year | Posts | Migrated
 2018   | 7 |✔
 2017   | 21 |✔
 2016   | 40 |✔
-2015   | 44 | ♻
+2015   | 44 | ✔
 2014   | 59 | ✔
 2013   |  37 |✔
-newPosts | 4 |❌
+
 
 Features | Completed
 ------ | ------
 tagging works | ✔
 archives work | ✔
-video quality test | ❌
+Verify all series pages work | ❌
+fix posts with missing videos | ❌
 New logo? | ❌
 final review | ❌
-Verify all series pages work | ❌
+newPosts | ❌
 domain cutover | ❌
 
-### New Posts to do
+
+## Pre CutOver
 
 Post | Code Complete | Drafted | Ready 
 --| --|--|--
-April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍🐕
 PowerShell Lazy Caching | ✔ | ✔ | ✔
-GitHub Report Issue Link  | ✔ | ❌ | ❌
+GitHub Report Issue Link  | ✔ | ♻♻♻| ❌
+
+# Post Cut planning
+Post | Code Complete | Drafted | Ready 
+--| --|--|--
+April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍🐕
 PowerShell DVT Testing  | ✔ | ❌ | ❌
 The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌
 Test Driven POC | ❌ | ❌ | ❌
