@@ -8,6 +8,11 @@ tags:
   - "powershell"
   - "sccm"
 ---
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
 
 This is a little quicky.  I've found the documentation both on TechNet and in PowerShell's in-line help to be very lacking for the new Configuration Manager Commandlettes, so I did the work to figure them out on my own and will post some of what I've learned here.  I recently needed to configure Bandwidth Control for a client and loathed manually setting these options on all of the servers, so I turned to PS.   In my example, I needed to restrict package transfer at certain times, and during those times, also control how much bandwidth was being used.
 

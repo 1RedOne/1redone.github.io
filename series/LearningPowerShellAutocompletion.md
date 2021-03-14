@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Learning WinRM |  Series Home
+title: Learning PowerShell AutoCompletion |  Series Home
 permalink: /series/powershell-autocompletion
 hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 hero_height: is-medium

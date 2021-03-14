@@ -20,7 +20,6 @@ But for some companies, Can = Should, and since PowerShell offers HTTPs remoting
 
 In this series, I cover my research and findings into exactly what happens to WinRM in a variety of situations related to certificates, including what happens when they expire and are renewed!
 
-* WinRM HTTPs and the Case of Spooky Certificate
-* WinRM and HTTPs — What happens when certs die
-* SOLVED: What happens to WINRM when certs die
-* Script: automate replacement of certs
+* [WinRM HTTPs and the Case of Spooky Certificate](/2016/09/16/winrm-https-and-the-case-of-ghost-certificate)
+* [WinRM and HTTPs — What happens when certs die](/2016/09/13/winrm-and-https-what-happens-when-certs-die)
+* [SOLVED: What happens to WINRM when certs die](/2017/01/13/solved-what-happens-to-winrm-when-certs-die)

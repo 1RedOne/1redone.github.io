@@ -11,8 +11,7 @@ tags:
 excerpt: "
 In this post we'll be covering how to implement progress bars in your own application, and how to multi-thread your PowerShell applications so they don't hang when background operations take place. The goal here is to ensure that our applications DON'T lock up when the users click anything."
 ---
-
-![](../assets/images/2015/04/images/series_powershellgui.png)
+[![Learning PowerShell GUIs](../series/images/series_gui.webp)](/series/LearningGUIs)
 
 **This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 

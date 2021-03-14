@@ -6,7 +6,9 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 hero_height: is-small
 show_sidebar: true
 ---
-Want something you could hold in your hand, like a book?  
+Here's a list of my PowerShell blog posts with introductory content on various PowerShell topics. 
+
+Also, a list of PowerShell resources.
 
 ## Learning PowerShell Posts
 
@@ -21,4 +23,3 @@ In this section, you'll find a curated list of resources which will get you star
 
 
 {% include LearningPowerShell.html %}
-

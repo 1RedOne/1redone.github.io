@@ -8,6 +8,12 @@ categories:
 excerpt: "In this post, we will take our code and port it over to run on .net core, and hook up the results to the GUI. Stick with me here, and by the end you'll have a framework you can modify to list your Twitter followers, your Facebook Feed, or monitor your own blog stats as well."
 ---
 
+[![IntroToIoT](../series/images/series_iot.webp)](/series/learningRaspberryPi)
+
+**This post is part of the Learning Windows IoT Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
+
+* * *
+
 ![](../assets/images/2017/07/images/1-millioncountdown.png?w=636)
 
 [Previously](http://foxdeploy.com/2017/07/19/buildyourowniotmonitoringtool/) 🔗, we took off our socks and put our feet into the sand, and wrote our first C# Console application.  We built on it and added the ability to complete a web request and even parsed some JSON as well!  Along the way, we learned a bit of how things work in C# and some background on programming terms and functionality.

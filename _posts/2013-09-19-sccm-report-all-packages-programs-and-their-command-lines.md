@@ -6,6 +6,11 @@ tags:
   - "sccm"
   - "sql"
 ---
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
 
 I recently had a requirement at a client to make a list of all SCCM Packages. their Programs,  and then the command lines of each, along with the package source.  I wondered if this was possible, and fortunately the SQL Views were already present to do so.
 <!--more-->

@@ -12,7 +12,7 @@ excerpt: "When we left off, we had a nice fancy UI that didn't do anything! This
 Once we're done with this, we'll experiment with some of the other controls available, and then customize things a bit more."
 ---
 
-![](/series/LearningGUIs)
+[![Learning PowerShell GUIs](../series/images/series_gui.webp)](/series/LearningGUIs)
 
 **This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 

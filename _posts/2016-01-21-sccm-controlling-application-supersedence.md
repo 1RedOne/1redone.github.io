@@ -11,6 +11,12 @@ I've finally been able (with the help of my friend and future ConfigMgr MVP nomi
 "
 ---
 
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
+
 You might be wondering how to control this box in your SCCM 2012 R2 SP1 (or ConfigMgr SP2, pretty much the same thing) deployments.
 
 ![ham](../assets/images/2016/01/images/ham.png)

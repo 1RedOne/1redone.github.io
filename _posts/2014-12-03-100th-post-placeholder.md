@@ -12,6 +12,10 @@ tags:
   - "walkthrough"
 coverImage: "omgadorable03.png"
 ---
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
+
+This post is part of the Learning DSC Series, click the link to explore the rest of the posts!
+
 
 ## My 100th Post, Thank you!
 

@@ -9,7 +9,11 @@ tags:
 excerpt: "How does InTune Conditional Access Policy affect devices in the field?  (e.g. Bob's phone already has a manually configured mail profile.  What happens to Bob's e-mail when I enforce Conditional Access (i.e. saying a user must have InTune to receive e-mail?))"  
 ---
 
-#### The Question
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+### The Question
 
 How does InTune Conditional Access Policy affect devices in the field?  (e.g. Bob's phone already has a manually configured mail profile.  What happens to Bob's e-mail when I enforce Conditional Access (i.e. saying a user must have InTune to receive e-mail?))
 

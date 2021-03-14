@@ -9,6 +9,12 @@ tags:
   - "sccm"
 ---
 
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
+
 Another quickie here: I needed a way to add all packages to all distribution points, and do so with as few / zero clicks as possible.  Using a few PowerShell commands, I was able to do just that!  While there is no native command (yet!) to push content to a distribution point, you can easily do so with a WMI call, and automate the whole process with a single pipeline.
 
 For the first step, we'll use the Configuration Manager Module's Get-CMPackage Command, and pipe it into a filter.  We'll need the PackageID field, and would prefer not to have the value include the column header, so we'll use the -ExpandProperty parameter to omit this.

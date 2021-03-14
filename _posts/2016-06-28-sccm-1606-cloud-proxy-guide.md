@@ -14,6 +14,13 @@ tags:
 coverImage: "../assets/images/2016/06/images/configmgr-in-the-cloud1.png"
 ---
 
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
+
+
 ![Configmgr in the cloud](../assets/images/2016/06/images/configmgr-in-the-cloud.png)
 
 ## UPDATE

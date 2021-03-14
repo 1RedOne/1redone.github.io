@@ -14,8 +14,10 @@ excerpt: "In this post, I'll walk you through my GUI design process, and share h
 Along the way, I'll call out a few really confusing bugs that I worked through in creating this tool, and explain what went wrong. In particular, I ran into quite a snag when trying to programmatically create event handlers in code when trying to use `$psitem`  or `$_`. This lead to many conversations which introduced me to a powerful solution: the `$this` variable."
 ---
 
-![](../assets/images/2016/09/images/dsc-designer-3.png)
-[Learning DSC](../series/LearningDSC)
+[![Learning PowerShell GUIs](../series/images/series_gui.webp)](/series/LearningGUIs)
+
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
+
 **This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 
 * * *

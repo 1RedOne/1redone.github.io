@@ -10,6 +10,13 @@ tags:
 excerpt: "A quickie to help you install the prereqs of SCCM 1511 with PowerShell"
 ---
 
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
+
+
 Just a warning, there's a FEW things you can't install w/ PowerShell, so make sure that you still do these steps manually:
 
 - Use ADSI Edit to create a Systems\\Systems Management Container

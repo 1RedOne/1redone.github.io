@@ -7,6 +7,12 @@ tags:
   - "sccm"
 ---
 
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](images/series_sccm.png)]((/series/LearningSCCM))
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
+
 Jumping back into the SCCM Saddle, I noticed that I could really benefit from a printable SCCM reference guide.  I decided to whip one up, using the data from the Technet page.
 
 Print up this full-sized .png or download the PDF Below.

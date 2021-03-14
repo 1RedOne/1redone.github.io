@@ -14,6 +14,15 @@ tags:
 excerpt: "Further diving into what happens with WinRM when certs expire"
 ---
 
+[![Learning WinRM](../series/images/series_winrm.webp)](/series/LearningWinRM)
+
+
+**This post is part of the Learning WinRM Series, here on FoxDeploy. Click the banner to return to the series jump page!**
+
+* * * 
+
+
+
 ![](../assets/images/2016/09/images/winrm-https.png)
 
 ### Follow-up!

@@ -9,10 +9,10 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 
 To do : 
 
-* Next, Verify Series Pages
-* Then, manual re-check 
+* Add 'TopPosts' 
 * Then, fix videos
-* Then, finish Report Image blog post
+* Then, finish new blog posts
+* Then, domain cutover
 
 Year | Posts | Migrated
 ------ | ------ | ----
@@ -30,7 +30,7 @@ Features | Completed
 ------ | ------
 tagging works | ✔
 archives work | ✔
-Verify all series pages work | ❌
+Verify all series pages work |  ✔
 fix posts with missing videos | ❌
 New logo? | ❌
 final review | ❌

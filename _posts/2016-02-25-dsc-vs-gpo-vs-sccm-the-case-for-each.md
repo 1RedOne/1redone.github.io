@@ -15,7 +15,7 @@ excerpt: "This is the showdown, guys. In the world of Windows tooling, which too
 
 In this post, we'll cover the general benefits and pros and cons of SCCM vs DSC, and also consider GPO and MDT as well."
 ---
-
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
 ![EVA Post.png](../assets/images/2016/02/images/eva-post.png)
 
 This is the showdown, guys. In the world of Windows tooling, which tool do we use?

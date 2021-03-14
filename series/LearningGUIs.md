@@ -18,16 +18,16 @@ In this series, I’ll take you step by step, from creating a GUI using the slow
 As time goes on and I post more and more about GUI Toolmaking, this post will always be updated with the newest links
 
 ### XAML And Visual Studio
-* PART VI – Step by step, building an advanced application
-* Original ISE Snippet – XAML to GUI Loader
-* Runspace-Powered multi threaded ISE Snippet
-* Part V – Building responsive PowerShell apps with progress bars
-* Part IV – Handling events and making a tabbed interface
-* Part III – Using Advanced GUI Elements in PowerShell
-* Part II – Deploying PowerShell GUIs in Minutes using Visual Studio
-* Part I – Creating PowerShell GUIs in Minutes using Visual Studio – A New Hope
+* [PART VI – Step by step, building an advanced application](/2016/09/20/part-vi-in-depth-building-the-foxdeploy-dsc-designer)
+* [Original ISE Snippet – XAML to GUI Loader](https://github.com/1RedOne/PowerShell_XAML/)
+* [Runspace-Powered multi threaded ISE Snippet](https://github.com/1RedOne/BlogPosts/blob/master/GUI%20Part%20V/PowerShell-GUI%20with%20Runspace%20Snippet.ps1)
+* [Part V – Building responsive PowerShell apps with progress bars](/2016/05/17/part-v-powershell-guis-responsive-apps-with-progress-bars)
+* [Part IV – Handling events and making a tabbed interface](/2015/09/08/powershell-guis-how-to-handle-events-and-create-a-tabbed-interface)
+* [Part III – Using Advanced GUI Elements in PowerShell](/2015/05/14/part-iii-using-advanced-gui-elements-in-powershell)
+* [Part II – Deploying PowerShell GUIs in Minutes using Visual Studio](/2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio)
+* [Part I – Creating PowerShell GUIs in Minutes using Visual Studio – A New Hope](/2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope)
 ### Windows Forms
-* Part III – Two Ways to Provide GUI Interactions to users
+* [Part III – Two Ways to Provide GUI Interactions to users](/2014/02/17/two-ways-to-provide-gui-interaction-to-users)
 * [Part II –  Continued: Creating a GUI Natively using .Net Methods](/2013/10/30/continued-creating-a-gui-natively-for-your-powershell-tools-using-net-methods)
 * [Part I – Creating a GUI Natively using .Net Methods](../blog/creating-a-gui-natively-for-your-powershell-tools-using-net-methods)
 

@@ -73,5 +73,3 @@ And...we're done when we see this screen!
 ![IntroToDsc](../assets/images/2015/12/images/NewDomain.png)
 
 So, I hope this clears up the questions people were asking about how to use this 'OneClick Domain Controller'.
-
-My next plan is to add SQL support and the prerequisites for SCCM. And then we'll work up to a one-click ConfigMgr install!

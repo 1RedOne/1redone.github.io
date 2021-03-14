@@ -9,8 +9,7 @@ tags:
   - "dsc"
   - "powershell"
 ---
-
-[![IntroToDsc](../series/images/series_dscsidebar.webp)](http://foxdeploy.com/learning-dsc-series/)
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
 
 I often rebuild my testlab from the ground up, and have gotten to the point that setting up my Domain, DHCP, DNS and the like all is a very quick and easy task., But it wasn't always this way, in fact, I used to spend hours trying just to get DHCP and Domain Controller working.
 

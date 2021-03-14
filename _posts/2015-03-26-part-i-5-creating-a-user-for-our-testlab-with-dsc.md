@@ -7,7 +7,7 @@ categories:
   - "scripting"
 ---
 
-[![IntroToDsc](images/introtodsc.jpg?w=705)](http://foxdeploy.com/learning-dsc-series/)
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
 
 Being that I am a creature of pure distilled vanity, I often reread my articles and blog posts after the fact to make sure that I wrote well and don't have any typos. Well, when I reread my last post, I realized that I forgot to add the step of making a User Account with PowerShell DSC! Whoops!
 

@@ -13,8 +13,8 @@ tags:
   - "wmf"
 ---
 
-![](http://foxdeploy.com/learning-dsc-series/)
-[Learning DSC](../series/LearningDSC)
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
+
 This post is part of the Learning DSC Series here on FoxDeploy.com. To see the other articles, click the banner above!
 
 * * *

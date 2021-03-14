@@ -10,9 +10,7 @@ tags:
   - "powershell"
   - "visual-studio"
 ---
-
-[![IntroToDsc](../series/images/series_gui.webp)](http://foxdeploy.com/learning-dsc-series/)
-
+[![Learning PowerShell GUIs](../series/images/series_gui.webp)](/series/LearningGUIs)
 
 **This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 

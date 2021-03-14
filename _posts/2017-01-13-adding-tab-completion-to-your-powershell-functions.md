@@ -14,8 +14,7 @@ excerpt: "Probably my single favorite feature of PowerShell isn't exciting to mo
 As I have the typing skills of a preying mantis (why did I mention them...they're easily the creepiest and worst insect...ewww) and constantly typo everything, I LOVE auto-completion."
 ---
 
-
-![](../assets/images/2017/01/images/upgrade-your-code1.png)
+[![depicts a highway road sign saying 'Upgrade your scripts with autocompletion'](../assets/images/2017/01/images/upgrade-your-code1.png)](/series/powershell-autocompletion)
 
 
 * * *

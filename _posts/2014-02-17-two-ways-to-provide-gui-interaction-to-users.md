@@ -8,8 +8,8 @@ tags:
   - "powershell"
   - "guis"
 ---
+[![Learning PowerShell GUIs](../series/images/series_gui.webp)](/series/LearningGUIs)
 
-![](http://foxdeploy.com/series/learning-gui-toolmaking-series/)
 
 **This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 

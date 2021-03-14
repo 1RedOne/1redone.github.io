@@ -13,6 +13,12 @@ coverImage: "../assets/images/2016/09/images/the-case-of-the-ghost-certificate.p
 excerpt: "In this post, we dig deepere into what happens to WinRM over HTTPs when certs expire."
 ---
 
+[![Learning WinRM](../series/images/series_winrm.webp)](/series/LearningWinRM)
+
+**This post is part of the Learning WinRM Series, here on FoxDeploy. Click the banner to return to the series jump page!**
+
+* * *
+
 ![the-case-of-the-ghost-certificate](../assets/images/2016/09/images/the-case-of-the-ghost-certificate.png)
 
 This post is a follow-up to my previous post, [WinRM : What Happens when certificates die?](http://foxdeploy.com/2016/09/13/winrm-and-https-what-happens-when-certs-die/)

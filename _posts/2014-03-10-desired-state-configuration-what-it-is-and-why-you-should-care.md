@@ -8,7 +8,7 @@ tags:
   - "dsc"
 excerpt: "f you've been following Microsoft management news, you've no doubt heard of Desired State Configuration.  You might be wondering what it is."
 ---
-
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
 If you've been following Microsoft management news, you've no doubt heard of Desired State Configuration.  You might be wondering what it is.
 
 Let's start with what it's not.  Many believe that DSC is a feature of PowerShell v4, but this is actually a misconception, as the feature really stems from the Windows Management Framework, but implemented using PowerShell, WMI and WMF.  You can use it on any OS compatible with WMF 4.0, which currently includes Server 2008 R2 SP1, Server 2012, 2012 R2, Windows 7 SP1 and Windows 8.1 but not Windows 8, for some reason.

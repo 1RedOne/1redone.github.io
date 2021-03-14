@@ -10,8 +10,8 @@ tags:
   - "custom-types"
 excerpt: "You know how in PowerShell you can type a cmdlet, then pipe into `Select-Object` or another cmdlet and start tabbing through property names?  This is the type of Autocompletion we are going to add to our function in this post!"
 ---
+[![depicts a highway road sign saying 'Upgrade your scripts with autocompletion'](../assets/images/2017/01/images/upgrade-your-code1.png)](/series/powershell-autocompletion)
 
-![](../assets/images/2017/01/images/upgrade-your-code1.png)
 
 This post is part of the series on AutoCompletion options for PowerShell! Click the banner for more posts in the series!
 

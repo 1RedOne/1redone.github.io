@@ -12,6 +12,10 @@ coverImage: "../assets/images/2017/07/images/1-millioncountdown.png"
 excerpt: "We're counting down here at FoxDeploy, about to reach a traffic milestone (1 Million hits!) , and because I am pretty excited and like to celebrate moments like this, I had an idea...let's get in WAY over my head and make a Windows IoT Traffic tracker"
 ---
 
+[![IntroToIoT](../series/images/series_iot.webp)](/series/learningRaspberryPi)
+
+**This post is part of the Learning Windows IoT Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
+
 ![](../assets/images/2017/07/images/1-millioncountdown.png?w=636)
 
 We're counting down here at FoxDeploy, about to reach a traffic milestone (1 Million hits!) , and because I am pretty excited and like to celebrate moments like this, I had an idea...

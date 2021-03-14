@@ -11,6 +11,12 @@ tags:
   - "sccm"
 ---
 
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
+
 Every time you migrate from one SCCM instance to another, or if you have to move your drivers around (for instance: you originally had your drivers placed on the c:\\ and want to mover them to another drive), you'll need to update the location not only of DriverPackages, but also of all drivers as well.
 
 This has been something that I MIGHT have forgotten more than once.  More than twice even.

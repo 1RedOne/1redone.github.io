@@ -10,7 +10,9 @@ tags:
   - "powershell"
 ---
 
-[![IntroToDsc](../assets/images/2015/03/images/introtodsc.jpg?w=705)](http://foxdeploy.com/learning-dsc-series/)
+[![IntroToDsc](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
+
+**This post is part of the Learning PowerShell DSC Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 
 This three part series is going to be about twenty parts at the rate I keep forgetting things.
 
