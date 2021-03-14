@@ -37,11 +37,37 @@ get rid of caption
 
 [![IntroToIoT](../series/images/series_iot.webp)](/series/learningRaspberryPi)
 
+**This post is part of the Learning Windows IoT Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
+
+* * * 
+
+
+[![Learning PowerShell GUIs](../series/images/series_gui.webp)](/series/LearningGUIs)
+
 [![IntroToDsc](../series/images/series_gui.webp)](/series/LearningGUIs)
-[![IntroToDsc](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
+[![Learning DSC Series](../series/images/series_dscsidebar.webp)](/series/LearningDSC)
+[![Learning PowerShell](../series/images/series_gui.webp)](/series/LearningGUIs)
+
+
+[![Learning WinRM(../series/images/series_learningWinRM.webp)](/series/LearningWinRM)
+
+**This post is part of the Learning WinRM Series, here on FoxDeploy. Click the banner to return to the series jump page!**
+
+* * * 
+
+
+[![depicts a highway road sign saying 'Upgrade your scripts with autocompletion'](../assets/images/2017/01/images/upgrade-your-code1.png)](/series/powershell-autocompletion)
+
 
 ../assets/images/2015/05/images
 
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](../series/images/series_sccm.png)](/series/LearningSCCM)
+
+This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
+
+* * * 
+
+####
 convert image to webm 
 cwebp -strong Caching-For-Speed.png -o Caching-For-Speed.webp
 reducde png from 560 KB to only 30kb!
