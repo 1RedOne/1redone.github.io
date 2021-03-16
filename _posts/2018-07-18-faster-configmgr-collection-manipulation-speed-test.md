@@ -7,6 +7,7 @@ tags:
   - "sccm"
   - "speedtest"
 coverImage: "../assets/images/2018/07/images/fastest-way.png"
+excerpt: "Recently at work, we had a task come up which saw us needing to move tens of thousands of devices between collections in CM. We decided to run some tests to find the fastest way! We compared a lot of options, from using old CM cmdlets to new preview cmdlet versions and even making our own direct WMI Manipulation cmdlets.  Finally, we tried just directly inserting them into collections via direct Collection manipulation in SQL which is totally unsupported.  Which method one the day?  Resad to find out! "
 ---
 
 ![](../assets/images/2018/07/images/fastest-way.png)
