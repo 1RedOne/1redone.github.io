@@ -71,7 +71,7 @@ With all of these components in mind, time to get started.
 
 We're going to open up Visual Studio, pick a WPF app and then do some drag and dropping. If you are getting a bit scared of how to do it, or what you should do to install it, check out some of the previous posts in my GUI Series, here!
 
-![](http://foxdeploy.com/series/learning-gui-toolmaking-series/)
+![](http://foxdeploy.com/series/Learning-gui-toolmaking-series/)
 
 You should end up with something like this:
 {% gist 7ca9e036f29a97bbfafae2cbd485cc9b %}

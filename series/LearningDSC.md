@@ -21,7 +21,7 @@ This page is the jump page to my series on Desired State Configuration, which wi
 * [Step 1.5 Creating our first local user](/2015/03/26/part-i-5-creating-a-user-for-our-testlab-with-dsc)
 * [Step 2 Making our user a local administrator](/2015/03/31/building-on-our-configuration-from-last-week-we-add-our-user-to-the-local-admin-group-using-dsc)
 * [Step 3 Making our system a Domain Controller](/2015/04/03/part-iii-dsc-making-our-domain-controller)
-* Step 4 One-Click Domain Controller with DSC
+* [Step 4 One-Click Domain Controller with DSC](/2015/06/11/part-iv-one-click-domain-controller)
 * [Step 5 DSC Revisited.  The simplest Domain Controller config, Ever.](/2015/12/02/dsc-the-simplest-domain-controller-config-ever)
 * [FoxDeploy DSC Designer – A point and click driven, guided DSC Configuration tool](/2016/09/20/part-v-introducing-the-foxdeploy-dsc-designer)
 

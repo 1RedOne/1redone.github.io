@@ -35,7 +35,7 @@ get rid of caption
     - name: Random SQL Snippets
       link: /series/snippet-randomSql
 
-[![IntroToIoT](../series/images/series_iot.webp)](/series/learningRaspberryPi)
+[![IntroToIoT](../series/images/series_iot.webp)](/series/LearningRaspberryPi)
 
 **This post is part of the Learning Windows IoT Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 

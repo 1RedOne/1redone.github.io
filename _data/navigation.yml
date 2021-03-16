@@ -23,7 +23,7 @@
     - name: Learn GUI Toolmaking
       link: /series/LearningGUIs    
     - name: Learn Rasperry Pi
-      link: /series/learningRaspberryPi
+      link: /series/LearningRaspberryPi
     - name: Scripting for SCCM
       link: /series/LearningSCCM
     - name: WinRM and Certificates

@@ -9,7 +9,7 @@ tags:
   - "powershell"
   - "raspberry-pi"
 ---
-[![IntroToIoT](../series/images/series_iot.webp)](/series/learningRaspberryPi)
+[![IntroToIoT](../series/images/series_iot.webp)](/series/LearningRaspberryPi)
 
 This is part of the **Learning Raspberry Pi Series** here on FoxDeploy.com. Click the banner for more Raspberry Pi and Windows!
 

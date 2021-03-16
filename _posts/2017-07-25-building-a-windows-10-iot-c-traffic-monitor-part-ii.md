@@ -8,7 +8,7 @@ categories:
 excerpt: "In this post, we will take our code and port it over to run on .net core, and hook up the results to the GUI. Stick with me here, and by the end you'll have a framework you can modify to list your Twitter followers, your Facebook Feed, or monitor your own blog stats as well."
 ---
 
-[![IntroToIoT](../series/images/series_iot.webp)](/series/learningRaspberryPi)
+[![IntroToIoT](../series/images/series_iot.webp)](/series/LearningRaspberryPi)
 
 **This post is part of the Learning Windows IoT Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
 
