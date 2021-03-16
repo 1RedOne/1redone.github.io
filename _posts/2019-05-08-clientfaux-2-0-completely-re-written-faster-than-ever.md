@@ -35,9 +35,8 @@ You can also increase the number of threads (I've tested up to 12 threads and se
 
 Then to see it in action...click to the 'Ready' page and hit 'Ready!' and away we go!
 
-\[wpvideo euqP4j7i\]
+{%include youtube.html video="5cuCOMHF6ns"%}
 
- 
 
 ### The Big Warning
 
