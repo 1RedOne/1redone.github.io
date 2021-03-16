@@ -89,13 +89,13 @@ However for my purposes, this wasn't a viable option.  We'd heard about automat
 
 If you're not familiar with the term, OOBE is the Out-Of-Box-Experience.  It's a part of Windows Setup and can be thought of as the 'Getting Devices Ready' and Blue-background section of OS install, in which the user is asked to provide their name, password, etc.
 
-\[wpvideo WkVP9caR\]
+{%include youtube.html video="7Vzxe3vmVAM"%}
 
 Well, it turns out that if the PPKG file is present on the root of a Flash Drive or any volume during OOBE, the user will be automatically triggered and prompted to accept the package!
 
 **Protip:** If your PPKG isn't automatically invoked, hit the Windows Key Five times when at the 'Let's Pick a Region' Screen.
 
-\[wpvideo QfaPGiiZ\]
+{%include youtube.html video="9ShT9J98ynQ"%}
 
 However, this STILL requires someone to do something...and assumes we'll have a keyboard attached to our systems.  This would be good for schools or other 'light-touch' scenarios, but was a non-starter for me, onto the next approach.
 
@@ -161,7 +161,7 @@ With these steps done, fire up WICD again and go to Export Provisioning Package.
 
 Provide a name and Version Number like normal and hit next.  The video below guides us through the rest.
 
-\[wpvideo 4lGtqjMa\]
+{%include youtube.html video="1825PdLa2nI"%}
 
 Talking through that, in the next page, choose the Certificate to sign it.  This needs to be the same cert that will be trusted on your end computers as well.  If you don't see your cert listed, make sure (for Self-Signed) that it's also in your Trusted Root Cert Authority.  If you're using PKI, be sure you have an authorized Server Auth or Code Signing Cert present from a CA that your computer trusts.
 
@@ -187,7 +187,11 @@ Import-Certificate -FilePath C:\\temp\\DistributeMe.cer -CertStoreLocation Cert:
 
 Now, you can run SysPrep or otherwise capture this image, and the changes will persist. You could also run these steps by running a PowerShell script with SCCM, MDT, GPO or whatever you want.
 
-With all of these steps in place, check out what happens when you invoke the Provisioning Package now! \[wpvideo mZpnvYLZ\]
+With all of these steps in place, check out what happens when you invoke the Provisioning Package now! 
+
+## End Result
+
+{%include youtube.html video="IJPmN0dTyq8"%}
 
 ### Conclusion
 
