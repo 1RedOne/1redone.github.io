@@ -59,23 +59,30 @@ You fill your your database up with all of the books you're going to sell, like 
 and then you write the conceptual model of a book one time. It could look something like this.
 
 ```csharp
-namespace MVCDemo.Models { 
-  using System; 
-  using System.Collections.Generic; 
-  
-  public partial class book { 
-    public short id { get; set; } 
-    public string title { get; set; } 
-    public string author { get; set; } 
-    public string format { get; set; } 
-    public Nullable<float> price { get; set; } 
-    } 
-} 
-
-
+public class book { 
+  public short id { get; set; } 
+  public string title { get; set; } 
+  public string author { get; set; } 
+  public string format { get; set; } 
+  public Nullable<float> price { get; set; } 
+  } 
 ```
 
 That's the M of MVC. (borrowing that line holehog from this [walkthrough](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller))
+
+So a single book would look like this:
+
+```json
+{
+  "id": 0,
+  "title": "To Kill a Foxingbird",
+  "author": "Aldus Huxley",
+  "format": "paperback",
+  "price": 4.99
+}
+
+```
+
 
 Now that we have modeled the data in our Database, our app will know how to access it (_**without having to write queries**_).
 
@@ -136,17 +143,6 @@ The controller is a piece of code that runs on our server. When a user tries to 
 So, the controller is the most 'code like' piece of this whole pie.  Here's what a controller looks like.
 
 ```csharp
-using System; 
-using System.Collections.Generic; 
-using System.Data; 
-using System.Data.Entity; 
-using System.Linq; 
-using System.Net; 
-using System.Web; 
-using System.Web.Mvc; 
-using CollectionMGR.Models;
-
-namespace CollectionMGR.Controllers { 
     public class booksController : Controller { 
       private CollectionMGREntities db = new CollectionMGREntities();
 
@@ -155,7 +151,7 @@ namespace CollectionMGR.Controllers {
         return View(db.books.ToList()); 
     } 
   } 
-} 
+ 
 ```
 
 This controller above states that when the user navigates to my web site, localhost, and goes to the **books** endpoint, we have an action called **Index** which shows us all of the available books.
@@ -189,25 +185,35 @@ Did you notice that there was basically zero querying done, though we could stil
 In a traditional data connection framework, you'd often see code like this, note the native SQL query baked right into the page.
 
 ```php
-<tbody> <?php $connect = mysql\_connect("localhost","root", "root"); if (!$connect) { die(mysql\_error()); } mysql\_select\_db("apploymentdevs"); $results = mysql\_query("SELECT \* FROM demo LIMIT 10"); while($row = mysql\_fetch\_array($results)) { ?> <tr> <td><?php echo $row\['Id'\]?></td>
-
-<td><?php echo $row\['Name'\]?></td>
-
-</tr>
-
-<?php } ?> </tbody>
-
-
+<tbody>
+    <?php $connect = mysql_connect("localhost","root", "root");
+     if (!$connect) {
+        die(mysql_error()); 
+      } 
+      mysql_select_db("apploymentdevs"); 
+      $results = mysql_query("SELECT * FROM demo LIMIT 10"); 
+      while($row = mysql_fetch_array($results)) {
+      ?>
+      <tr>
+        <td><?php echo $row['Id']?></td>
+        <td><?php echo $row['Name']?></td>
+      </tr>
+<?php } ?>
+</tbody>
 ```
 
 Compare that to this approach, first the user requests the Index page, where we paginate and return 10 results at a time. So here's the code to actually retrieve the first 10 of those results.
 
-\[code lang="csharp" light="true"\] public ActionResult Index() { private MVCDemoEntities db = new MVCDemoEntities(); return View(db.books.ToList().Take(10)); } 
+```csharp
+  public ActionResult Index() { 
+    var db = new MVCDemoEntities(); 
+    return View(db.books.ToList().Take(10)); 
+  } 
 ```
 
 The connection to the db is handled for us via the Entity Framework, which generates the models for us when we first connect our app to our DB (covered below in the 'How to play along?' section). So, to distill down a bit further, the Entity Framework gives us a lot of tools to keep us from having to be SQL experts in addition to C# experts.
 
-#### Recapping
+## Recapping
 
 In this post, we covered some of the basics of what an MVC is, and I showed an example of how using one can result in some massive time savings, especially when coupled with the Entity Framework. In the next post, we'll drill further into the MVC as I cover how to bundle requests with a parent request, using a programming model called the Master-Detail Scenario!
 
