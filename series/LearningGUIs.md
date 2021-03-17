@@ -17,7 +17,15 @@ In this series, I’ll take you step by step, from creating a GUI using the slow
 
 As time goes on and I post more and more about GUI Toolmaking, this post will always be updated with the newest links
 
+### Progressive Automation
+
+These posts guide you through the approach I take to building up to a full GUI.  First, with a problem and mission statement, then adding layers of complexity until we have our ideal tooling.
+
+* [Progressive Automation Part II](/2020/05/08/progressive-automation-pt-ii-powershell-guis/)
+* [Progressive Automation Part I](/2019/09/10/progressive-automation-part-i)
+
 ### XAML And Visual Studio
+
 * [PART VI – Step by step, building an advanced application](/2016/09/20/part-vi-in-depth-building-the-foxdeploy-dsc-designer)
 * [Original ISE Snippet – XAML to GUI Loader](https://github.com/1RedOne/PowerShell_XAML/)
 * [Runspace-Powered multi threaded ISE Snippet](https://github.com/1RedOne/BlogPosts/blob/master/GUI%20Part%20V/PowerShell-GUI%20with%20Runspace%20Snippet.ps1)

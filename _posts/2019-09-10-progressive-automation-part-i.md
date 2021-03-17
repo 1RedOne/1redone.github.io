@@ -16,6 +16,12 @@ excerpt: "In this series, I thought it'd be fun to walk through the common phase
 We'll walk through recognizing a good opportunity to move a manual task to automation covering these three main steps, over the next few posts here"
 ---
 
+[![Learning PowerShell GUIs](../series/images/series_gui.webp)](/series/LearningGUIs)
+
+**This post is part of the Learning GUI Toolmaking Series, here on FoxDeploy. Click the banner to return to the series jump page!**
+
+* * *
+
 ![Progressive automation - real world automation in increasing complexity](../assets/images/2019/09/images/progressive-automation-2.png)
 
 In this series, I thought it'd be fun to walk through the common phases of an automation initiative and specifically show how I love to handle this sort of situation when it arises today.
