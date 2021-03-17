@@ -158,7 +158,7 @@ So this is an attack from one-website, through the user's PC, to another website
 
 Will it work? If it does, I'll click the button from one site and we'll see the user's 'InManager' property change in the other site.
 
-\[wpvideo qqNOKiHE\]
+{% include youtube.html video="5f7Juo2b164" %}
 
 ### Wow that's terrifying
 
