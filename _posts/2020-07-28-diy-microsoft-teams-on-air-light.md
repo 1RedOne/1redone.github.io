@@ -44,6 +44,7 @@ But if you do want to make your own...read on!
 
 With all of the products acquired, let's get started.
 
+
 ### Setting up the Smart Switch
 
 This can be surprisingly hard. If you buy the three or five packs of the Wemo Mini Smart Switch, rectangular style, they will likely be the Mini.82C or F7C063. Depending on your luck and if you buy the bulk packaging, you might end up with ones like I got, which had Firmware so old the Wemo Smart app as of July 2020 would be unable to configure them.
@@ -61,6 +62,8 @@ Do this for each switch to make your life easier.
 I'm calling my device 'MeetingLight'.
 
 **Before moving on**, you should have one plug connected to a light or fan or whatever that responds when you turn it on and off with the Wemo app.
+
+As a sneak preview, this is what turning a light on from PowerShell when I join a meeting...here's what it looks like!
 
 ### Connecting Switches to IFTTT
 
@@ -145,10 +148,6 @@ Function meetingStart { irm https://maker.ifttt.com/trigger/meetingStart/with/ke
 Function meetingStop { irm https://maker.ifttt.com/trigger/meetingStop/with/key/apiKeyGoesHere -method Post } 
 
 ```
-
-And to test them...
-
-\[wpvideo UwujNGe0\]
 
 ## Connecting to Microsoft Teams
 

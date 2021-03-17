@@ -42,8 +42,6 @@ More often than not, the response to this web request will contain all or part o
 
 I check the pollen count online a lot.  I live in the South-Eastern United States, home to some of the worst pollen levels recorded on the planet.  We get _super high_ pollen counts here.
 
-https://www.youtube.com/watch?v=zrD2Igmz4fk
-
 Once, I was out jogging in the pine forest of Kennesaw Mountain, back before I had children, when I had the time to exercise, or perform leisure activities, and a gust of wind hit the trees and a _visible cloud of yellow pollen flew out_.  I breathed it in deeply...and I think that was the moment I developed allergies.
 
 Anyway, I often check the pollen counts to see how hosed I'll be and if I need to take some medicine, and I really like Weather.com's pollen tracker.
@@ -54,7 +52,7 @@ So I thought to see if I could test out this neat new feature.  I started to ty
 
 **Full screen recommended!** I've got a 4k monitor and recorded in native resolution, you'll probably need a magnifying glass if you don't full screen this.
 
-\[wpvideo UDnQp46z\]
+{% include youtube.html video="DM6fLCo-yxI" %}
 
 So, to break that down:
 

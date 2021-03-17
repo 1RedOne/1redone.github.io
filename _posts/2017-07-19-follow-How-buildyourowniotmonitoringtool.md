@@ -82,7 +82,13 @@ It implements touch via a resistive touch panel rather than the standard capacit
 
 When I connected this display, I saw scrolling lines which changed patterns as the content on the screen changed.
 
-\[wpvideo GEKd8kcv\]
+![](../assets/images/2017/07/images/displayError.webm)
+
+<video controls>
+    <source src="../assets/images/2017/07/images/displayError.webm"
+            type="video/webm">  
+    Sorry, your browser doesn't support embedded videos.
+</video>
 
 This is a great sign, as it means that Windows is rendering to the display, but at the wrong refresh rate or resolution.
 
