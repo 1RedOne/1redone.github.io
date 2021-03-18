@@ -71,3 +71,6 @@ This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner 
 convert image to webm 
 cwebp -strong Caching-For-Speed.png -o Caching-For-Speed.webp
 reducde png from 560 KB to only 30kb!
+
+convert gif to web whatever
+gif2webp -lossy -m 3 science.gif -o science.webp

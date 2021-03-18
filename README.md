@@ -31,9 +31,9 @@ archives work | ✔
 Verify all series pages work |  ✔
 fix posts with missing videos | ✔
 Add 'TopPosts' | ✔
+newPosts | ✔
 New logo? | ❌
 final review | ❌
-newPosts | ❌
 domain cutover | ❌
 
 
@@ -42,7 +42,7 @@ domain cutover | ❌
 Post | Code Complete | Drafted | Ready 
 --| --|--|--
 PowerShell Lazy Caching | ✔ | ✔ | ✔
-GitHub Report Issue Link  | ✔ | ♻♻♻| ❌
+GitHub Report Issue Link  | ✔ | ✔| ✔
 
 # Post Cut planning
 Post | Code Complete | Drafted | Ready 
