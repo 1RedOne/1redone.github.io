@@ -66,14 +66,33 @@
     background: -webkit-linear-gradient(#eee,#333);
     -webkit-background-clip: text;
     }
+    .actuallyCentered{
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    .heroicAndFady{
+        max-height: 950px;
+        opacity: 1;
+    }
+    .heroicAndFady:hover{        
+        opacity:0.05;
+        filter:alpha(opacity=60); /* For IE8 and earlier */
+            -webkit-transition: all 2s ease-in-out;
+            -moz-transition: all 2s ease-in-out;
+            -ms-transition: all 2s ease-in-out;
+            -o-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out;
+    }
 </style>
 
 <section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary" {% if page.hero_image %} style="background: url('{{ page.hero_image }}') no-repeat center center; background-size: cover;" {% endif %}>
     <div class="hero-body hero-darken">
-        <div class="container">
+        <div class="container heroicAndFady">
             <a href="\" style="color:white;">
-            <h1 class="customTitle is-2">FoxDeploy.com</h1>
-            <p class="customSlug is-3">Automation Tails from the Fox Hole</p>
+                <img src="..\assets\images\foxDeployLogo.webp" alt="Depicts a cute Smiling drawn fox within the letter O of FoxDeploy" class="actuallyCentered">
+                <h1 class="customTitle is-2">FoxDeploy.com</h1>
+                <p class="customSlug is-3">Automation Tails from the Fox Hole</p>
             </a>
         </div>
     </div>

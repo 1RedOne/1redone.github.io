@@ -32,10 +32,9 @@ Verify all series pages work |  ✔
 fix posts with missing videos | ✔
 Add 'TopPosts' | ✔
 newPosts | ✔
-New logo? | ❌
-final review | ❌
-domain cutover | ❌
-
+final review | ✔
+domain cutover | ♻
+New logo? | ♻
 
 ## Pre CutOver
 
