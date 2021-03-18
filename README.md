@@ -9,8 +9,6 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
 
 To do : 
 
-* Add 'TopPosts' 
-* Then, fix videos
 * Then, finish new blog posts
 * Then, domain cutover
 
@@ -21,9 +19,9 @@ Year | Posts | Migrated
 2018   | 7 |✔
 2017   | 21 |✔
 2016   | 40 |✔
-2015   | 44 | ✔
-2014   | 59 | ✔
-2013   |  37 |✔
+2015   | 44 |✔
+2014   | 59 |✔
+2013   | 37 |✔
 
 
 Features | Completed
@@ -31,7 +29,8 @@ Features | Completed
 tagging works | ✔
 archives work | ✔
 Verify all series pages work |  ✔
-fix posts with missing videos | ❌
+fix posts with missing videos | ✔
+Add 'TopPosts' | ✔
 New logo? | ❌
 final review | ❌
 newPosts | ❌
@@ -49,6 +48,7 @@ GitHub Report Issue Link  | ✔ | ♻♻♻| ❌
 Post | Code Complete | Drafted | Ready 
 --| --|--|--
 April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍🐕
+Migrating to Jekyll from Wordpress  | ✔ | ❌ | ❌
 PowerShell DVT Testing  | ✔ | ❌ | ❌
 The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌
 Test Driven POC | ❌ | ❌ | ❌
