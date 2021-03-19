@@ -50,7 +50,7 @@ Enter the Report Issue Button, which can be found in a lot of Microsoft Docs, [l
 
 Clicking this button takes the user to the 'Report an issue' page but also populated the body of the issue with a lot of useful info.
 
-![Shows the Github repository for Azure Docs, opening a new Issue, with a body for the issue popualted with lots of fields listed below the image](..\assets\images\2021\issuebuttonBody.png)
+![Shows the Github repository for Azure Docs, opening a new Issue, with a body for the issue popualted with lots of fields listed below the image](..\assets\images\2021\issueButtonBody.png)
 
 This implementation is great, because it automagically includes a lot of info about the post including which specific URL they viewed and also a link to the source file, so the dev or whoever isn't left wondering what the heck the person is talking about.  
 
@@ -158,7 +158,7 @@ I took this chance to spruce up the button into a full modal element.
 
 {% gist ad1722d3fa40f4ad19056e885fd259a1 %}
 
-![Shows a working Report Issue Github button below a blog post.](..\assets\images\2021\CompletedModal.png)
+![Shows a working Report Issue Github button below a blog post.](..\assets\images\2021\completedModal.png)
 
 
 ##  Automatically adding it below posts in Jekyll

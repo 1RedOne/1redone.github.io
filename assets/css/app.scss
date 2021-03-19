@@ -1,5 +1,16 @@
 ---
 ---
-$primary: #333a42;
+
+//Controls the nav bar colors
+//new foxdeploy blue
+$primary: #2BACE3;
+
+//previous grey from WordPress theme
+    //$primary: #333a42;
+
+// Fox: Used to over ride the padding so the hero doesn't get 
+//   tooooo ginormous when I add an image
+$hero-body-padding-medium: 5rem 1.5rem;
+
 // Import Main CSS file from theme
 @import "main";
