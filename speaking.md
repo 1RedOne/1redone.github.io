@@ -2,7 +2,7 @@
 layout: page
 title: Speaking and Media
 permalink: /about/speakingandmedia
-hero_image: ../assets/images/foxdeployMOUNTAINTOP_hero.png
+hero_image: ../assets/images/foxdeployMOUNTAINTOP_hero.webp
 hero_height: is-medium
 show_sidebar: true
 ---
@@ -12,7 +12,7 @@ This site collects my past speaking engagements.
 
 ![](../assets/images/microsoft-ignite-2017-100734688-large.jpg)
 
-![](../assets/images/mms180x150_adjazza.png)
+![](../assets/images/mms180x150_adjazza.webp)
 
 
 ## Media Links

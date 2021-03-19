@@ -2,7 +2,7 @@
 layout: page
 title: Learning GUI Toolmaking | Series Home
 permalink: /series/LearningGUIs
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
 hero_height: is-medium
 show_sidebar: true
 ---

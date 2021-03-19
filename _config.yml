@@ -42,7 +42,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-paginate
   
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
 defaults:
   -
     scope:
@@ -51,7 +51,7 @@ defaults:
     values:
       author: "Stephen Owen"
       layout: post
-      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
+      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
       show_sidebar: true
       hero_link: "FoxDeploy.com" 
 
@@ -62,10 +62,16 @@ defaults:
     values:
       author: "Stephen Owen"
       layout: post
-      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
+      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
       show_sidebar: true
       
 exclude: [node_modules]
+
+# excluding for now b/c I'm noot sure if setting this returns this header for all values or not
+# webrick:
+#   headers:
+#     Cache-Control: max-age=604800;
+    
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

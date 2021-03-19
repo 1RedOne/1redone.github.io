@@ -2,7 +2,7 @@
 layout: page
 title: Learning PowerShell | Series Home
 permalink: /series/LearningPowerShell
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.png
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
 hero_height: is-small
 show_sidebar: true
 ---
