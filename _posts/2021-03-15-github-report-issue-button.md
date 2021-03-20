@@ -24,8 +24,8 @@ I have long admired the Report Issue button on Microsoft Docs and sought to recr
 
 * Example of What I'm talking about
 * Why is this useful?
-* OK, I'm sold, let's make one! - WIP
-* How to make it into a snippet - WIP
+* OK, I'm sold, let's make one!
+* How to make it into a snippet
 * Automatically adding it below posts in Jekyll
 
 ## What are you smoking, Stephen?
