@@ -11,7 +11,7 @@ tags:
   - "meta"
 ---
 
-![Dear Stephen Owen,  Congratulations! We are pleased to present you with the 2015 Microsoft® MVP Award! This award is given to exceptional technical community leaders who actively share their high quality, real world expertise with others. We appreciate your outstanding contributions in PowerShell technical communities during the past year.  Also in this email: About your MVP Award Gift How to claim your award benefits Your MVP Identification Number MVP Award Program Code of Conduct The Microsoft MVP Award provides us the unique opportunity to celebrate and honor your significant contributions and say "Thank you for your technical leadership."](../assets/images/2015/01/images/mvp_award_screenshot1.png)
+![Dear Stephen Owen,  Congratulations! We are pleased to present you with the 2015 Microsoft® MVP Award! This award is given to exceptional technical community leaders who actively share their high quality, real world expertise with others. We appreciate your outstanding contributions in PowerShell technical communities during the past year.  Also in this email: About your MVP Award Gift How to claim your award benefits Your MVP Identification Number MVP Award Program Code of Conduct The Microsoft MVP Award provides us the unique opportunity to celebrate and honor your significant contributions and say "Thank you for your technical leadership."](../assets/images/2015/01/images/mvp_award_screenshot1.webp)
 
 Wow, talk about feeling blown away.  Back in September I received an e-mail stating that I'd been nominated to become an MVP, and since that moment I've felt that I've been walking on air.
 
@@ -33,7 +33,7 @@ We went back to playing with our daughter and taking down the Christmas decorati
 
 Thirty minutes later, we heard the special ringer I set for Gmail messages containing the words 'MVP' go off!  I practically sprinted across the house to grab my phone!  I virtually slid from the door of the bedroom over to the bedside table, I don't think my feet even touched the ground!  I snatched my phone up, fogetting my phone unlock code over and over in my haste.  When I finally controlled my thumbs again, I  saw the headline of the message
 
-![](../assets/images/2015/01/images/mvp_award_screenshot_header.png)
+![](../assets/images/2015/01/images/mvp_award_screenshot_header.webp)
 
 And we started dancing!  Our colds forgotten, we danced around the room and then went out to celebrate at the steak house!  We were on top of the world while we were out, spirits high and our minds clouded with robitussin...and then...our flu medicine wore off.  So what if I feel asleep in my mashed potatoes, woo-hoo!  A little bit of _aus jus_ in my hair is a small price to pay!
 
@@ -43,4 +43,4 @@ I want to thank the person who nominated me, the folks who've read my blog, my f
 
 Thank you all, I am very honored and deeply humbled to be chosen, and will strive to work ever harder for you all in this New Year!
 
-![Become A MVP](../assets/images/2015/01/images/become-a-mvp.png)
+![Become A MVP](../assets/images/2015/01/images/become-a-mvp.webp)

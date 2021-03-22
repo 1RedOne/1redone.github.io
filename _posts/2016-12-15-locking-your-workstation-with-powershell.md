@@ -2,7 +2,7 @@
 title: "Locking your Workstation with PowerShell"
 date: "2016-12-15"
 redirect_from : /2016/12/15/locking-your-workstation-with-powershell
-coverImage: ../assets/images/2016/12/images/locking-your-workstation.png
+coverImage: ../assets/images/2016/12/images/locking-your-workstation.webp
 tags: 
   - "pInvoke"
   - "powerShell Engineering"
@@ -12,13 +12,13 @@ excerpt: "Locking a workstation using PowerShell?  It sounds like an easy task,
 As it turns out, some tasks in Windows just aren't accessible via WMI.  For instance, the useful Win32\_OperatingSystem class has some nifty methods for working with the system's power state, like Reboot and"
 ---
 
-![locking-your-workstation](../assets/images/2016/12/images/locking-your-workstation.png)
+![locking-your-workstation](../assets/images/2016/12/images/locking-your-workstation.webp)
 
 Locking a workstation using PowerShell?  It sounds like an easy task, right?  That's what I thought too...and told the customer...but NO!  Friends, it wasn't easy...before now.
 
 As it turns out, some tasks in Windows just aren't accessible via WMI.  For instance, the useful Win32\_OperatingSystem class has some nifty methods for working with the system's power state, like Reboot and Shutdown...but strangely none for locking the system!
 
-![01](../assets/images/2016/12/images/01.png)
+![01](../assets/images/2016/12/images/01.webp)
 
 Then I stumbled upon [this useful post by Ed over at The Scripting Guys,](https://blogs.technet.microsoft.com/heyscriptingguy/2004/11/15/can-i-lock-a-workstation-using-a-script/) but this was back in the dark ages of VBScript, and unfortunately the only answer they found was to use Rundll32.exe to call a method in a dll and that, frankly will not fly.  You'll hear the shrillest high and lowest lows over the radio, and my voice will guide you home, they will see us waving from such great heights--
 
@@ -86,7 +86,7 @@ $Handle = Get-Process notepad |
 
 And here's how it looks in practice.
 
-![gif](../assets/images/2016/12/images/gif.gif)
+![gif](../assets/images/2016/12/images/gif.webp)
 
 If you'd like to know what other Methods are available, you can turn to the lovely [Pinvoke website](http://www.pinvoke.net/) which has a listing of every method available from all of these dlls.  And you can just plug and play them all, easily!
 

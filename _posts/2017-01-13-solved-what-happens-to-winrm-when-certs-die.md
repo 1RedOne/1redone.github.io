@@ -43,7 +43,7 @@ With the stage set, and the cert was present on both machines, I ran `winrm quic
 
 #### Swimming with the Sharks
 
-![sharks](../assets/images/2017/01/images/sharks.gif) How I felt looking at all of these packets
+![sharks](../assets/images/2017/01/images/sharks.webp) How I felt looking at all of these packets
 
 When you first open WireShark and start recording, you may be a bit dismayed...
 

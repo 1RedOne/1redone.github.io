@@ -6,7 +6,7 @@ categories:
   - "scripting"
 tags: 
   - "dashboard"
-coverImage: "../assets/images/2017/11/images/glorious-powershell-dashboards.png"
+coverImage: "../assets/images/2017/11/images/glorious-powershell-dashboards.webp"
 excerpt: "I've covered the topic of dashboards on this blog a few times before, from layering CSS on PowerShell's built-in HTML capabilities, to hacking together HTML 5 templates with PowerShell, as the hunt continues for the next great thing in PowerShell reporting. Guys, the hunt is OVER!  Time to ascend to the next level in reporting...
 
 It's the motherlode!  Adam Driscoll's AWESOME PowerShell Universal Dashboard, a gorgeous and dead-simple dashboard tool which makes it super easy to retrieve values from your environment and spin them into adaptive, animated dashboards full of sexy transitions and colors.  "
@@ -14,7 +14,7 @@ It's the motherlode!  Adam Driscoll's AWESOME PowerShell Universal Dashboard, a
 
 I've covered the topic of dashboards on this blog a few times before, from [layering CSS on PowerShell's built-in HTML capabilities](http://foxdeploy.com/2014/05/23/using-html-formatting-to-create-useful-webpage-reports-from-powershell/), to [hacking together HTML 5 templates with PowerShell](http://foxdeploy.com/2016/04/11/building-better-powershell-dashboards/), as the hunt continues for the next great thing in PowerShell reporting. Guys, the hunt is OVER!  Time to ascend to the next level in reporting...
 
-![](../assets/images/2017/11/images/glorious-powershell-dashboards.png)
+![](../assets/images/2017/11/images/glorious-powershell-dashboards.webp)
 
 It's the motherlode!  Adam Driscoll's AWESOME PowerShell Universal Dashboard, a gorgeous and dead-simple dashboard tool which makes it super easy to retrieve values from your environment and spin them into adaptive, animated dashboards full of sexy transitions and colors.   [Click here to see it in action.](http://www.poshud.com/Home) Or just look at these sexy animations and tasteful colors.  Deploy this and then show your boss.  It's guaranteed to impress, blow his pants off, and get you a huge raise or maybe a $5 Starbucks gift card.
 
@@ -36,7 +36,7 @@ Install-Module UniversalDashboard
 
 Next, copy the code for A[dam's sample Dashboard from here and run it](https://github.com/adamdriscoll/poshprotools/blob/master/examples/universal-dashboard/azure-dashboard.ps1).  You should see this screen appear
 
-![](../assets/images/2017/11/images/00-image.png)
+![](../assets/images/2017/11/images/00-image.webp)
 
 Now, PowerShell Pro Tools IS a paid piece of software.  But the trial license is super generous, so simply put in your e-mail and you'll receive a license automatically in a few minutes.
 
@@ -44,11 +44,11 @@ Now, PowerShell Pro Tools IS a paid piece of software.  But the trial license i
 
 Once you receive your key, paste it in and you're ready to go
 
-![](../assets/images/2017/11/images/01-image.png)
+![](../assets/images/2017/11/images/01-image.webp)
 
  
 
-![](../assets/images/2017/11/images/02-image.png) A sign of a happily licensed PowerShell Pro Tools.
+![](../assets/images/2017/11/images/02-image.webp) A sign of a happily licensed PowerShell Pro Tools.
 
 Let's start customizing this badboy! 
 
@@ -56,11 +56,11 @@ Let's start customizing this badboy!
 
 For my project, I wanted to replace the somewhat aging ("_somewhat"_) front-end I put on my backup Dropbox script, covered here in this post : Automatically move old photos out of DropBox with PowerShell to free up space .  At the time, I thought it was the slickest think since really oiley sliced bread.
 
-![](../assets/images/2017/11/images/03-replace-this.png) I still think you look beautiful
+![](../assets/images/2017/11/images/03-replace-this.webp) I still think you look beautiful
 
 So, to kick things off, I copied and pasted the code [Adam shares on the PowerShell Universal Dashboard homepage](https://github.com/adamdriscoll/poshprotools/blob/master/examples/universal-dashboard/azure-dashboard.ps1), to recreate that dashboard.  Once it's pasted in, hit F5 and you should see the following, running locally on your machine:
 
-![](../assets/images/2017/11/images/04-first-up.png)
+![](../assets/images/2017/11/images/04-first-up.webp)
 
 First up, to delete the placeholder 'About Universal Dashboard', let's delete the `New-UDColumn` from lines 15~17.
 
@@ -87,7 +87,7 @@ Get-Random -Minimum 0 -Maximum 100 | Out-UDMonitorData
 
 With that removed, the cell vanishes.
 
-![](../assets/images/2017/11/images/04-5-e.png)
+![](../assets/images/2017/11/images/04-5-e.webp)
 
 I took a look at the [Components page](http://www.poshud.com/Components) on the PowerShell Universal Dashboard, and really liked the way the `Counter` design looked, so I decided to copy the example for `Total Bytes Downloaded` and use that in-place of the old introduction.  I added these lines:
 
@@ -103,7 +103,7 @@ New-UDColumn -Size 4 {
 
 I also created a new text file at `C:\temp\picSpace.txt` and added the value `1234` to it.  With those changes completed, I hit F5.
 
-![](../assets/images/2017/11/images/savedspace.png) Ohh this is a VERY nice start
+![](../assets/images/2017/11/images/savedspace.webp) Ohh this is a VERY nice start
 
 Now, to actually populate this value when my code runs.  Editing `Move-FilesOlderThan.ps1`(note: I'm very sorry about this name, I wrote [the script](http://foxdeploy.com/2015/02/02/dropbox-powershell-2/) when my daughter was not sleeping through the night yet...not clue why I choose that name), the function of that code is to accept a cut-off date, then search for files older than that date in a folder.  If it finds files that are too many days old, they get moved elsewhere. Here's the relevant snippet:
 
@@ -131,7 +131,7 @@ $itemCount | set-content c:\\temp\\totalmoved.txt
 
 Now, after running the script a few times to move files, the card actually keeps track of how many files are moved!
 
-![](../assets/images/2017/11/images/savedspace02.png)
+![](../assets/images/2017/11/images/savedspace02.webp)
 
 ### Further Customizations
 
@@ -151,7 +151,7 @@ New-UDColumn -Size 4 {
 }
 ```
 
-![](../assets/images/2017/11/images/w-file-count.png)
+![](../assets/images/2017/11/images/w-file-count.webp)
 
 #### Modify the table to display my values
 
@@ -184,7 +184,7 @@ Next, to hook it up to the dashboard itself.  Adam gave us a really nice exampl
 
 And a quick F5 later...
 
-![](../assets/images/2017/11/images/chart.png)
+![](../assets/images/2017/11/images/chart.webp)
 
  
 
@@ -213,7 +213,7 @@ Here's the code sample of what my finished chart looked like:
 
 And the result:
 
-![](../assets/images/2017/11/images/graph-of-file.png)
+![](../assets/images/2017/11/images/graph-of-file.webp)
 
 #### Satisfy my Ego and add branding
 
@@ -228,7 +228,7 @@ New-UDDashboard -NavbarLinks $NavBarLinks -Title "FoxDeploy Space Management Das
 You can also add an image file with a single card.  In my experience, this image needs to already live on the web somewhere.  You could spin up a quick [Node http-server](https://stackoverflow.com/questions/16333790/node-js-quick-file-server-static-files-over-http) to serve up the files, leverage another online host, or use a standalone server like [Abyss](https://aprelium.com/abyssws/).  I always have an install of both Abyss and Node on my machines, so I tossed the file up and linked it.
 
 ```powershell 
-New-UDImage -Url http://localhost/Foxdeploy\_DEPLOY\_large.png
+New-UDImage -Url http://localhost/Foxdeploy\_DEPLOY\_large.webp
 ```
 
 Finally, to clean up all of the extra cards I didn't use, and fix some layout issues.
@@ -237,11 +237,11 @@ Finally, to clean up all of the extra cards I didn't use, and fix some layout is
 
 See, wasn't that easy?
 
-![finished](../assets/images/2017/11/images/finished.png)
+![finished](../assets/images/2017/11/images/finished.webp)
 
 And it only took me ~100 tabs to finish it.
 
-![](../assets/images/2017/11/images/how-many-tabs.png) Actual screenshot of my Chrome tab situation after an hour of tweaking
+![](../assets/images/2017/11/images/how-many-tabs.webp) Actual screenshot of my Chrome tab situation after an hour of tweaking
 
 If you want to use my example and modify it, feel free to do so (and please share if you create something cool!)  Here are some ideas:
 
@@ -260,4 +260,4 @@ The script that actually creates a dashboard and opens it, `Create-BlogDashboard
 
 I realized my preaching about paying for software, and yet this whole thing was spawned from my desire to cheaply get away with using Dropbox but not wanting to pay for it.  Ok....I've cracked.  I've actually now paid for Dropbox as well!  Time for me to practice what I preach too!
 
-![drop](../assets/images/2017/11/images/drop.png)
+![drop](../assets/images/2017/11/images/drop.webp)

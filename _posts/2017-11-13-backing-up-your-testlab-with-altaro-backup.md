@@ -7,11 +7,11 @@ tags:
   - "hyper-v"
   - "other"
   - "virtualization"
-coverImage: "../assets/images/2017/11/images/backing-up-your-testlab.png"
+coverImage: "../assets/images/2017/11/images/backing-up-your-testlab.webp"
 excerpt: "Sponsored post.  This post shows off my shiney new home testlab specced to the gills with ridiculous hardware and walks you through configuring automatic hyper-v backup using Altaro, who sponsored this post."
 ---
 
-![](../assets/images/2017/11/images/backing-up-your-testlab.png)
+![](../assets/images/2017/11/images/backing-up-your-testlab.webp)
 
 To be a good engineer, you need a Testlab. End of sentence.
 
@@ -23,7 +23,7 @@ In consulting, I would get assigned to a project and have a month or so to come 
 
 If you have read this and are convinced that you too need a testlab, _and don't yet have one_, you can click here to read my guide here on [setting up a Domain Controller with one-click!](https://foxdeploy.com/2015/12/02/dsc-the-simplest-domain-controller-config-ever/)
 
-![](../assets/images/2017/11/images/DSCPrompt.png) The one-click domain controller UI in action
+![](../assets/images/2017/11/images/DSCPrompt.webp) The one-click domain controller UI in action
 
 And what should we do with things that are important? We protect them. In this post I'll walk you through some of the options available to protect and backup your testlab.
 
@@ -47,7 +47,7 @@ I decided to bone up on how real world people do it and quickly became prideful,
 
 So, for every write to the volume, Parity writes took place on each drive including the drastically slower spinning disk.  I got absolutely horrible performance (three minute boot times on a Win 8.1 image, 6 hour SCCM Site Install times) and eventually the strain of backups and prod use on the same volume and my moronic partitioning caused my second full loss of VMs and Backups.
 
-![](../assets/images/2017/11/images/dunning-kruger-effect.jpg) I was flying down mount stupid without any brakes when I came up with that partitioning scheme
+![](../assets/images/2017/11/images/dunning-kruger-effect.webp) I was flying down mount stupid without any brakes when I came up with that partitioning scheme
 
 Not only did I lose the data on the Storage Space, but the spinning drive would never spin up again, I think I killed its spirit.  One of the SSDs quickly failed later (third loss of VMs, but at least I had backups.)
 
@@ -87,35 +87,35 @@ To get started, [download Altaro VM Backup here](https://www.altaro.com/vm-backu
 
 Setup is an absolute breeze, next, next finish practically the whole way.
 
-![](../assets/images/2017/11/images/altaro-eetup.png)
+![](../assets/images/2017/11/images/altaro-eetup.webp)
 
-![](../assets/images/2017/11/images/setup02.png)
+![](../assets/images/2017/11/images/setup02.webp)
 
 Altaro VM Backup should launch on its own and you simply need to choose to Connect to Local Instance.
 
-![](../assets/images/2017/11/images/01.png)
+![](../assets/images/2017/11/images/01.webp)
 
-Next, choose to Add Hyper-V / VMware Host.![](../assets/images/2017/11/images/setupconsole00.png)
+Next, choose to Add Hyper-V / VMware Host.![](../assets/images/2017/11/images/setupconsole00.webp)
 
 Click Add Host and then provide the name of the Hyper-V host (and credentials if you need to)
 
-(../assets/images/2017/11/images/setupconsole01.png) Serious props to anyone who knows what my Testlab is named after
+(../assets/images/2017/11/images/setupconsole01.webp) Serious props to anyone who knows what my Testlab is named after
 
 #### Configuring Backup Location
 
 Next, click on 'Backup Locations' to decide where to stick the VM Backups.
 
-![](../assets/images/2017/11/images/setupconsole02.png)
+![](../assets/images/2017/11/images/setupconsole02.webp)
 
 In my case, I have a big spinning disk on my VM Testlab, so I'm using that as my Physical Drive location.  You can also backup over the network too, or configure backup to use both a local disk and a network location for optimal redundancy.
 
-![](../assets/images/2017/11/images/setupconsole03.png)
+![](../assets/images/2017/11/images/setupconsole03.webp)
 
 Now to pick the actual drive.
 
-![](../assets/images/2017/11/images/setupconsole04.png) To pick a subfolder, click 'Choose Folder'
+![](../assets/images/2017/11/images/setupconsole04.webp) To pick a subfolder, click 'Choose Folder'
 
-![](../assets/images/2017/11/images/setupconsole05.png) One of the folders here is from another failed VM lab recovery. Care to guess which?
+![](../assets/images/2017/11/images/setupconsole05.webp) One of the folders here is from another failed VM lab recovery. Care to guess which?
 
 With this completed, click Finish and now you've configured this host for backups.  Now, to actually apply the backup location setting to all of the VMs.  This is really easy.  Just click the host, then drag over to the location, as demonstrated below.
 
@@ -135,13 +135,13 @@ At this point, you're safe!  Of course, you only have this one backup, so it's 
 
 #### Setting a Schedule
 
-I have the memory of a mantis shrimp, I don't want to remember to back things up.  Fortunately it only takes like two minutes to make a backup schedule.  First, click **Schedule,** then **Add Backup Schedule**.![](../assets/images/2017/11/images/schedule-1.png)
+I have the memory of a mantis shrimp, I don't want to remember to back things up.  Fortunately it only takes like two minutes to make a backup schedule.  First, click **Schedule,** then **Add Backup Schedule**.![](../assets/images/2017/11/images/schedule-1.webp)
 
 Why can't Recurring Calendars in Outlook be this easy!  Or Scheduled Tasks! Seriously, its so much easier to define a schedule here that I think this should be the new normal.
 
 I want to back these VMs up every Monday, Wednesday, Friday and Sunday, and I want it to happen at midnight.
 
-![](../assets/images/2017/11/images/schedule-3.png) Click Save to Save...caption of the year
+![](../assets/images/2017/11/images/schedule-3.webp) Click Save to Save...caption of the year
 
 Now, for one last GIF.  Just drag the VMs (or the whole Host, or all of your Hosts, if you have more than one)) onto the schedule and you're done.
 
@@ -151,6 +151,6 @@ Now, for one last GIF.  Just drag the VMs (or the whole Host, or all of your Ho
 
 That's it!  You're done.  Seriously  I did this one time like three months ago and it's been fire and forget ever since then.  It is super nice to get reminder e-mails like this one too.
 
-![](../assets/images/2017/11/images/email.png)
+![](../assets/images/2017/11/images/email.webp)
 
 Having difficulties getting up and running?  Let me know!  I can help you out, or introduce you to some folks who can.

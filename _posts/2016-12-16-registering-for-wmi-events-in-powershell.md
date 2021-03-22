@@ -2,7 +2,7 @@
 title: "Registering for WMI Events in PowerShell"
 date: "2016-12-16"
 redirect_from : /2016/12/16/registering-for-wmi-events-in-powershell
-coverImage: "../assets/images/2016/12/images/registering-for-wmi-events.png"
+coverImage: "../assets/images/2016/12/images/registering-for-wmi-events.webp"
 categories: 
   - "scripting"
 tags: 
@@ -11,7 +11,7 @@ tags:
   - "Consulting Tales"
 ---
 
-![registering-for-wmi-events](../assets/images/2016/12/images/registering-for-wmi-events.png)
+![registering-for-wmi-events](../assets/images/2016/12/images/registering-for-wmi-events.webp)
 
 An alternate title might be 'Running PowerShell Code ONLY when the power state changes', because that was the _very_ interesting task I received from my customer this week.
 

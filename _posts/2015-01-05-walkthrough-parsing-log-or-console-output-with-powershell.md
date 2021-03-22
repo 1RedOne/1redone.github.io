@@ -2,7 +2,7 @@
 title: "Walkthrough - Parsing log or console output with PowerShell"
 date: "2015-01-05"
 redirect_from : /2015/01/05/walkthrough-parsing-log-or-console-output-with-powershell
-coverImage: ../assets/images/2015/01/images/bloggraphic-parsedata.gif
+coverImage: ../assets/images/2015/01/images/bloggraphic-parsedata.webp
 categories: 
   - "scripting"
 tags: 
@@ -12,7 +12,7 @@ tags:
   - "psobject"
 ---
 
-![BlogGraphic-ParseData](../assets/images/2015/01/images/bloggraphic-parsedata.gif)
+![BlogGraphic-ParseData](../assets/images/2015/01/images/bloggraphic-parsedata.webp)
 
 As I go from project to project, inevitably a question like this one arises:
 
@@ -67,13 +67,13 @@ Here's an example of what the output looked like.
 ```
 Nothing too tricky, fairly standard Permissions listing of the ACLs on these shares.  At this phase, we should think of what we'd like the output to be.  In my case, we wanted something like this.
 
-![](../assets/images/2015/01/images/parsin01.png) The result of our parsing will be PowerShell objects with a ShareName property containing the name of the Share.  Each object will contain properties with the permissions broken up by each user, with a $user and $permissionLevel property.  Presented in table form:
+![](../assets/images/2015/01/images/parsin01.webp) The result of our parsing will be PowerShell objects with a ShareName property containing the name of the Share.  Each object will contain properties with the permissions broken up by each user, with a $user and $permissionLevel property.  Presented in table form:
 
 <table style="direction:ltr;border-collapse:collapse;border:1pt solid #A3A3A3;" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:top;width:1.6979in;padding:4pt;border:1pt solid #A3A3A3;"><p style="margin:0;font-family:Calibri;font-size:11pt;">Step</p></td><td style="vertical-align:top;width:2.1687in;padding:4pt;border:1pt solid #A3A3A3;"><p style="margin:0;font-family:Calibri;font-size:11pt;">Example</p></td><td style="vertical-align:top;width:3.9569in;padding:4pt;border:1pt solid #A3A3A3;"><p style="margin:0;font-family:Calibri;font-size:11pt;">Characteristic</p></td></tr><tr><td style="vertical-align:top;width:1.6979in;padding:4pt;border:1pt solid #A3A3A3;"><ul style="margin-left:.2458in;direction:ltr;unicode-bidi:embed;margin-top:0;margin-bottom:0;"><li style="list-style-type:none;"><ol style="margin-left:0;direction:ltr;unicode-bidi:embed;margin-top:0;margin-bottom:0;font-family:Calibri;font-size:11pt;font-weight:normal;font-style:normal;" type="1"><li style="margin-top:0;margin-bottom:0;vertical-align:middle;" value="1"><span style="font-family:Calibri;font-size:11pt;font-weight:normal;font-style:normal;">Define the Object</span></li></ol></li></ul></td><td style="vertical-align:top;width:2.1687in;padding:4pt;border:1pt solid #A3A3A3;"><p style="margin:0;font-family:Calibri;font-size:11pt;">Each share</p></td><td style="vertical-align:top;width:3.9569in;padding:4pt;border:1pt solid #A3A3A3;"><p style="margin:0;font-family:Calibri;font-size:11pt;">Start with a '\\'</p></td></tr><tr><td style="vertical-align:top;width:1.6979in;padding:4pt;border:1pt solid #A3A3A3;"><ul style="margin-left:.2458in;direction:ltr;unicode-bidi:embed;margin-top:0;margin-bottom:0;"><li style="list-style-type:none;"><ol style="margin-left:0;direction:ltr;unicode-bidi:embed;margin-top:0;margin-bottom:0;font-family:Calibri;font-size:11pt;font-weight:normal;font-style:normal;" type="1"><li style="margin-top:0;margin-bottom:0;vertical-align:middle;" value="2"><span style="font-family:Calibri;font-size:11pt;font-weight:normal;font-style:normal;">Define the properties</span></li></ol></li></ul></td><td style="vertical-align:top;width:2.1687in;padding:4pt;border:1pt solid #A3A3A3;"><p style="margin:0;font-family:Calibri;font-size:11pt;">Each user and their permissions</p></td><td style="vertical-align:top;width:3.9569in;padding:4pt;border:1pt solid #A3A3A3;"><p style="margin:0;font-family:Calibri;font-size:11pt;">Will be in-between each object (will find them between '\\')</p></td></tr></tbody></table>
 
 To illustrate how we'll do this, let's draw a diagram of how we'll interpret these fields from our input object.
 
-[![parsin02](../assets/images/2015/01/images/parsin021.png)](../assets/images/2015/01/images/parsin021.png)
+[![parsin02](../assets/images/2015/01/images/parsin021.webp)](../assets/images/2015/01/images/parsin021.webp)
 
 Everything that occurs between each instance of the '\\' will be considered properties of a single object.
 
@@ -87,11 +87,11 @@ $fileContents = Get-Content C:\\temp\\acl.txt
 
 Now, to dig in by breaking our list apart into items. We can see that every set of double backslash indicates the start of a new share.
 
-[![parsin03](../assets/images/2015/01/images/parsin03.png)](../assets/images/2015/01/images/parsin03.png)
+[![parsin03](../assets/images/2015/01/images/parsin03.webp)](../assets/images/2015/01/images/parsin03.webp)
 
 We can use the select-string command here to get instances of the double backslash pattern. Running this on our $filecontents gives us.
 
-![parsin04](images/parsin04.png)](../assets/images/2015/01/images/parsin04.png) Use -SimpleMatch to keep PowerShell from treating the search query as Regex. '\\\\' in regex would be a single escaped backslash character.
+![parsin04](images/parsin04.webp)](../assets/images/2015/01/images/parsin04.webp) Use -SimpleMatch to keep PowerShell from treating the search query as Regex. '\\\\' in regex would be a single escaped backslash character.
 
  
 
@@ -160,17 +160,17 @@ Now, when we run our code, we'll be prompted by line 23 to Halt, Continue or Sus
 
 **Using Suspend while in a code loop is awesomely powerful!** It allows you near Neo-level powers to jump into the command line and access the $\_ object in real time, and see which objects exist in the pipeline. Instead of assigning an outside object the values of a point-in-time slice of your script, you can play with the results in real time!
 
-[caption id="attachment\_5130" align="alignnone" width="500"]![tumblr_lqmd84dp741qglnd4o1_500](../assets/images/2015/01/images/tumblr_lqmd84dp741qglnd4o1_500.gif) How it feels to 'pause time' via Suspend
+[caption id="attachment\_5130" align="alignnone" width="500"]![tumblr_lqmd84dp741qglnd4o1_500](../assets/images/2015/01/images/tumblr_lqmd84dp741qglnd4o1_500.webp) How it feels to 'pause time' via Suspend
 
 PowerShell v5 preview allows you to jump directly into debug mode while using the ISE by hitting  **Control+B,** so you don't even have to set a Write-Debug breakpoint.  However, for ease and backwards compatibility, I like to leave Write-Debug statements liberally left in my code, which I can access using either the -Debug switch on a function or bound script, or by setting my $DebugPreference manually.  There are nearly limitless options to the troubleshooting and outcomes you can create when using Suspend.
 
 When you run code with a $DebugPreference set to Inquire, you'll get a nice prompt and console output with the message you left behind.  Save your future self from confusion and make sure to mention which variable you should test at this point in time.
 
-[![parsing05](../assets/images/2015/01/images/parsing05.png)](../assets/images/2015/01/images/parsing05.png)
+[![parsing05](../assets/images/2015/01/images/parsing05.webp)](../assets/images/2015/01/images/parsing05.webp)
 
 So, to check our values of $sharename and $ThisSetOfPermissions.
 
-![parsing06](../assets/images/2015/01/images/parsing06.png) See line 2 with the >> mark? You'll notice that you're in a suspended command line when you see the Console Prompt icon change into a '>>' character.
+![parsing06](../assets/images/2015/01/images/parsing06.webp) See line 2 with the >> mark? You'll notice that you're in a suspended command line when you see the Console Prompt icon change into a '>>' character.
 
 Alright, the final step now is to iterate through our $ThisSetOfPermissions and assign each of these lines to be a new PowerShell custom object. We'll collect all of these together into a $permissiosn array and then publish them as one $sharename object with a mult-valued $permissions property
 
@@ -244,6 +244,6 @@ $permissions += [pscustomobject]@{User=$user;Permissions=$access} }
 
 ### The Results
 
-[![parsing07](../assets/images/2015/01/images/parsing07.png)](../assets/images/2015/01/images/parsing07.png)
+[![parsing07](../assets/images/2015/01/images/parsing07.webp)](../assets/images/2015/01/images/parsing07.webp)
 
 I hope you guys enjoyed this walk-through and that it helps you the next time you have to parse output from a non-PowerShell command, or are expected to flex your PowerShell wizardry and parse plaintext.

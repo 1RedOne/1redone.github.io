@@ -45,7 +45,7 @@ Our next step here is to take a row or two that we care about, and mark out our 
 
 Taking a glance at the file, it is pretty obvious that our Company records are in the left column, while the AccountNumber is in the right. We have to teach this to the computer though.
 
-[![CFS_filePreview](../assets/images/2015/01/images/cfs_filepreview.png)](../assets/images/2015/01/images/cfs_filepreview.png)
+[![CFS_filePreview](../assets/images/2015/01/images/cfs_filepreview.webp)](../assets/images/2015/01/images/cfs_filepreview.webp)
 
 ### Making a template
 
@@ -62,9 +62,9 @@ Let's see what happens when we run this through ConvertFrom-String. A note: I li
 ```powershell   ConvertFrom-String -InputObject $import -TemplateContent $template -OutVariable TestMePlz | Out-Null "Parent Objects found $($testmePlz.Count)" "-Child objects found $($testmePlz.Company.Items.Count)" $TestMePlz | select Company 
 ```
 
-[![CFS_01](../assets/images/2015/01/images/cfs_01.png)](../assets/images/2015/01/images/cfs_01.png)
+[![CFS_01](../assets/images/2015/01/images/cfs_01.webp)](../assets/images/2015/01/images/cfs_01.webp)
 
-[![CFS_Output01](../assets/images/2015/01/images/cfs_output01.png)](../assets/images/2015/01/images/cfs_output01.png)
+[![CFS_Output01](../assets/images/2015/01/images/cfs_output01.webp)](../assets/images/2015/01/images/cfs_output01.webp)
 
 We see that it captured the name of each company ($testmeplz.Company) but it didn't grab the AccountNumber! Not bad for very little work! If we now add a bit more detail to our template file, we can hopefully narrow things down and grab the rest of the output. Let's try adding an extra row to our template to give it another example and try and teach the system.
 
@@ -77,7 +77,7 @@ $template = @' <html> <body> <table> <tr><td>{!Company\*:Company}</td><td>Accoun
 ConvertFrom-String -InputObject $import -TemplateContent $template -OutVariable TestMePlz | Out-Null "Parent Objects found $($testmePlz.Count)" "-Child objects found $($testmePlz.Company.Items.Count)" $TestMePlz | select Company 
 ```
 
-![CFS_Output02](../assets/images/2015/01/images/cfs_output02.png)]
+![CFS_Output02](../assets/images/2015/01/images/cfs_output02.webp)]
 
 Better, now we're getting back at least the first three companies AND we have the accountnumber too! We also don't have an that pesky incorrect result of 'Company/Accountnumber' crapping things up anymore either.
 
@@ -87,7 +87,7 @@ Better, now we're getting back at least the first three companies AND we have th
 $TestMePlz | Select-Object @{Name=‘Company‘;Expression={$\_.Company.Value}},@{Name=‘AccountNumber’;Expression={$\_.Company.AccountNumber.Value}} 
 ```
 
-[![CFS_03](../assets/images/2015/01/images/cfs_03.png)](../assets/images/2015/01/images/cfs_03.png)
+[![CFS_03](../assets/images/2015/01/images/cfs_03.webp)](../assets/images/2015/01/images/cfs_03.webp)
 
 We're running into an issue here…we're only getting back 3 of our five inputs! Is there any difference between these last two (Daquiri and Eggplant) compared to the others? We could look at the debug output for more info.
 
@@ -107,7 +107,7 @@ ConvertFrom-String -InputObject $import -TemplateContent $template -OutVariable 
 $TestMePlz | Select-Object @{Name=‘Company‘;Expression={$\_.Company.Value}},@{Name=‘AccountNumber’;Expression={$\_.Company.AccountNumber.Value}}
 ```
 
-[![CFS_FullReport03](../assets/images/2015/01/images/cfs_fullreport03.png)](../assets/images/2015/01/images/cfs_fullreport03.png)
+[![CFS_FullReport03](../assets/images/2015/01/images/cfs_fullreport03.webp)](../assets/images/2015/01/images/cfs_fullreport03.webp)
 
 So, it's a tricky concept, but look at how much less code this used than the previous functional approach. Imagine if you had a very complex list of addresses, license keys and things like that to parse, and I think you can see why this is a worthwhile endeavor.
 
@@ -129,7 +129,7 @@ $testme = ConvertFrom-String -InputObject $filecontents -TemplateContent $Templa
 $testme | Select-Object @{Name=‘Sharename‘;Expression={$\_.ShareName.Value}},@{Name=‘User’;Expression={$\_.ShareName.Items.User}},@{Name=‘Perms’;Expression={$\_.ShareName.Items.Perm}} 
 ```
 
-![](../assets/images/2015/01/images/cfs_output03.png) This is getting to be so easy!
+![](../assets/images/2015/01/images/cfs_output03.webp) This is getting to be so easy!
 
 Fully resolving all of our objects, with less than a quarter of the code. **AWESOME!**
 

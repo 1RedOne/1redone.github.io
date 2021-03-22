@@ -2,17 +2,17 @@
 title: "Ignite, decompressed"
 date: "2017-10-09"
 redirect_from : /2017/10/09/ignite-decompressed
-coverImage: ../assets/images/2017/10/images/msftignite2017-1.png
+coverImage: ../assets/images/2017/10/images/msftignite2017-1.webp
 categories: 
   - "scripting"
 excerpt: "Ignite Orlando WAS AWESOME! In this post, I'll give you some of my fun memories and commentary about the event, and then end with a bunch of the best videos from Microsoft Ignite 2017."
 ---
 
-![MSFTignite2017 (1)](../assets/images/2017/10/images/msftignite2017-1.png)
+![MSFTignite2017 (1)](../assets/images/2017/10/images/msftignite2017-1.webp)
 
 Ignite Orlando WAS AWESOME! In this post, I'll give you some of my fun memories and commentary about the event, and then end with a bunch of the best videos from Microsoft Ignite 2017.
 
-### My sessions
+# My sessions
 
 We had a HUGE turn out for the PowerShell Community Event, in fact, it was so big that we had an overflow room with 200 people in it!
 
@@ -26,13 +26,13 @@ There were a lot of folks waiting outside who weren't able to attend, and at thi
 
 Not pictured, Adam Bertram standing on a table, shouting into the crowd!  Oh, and did I mention that Jeffrey Snover came on stage as well?  Talk about a dream come true!
 
-![OnStageWJeffrey](../assets/images/2017/10/images/onstagewjeffrey.jpg) Jeffrey is the four greenish pixels near the screen
+![OnStageWJeffrey](../assets/images/2017/10/images/onstagewjeffrey.webp) Jeffrey is the four greenish pixels near the screen
 
 Fortunately I was prepared and stammered through a terrible soft-ball question about Azure Cloud Shell.  Jeffrey said 'that's your question, Stephen?'
 
 My final session was at the end of the day on Thursday, which effectively maximized my stress for the entirety of Ignite.  Fortunately I had plenty of time to practice and work on my transitions and I felt that I really gave it my all.
 
-![2017-09-26 15.07.11](../assets/images/igniteCollage.png)
+![2017-09-26 15.07.11](../assets/images/igniteCollage.webp)
 
 Next year, I'd like to lead a one hour session, or one focused on real world usage of PowerShell as a glue language.  We'll see if they get approved!
 
@@ -50,7 +50,7 @@ Getting to meet Brad in person was great, as I've seen him deliver presentations
 
 #### Other photos
 
-![2017-09-26 15.07.11](../assets/images/meAndAdam.jpeg)
+![2017-09-26 15.07.11](../assets/images/meAndAdam.webp)
 
 Spinners were...everywhere.
 

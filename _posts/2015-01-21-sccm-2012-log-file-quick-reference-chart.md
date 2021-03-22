@@ -7,7 +7,7 @@ tags:
   - "sccm"
 ---
 
-[![Depicts an image saying 'Scripting System Center Configuration Manager'](images/series_sccm.png)]((/series/LearningSCCM))
+[![Depicts an image saying 'Scripting System Center Configuration Manager'](images/series_sccm.webp)]((/series/LearningSCCM))
 
 This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner for more!  
 
@@ -15,8 +15,8 @@ This post is part of the 'Scripting SCCM' series on FoxDeploy, click the banner 
 
 Jumping back into the SCCM Saddle, I noticed that I could really benefit from a printable SCCM reference guide.  I decided to whip one up, using the data from the Technet page.
 
-Print up this full-sized .png or download the PDF Below.
+Print up this full-sized .webp or download the PDF Below.
 
-![Printable SCCM 2012 Log File Chart and Reference Guide](../assets/images/2015/01/images/sccm-2012-logs-chart.png) Printable SCCM 2012 Log File Chart and Reference Guide
+![Printable SCCM 2012 Log File Chart and Reference Guide](../assets/images/2015/01/images/sccm-2012-logs-chart.webp) Printable SCCM 2012 Log File Chart and Reference Guide
 
 [SCCM 2012 Logs Chart](images/sccm-2012-logs-chart.pdf)

@@ -74,3 +74,11 @@ reducde png from 560 KB to only 30kb!
 
 convert gif to web whatever
 gif2webp -lossy -m 3 science.gif -o science.webp
+
+#convert mp4 to webm 
+ffmpeg -i 20201127_144816_07.mp4 -c:v libvpx -crf 15 -b:v 1M -c:a libvorbis 20201127_144816_07.webm
+
+#convert whole dir
+dir *.jpg | %{
+	invoke-expression "cwebp -q 50 $($_.Name) -o $($_.Basename).webp"
+}
