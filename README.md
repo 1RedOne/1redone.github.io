@@ -51,3 +51,4 @@ Migrating to Jekyll from Wordpress  | ✔ | ❌ | ❌
 PowerShell DVT Testing  | ✔ | ❌ | ❌
 The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌
 Test Driven POC | ❌ | ❌ | ❌
+Making Working Tags Lists in Jekyll Easily| ❌ | ❌ | ❌
