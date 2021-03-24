@@ -18,13 +18,12 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
 
   }
 </style>
-
   {% for post in paginator.posts %}
 
       <h2 style="margin-top: 0em!important;">
         <a href="{{ post.url }}" title="Click to view post '{{ post.title }}'">{{ post.title }}</a></h2>
-      <div class="meta"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}
-        <i class="fa fa-user" aria-hidden="true"></i> FoxDeploy
+      <div class="meta"><span class="icon-list-alt"></span> {{ post.date | date: '%B %d, %Y' }}
+        <span class="icon-user"></span> FoxDeploy
       </div>
       <a href="{{ post.url }}" title="This is another link to view the post{{ post.title }}"><img src="{{ post.header }}{{ post.coverImage }}" title="hero graphic for the post {{ post.title }}"></a><br>
       {{ post.excerpt }}
