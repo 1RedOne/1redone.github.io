@@ -1,7 +1,7 @@
 ---
 title: "ConfigMgr Tech Preview Install Guide"
 date: "2019-10-25"
-redirect_from : /2019/10/25/configmgr-tech-preview-install-guide
+redirect_from : 2019/10/25/configmgr-tech-preview-install-guide
 categories: 
   - "quickies"
   - "sccm"

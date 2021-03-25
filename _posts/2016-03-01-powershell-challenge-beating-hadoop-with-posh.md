@@ -1,7 +1,7 @@
 ---
 title: "PowerShell Challenge - Beating Hadoop with Posh"
 date: "2016-03-01"
-redirect_from : /2016/03/01/powershell-challenge-beating-hadoop-with-posh
+redirect_from : 2016/03/01/powershell-challenge-beating-hadoop-with-posh
 coverImage: ../assets/images/2016/03/images/coding-for-speed.png
 categories: 
   - "other"

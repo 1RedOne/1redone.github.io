@@ -1,7 +1,7 @@
 ---
 title: "The Power of Exception Filters"
 date: "2021-03-28"
-redirect_from : /2021/03/28/the-power-of-exception-filters
+redirect_from : 2021/03/28/the-power-of-exception-filters
 coverImage: ..\assets\images\2021\imageNeeded.webp
 categories: 
   - "scripting"

@@ -1,7 +1,7 @@
 ---
 title: "Jekyll Migration From WordPress - What about the stats?!"
 date: "2021-04-10"
-redirect_from : /2021/04/10/github-report-issue-button
+redirect_from : 2021/04/10/github-report-issue-button
 coverImage: ..\assets\images\2021\imageNeeded.webp
 categories: 
   - "scripting"

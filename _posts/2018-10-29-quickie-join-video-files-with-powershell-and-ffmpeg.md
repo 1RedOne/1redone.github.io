@@ -1,7 +1,7 @@
 ---
 title: "Quickie - Join video files with PowerShell and FFMPEG"
 date: "2018-10-29"
-redirect_from : /2018/10/29/quickie-join-video-files-with-powershell-and-ffmpeg
+redirect_from : 2018/10/29/quickie-join-video-files-with-powershell-and-ffmpeg
 coverImage: ../assets/images/2018/10/images/join-video-files-quickly1.png
 categories: 
   - "quickies"

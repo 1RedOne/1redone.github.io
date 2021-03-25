@@ -1,7 +1,7 @@
 ---
 title: "SCCM - USMT on Windows 10 'too many files for sharing'"
 date: "2016-05-05"
-redirect_from : /2016/05/05/sccm-usmt-on-windows-10-too-many-files-for-sharing
+redirect_from : 2016/05/05/sccm-usmt-on-windows-10-too-many-files-for-sharing
 categories: 
   - "sccm"
 excerpt: "Solving an odd USMT issue..."

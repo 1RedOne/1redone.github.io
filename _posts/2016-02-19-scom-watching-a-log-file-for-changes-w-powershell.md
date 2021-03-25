@@ -1,7 +1,7 @@
 ---
 title: "SCOM - Watching a log file for changes w/ PowerShell"
 date: "2016-02-19"
-redirect_from : /2016/02/19/scom-watching-a-log-file-for-changes-w-powershell
+redirect_from : 2016/02/19/scom-watching-a-log-file-for-changes-w-powershell
 categories: 
   - "scripting"
 tags: 

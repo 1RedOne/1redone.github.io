@@ -1,7 +1,7 @@
 ---
 title: "SCCM 1511 Upgrade Hangs Fix"
 date: "2016-06-10"
-redirect_from : /2016/06/10/sccm-1511-upgrade-hangs-fix
+redirect_from : 2016/06/10/sccm-1511-upgrade-hangs-fix
 tags: 
   - "sccm"
 excerpt: "Recently for a customer, we ran into an issue in which the SCCM 1511 upgrade was hanging at the following screen. 'Backing  Files for Upgrade'"

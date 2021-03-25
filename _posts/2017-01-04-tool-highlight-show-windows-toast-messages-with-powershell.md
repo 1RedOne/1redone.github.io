@@ -1,7 +1,7 @@
 ---
 title: "Tool-highlight: Show Windows Toast Messages with PowerShell"
 date: "2017-01-04"
-redirect_from : /2017/01/04/tool-highlight-show-windows-toast-messages-with-powershell
+redirect_from : 2017/01/04/tool-highlight-show-windows-toast-messages-with-powershell
 coverImage: ../assets/images/2017/01/images/encryption-percentage.png
 categories: 
   - "scripting"

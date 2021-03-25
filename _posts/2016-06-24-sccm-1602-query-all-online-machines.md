@@ -1,7 +1,7 @@
 ---
 title: "SCCM 1602 Query - All Online Machines"
 date: "2016-06-24"
-redirect_from : /2016/06/24/sccm-1602-query-all-online-machines
+redirect_from : 2016/06/24/sccm-1602-query-all-online-machines
 tags: 
   - "sccm"
 coverImage: "../assets/images/2016/06/images/t01.png"

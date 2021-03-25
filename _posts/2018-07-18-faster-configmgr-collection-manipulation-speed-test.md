@@ -1,7 +1,7 @@
 ---
 title: "Faster: ConfigMgr Collection Manipulation Speed Test"
 date: "2018-07-18"
-redirect_from : /2018/07/18/faster-configmgr-collection-manipulation-speed-test
+redirect_from : 2018/07/18/faster-configmgr-collection-manipulation-speed-test
 tags: 
   - "collections"
   - "sccm"

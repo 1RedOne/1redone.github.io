@@ -1,7 +1,7 @@
 ---
 title: "Coming to Ignite? Come to my session!"
 date: "2016-08-14"
-redirect_from : /2016/08/14/coming-to-ignite-come-to-my-session
+redirect_from : 2016/08/14/coming-to-ignite-come-to-my-session
 coverImage: ../assets/images/2016/08/images/wp-1471197991802.png
 tags: 
   - "speaking"

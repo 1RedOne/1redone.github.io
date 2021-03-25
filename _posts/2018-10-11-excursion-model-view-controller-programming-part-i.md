@@ -1,7 +1,7 @@
 ---
 title: "Excursion: Model View Controller Programming - Part I"
 date: "2018-10-11"
-redirect_from : /2018/10/11/excursion-model-view-controller-programming-part-i
+redirect_from : 2018/10/11/excursion-model-view-controller-programming-part-i
 coverImage: ../assets/images/2018/10/images/excursion-mvc.png
 tags: 
   - "asp-net"

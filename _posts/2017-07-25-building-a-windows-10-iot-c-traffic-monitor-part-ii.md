@@ -1,7 +1,7 @@
 ---
 title: "Building a Windows 10 IoT C# traffic monitor: Part II"
 date: "2017-07-25"
-redirect_from : /2017/07/25/building-a-windows-10-iot-c-traffic-monitor-part-ii
+redirect_from : 2017/07/25/building-a-windows-10-iot-c-traffic-monitor-part-ii
 coverImage: ../assets/images/2017/07/images/1-millioncountdown.png?w=636
 categories: 
   - "scripting"

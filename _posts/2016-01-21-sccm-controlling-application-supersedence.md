@@ -1,7 +1,7 @@
 ---
 title: "SCCM - Controlling Application Supersedence"
 date: "2016-01-21"
-redirect_from : /2016/01/21/sccm-controlling-application-supersedence
+redirect_from : 2016/01/21/sccm-controlling-application-supersedence
 tags: 
   - "configmgr"
   - "sccm"

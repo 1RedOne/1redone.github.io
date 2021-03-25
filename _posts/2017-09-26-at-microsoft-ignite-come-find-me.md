@@ -1,7 +1,7 @@
 ---
 title: "At Microsoft Ignite?  Come find me!"
 date: "2017-09-26"
-redirect_from : /2017/09/26/at-microsoft-ignite-come-find-me
+redirect_from : 2017/09/26/at-microsoft-ignite-come-find-me
 coverImage: ../assets/images/2017/09/images/wheretofindfox.jpg
 categories: 
   - "scripting"

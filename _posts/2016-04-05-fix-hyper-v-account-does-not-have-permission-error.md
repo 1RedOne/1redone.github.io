@@ -1,7 +1,7 @@
 ---
 title: "Fix Hyper-V 'Account does not have permission' error"
 date: "2016-04-05"
-redirect_from : /2016/04/05/fix-hyper-v-account-does-not-have-permission-error
+redirect_from : 2016/04/05/fix-hyper-v-account-does-not-have-permission-error
 coverImage: ../assets/images/2016/04/images/01.png
 categories: 
   - "virtualization"

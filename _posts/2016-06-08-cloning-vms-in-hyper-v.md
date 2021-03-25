@@ -1,7 +1,7 @@
 ---
 title: "Cloning VMs in Hyper-V"
 date: "2016-06-08"
-redirect_from : /2016/06/08/cloning-vms-in-hyper-v
+redirect_from : 2016/06/08/cloning-vms-in-hyper-v
 categories: 
   - "scripting"
 excerpt: "

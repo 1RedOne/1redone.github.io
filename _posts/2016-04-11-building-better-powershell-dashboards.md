@@ -1,7 +1,7 @@
 ---
 title: "Building Better PowerShell Dashboards"
 date: "2016-04-11"
-redirect_from : /2016/04/11/building-better-powershell-dashboards
+redirect_from : 2016/04/11/building-better-powershell-dashboards
 coverImage: ../assets/images/2016/04/images/phantombreakdowncode.png
 categories: 
   - "scripting"

@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Ignite 2016 : Recap"
 date: "2016-10-03"
-redirect_from : /2016/10/03/recapignite
+redirect_from : 2016/10/03/recapignite
 tags: 
   - "conferences"
   - "scripting"

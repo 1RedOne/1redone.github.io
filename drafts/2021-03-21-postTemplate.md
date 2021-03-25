@@ -1,7 +1,7 @@
 ---
 title: "GitHub Report Issue Button"
 date: "2021-03-24"
-redirect_from : /2021/03/24/github-report-issue-button
+redirect_from : 2021/03/24/github-report-issue-button
 coverImage: ..\assets\images\2021\title_GithubButton.webp
 categories: 
   - "scripting"

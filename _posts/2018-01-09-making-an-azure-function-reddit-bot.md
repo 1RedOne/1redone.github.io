@@ -1,7 +1,7 @@
 ---
 title: "Making an Azure Function Reddit Bot"
 date: "2018-01-09"
-redirect_from : /2018/01/09/making-an-azure-function-reddit-bot
+redirect_from : 2018/01/09/making-an-azure-function-reddit-bot
 coverImage: ../assets/images/2018/01/images/azure-function.png
 categories: 
   - "azure"

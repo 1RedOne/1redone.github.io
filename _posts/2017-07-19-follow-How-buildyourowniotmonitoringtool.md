@@ -1,7 +1,7 @@
 ---
 title: "Building a Windows 10 IoT C# traffic monitor: Part I"
 date: "2017-07-19"
-redirect_from : /2017/07/19/buildyourowniotmonitoringtool/
+redirect_from : 2017/07/19/buildyourowniotmonitoringtool/
 categories: 
   - "scripting"
 tags: 

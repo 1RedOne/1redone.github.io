@@ -1,7 +1,7 @@
 ---
 title: "POWERSHELL DECONSTRUCTED"
 date: "2017-05-23"
-redirect_from : /2017/05/23/powershell-deconstructed
+redirect_from : 2017/05/23/powershell-deconstructed
 coverImage: ../assets/images/2017/05/images/deconstructed.png
 categories: 
   - "scripting"

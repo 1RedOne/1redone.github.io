@@ -1,7 +1,7 @@
 ---
 title: "FoxDeploy - What happened to you?!"
 date: "2016-02-20"
-redirect_from : /2016/02/20/foxdeploy-what-happened-to-you
+redirect_from : 2016/02/20/foxdeploy-what-happened-to-you
 categories: 
   - "other"
 tags: 

@@ -1,7 +1,7 @@
 ---
 title: "WinRM HTTPs and the Case of Spooky Certificate"
 date: "2016-09-16"
-redirect_from : /2016/09/16/winrm-https-and-the-case-of-ghost-certificate
+redirect_from : 2016/09/16/winrm-https-and-the-case-of-ghost-certificate
 categories: 
   - "scripting"
 tags: 

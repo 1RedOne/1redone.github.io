@@ -1,7 +1,7 @@
 ---
 title: "Registering for WMI Events in PowerShell"
 date: "2016-12-16"
-redirect_from : /2016/12/16/registering-for-wmi-events-in-powershell
+redirect_from : 2016/12/16/registering-for-wmi-events-in-powershell
 coverImage: "../assets/images/2016/12/images/registering-for-wmi-events.webp"
 categories: 
   - "scripting"

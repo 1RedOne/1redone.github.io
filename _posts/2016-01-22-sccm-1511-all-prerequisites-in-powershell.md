@@ -1,7 +1,7 @@
 ---
 title: "SCCM 1511 - All prerequisites, in PowerShell"
 date: "2016-01-22"
-redirect_from : /2016/01/22/sccm-1511-all-prerequisites-in-powershell
+redirect_from : 2016/01/22/sccm-1511-all-prerequisites-in-powershell
 categories: 
   - "scripting"
 tags: 

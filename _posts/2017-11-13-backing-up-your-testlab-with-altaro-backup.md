@@ -1,7 +1,7 @@
 ---
 title: "Backing up your Testlab with Altaro VM Backup"
 date: "2017-11-13"
-redirect_from : /2017/11/13/backing-up-your-testlab-with-altaro-backup
+redirect_from : 2017/11/13/backing-up-your-testlab-with-altaro-backup
 tags: 
   - "backup-testlab"
   - "hyper-v"

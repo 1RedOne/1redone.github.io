@@ -1,7 +1,7 @@
 ---
 title: "Planning for SCCM Current Branch"
 date: "2016-05-10"
-redirect_from : /2016/05/10/understanding-sccms-new-release-cadence.
+redirect_from : 2016/05/10/understanding-sccms-new-release-cadence.
 categories: 
   - "consulting"
   - "sccm"

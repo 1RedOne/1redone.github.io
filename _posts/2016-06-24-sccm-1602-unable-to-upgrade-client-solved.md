@@ -1,7 +1,7 @@
 ---
 title: "SCCM 1602 - Unable to upgrade client solved"
 date: "2016-06-24"
-redirect_from : /2016/06/24/sccm-1602-unable-to-upgrade-client-solved
+redirect_from : 2016/06/24/sccm-1602-unable-to-upgrade-client-solved
 tags: 
   - "sccm"
 coverImage: ../assets/images/2016/06/images/sccm03.png

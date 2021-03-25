@@ -1,7 +1,7 @@
 ---
 title: "Ignite, decompressed"
 date: "2017-10-09"
-redirect_from : /2017/10/09/ignite-decompressed
+redirect_from : 2017/10/09/ignite-decompressed
 coverImage: ../assets/images/2017/10/images/msftignite2017-1.webp
 categories: 
   - "scripting"

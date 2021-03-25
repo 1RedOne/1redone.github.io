@@ -1,7 +1,7 @@
 ---
 title: "ClientFaux - the fastest way to fill ConfigMgr with Clients"
 date: "2018-06-08"
-redirect_from : /2018/06/08/how-to-populate-cm-with-fake-clients
+redirect_from : 2018/06/08/how-to-populate-cm-with-fake-clients
 coverImage: goes here...
 tags: 
   - "scripting"

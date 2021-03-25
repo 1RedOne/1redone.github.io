@@ -1,7 +1,7 @@
 ---
 title: "SOLVED: What happens to WINRM when certs die"
 date: "2017-01-13"
-redirect_from : /2017/01/13/solved-what-happens-to-winrm-when-certs-die
+redirect_from : 2017/01/13/solved-what-happens-to-winrm-when-certs-die
 categories: 
   - "other"
   - "scripting"

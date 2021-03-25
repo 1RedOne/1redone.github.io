@@ -1,7 +1,7 @@
 ---
 title: "Safely storing credentials and other things with PowerShell"
 date: "2016-07-14"
-redirect_from : /2016/07/14/safely-storing-credentials-and-other-things-with-powershell
+redirect_from : 2016/07/14/safely-storing-credentials-and-other-things-with-powershell
 tags: 
   - "credentials"
 coverImage: "../assets/images/2016/07/images/storing-credentials.png"

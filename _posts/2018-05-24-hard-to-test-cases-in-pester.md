@@ -1,7 +1,7 @@
 ---
 title: "Hard to test cases in Pester"
 date: "2018-05-24"
-redirect_from : /2018/05/24/hard-to-test-cases-in-pester
+redirect_from : 2018/05/24/hard-to-test-cases-in-pester
 coverImage: goes here...
 tags: 
   - "scripting"

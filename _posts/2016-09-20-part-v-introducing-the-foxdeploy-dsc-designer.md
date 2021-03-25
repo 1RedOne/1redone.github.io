@@ -1,7 +1,7 @@
 ---
 title: "Part V - Introducing the FoxDeploy DSC Designer"
 date: "2016-09-20"
-redirect_from : /2016/09/20/part-v-introducing-the-foxdeploy-dsc-designer
+redirect_from : 2016/09/20/part-v-introducing-the-foxdeploy-dsc-designer
 coverImage: ../assets/images/2016/09/images/dsc-designer-3.png
 categories: 
   - "scripting"
