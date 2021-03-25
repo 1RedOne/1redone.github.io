@@ -7,48 +7,18 @@ hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
 ---
 ## FoxDeploy Blog Repo
 
-To do : 
-
-* Then, finish new blog posts
-* Then, domain cutover
-
-Year | Posts | Migrated
------- | ------ | ----
-2020   | 6| ✔
-2019   | 6| ✔
-2018   | 7 |✔
-2017   | 21 |✔
-2016   | 40 |✔
-2015   | 44 |✔
-2014   | 59 |✔
-2013   | 37 |✔
-
-
-Features | Completed
------- | ------
-tagging works | ✔
-archives work | ✔
-Verify all series pages work |  ✔
-fix posts with missing videos | ✔
-Add 'TopPosts' | ✔
-newPosts | ✔
-final review | ✔
-domain cutover | ♻
-New logo? | ♻
-
-## Pre CutOver
-
-Post | Code Complete | Drafted | Ready 
---| --|--|--
-PowerShell Lazy Caching | ✔ | ✔ | ✔
-GitHub Report Issue Link  | ✔ | ✔| ✔
-
-# Post Cut planning
-Post | Code Complete | Drafted | Ready 
---| --|--|--
-April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍🐕
-Migrating to Jekyll from Wordpress  | ✔ | ❌ | ❌
-PowerShell DVT Testing  | ✔ | ❌ | ❌
-The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌
+Post | Code Complete | Drafted | Ready | Published
+--| --|--|-- |--
+PowerShell Lazy Caching | ✔ | ✔ | ✔ | ✔ March 05
+GitHub Report Issue Link  | ✔ | ✔| ✔ | ✔ March 10 
+April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍ | ❔
+Migrating to Jekyll from Wordpress  | ✔ | ❌ | ❌  | ~April 07
+The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌ | ~April 10
+PowerShell DVT Testing  | ✔ | ❌ | ❌ | ~April 12
 Test Driven POC | ❌ | ❌ | ❌
 Making Working Tags Lists in Jekyll Easily| ❌ | ❌ | ❌
+
+* * * 
+
+FoxDeploy Heroes?
+- https://twitter.com/dzejzipl - Jakub Piesik
