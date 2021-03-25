@@ -1,7 +1,11 @@
 ---
 title: "Glorious PowerShell Dashboards"
 date: "2017-11-06"
-redirect_from : 2017/11/06/glorious-powershell-dashboards
+redirect_from : 
+  - 2017/11/06/glorious-powershell-dashboards
+  - 2017/11/06/glorious-powershell-dashboards/
+  - /2017/11/06/glorious-powershell-dashboards/
+  - /2017/11/06/glorious-powershell-dashboards
 categories: 
   - "scripting"
 tags: 
