@@ -1,7 +1,12 @@
 ---
 title: "Part IV - PowerShell GUIs - how to handle events and create a Tabbed Interface"
 date: "2015-09-08"
-redirect_from : /2015/09/08/powershell-guis-how-to-handle-events-and-create-a-tabbed-interface
+redirect_from : 
+    - /2015/09/08/powershell-guis-how-to-handle-events-and-create-a-tabbed-interface
+    - /2015/09/08/powershell-guis-how-to-handle-events-and-create-a-tabbed-interface/
+    - 2015/09/08/powershell-guis-how-to-handle-events-and-create-a-tabbed-interface
+    - 2015/09/08/powershell-guis-how-to-handle-events-and-create-a-tabbed-interface/
+
 coverImage: ../series/images/series_gui.webp
 categories: 
   - "scripting"

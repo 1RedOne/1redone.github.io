@@ -18,7 +18,7 @@ fileName: '2021-04-10-jekyll-migration-from-wordpress-what-about-the-stats'
 
 Recently I migrated my blog off of WordPress hosting and over to static sites generated from Markdown files, hosted on GitHub Pages.
 
-# Octocat photp here
+# Octocat photo here
 
 In migrating from Wordpress.com hosting, I noticed that there wasn't any great one solution for the 'WordPress Stats' info I got from WordPress' JetPack Service.  In this post, I'll show you exactly how I recreated both the utility AND more importantly the Vanity I got from WordPress Stats (the later to satify my ego!)
 
@@ -32,14 +32,27 @@ In migrating from Wordpress.com hosting, I noticed that there wasn't any great o
 * Satisfying My Ego
 * Automatically adding it below posts in Jekyll
 
-## What are you smoking, Stephen?
+## What are WordPress Stats
 
-This is a reasonable question to ask anyone, and especially me.  
+If you're a long time reader of blogs but don't blog on your own, you might never have paid much attention to little widgets like these on the sites you visit.
 
+# Screen shot of stat counter
+
+But believe me, the authors of those sites **definitely** know what I'm talking about.
+
+What does it do?  Well, it might be a little bit old school but it just keeps track of the page loads of a site.  If someone comes and visits an article, then clicks to see some more in the series and ends up looking at four other articles, it would tick up five more times.
+
+# Marge I just think they're neat
+
+If you host your blog on WordPress, one of the nifty features you can enable is a Plugin called JetPack which gives you a number of cool features, one of which is the stat tracker I showed above.
+
+Unfortunately if you migrate away from WordPress...you can't bring it with you.
+
+Or can we??
 
 https://tutorial.eyehunts.com/js/javascript-number-format-comma-html-format-number-thousands-separator/
 
-Part of my migration from WordPress Series
+
 
 <div class="card" style="padding-top:20px;">    
     <header class="card-header">
