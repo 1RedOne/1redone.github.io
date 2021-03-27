@@ -1,7 +1,11 @@
 ---
 title: "Part III - Using Advanced GUI Elements in PowerShell"
 date: "2015-05-14"
-redirect_from : /2015/05/14/part-iii-using-advanced-gui-elements-in-powershell
+redirect_from : 
+ - /2015/05/14/part-iii-using-advanced-gui-elements-in-powershell
+ - /2015/05/14/part-iii-using-advanced-gui-elements-in-powershell/
+ - 2015/05/14/part-iii-using-advanced-gui-elements-in-powershell
+ - 2015/05/14/part-iii-using-advanced-gui-elements-in-powershell/
 coverImage: ../series/images/series_gui.webp
 categories: 
   - "scripting"
