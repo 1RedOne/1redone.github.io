@@ -135,7 +135,7 @@ const range = (start, end, length = end - start + 1) =>
 
 var d = new Date();
 
-if (range(23,31).includes(d.getDate()) || (range(1,3).includes(d.getDate()))){
+if (range(30,31).includes(d.getDate()) || (range(1,3).includes(d.getDate()))){
     console.log("should show dogDeploy logo");
     var dogDeployButton = document.getElementById("dogDeploy");
     dogDeployButton.style.display = "show";
