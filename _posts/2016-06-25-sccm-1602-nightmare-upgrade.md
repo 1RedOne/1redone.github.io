@@ -1,7 +1,7 @@
 ---
 title: "SCCM 1602 nightmare upgrade"
 date: "2016-06-25"
-redirect_from : /2016/06/25/sccm-1602-nightmare-upgrade
+redirect_from : 2016/06/25/sccm-1602-nightmare-upgrade
 categories: 
   - "sccm"
 excerpt: "This week, we had a scary ConfigMgr 1602 upgrade.

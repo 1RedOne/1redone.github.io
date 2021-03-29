@@ -1,7 +1,7 @@
 ---
 title: "Advanced Autocompletion: adding output types"
 date: "2017-03-23"
-redirect_from : /2017/03/23/advanced-autocompletion-adding-output-types
+redirect_from : 2017/03/23/advanced-autocompletion-adding-output-types
 coverImage: ../assets/images/2017/01/images/upgrade-your-code1.png
 categories: 
   - "scripting"

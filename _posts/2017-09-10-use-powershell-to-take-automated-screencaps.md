@@ -1,7 +1,7 @@
 ---
 title: "Use PowerShell to take automated screencaps"
 date: "2017-09-10"
-redirect_from : /2017/09/10/use-powershell-to-take-automated-screencaps
+redirect_from : 2017/09/10/use-powershell-to-take-automated-screencaps
 coverImage: ../assets/images/2017/09/images/unattendedsnapshot_loop.gif
 categories: 
   - "scripting"

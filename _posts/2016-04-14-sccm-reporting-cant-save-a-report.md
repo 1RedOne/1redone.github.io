@@ -1,7 +1,7 @@
 ---
 title: "SCCM Reporting - Can't save a report"
 date: "2016-04-14"
-redirect_from : /2016/04/14/sccm-reporting-cant-save-a-report
+redirect_from : 2016/04/14/sccm-reporting-cant-save-a-report
 tags: 
   - "sccm"
   - "ssrs"

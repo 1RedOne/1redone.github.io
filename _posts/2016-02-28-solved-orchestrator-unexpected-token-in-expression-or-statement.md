@@ -1,7 +1,7 @@
 ---
 title: "Solved - Orchestrator 'Unexpected token '' in expression or statement'"
 date: "2016-02-28"
-redirect_from : /2016/02/28/solved-orchestrator-unexpected-token-in-expression-or-statement
+redirect_from : 2016/02/28/solved-orchestrator-unexpected-token-in-expression-or-statement
 excerpt: "If you are still looking at this post in 2021, then may god have mercy on your soul"
 categories: 
   - "scripting"

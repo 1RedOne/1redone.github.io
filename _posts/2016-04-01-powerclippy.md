@@ -1,7 +1,7 @@
 ---
 title: "PowerClippy"
 date: "2016-04-01"
-redirect_from : /2016/04/01/powerclippy
+redirect_from : 2016/04/01/powerclippy
 categories: 
   - "quickies"
   - "scripting"

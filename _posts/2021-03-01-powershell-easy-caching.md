@@ -1,7 +1,7 @@
 ---
 title: "PowerShell Easy Caching"
 date: "2021-03-01"
-redirect_from : /2021/03/01/powershell-easy-caching
+redirect_from : 2021/03/01/powershell-easy-caching
 coverImage: ..\assets\images\2021\Caching-For-Speed.webp   
 categories: 
   - "scripting"

@@ -1,7 +1,7 @@
 ---
 title: "Conditional Access with SCCM and InTune"
 date: "2016-01-15"
-redirect_from : /2016/01/15/conditional-access-with-sccm-and-intune
+redirect_from : 2016/01/15/conditional-access-with-sccm-and-intune
 tags: 
   - "configmgr"
   - "intune"

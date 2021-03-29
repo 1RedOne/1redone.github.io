@@ -1,7 +1,7 @@
 ---
 title: "Progressive Automation: Part I"
 date: "2019-09-10"
-redirect_from : /2019/09/10/progressive-automation-part-i
+redirect_from : 2019/09/10/progressive-automation-part-i
 categories: 
   - "consulting"
   - "programming"

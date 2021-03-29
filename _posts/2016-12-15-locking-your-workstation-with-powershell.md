@@ -1,7 +1,7 @@
 ---
 title: "Locking your Workstation with PowerShell"
 date: "2016-12-15"
-redirect_from : /2016/12/15/locking-your-workstation-with-powershell
+redirect_from : 2016/12/15/locking-your-workstation-with-powershell
 coverImage: ../assets/images/2016/12/images/locking-your-workstation.webp
 tags: 
   - "pInvoke"

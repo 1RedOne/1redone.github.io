@@ -1,7 +1,10 @@
 ---
 title: "Part II - Deploying PowerShell GUIs in Minutes using Visual Studio"
 date: "2015-04-16"
-redirect_from : /2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio
+redirect_from : 
+  - /2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio
+  - /2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio/
+  - 2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio/
 coverImage: ..\assets\images\foxPlaceHolder.webp
 categories: 
   - "scripting"

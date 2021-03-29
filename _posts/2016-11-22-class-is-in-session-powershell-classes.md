@@ -1,7 +1,7 @@
 ---
 title: "Class is in Session: PowerShell Classes"
 date: "2016-11-22"
-redirect_from : /2016/11/22/class-is-in-session-powershell-classes
+redirect_from : 2016/11/22/class-is-in-session-powershell-classes
 coverImage: ../assets/images/2016/11/images/news.png
 tags: 
   - "ideas"

@@ -1,7 +1,7 @@
 ---
 title: "Is WinRM Secure or do I need HTTPs?"
 date: "2017-02-08"
-redirect_from : /2017/02/08/is-winrm-secure-or-do-i-need-https
+redirect_from : 2017/02/08/is-winrm-secure-or-do-i-need-https
 coverImage: ../assets/images/2017/02/images/is-winrm-secure.png
 categories: 
   - "scripting"

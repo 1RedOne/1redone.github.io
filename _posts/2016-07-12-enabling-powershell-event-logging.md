@@ -1,7 +1,7 @@
 ---
 title: "Enabling PowerShell Event Logging"
 date: "2016-07-12"
-redirect_from : /2016/07/12/enabling-powershell-event-logging
+redirect_from : 2016/07/12/enabling-powershell-event-logging
 coverImage: "../assets/images/2016/07/images/powershell-logging.png"
 tags: 
   - "scripting"

@@ -1,7 +1,7 @@
 ---
 title: "SCCM 1606 Cloud Proxy Guide"
 date: "2016-06-28"
-redirect_from : /2016/06/28/sccm-1606-cloud-proxy-guide
+redirect_from : 2016/06/28/sccm-1606-cloud-proxy-guide
 excerpt: "This post is about the Cloud Proxy feature, which was included with Tech Preview 1606 of SCCM Current Branch.
 
 While featured in the Tech Preview for 1606, Cloud Proxy was not included with the production release of SCCM 1606, which shipped on July 22, 2016."

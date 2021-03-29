@@ -1,7 +1,7 @@
 ---
 title: "Thinking about stateless applications"
 date: "2016-06-22"
-redirect_from : /2016/06/22/thinking-about-stateless-applications
+redirect_from : 2016/06/22/thinking-about-stateless-applications
 coverImage: "../assets/images/2016/06/images/goingstateless-1.jpg"
 tags: 
   - "programming"

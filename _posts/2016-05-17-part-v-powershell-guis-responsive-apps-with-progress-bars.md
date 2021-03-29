@@ -1,7 +1,7 @@
 ---
 title: "Part V - Building Responsive PowerShell Apps with Progress bars"
 date: "2016-05-17"
-redirect_from : /2016/05/17/part-v-powershell-guis-responsive-apps-with-progress-bars
+redirect_from : 2016/05/17/part-v-powershell-guis-responsive-apps-with-progress-bars
 coverImage: ../assets/images/2015/04/images/series_powershellgui.png
 tags: 
   - "scripting"

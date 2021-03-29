@@ -1,7 +1,7 @@
 ---
 title: "The quest for true silent MDM Enrollment"
 date: "2017-06-05"
-redirect_from : /2017/06/05/the-quest-for-true-silent-mdm-enrollment
+redirect_from : 2017/06/05/the-quest-for-true-silent-mdm-enrollment
 coverImage: ../assets/images/2017/06/images/mdmtitle.png
 categories: 
   - "sccm"

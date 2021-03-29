@@ -1,7 +1,7 @@
 ---
 title: "SCCM v Intune Showdown"
 date: "2016-10-24"
-redirect_from : /2016/10/24/sccm-v-intune-showdown
+redirect_from : 2016/10/24/sccm-v-intune-showdown
 coverImage: ../assets/images/2016/10/images/sccm.png?w=636
 tags: 
   - "intune"

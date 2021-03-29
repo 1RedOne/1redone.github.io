@@ -1,7 +1,7 @@
 ---
 title: "Wow, ONE MILLION HITS!"
 date: "2017-08-01"
-redirect_from : /2017/08/01/wow-one-million-hits
+redirect_from : 2017/08/01/wow-one-million-hits
 coverImage: ../assets/images/2017/08/images/onemillion.png
 categories: 
   - "other"

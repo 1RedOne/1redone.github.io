@@ -1,7 +1,7 @@
 ---
 title: "PowerShell - Testing endpoints that perform Anti-forgery verification"
 date: "2019-05-29"
-redirect_from : /2019/05/29/powershell-testing-endpoints-that-perform-anti-forgery-verification
+redirect_from : 2019/05/29/powershell-testing-endpoints-that-perform-anti-forgery-verification
 categories: 
   - "programming"
   - "scripting"

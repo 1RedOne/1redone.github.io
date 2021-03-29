@@ -1,7 +1,7 @@
 ---
 title: "Extracting and monitoring web content with PowerShell"
 date: "2017-03-30"
-redirect_from : /2017/03/30/extracting-and-monitoring-web-content-with-powershell
+redirect_from : 2017/03/30/extracting-and-monitoring-web-content-with-powershell
 coverImage: ../assets/images/2017/03/images/extract-2f-powershell1.png
 tags: 
   - "webRequests"

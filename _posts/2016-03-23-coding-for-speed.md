@@ -1,7 +1,7 @@
 ---
 title: "Coding for speed"
 date: "2016-03-23"
-redirect_from : /2016/03/23/coding-for-speed
+redirect_from : 2016/03/23/coding-for-speed
 coverImage: ../assets/images/2016/03/images/coding-for-speed.png
 tags: 
   - "scripting"

@@ -1,7 +1,7 @@
 ---
 title: "Lessons on ProcMon and how to force On-screen keyboard"
 date: "2017-03-14"
-redirect_from : /2017/03/14/how-to-force-on-screen-keyboard-while-docked-win-10
+redirect_from : 2017/03/14/how-to-force-on-screen-keyboard-while-docked-win-10
 coverImage: ../assets/images/2017/03/images/no-on-screen-keyboard.png
 categories: 
   - "hacking"

@@ -1,7 +1,11 @@
 ---
 title: "Part I - Creating PowerShell GUIs in Minutes using Visual Studio - A New Hope"
 date: "2015-04-10"
-redirect_from : /2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope
+redirect_from : 
+  - /2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope
+  - /2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope/
+  - 2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope
+  - 2015/04/10/part-i-creating-powershell-guis-in-minutes-using-visual-studio-a-new-hope/
 coverImage: ..\assets\images\foxPlaceHolder.webp
 categories: 
   - "scripting"

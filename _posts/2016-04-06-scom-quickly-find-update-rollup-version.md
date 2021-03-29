@@ -1,7 +1,7 @@
 ---
 title: "SCOM: Quickly find Update Rollup Version"
 date: "2016-04-06"
-redirect_from : /2016/04/06/scom-quickly-find-update-rollup-version
+redirect_from : 2016/04/06/scom-quickly-find-update-rollup-version
 categories: 
   - "quickies"
   - "scripting"

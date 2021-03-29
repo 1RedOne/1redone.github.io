@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 Must-have Customizations"
 date: "2017-08-14"
-redirect_from : /2017/08/14/windows-10-must-have-customizations
+redirect_from : 2017/08/14/windows-10-must-have-customizations
 categories: 
   - "scripting"
 tags: 

@@ -1,7 +1,7 @@
 ---
 title: "Faster Web Cmdlet Design with Chrome 65"
 date: "2018-04-02"
-redirect_from : /2018/04/02/faster-web-cmdlet-design-with-chrome-65
+redirect_from : 2018/04/02/faster-web-cmdlet-design-with-chrome-65
 coverImage: ../assets/images/2018/04/images/super-fast.png
 categories: 
   - "scripting"

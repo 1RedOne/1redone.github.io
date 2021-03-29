@@ -1,7 +1,7 @@
 ---
 title: "SCCM - Updating all drivers after a migration"
 date: "2016-01-20"
-redirect_from : /2016/01/20/sccm-updating-all-drivers-after-a-migration
+redirect_from : 2016/01/20/sccm-updating-all-drivers-after-a-migration
 excerpt: "Every time you migrate from one SCCM instance to another, or if you have to move your drivers around (for instance: you originally had your drivers placed on the c:\\ and want to mover them to another drive), you'll need to update the location not only of DriverPackages, but also of all drivers as well.  This post provides a powershell script to make this easy!"
 categories: 
   - "scripting"

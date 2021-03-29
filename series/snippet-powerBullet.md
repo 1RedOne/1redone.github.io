@@ -9,7 +9,7 @@ show_sidebar: true
 
 ## PowerBullet : PushBullet for PowerShell
 
-```
+```powershell
 <#
 .Synopsis
    Use this Function to use the pushbullet service to send push messages to your browser, computer or device 

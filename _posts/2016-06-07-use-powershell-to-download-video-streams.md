@@ -1,7 +1,7 @@
 ---
 title: "Use PowerShell to download video Streams"
 date: "2016-06-07"
-redirect_from : /2016/06/07/use-powershell-to-download-video-streams
+redirect_from : 2016/06/07/use-powershell-to-download-video-streams
 excerpt: "Streaming is cool and all, but there are times when it's nice to have videos saved locally, like the huge backlog of content from MMS and TechEd.  However, a lot of streaming services want you to only view their videos within the confines of their web page, normally with a sign-in session.
 
 In this post, I'll show you a few ways to download videos you'll run across online, and how you can use PowerShell to download some of the REALLY tricky ones."

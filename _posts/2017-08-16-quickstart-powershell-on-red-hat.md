@@ -1,7 +1,7 @@
 ---
 title: "QuickStart PowerShell on Red Hat"
 date: "2017-08-16"
-redirect_from : /2017/08/16/quickstart-powershell-on-red-hat
+redirect_from : 2017/08/16/quickstart-powershell-on-red-hat
 categories: 
   - "scripting"
 tags: 

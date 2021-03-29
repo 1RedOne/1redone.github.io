@@ -1,7 +1,7 @@
 ---
 title: "WinRM and HTTPs - What happens when certs die"
 date: "2016-09-13"
-redirect_from : /2016/09/13/winrm-and-https-what-happens-when-certs-die
+redirect_from : 2016/09/13/winrm-and-https-what-happens-when-certs-die
 coverImage: ../assets/images/2016/09/images/winrm-https.png
 categories: 
   - "scripting"
