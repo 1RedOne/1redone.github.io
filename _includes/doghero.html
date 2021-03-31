@@ -1,0 +1,161 @@
+<style>
+    .customTitle{
+        -webkit-text-size-adjust: 100%;
+    --font-headings: unset;
+    --font-base: unset;
+    --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-sizing: inherit;
+    border: 0;
+    font-style: inherit;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    clear: both;    
+    font-family: Raleway,Arial,Helvetica,sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    font-size: 2.3rem;
+    text-shadow: 3px 4px #000;
+    margin-top: 15px;
+    }
+
+    .customSlug{
+        -webkit-text-size-adjust: 100%;
+    --coblocks-spacing--0: 0;
+    --coblocks-spacing--1: .5em;
+    --coblocks-spacing--2: 1em;
+    --coblocks-spacing--3: 1.5em;
+    --coblocks-spacing--4: 2em;
+    --coblocks-spacing--5: 2.5em;
+    --coblocks-spacing--6: 3em;
+    --coblocks-spacing--7: 3.5em;
+    --coblocks-spacing--8: 4em;
+    --coblocks-spacing--9: 4.5em;
+    --coblocks-spacing--10: 7em;
+    --wp-admin-theme-color: #007cba;
+    --wp-admin-theme-color-darker-10: #006ba1;
+    --wp-admin-theme-color-darker-20: #005a87;
+    --font-headings: unset;
+    --font-base: unset;
+    --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-sizing: inherit;
+    border: 0;
+    font-style: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    clear: both;
+    font-family: Raleway,Arial,Helvetica,sans-serif;
+    line-height: 1.8;
+    margin-top: .9em;
+    color: #000;
+    margin-bottom: 10px;
+    text-shadow: 2px 3px #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#eee,#333);
+    -webkit-background-clip: text;
+    }
+    .actuallyCentered{
+        display: block;
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    .heroicAndFady{
+        max-height: 950px;
+        opacity: 1;
+    }
+    .heroicAndFady:hover{        
+        opacity:0.05;
+        transform: (1.05);
+        filter:alpha(opacity=60); /* For IE8 and earlier */
+            -webkit-transition: all 2s ease-in-out;
+            -moz-transition: all 2s ease-in-out;
+            -ms-transition: all 2s ease-in-out;
+            -o-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out;
+    }
+
+    .dogDeploy {
+        width: 70px;
+        height: 70px;
+        background-color: aqua;   
+        border-radius: 50%;
+        box-shadow: 0 6px 10px 0 #333;
+        transition: all 0.1s ease-in-out;
+        
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        
+        position: absolute;
+        left: 20px;
+        top: 150px;
+        z-index: 100;
+    }
+ 
+    .dogDeploy:hover {
+        box-shadow: 0 6px 14px 0 #fff;
+        transform: scale(1.05);
+        z-index: 100;
+    }
+
+    .callToAction{
+        -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    position: relative;
+    background: linear-gradient(
+45deg
+, #D38312 10%, #A83279 90%);
+    background-size: 200% 100%;
+    padding: 1.5rem 2rem;
+    color: white;
+    border-radius: 100px;    
+    transition: 0.3s;
+    }       
+    
+</style>
+
+<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary" {% if page.hero_image %} style="background: url('{{ page.hero_image }}') no-repeat center center; background-size: cover;" {% endif %}>
+    <div class="hero-body hero-darken">
+        <div class="container heroicAndFady">
+            <a href="\" style="color:white;">
+                <img src="..\assets\images\dogDeployLogoTrans.webp" alt="Depicts a cute Smiling dog?! within the letter O of FoxDeploy" class="actuallyCentered">
+                <h1 class="customTitle is-2">DogDeploy.com</h1>
+                <p class="customSlug is-3">Dog, uh, Tails from the..er..backyard</p>
+                <a href="/bulma-clean-theme/page-1/" class="button is-info is-small callToAction">Happy April 1st! Back to FoxDeploy...</a>
+                <div class="dogDeploy glow" id="dogDeploy">
+                    <a href="\dogDeploy" style="color:white;">
+                        <img src="..\assets\images\dogIco.webp" alt="Depicts a cute golden doodle illustration.">
+                    </a>                    
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<Script>
+const range = (start, end, length = end - start + 1) =>
+  Array.from({ length }, (_, i) => start + i)
+
+var d = new Date();
+
+if (range(23,31).includes(d.getDate()) || (range(1,3).includes(d.getDate()))){
+    console.log("should show dogDeploy logo");
+    var dogDeployButton = document.getElementById("dogDeploy");
+    dogDeployButton.style.display = "show";
+    document.getElementById("homeButtonHook").text = "DogDeploy🐶"
+}
+
+</Script>
