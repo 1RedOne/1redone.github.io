@@ -21,30 +21,37 @@ layout: page
     line-height: 1;
     letter-spacing: -1px;
   }
-
-  .redirecting{display:none;}
+  
 
 </style>
 
 <div class="container">
-  <h1>404 - Foxes not found</h1>
+  <h1 id="redirectingFail">404 - Foxes not found</h1>
   <div id="redirecting" style="display:none">
-    <h3 class="redirecting">Redirecting to likely new URL</h3>
+    <h1 class="redirecting">Redirecting to likely new URL</h3>
     <img src="\assets\images\confusedPup.gif">
   </div>
-    <div>
-  <p><strong>Page not found :(</strong></p>
-  <p>Try looking outside for your page in a hot air balloons, because I don't know where it went!</p>
+  <div id="redirectingFail2">
+    <p><strong>Page not found :(</strong></p>
+    <p>Try looking outside for your page in a hot air balloons, because I don't know where it went!</p>
+  </div>
   <img src="/assets/images/highDpiFoxy.png">
   {% include gitHubLink.html %}  
 </div>
 <Script>
   if (window.location.href.endsWith('/')){
     console.log("We might have a valid redirect, trying...");
+
+    var dontshowh1 = document.getElementById("redirectingFail");
+    dontshowh1.textContent = "Might have a valid redirect, hold please!"
+
+    var dontshowh2 = document.getElementById("redirectingFail2");
+    dontshowh1.style.display = "none";        
+
     var redirecting = document.getElementById("redirecting");
     redirecting.style.display = "block";
     setTimeout(function () {
       window.location.href=(window.location.href.slice(0, -1))
-    }, 2800);
+    }, 4000);
   }
 </Script>
