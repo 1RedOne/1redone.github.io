@@ -7,7 +7,7 @@ categories:
   - "scripting"
 tags: 
   - "annoy-your-coworkers"
-  - "april1st"
+  - "april01"
   - "powershell"
 ---
 

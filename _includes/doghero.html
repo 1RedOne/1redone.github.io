@@ -60,7 +60,7 @@
     margin-top: .9em;
     color: #000;
     margin-bottom: 10px;
-    text-shadow: 2px 3px #fff;
+    filter: drop-shadow(2px 2px 2px #eee);
     font-size: 1.3rem;
     font-weight: 700;
     background: -webkit-linear-gradient(#eee,#333);
@@ -87,9 +87,9 @@
     }
 
     .dogDeploy {
-        width: 70px;
-        height: 70px;
-        background-color: aqua;   
+        width: 80px;
+        height:80px;
+        background-color: yellow;   
         border-radius: 50%;
         box-shadow: 0 6px 10px 0 #333;
         transition: all 0.1s ease-in-out;
@@ -131,14 +131,14 @@
 <section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary" {% if page.hero_image %} style="background: url('{{ page.hero_image }}') no-repeat center center; background-size: cover;" {% endif %}>
     <div class="hero-body hero-darken">
         <div class="container heroicAndFady">
-            <a href="\" style="color:white;">
+            <a href="\" style="color:white;" style="z-index: 999;">
                 <img src="..\assets\images\dogDeployLogoTrans.webp" alt="Depicts a cute Smiling dog?! within the letter O of FoxDeploy" class="actuallyCentered">
-                <h1 class="customTitle is-2">DogDeploy.com</h1>
+                <h1 class="customTitle is-2" style="z-index: 999;">DogDeploy.com</h1>
                 <p class="customSlug is-3">Dog, uh, Tails from the..er..backyard</p>
-                <a href="/bulma-clean-theme/page-1/" class="button is-info is-small callToAction">Happy April 1st! Back to FoxDeploy...</a>
+                <a href="\" class="button is-info is-small callToAction" style="z-index: 999;">Happy April 1st! Back to FoxDeploy...</a>
                 <div class="dogDeploy glow" id="dogDeploy">
                     <a href="\dogDeploy" style="color:white;">
-                        <img src="..\assets\images\dogIco.webp" alt="Depicts a cute golden doodle illustration.">
+                        <img src="..\assets\images\bernieButtonSmoll.png" alt="Depicts a cute golden doodle illustration.">
                     </a>                    
                 </div>
             </a>

@@ -3,7 +3,7 @@ title: "Progressive Automation Pt II - PowerShell GUIs"
 date: "2020-05-08"
 tags: 
   - "scripting"
-  - "PowerShell"
+  - "powerShell"
 coverImage: "../assets/images/2020/05/images/progressive-automation-pt-ii.png"
 excerpt : "In our previous post in the series, we took a manual task and converted it into a script, but our users could only interface with it by ugly manual manipulation of a spreadsheet.  So in this post, I'll show how I would typically go about building a PowerShell WPF GUI from an existing automation that kind of works OK."
 redirect_from: /2020/05/08/progressive-automation-pt-ii-powershell-guis/

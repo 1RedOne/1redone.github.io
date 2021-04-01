@@ -18,6 +18,8 @@ Or not!  But if you're like my friend Ryan Engstrom on Twitter, and wanted me to
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Please put together a thread of all your &#39;dog size update&#39; photos.</p>&mdash; Ryan Engstrom (@ryandengstrom) <a href="https://twitter.com/ryandengstrom/status/1366128830419783682?ref_src=twsrc%5Etfw">February 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Then check out the April Fools Page, over here, by clicking the link below!
+Then check out the April Fools Page, over here, by clicking the link below!  
 
-![Header for this post, which is the normal FoxDeploy logo but with a shaggy dog in place of foxes'](..\assets\images\dogDeployHero.webp)
+[![Header for this post, which is the normal FoxDeploy logo but with a shaggy dog in place of foxes'](..\assets\images\dogDeployHero.webp)](/dogDeploy)
+
+Or click the little Bernie button floating up above!

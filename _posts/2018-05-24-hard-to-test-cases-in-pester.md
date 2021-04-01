@@ -5,8 +5,8 @@ redirect_from : 2018/05/24/hard-to-test-cases-in-pester
 coverImage: goes here...
 tags: 
   - "scripting"
-  - Pester
-  - Unit Tests
+  - pester
+  - testing
 coverImage: "../assets/images/2018/05/images/hard-to-test-cases-in-pester1.png"
 ---
 

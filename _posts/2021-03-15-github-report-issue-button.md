@@ -6,7 +6,7 @@ coverImage: ..\assets\images\2021\title_GithubButton.webp
 categories: 
   - "scripting"
 tags: 
-  - "Jekyll"
+  - "jekyll"
   - "blogging"
   - "github"
 excerpt: "I have long admired the Report Issue button on Microsoft Docs and sought to recreate it.  Then I loved it so much, I added it to the end of every post!  Here's how, and you can just copy and paste it and then take the rest of the day off!"
