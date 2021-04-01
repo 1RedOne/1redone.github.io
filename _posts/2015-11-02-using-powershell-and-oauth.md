@@ -1,7 +1,9 @@
 ---
 title: "Using PowerShell and oAuth"
 date: "2015-11-02"
-redirect_from : /2015/11/02/using-powershell-and-oauth
+redirect_from : 
+  - /2015/11/02/using-powershell-and-oauth
+  - 2015/11/02/using-powershell-and-oauth/
 coverImage: ..\assets\images\foxPlaceHolder.webp
 categories: 
   - "scripting"

@@ -1,7 +1,9 @@
 ---
 title: "MDM errors failures and how to fix them"
 date: "2017-08-04"
-redirect_from : 2017/08/04/mdm-errors-failures-and-how-to-fix-them
+redirect_from : 
+  - 2017/08/04/mdm-errors-failures-and-how-to-fix-them
+  - 2017/08/04/mdm-errors-failures-and-how-to-fix-them/
 categories: 
   - "sccm"
 tags: 

@@ -1,7 +1,9 @@
 ---
 title: "Adding tab-completion to your PowerShell Functions"
 date: "2017-01-13"
-redirect_from : 2017/01/13/adding-tab-completion-to-your-powershell-functions
+redirect_from : 
+ - 2017/01/13/adding-tab-completion-to-your-powershell-functions
+ - 2017/01/13/adding-tab-completion-to-your-powershell-functions/
 coverImage: ../assets/images/2017/01/images/upgrade-your-code1.png
 categories: 
   - "scripting"

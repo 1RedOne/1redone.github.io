@@ -3,6 +3,7 @@ layout: page
 title: Tools | SQL Query Cheatsheet
 permalink: /series/snippet-randomSql
 hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
+redirect_from: functions/code-and-scripts/sql-queries/useful-sccm-disk-report/
 hero_height: is-medium
 show_sidebar: true
 ---

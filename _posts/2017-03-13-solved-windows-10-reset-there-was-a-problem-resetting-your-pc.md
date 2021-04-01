@@ -2,6 +2,7 @@
 title: "SOLVED! Windows 10 Reset - There was a problem resetting your PC"
 date: "2017-03-13"
 coverImage: ../assets/images/2017/03/images/solved.png
+redirect_from: 2017/03/13/solved-windows-10-reset-there-was-a-problem-resetting-your-pc/
 categories: 
   - "hacking"
   - "quickies"

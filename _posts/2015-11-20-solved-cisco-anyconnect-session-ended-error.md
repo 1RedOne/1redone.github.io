@@ -1,7 +1,9 @@
 ---
 title: "Solved: Cisco AnyConnect 'Session Ended' error"
 date: "2015-11-20"
-redirect_from : /2015/11/20/solved-cisco-anyconnect-session-ended-error
+redirect_from : 
+ - /2015/11/20/solved-cisco-anyconnect-session-ended-error
+ - 2015/11/20/solved-cisco-anyconnect-session-ended-error/
 coverImage: ..\assets\images\foxPlaceHolder.webp
 categories: 
   - "scripting"
