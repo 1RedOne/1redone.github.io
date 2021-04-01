@@ -15,15 +15,36 @@ layout: page
     line-height: 1;
     letter-spacing: -1px;
   }
+  h3 {
+    margin: 30px 0;
+    font-size: 2em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .redirecting{display:none;}
+
 </style>
 
 <div class="container">
   <h1>404 - Foxes not found</h1>
-
+  <div id="redirecting" style="display:none">
+    <h3 class="redirecting">Redirecting to likely new URL</h3>
+    <img src="\assets\images\confusedPup.gif">
+  </div>
+    <div>
   <p><strong>Page not found :(</strong></p>
   <p>Try looking outside for your page in a hot air balloons, because I don't know where it went!</p>
+  <img src="/assets/images/highDpiFoxy.png">
   {% include gitHubLink.html %}  
 </div>
-
-<img src="/assets/images/highDpiFoxy.png">
-
+<Script>
+  if (window.location.href.endsWith('/')){
+    console.log("We might have a valid redirect, trying...");
+    var redirecting = document.getElementById("redirecting");
+    redirecting.style.display = "block";
+    setTimeout(function () {
+      window.location.href=(window.location.href.slice(0, -1))
+    }, 5000);
+  }
+</Script>
