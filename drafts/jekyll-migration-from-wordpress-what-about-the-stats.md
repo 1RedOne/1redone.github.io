@@ -1,8 +1,8 @@
 ---
 title: "Jekyll Migration From WordPress - What about the stats?!"
-date: "2021-04-10"
-redirect_from : 2021/04/10/github-report-issue-button
-coverImage: ..\assets\images\2021\imageNeeded.webp
+date: "2021-04-12"
+redirect_from : 2021/04/12/jekyll-migration-stats
+coverImage: ..\assets\images\2021\trackingStates.webp
 categories: 
   - "scripting"
 tags: 
@@ -10,7 +10,7 @@ tags:
   - "blogging"
   - "github"
   - "draft"
-excerpt: "In migrating from Wordpress.com hosting, I noticed that there wasn't any great one solution for the 'WordPress Stats' info I got from WordPress' JetPack Service.  In this post, I'll show you exactly how I recreated both the utility AND more importantly the Vanity I got from WordPress Stats (the later to satify my ego!)"
+excerpt: "In migrating from Wordpress.com hosting, I noticed that there wasn't any great one solution for the 'WordPress Stats' info I got from WordPress' JetPack Service.  In this post, I'll show you exactly how I recreated both the utility AND more importantly the Vanity I got from WordPress Stats (the later to satisfy my ego!)"
 fileName: '2021-04-10-jekyll-migration-from-wordpress-what-about-the-stats'
 ---
 
