@@ -61,6 +61,7 @@ All I *really* needed was an API that could increment simply.  I thought of writ
 But then...I got lazy.
 
 ![depicts an adorable small black kitten asleep on a laptop keyboard](/assets/images/2021/lazyCat.webp)
+
 *My normal level of energy on a given day*
 
 So I hunted for an easy peasey API, and found a great one in [countapi.xyz](https://api.countap.xyz](https://api.countapi.xyz/))
@@ -87,12 +88,11 @@ Now I have a mechanism to track my hits, I just need to actually trigger this wh
 
 ## Automatically adding it to posts in Jekyll
 
-This was really easy.  My blog theme, Bulma-Clean-Theme already had a look and feel I liked from my site on WordPress (foxdeploy.wordpress.com)[https://www.foxdeploy.wordpress.com], so with a minimal amount of configuration, I had something that felt familiar.
+This was really easy.  My blog theme, Bulma-Clean-Theme already had a look and feel I liked from my site on WordPress [foxdeploy.wordpress.com](https://www.foxdeploy.wordpress.com), so with a minimal amount of configuration, I had something that felt familiar.
 
 It even had a great sidebar function, provided via a file called `Latest-Posts.html`.  Here's mine if you want to see what it looks like:
 
-(latest-posts)[
-https://github.com/1RedOne/1redone.github.io/blob/master/_includes/latest-posts.html]
+[latest-posts](https://github.com/1RedOne/1redone.github.io/blob/master/_includes/latest-posts.html)
 
 ![depicts Tails from Sonic the Hedge, blushing](/assets/images/2021/tailsBlush.gif)
 
