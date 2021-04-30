@@ -82,7 +82,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rexml (3.2.4)
+    rexml (3.2.5)
     rouge (3.26.0)
     ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
@@ -99,7 +99,6 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2021.1)
       tzinfo (>= 1.0.0)
-    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -116,7 +115,6 @@ DEPENDENCIES
   jekyll-remote-theme
   kramdown-parser-gfm
   tzinfo-data
-  wdm (~> 0.1.0)
 
 BUNDLED WITH
    2.2.10
