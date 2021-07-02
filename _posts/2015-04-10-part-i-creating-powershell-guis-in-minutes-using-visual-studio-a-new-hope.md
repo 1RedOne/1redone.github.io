@@ -152,5 +152,5 @@ In this guide, we installed Visual Studio and spent some time creating a WPF Pow
 
 Read on, intrepid reader, to find out.
 
-* [Series Home page ](http://foxdeploy.com/resources/learning-gui-toolmaking-series/) 
-* [Part II - Deploying PowerShell GUIs in Minutes using Visual Studio](http://foxdeploy.com/2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio/)
+* [Series Home page ](https://www.foxdeploy.com/series/LearningGUIs) 
+* [Part II - Deploying PowerShell GUIs in Minutes using Visual Studio](https://www.foxdeploy.com/blog/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio.html)

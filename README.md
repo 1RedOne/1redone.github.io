@@ -11,10 +11,10 @@ Post | Code Complete | Drafted | Ready | Published
 --| --|--|-- |--
 PowerShell Lazy Caching | ✔ | ✔ | ✔ | ✔ March 05
 GitHub Report Issue Link  | ✔ | ✔| ✔ | ✔ March 10 
-April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍ | ❔
-Migrating to Jekyll from Wordpress  | ✔ | ❌ | ❌  | ~April 07
-The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌ | ~April 10
-PowerShell DVT Testing  | ✔ | ❌ | ❌ | ~April 12
+April Fools Post | 🦊 | 🐶 | 🐕‍🦺🐕‍ | ✔ April 01 
+Migrating to Jekyll from Wordpress  | ✔ | ✔ | ✔  | ✔ April 13 
+The Power of ExceptionFilters in C# 7  | ✔ | ❌ | ❌ | ~April 17
+PowerShell DVT Testing  | ✔ | ❌ | ❌ | ~April 
 Test Driven POC | ❌ | ❌ | ❌
 Making Working Tags Lists in Jekyll Easily| ❌ | ❌ | ❌
 
