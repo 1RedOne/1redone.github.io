@@ -1,7 +1,9 @@
 ---
 title: "DSC vs. GPO vs. SCCM, the case for each."
 date: "2016-02-25"
-redirect_from : 2016/02/25/dsc-vs-gpo-vs-sccm-the-case-for-each
+redirect_from : 
+ - 2016/02/25/dsc-vs-gpo-vs-sccm-the-case-for-each
+ - 2016/02/25/dsc-vs-gpo-vs-sccm-the-case-for-each/
 coverImage: ../assets/images/2016/02/images/eva-post.png
 categories: 
   - "consulting"

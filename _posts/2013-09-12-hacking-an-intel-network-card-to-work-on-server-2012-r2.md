@@ -1,7 +1,9 @@
 ---
 title: "Hacking an Intel network card to work on Server 2012 R2"
 date: "2013-09-12"
-redirect_from : /2013/09/12/hacking-an-intel-network-card-to-work-on-server-2012-r2
+redirect_from : 
+ - /2013/09/12/hacking-an-intel-network-card-to-work-on-server-2012-r2
+ - 2013/09/12/hacking-an-intel-network-card-to-work-on-server-2012-r2/
 excerpt: "With the release of Server 2012 R2, I decided to rebuild my test lab on the newest of the new.  The 'newy-new' as we call it in the field.
 
 The install of Server 2012 R2 was relatively uneventful.  However, my Ethernet adapter was not detected.  Thinking myself a wise man, I went to the Asus website to find the Ethernet software, however the installation failed with 'OS version not supported'. Such is the life on the bleeding edge."
