@@ -42,7 +42,9 @@ param($postTitle,$postDate, $postExcerpt,$postTags)
     "would be created as $calculatedFileName.md"
 }
 
-New-BlogPost -postDate 2021-07-06 `
+$targetDate =  get-date ([DateTime]::Now.AddDays(-1)) -UFormat %Y-%m-%d
+
+New-BlogPost -postDate $targetDate `
     -postTitle "Got messy Ifs Guard Clauses to the Rescue" `
     -postExcerpt "Revisiting PowerShell after mostly writing nothing but c# for years, I'm finding lots of useful programming practices can make my code easier to read.  In this post, we'll talk about guard clauses and how they can make your code easier to read!" `
     -postTags ham,onionions,cheese,foxes | clip
