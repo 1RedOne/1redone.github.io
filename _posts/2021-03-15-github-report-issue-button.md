@@ -1,6 +1,7 @@
 ---
 title: "GitHub Report Issue Button"
 date: "2021-03-15"
+layout: post
 redirect_from : 2021/03/15/github-report-issue-button
 coverImage: ..\assets\images\2021\title_GithubButton.webp
 categories: 

@@ -1,6 +1,7 @@
 ---
 title: "Got messy Ifs? Guard Clauses to the Rescue!"
 date: "2021-07-02"
+layout: post
 redirect_from : 2021/07/02/got-messy-ifs-guard-clauses-to-the-rescue/
 coverImage: \assets\images\2021\Guard-Clauses.png
 categories: 

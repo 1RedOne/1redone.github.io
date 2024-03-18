@@ -1,6 +1,7 @@
 ---
 title: "Solving internet connectivity drop with Game Pass on Windows 10 PCs"
 date: "2024-03-14"
+layout: post
 redirect_from : 2024/03/14/Solving-internet-connectivity-drop-with-Game-Pass-on-Windows-10-PCs
 coverImage: \assets\images\2024\SolvedNetworkFails.webp
 categories:

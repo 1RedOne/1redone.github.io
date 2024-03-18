@@ -1,6 +1,7 @@
 ---
 title: "DIY Microsoft Teams On-Air Light!"
 date: "2020-07-28"
+layout: post
 tags: 
   - "hackathon"
   - "ifttt"
