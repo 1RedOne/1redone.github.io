@@ -13,65 +13,26 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
-excerpt_separator: <!--more-->
 title: FoxDeploy.com
-email: stephen@foxDeploy.com
+email: stephen@foxdeploy.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Systems Management tails from the foxhole
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.foxdeploy.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: foxdeploy
-github_username:  1RedOne
-permalink: /blog/:title.html
-disqus_shortname: foxdeploy-com.disqus.com
-google_analytics: UA-60348969-1
-fixed_navbar: top
-theme_color: '#333333'
-#permalink: /:year/:month:/:title.html
+github_username:  1redone
+
 # Build settings
 markdown: kramdown
-#theme: minima
-paginate: 6
 theme: bulma-clean-theme
 remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
-  - jekyll-gist  
   - jekyll-remote-theme
-  - jekyll-redirect-from
-  - jekyll-paginate
-  
-hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      author: "Stephen Owen"
-      layout: post
-      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
-      show_sidebar: true
-      hero_link: "FoxDeploy.com" 
+  - jekyll-gist
 
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      author: "Stephen Owen"
-      layout: post
-      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
-      show_sidebar: true
-      
-exclude: [node_modules]
-
-# excluding for now b/c I'm noot sure if setting this returns this header for all values or not
-# webrick:
-#   headers:
-#     Cache-Control: max-age=604800;
-    
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
