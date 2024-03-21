@@ -23,17 +23,50 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: foxdeploy
 github_username:  1redone
+permalink: /blog/:title.html
+disqus_shortname: foxdeploy-com.disqus.com
+google_analytics: UA-60348969-1
+fixed_navbar: top
+theme_color: '#333333'
 layout: post
 
+
 # Build settings
+paginate: 6
 markdown: kramdown
 theme: bulma-clean-theme
 remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
-  - jekyll-gist
+  - jekyll-gist    
+  - jekyll-redirect-from
+  - jekyll-paginate
 
+hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Stephen Owen"
+      layout: post
+      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
+      show_sidebar: true
+      hero_link: "FoxDeploy.com" 
+
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      author: "Stephen Owen"
+      layout: post
+      hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
+      show_sidebar: true
+
+exclude: [node_modules]
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
