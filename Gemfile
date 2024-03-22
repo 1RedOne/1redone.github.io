@@ -26,7 +26,6 @@ group :jekyll_plugins do
   gem "jekyll-gist", "~> 1.4"
   gem "jekyll-remote-theme"
   gem "jekyll-postfiles"
-  gem "jekyll-gist"  
   gem "jekyll-redirect-from"
   gem "jekyll-paginate"
 end
