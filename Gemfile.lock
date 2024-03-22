@@ -45,6 +45,10 @@ GEM
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
     jekyll-paginate (1.1.0)
+    jekyll-postfiles (3.1.0)
+      jekyll (>= 3.8.6, < 5)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-remote-theme (0.4.3)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
@@ -113,7 +117,10 @@ DEPENDENCIES
   jekyll (~> 3.9.0)
   jekyll-feed (~> 0.6)
   jekyll-gist (~> 1.4)
-  jekyll-remote-theme (~> 0.4.1)
+  jekyll-paginate
+  jekyll-postfiles
+  jekyll-redirect-from
+  jekyll-remote-theme
   kramdown-parser-gfm
   minima (~> 2.0)
   tzinfo (~> 1.2)
