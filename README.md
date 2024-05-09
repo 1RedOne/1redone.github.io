@@ -26,6 +26,7 @@ To run the site locally, first mirror this repo, then install Ruby for Windows.
 * Chose options 1 & 3
 * add Ruby install dir to %PATH% variable
 * run `InstallSiteDependencies.bat` and rerun until completes without errors (may need to install missing components)
+* In case of errors, make sure to toggle between #theme and #remote-theme in the config.yml file
 * run `StartJekyllLocally.bat` to verify layout works and to troubleshoot errors. 
 
 
