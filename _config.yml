@@ -33,8 +33,8 @@ layout: post
 # Build settings
 paginate: 6
 markdown: kramdown
-#theme: bulma-clean-theme
-remote_theme: chrisrhymes/bulma-clean-theme
+theme: bulma-clean-theme
+#remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
