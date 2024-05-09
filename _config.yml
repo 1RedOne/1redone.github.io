@@ -31,7 +31,7 @@ theme_color: '#333333'
 layout: post
 
 # when using a github action, this super annoyingly tries to render vendor packages pages.  
-exclude: [vendor,vender,vendor/bundle/,vendor/,/home/runner/work/1redone.github.io/1redone.github.io/vendor/]
+exclude: [vendor,vender,vendor/bundle/,vendor/,/home/runner/work/1redone.github.io/1redone.github.io/vendor/, node_modules]
 
 # Build settings
 paginate: 6
@@ -68,7 +68,6 @@ defaults:
       hero_image: /assets/images/foxdeployMOUNTAINTOP_hero.webp
       show_sidebar: true
 
-exclude: [node_modules]
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
