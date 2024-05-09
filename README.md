@@ -29,6 +29,9 @@ To run the site locally, first mirror this repo, then install Ruby for Windows.
 * In case of errors, make sure to toggle between #theme and #remote-theme in the config.yml file
 * run `StartJekyllLocally.bat` to verify layout works and to troubleshoot errors. 
 
+Monitor build progress here 
+
+[Build Progress](https://github.com/1RedOne/1redone.github.io/actions)
 
 * * * 
 

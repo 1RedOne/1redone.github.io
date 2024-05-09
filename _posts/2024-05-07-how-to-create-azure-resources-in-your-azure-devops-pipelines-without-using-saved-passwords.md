@@ -10,10 +10,10 @@ categories:
   - "managedServiceIdentity"
 tags:
  - "devops"
-excerpt: "Using saved passwords in Azure Devops Pipelines is sooooo 2023.  The new hotness is using Azure Workload Id Federation.  It only took me 27 tries to get it right, and you can learn to do it form me correctly the first time. "
+excerpt: "Using saved passwords in Azure Devops Pipelines is sooooo 2023.  The new hotness is using Azure Workload Id Federation.  It only took me 27 tries to get it right, and you can learn to do it from me correctly the first time. "
 fileName: '2024-05-07-how-to-create-azure-resources-in-your-azure-devops-pipelines-without-using-saved-passwords'
 ---
-Using saved passwords in Azure Devops Pipelines is sooooo 2023.  The new hotness is using Azure Workload Id Federation.  It only took me 27 tries to get it right, and you can learn to do it form me correctly the first time.
+Using saved passwords in Azure Devops Pipelines is sooooo 2023.  The new hotness is using Azure Workload Id Federation.  It only took me 27 tries to get it right, and you can learn to do it from me correctly the first time.
 
 ![Header for this post, reads 'How To Make GitHub Button'](/assets/images/2024/MigratingAzureDevopPipelinesToUseMSIs.png)
 
