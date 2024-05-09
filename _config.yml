@@ -30,13 +30,6 @@ fixed_navbar: top
 theme_color: '#333333'
 layout: post
 
-load_paths:
-  - _sass
-  - node_modules
-
-sass:
-  sass_dir: _sass
-
 # Build settings
 paginate: 6
 markdown: kramdown
