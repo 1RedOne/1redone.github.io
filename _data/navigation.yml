@@ -44,3 +44,5 @@
   dropdown:
     - name: View site Repository
       link: https://github.com/1RedOne/1redone.github.io
+    - name: View Site Build Activity
+      link: https://github.com/1RedOne/1redone.github.io/actions
