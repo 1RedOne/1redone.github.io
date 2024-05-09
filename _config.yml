@@ -30,6 +30,9 @@ fixed_navbar: top
 theme_color: '#333333'
 layout: post
 
+# when using a github action, this super annoyingly tries to render vendor packages pages.  
+exclude: [vendor]
+
 # Build settings
 paginate: 6
 markdown: kramdown
