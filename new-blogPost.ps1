@@ -1,4 +1,4 @@
-﻿$base = @"
+﻿$global:base = @"
 ---
 title: "PostTitle"
 date: "calculatedPostDate"
@@ -24,6 +24,13 @@ calculatedPostExcerpt
 "@
 
 function New-BlogPost{
+<#
+.EXAMPLES
+New-BlogPost -postDate $targetDate `
+    -postTitle "Got messy Ifs Guard Clauses to the Rescue" `
+    -postExcerpt "Revisiting PowerShell after mostly writing nothing but c# for years, I'm finding lots of useful programming practices can make my code easier to read.  In this post, we'll talk about guard clauses and how they can make your code easier to read!" `
+    -postTags ham,onionions,cheese,foxes | clip
+#>
 param($postTitle,$postDate, $postExcerpt,$postTags)
     $postContent = $base 
     $calculatedPostTitle= $postTitle -replace " ","-"
@@ -40,11 +47,11 @@ param($postTitle,$postDate, $postExcerpt,$postTags)
 
     $postContent -replace "postTitle", $postTitle
     "would be created as $calculatedFileName.md"
+
+    $postContent
+    remove-item $calculatedFileName
+    new-item -Name $calculatedFileName -Value $postContent -ItemType File -force
 }
 
 $targetDate =  get-date ([DateTime]::Now.AddDays(-1)) -UFormat %Y-%m-%d
 
-New-BlogPost -postDate $targetDate `
-    -postTitle "Got messy Ifs Guard Clauses to the Rescue" `
-    -postExcerpt "Revisiting PowerShell after mostly writing nothing but c# for years, I'm finding lots of useful programming practices can make my code easier to read.  In this post, we'll talk about guard clauses and how they can make your code easier to read!" `
-    -postTags ham,onionions,cheese,foxes | clip
