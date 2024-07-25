@@ -2,14 +2,14 @@
 title: "Solved!  Missing mouse or trackpad on LG Laptops"
 date: "2024-07-17"
 redirect_from : 2024/07/23/2024-07-23-solved-missing-mouse-or-trackpad-on-lg-laptops
-coverImage: \assets\images\2024\MissingMouse.jpg
+coverImage: \assets\images\2024\MissingMouse.png
 categories: 
   - "troubleshooting"
 excerpt: "Have you ever needed to do complex automation in Azure Devops?  Like retrieving a token for one service and handing it off to subsequent commands to use?  Then you might have been puzzled about the correct syntax to use.  In this post, I'll give you a working example of how the syntax should be used to hand variables between bash and PowerShell tasks in Azure Devops"
 fileName: '2024-07-23-solved-missing-mouse-or-trackpad-on-lg-laptops'
 ---
 
-![Header for this post, reads 'Handing off variables in ADO'](\assets\images\2024\MissingMouse.jpg)
+![Header for this post, reads 'Handing off variables in ADO'](\assets\images\2024\MissingMouse.png)
 ## But first, a rant
 
 LG, Do better.
