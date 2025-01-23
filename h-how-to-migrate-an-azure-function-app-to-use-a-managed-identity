@@ -1,0 +1,24 @@
+---
+title: "PostTitle"
+date: "h"
+redirect_from : /How-to-migrate-an-Azure-Function-app-to-use-a-Managed-Identity
+coverImage: \assets\images\2021\trackingStates.webp
+categories: 
+  - "scripting"
+tags: 
+
+ - "AzureFunctions" 
+ - "ManagedIdentity"
+excerpt: "Recently I came upon the need to harden how some Azure Functions were setup.  Specifically, they were Azure Functions setup to fire and run some c# code when a message was dropped into a message queue.  They worked great, but we would much rather use the security of a Managed Identity to connect, instead using of using a connection string."
+fileName: 'h-how-to-migrate-an-azure-function-app-to-use-a-managed-identity'
+---
+Recently I came upon the need to harden how some Azure Functions were setup.  Specifically, they were Azure Functions setup to fire and run some c# code when a message was dropped into a message queue.  They worked great, but we would much rather use the security of a Managed Identity to connect, instead using of using a connection string.
+
+![Header for this post, reads 'How To Make GitHub Button'](\assets\images\2021\trackingStates.webp)
+
+*Post Outline*
+
+* What were WordPress Stats?
+* Finding a way to satisfy my ego
+* Automatically adding it below posts in Jekyll
+* How does this compare to Google Analytics?
