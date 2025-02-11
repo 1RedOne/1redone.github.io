@@ -36,6 +36,7 @@ These are being built or are a complete idea and ready to be built.
 
 ## Golden Retriever
 Design: A golden retriever dog in Balatro-style with two tennis balls in its mouth.
+![alt text](../assets/images/balatro/goldenRetriever.png)
 
 Effect:
 When a gold card is played, one in three chance of a copy of it being added to your deck.
