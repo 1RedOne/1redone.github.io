@@ -77,7 +77,7 @@ Special Mechanic: Has a chance to count twice, similar to the Blood mechanic.
 
 Art Concepts
 
-![alt text](assets/images/balatro/fickleFoxLevel1.webp)
+![alt text](../assets/images/balatro/fickleFoxLevel1.webp)
 
 
 ## Fickle Fox Follow Up
@@ -86,16 +86,16 @@ Art Concepts
 - Follow up Joker, similar to Gros Michel and Cavendish, once fleet fox vanshes
 - Gold Seal cards apply 1.5x mult
 
-![alt text](assets/images/balatro/fickleFoxLevel2.webp)
+![alt text](../assets/images/balatro/fickleFoxLevel2.webp)
 
 ## Summoning Circle Tarot
 
 - - Apply the 'Tag Effect' of Free Uncommon or Rare
 - - Applies 'Free Reroll' 
 
-![alt text](assets/images/balatro/Balatro_Summoning_Circle.webp)
+![alt text](../assets/images/balatro/Balatro_Summoning_Circle.webp)
 
-![alt text](assets/images/balatro/greaterCircle.png)
+![alt text](../assets/images/balatro/greaterCircle.png)
 
 # Concept Phase Cards
 
