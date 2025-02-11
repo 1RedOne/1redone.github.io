@@ -142,7 +142,7 @@ Greater Summoning Circle Tarot → Applies tag, like 'Rare free joker in shop'
 - Planetary cards apply steel like mult
 - Dusk - retrigger all cards on final hand
 
-Ideas -
+### Ideas -
 
 Orbital Bombardment 
 - Blue seal cards apply an extra affect Joker, maybe we can name after a famous original astronomer?
@@ -159,7 +159,7 @@ Orbital Bombardment
 
 ### Special Thanks
 
-Special thanks to the official Balatro / Balatro modding discord
-Special thanks to the Extra Credit team for their fantastic documentation on Balatro and modding
-Special thanks to the Triple Click podcast for introducing me to Balatro
-Special thanks to Roffle for introducing me to the world of modded Balatro
+- Special thanks to the official Balatro / Balatro modding discord
+- Special thanks to the Extra Credit team for their fantastic documentation on Balatro and modding
+- Special thanks to the Triple Click podcast for introducing me to Balatro
+- Special thanks to Roffle for introducing me to the world of modded Balatro
