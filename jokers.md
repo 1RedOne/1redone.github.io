@@ -112,12 +112,19 @@ Need better themeing ideas for this card
 These cards all need some more work in the areas of theming and affects
 
 Clone Card → Creates one copy of itself and increases the copy’s power level by +1.
+
 Beautiful Fox → Interacts specifically with cards numbered 7.
+
 Ethereal Nine-Tailed Fox → Interacts specifically with cards numbered 9.
+
 Undertow → Replaces a played single card with a number 8 card.
+
 Squidlord → Eights become lucky & wild, and hit twice.
+
 Enfeeble Tarot → Decreases the power of up to two cards (i.e. 2 becomes Ace, Ace becomes King)
+
 Lesser Summoning Circle Tarot → Applies tag, like 'Uncommon free joker in shop' 
+
 Greater Summoning Circle Tarot → Applies tag, like 'Rare free joker in shop' 
 
 
