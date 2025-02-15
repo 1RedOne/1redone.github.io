@@ -4,6 +4,8 @@ title: Balatro Mod Project
 permalink: /jokers/
 ---
 
+## FoxDeploy Balatro Mod
+
 Hi!  I've begun working on a balatro mod.  A full release and github project will come later!
 
 This doc is laid out in this order:
@@ -15,10 +17,11 @@ This doc is laid out in this order:
 
 Type | Status | Card Name
 --|---|---
-Joker | Golden Retriever | Debugging
-Joker | Akuma Themed Card | Approved, ready
-Joker | Fickle Fox | Approved
-Joker | Fickle Fox Follow Up | Planning
+Joker | Golden Retriever | Done
+Joker | Lucky Retriever | Done
+Joker | Fickle Fox | Done
+Joker | Fickle Fox Follow Up | Done
+Joker | Akuma Themed Card | Testing
 Joker | Power Up First Card | Planning
 Joker | Fox Themed | Planning
 Joker | Kyuubi Themed | Planning
