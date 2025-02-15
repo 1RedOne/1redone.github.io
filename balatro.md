@@ -8,6 +8,9 @@ permalink: /jokers/
 
 Hi!  I've begun working on a balatro mod.  A full release and github project will come later!
 
+![alt text](../assets/images/balatro/PawlatroLogo.png)
+
+
 This doc is laid out in this order:
 * Overall list of all cards names and their status
 * Approved Cards - Cards being built or fully fleshed out
