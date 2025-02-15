@@ -71,18 +71,22 @@ When a lucky card is played, one in three chance of a copy of it being added to 
 
 Art Concepts
 
-![alt text](../assets/images/balatro/fickleFoxLevel1.webp)
+![alt text](../assets/images/balatro/ficklefox.png)
 
 
-## Fickle Fox Follow Up - Belevolance
+## Fickle Fox Follow Up - Benevolance
 
 - - Benevolant Fox God
 - Follow up Joker, similar to Gros Michel and Cavendish, once fleet fox vanshes
 - Gold Seal cards apply 1.5x mult
 
-![alt text](../assets/images/balatro/fickleFoxLevel2.webp)
+Concept art - unused
 
+![alt text](../assets/images/balatro/benevolanceConcept.png)
 
+Finalized art
+
+![alt text](../assets/images/balatro/benevolance.png)
 
 ## A Kuma
 ![alt text](../assets/images/balatro/a_kuma.png)
