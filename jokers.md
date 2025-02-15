@@ -50,24 +50,14 @@ Should say "Good boy!' when this happens
 
 ✅ - Card Functions
 
-❌ - Card Completed
 
-Troubleshooting
-* Need to fix message
-* card procs too much 
-* should the new cards appear in your hand or in the deck, like the stone card?
-* Odds should be higher, if we are retriggering, the 'good boy' bonus should be lower, like the +mult from luckies
+## Lucky Retriever
+Design: A golden retriever dog in Balatro-style with two tennis balls in its mouth.
+![alt text](../assets/images/balatro/luckyRetriever.png)
 
-## Heaven's Gate - Raging Demon Card
+Effect:
+When a lucky card is played, one in three chance of a copy of it being added to your deck.
 
-Card Design ideas: 
-* Features the Japanese kanji for "Heaven" (天), pronounced "ten".
-* Akuma looking joker
-* Backwards facing fighter with kanji for heaven
-* Backwards facing fighter with katakana for 'joker' 
-
-Effect: When a 10 is played, grants +15 chips and a random buff.
-Special Mechanic: Has a chance to count twice, similar to the Blood mechanic.
 
 ## Fickle Fox 
 
@@ -81,13 +71,28 @@ Art Concepts
 ![alt text](../assets/images/balatro/fickleFoxLevel1.webp)
 
 
-## Fickle Fox Follow Up
+## Fickle Fox Follow Up - Belevolance
 
 - - Benevolant Fox God
 - Follow up Joker, similar to Gros Michel and Cavendish, once fleet fox vanshes
 - Gold Seal cards apply 1.5x mult
 
 ![alt text](../assets/images/balatro/fickleFoxLevel2.webp)
+
+
+
+## A Kuma
+![alt text](../assets/images/balatro/a_kuma.png)
+Card Design ideas: 
+* Features the Japanese kanji for "Heaven" (天), pronounced "ten".
+* Akuma looking joker
+* Backwards facing fighter with kanji for heaven
+* Backwards facing fighter with katakana for 'joker' 
+
+Effect: When a 10 is played, grants +15 chips and a random buff.
+Special Mechanic: Has a chance to count twice, similar to the Blood mechanic.
+
+# Approved Cards
 
 ## Summoning Circle Tarot
 
@@ -136,27 +141,115 @@ Greater Summoning Circle Tarot → Applies tag, like 'Rare free joker in shop'
 * enable issues
 * create Releases pipeline for ease of use
 
+## End Game Fun Improvements
+I want to workshop some Ideas for long term viability, i.e. most of the power in decks comes from same-same builds like Mime and Baron
 
-* * Workshop some Ideas for long term viability, i.e. most of the power in decks comes from same-same builds like Mime and Baron
+### Sources of end game viabulity today
 - Mime - retrigger all cards in hand
 - Baron - steel like trigger for all kings held in hand
-- Planetary cards apply steel like mult
+- Planetary cards apply steel like mult with certain legendary
 - Dusk - retrigger all cards on final hand
 
-### Ideas -
+### Ideas
+- I'd like a one/two joker setup in my mod.  One applied a buff to a card but is ephemeral
+- another low probability card rewards the buff.  Players could have fun using Death and the copy card spectral to make more, or use deck thinning.  Thought is that maybe we increase the xMult per card played with buff, OR when a card with buff is played, increase Joker xMult.  
 
-Orbital Bombardment 
+Fickly Joker Idea for long term viability
+- Fickle Joker Idea - elemental joker which changes alignment.  If only cards of alignment are played, xMult upgrades once per round.  But resets if wrong alignment played.
+
+## General Card Concepts
+
+### Orbital Bombardment 
 - Blue seal cards apply an extra affect Joker, maybe we can name after a famous original astronomer?
 - Gold seal card affect joker?  Midas?  Gold seal cards add mult = to held dollars in hand
 
-- Fickle Fox
+### Fickle Fox
 - - Applies gold seal to last played hand of cards?  First played hand?
 - - Could be Golden Fox Effigy
 - One is six chance to vanish
 
-- - Benevolant Fox God
+
+### Benevolant Fox God
 - Follow up Joker, similar to Gros Michel and Cavendish, once fleet fox vanshes
 - Gold Seal cards apply 1.5x mult
+- need to implement some kind of depletion, or it's basically like turning an entire deck into quasi-glass
+
+### Bandit loach / Racoon concepot
+- - Increases level of played hand once per round.  Eats 30 chips as payment
+
+### Space Cat / Souyuz idea 
+- - Starts at $3.  Adds + chips to each card played.  Gone after six hands
+
+### Sonar Bat
+- - Reveals next card in deck
+
+### Fickle Fennec
+* Elemental joker which changes alignment from red/black.  If only cards of alignment are played, xMult upgrades once per round.  But resets if wrong alignment played.
+
+### Reward 7's and 9's
+
+good synergy with odd card
+
+### Add mult when straights or flushes played
+Card
+
+### Flying Feret
+* Blesses up to five played cards with a blue seal
+
+### Eminence
+* xmult for gold cards held in hand, not scored (inverse of gold cards to reward saving)
+
+Something
+
+Radiance
+
+# To do 
+
+✅ Fix crash bug on golden due to align letters
+
+✅ see how cryptid Ship handles this interaction
+
+...fails on retrigger. Retrigger uses old style of trigger message. Testing new copy logic
+
+✅ copy works!
+
+✅ golden retriever works!
+
+✅Test Lucky Retriever - works!
+
+✅ Fix white outline on Golden retriever DONE
+✅ Fix white outline on fickle fox too DONE
+
+For copy cards
+[ ] Somehow the 'copy' affect plays before the card is scored
+
+
+Image size should be 71 x 95
+
+
+Fix fickle fox
+- FIXED gold seals are appearing on non played cards?!?
+- FIXED pops up word 'ERROR' on both blessing and vanishing
+- FIXED needs to vanish more quickly
+- animation happens before card is played
+- needs to not appear again after first appearance
+
+try logic like this to fix the fox.  It should iterate through the cards and have a 1 / 3 chance of blessing them.  If it blesses them say 'bless'.
+
+Finally it should support forsaking the card
+
+- need to find out how to add custom toasts
+
+```lua
+            for i = 1, #G.hand.cards do
+				if not G.hand.cards[i].murdered_by_impostor then
+					choosable_cards[#choosable_cards + 1] = G.hand.cards[i]
+					if is_impostor(G.hand.cards[i]) then
+						has_impostor = true
+					end
+				end
+			end
+```
 
 ### Special Thanks
 
