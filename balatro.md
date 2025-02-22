@@ -138,7 +138,7 @@ Effect: When a 10 is played, gains +2 chips
 
 
 ## Felicette
-![alt text](../assets/images/balatro/a_kuma.png)
+![alt text](../assets/images/balatro/felicette.png)
 
 Core Concept - The first cat in space!  The idea for this card is to reward cards with planet seals.  Again to explore and open up more end-game scoring options for longer runs.
 
