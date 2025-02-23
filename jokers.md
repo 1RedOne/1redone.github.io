@@ -73,7 +73,7 @@ Core Concept - repeat and small chance to gain extra cards when golden cards pla
 
 Design: A golden retriever dog in Balatro-style with two tennis balls in its mouth.
 
-![alt text](../assets/images/balatro/goldenRetriever.png)
+![alt text](../assets/images/balatro/GOLDENRepeater.png)
 
 Effect:
 - When a gold card is played, one in three chance of a copy of it being added to your deck.
@@ -122,7 +122,7 @@ Concept art - unused
 
 Finalized art
 
-![alt text](../assets/images/balatro/benevolance.png)
+![alt text](../assets/images/balatro/benevloence.png)
 
 ## A Kuma
 ![alt text](../assets/images/balatro/a_kuma.png)
