@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Balatro Mod Project
-permalink: /jokers/
+permalink: /pawlatro/
 ---
 
 ## FoxDeploy Balatro Mod
 
-Hi!  I've begun working on a balatro mod.  A full release and github project will come later!
+Hi!  Wanna help me make a mod?
 
+Warning : AI art asset
 ![alt text](../assets/images/balatro/PawlatroLogo.png)
 
 This doc is laid out in this order:
@@ -60,20 +61,20 @@ Joker | Power Up First Card | Planning
 
 # Programmed Cards
 
- These cards are fully working and are ready to have concept art replaced by pixel art to whoever woudl like to do them!
+ These cards are fully working and are ready to have concept art replaced by pixel art to whoever woudl like to do them
 
  What the sections mean:
  * Card name - My idea for a name for the card, open to suggestion if you have a good idea :)
  * Core Concept - what I've programmed the card to do
- * Design - my idea for how this card should look, or how I styled it in my concept art.  If you're an artist and have a different idea, then feel free to deviate from this idea
- * Concept Art - I tried my best to make these
+ * Design - my first stab for for how this card should look
+
 
 ## Golden Repeater
 Core Concept - repeat and small chance to gain extra cards when golden cards played.  Like a dog that fetches and comes back with two balls
 
 Design: A golden retriever dog in Balatro-style with two tennis balls in its mouth.
 
-![alt text](../assets/images/balatro/GOLDENRepeater.png)
+
 
 Effect:
 - When a gold card is played, one in three chance of a copy of it being added to your deck.
@@ -84,7 +85,7 @@ Core Concept - repeat and small chance to gain extra cards when Lucky cards play
 
 Design: An irish setter or other similar dog in Balatro-style with two tennis balls in its mouth and luck based iconography
 
-![alt text](../assets/images/balatro/luckyRetriever.png)
+
 
 Effect:
 When a lucky card is played, one in three chance of a copy of it being added to your deck.  Can retrigger lucky cards
@@ -103,7 +104,7 @@ Effect
 
 Art Concepts
 
-![alt text](../assets/images/balatro/ficklefox.png)
+
 
 
 ## Fickle Fox Follow Up - Benevolance
@@ -114,18 +115,18 @@ Effect
 Reward the accrual of Gold Seal Cards
 - Follow up Joker, only available after fickly fox vanishes
 - Gold Seal cards apply 1.5x mult when kept in hand (kind of an inverse of the normal benefit of playing gold seals)
-- really goes wild when a gold seal is on a steel card!
+- really goes wild when a gold seal is on a steel card
 
 Concept art - unused
 
-![alt text](../assets/images/balatro/benevolanceConcept.png)
+
 
 Finalized art
 
-![alt text](../assets/images/balatro/benevloence.png)
+
 
 ## A Kuma
-![alt text](../assets/images/balatro/a_kuma.png)
+
 
 Core Concept - a nod to a famous fighter. We can make a play on words about him being a bear, because his name could be misread as 'A kuma', and kuma means bear.
 
@@ -138,84 +139,84 @@ Effect: When a 10 is played, gains +2 chips
 
 
 ## Felicette
-![alt text](../assets/images/balatro/felicette.png)
 
-Core Concept - The first cat in space!  The idea for this card is to reward cards with planet seals.  Again to explore and open up more end-game scoring options for longer runs.
+
+Core Concept - The first cat in space
 
 Concept - a cat in or on a rocket ship?
 
 ## Lord of Gold
-![alt text](../assets/images/balatro/the golden lord.png)
+
 Core Concept - not fitting in the overall theme but the idea is to nod to a famous Lord of Gold from a popular trading card game.  He will grant xMult for gold cards.  He will be a Rare card.
 
 Concept - pixel art representation of Eldlich the golden lord in his famous reclining pose.  Already made a custom frame for this one.
 
 ## Hachiko
-![alt text](../assets/images/balatro/hachiko.png)
+
 Core Concept - He should play just like walkie-talkie but for 8's and 5's, a play on his name Hachi = Eight, Ko - would be Go (which is 5) but applying the " modifier as a pun.   Goes very nicely with Fibonacci.
 
 Design -    A nod to the famous dog with a statue in Tokyo.  I don't remember there being cherry trees near him but its not far from the area, so we can take artistic license here like in my concept card.
 
 
 ## Sonar Bat
-![alt text](../assets/images/balatro/SonarBat.png)
+
 Core Concept - Just for newbies, it's a bat that shows the next card in your hand.
 
 Design - I pictured a mom rat using sonar and the baby covering its ears.  I spent a long time working on the ears qq
 
 
 ## Sun and Moon (Open to better naming)
-![alt text](../assets/images/balatro/Sun and Moon.png)
+
 Core Concept - This card rewards played 6's and 9's in a similar manner to walkie-talkie.  Goes nicely with odd Todd.
 
 Design - Open to interpretation but the idea was a Hemingway cat (six toes) with a cute Kyuubi (a nine tailed fox).  I remember the area where I saw Hemingway's cats looking like it had French Quarter vibes so I put them in the french quarter in my first stab at it.
 
 ## Bandit Loach
-![alt text](../assets/images/balatro/banditLoach.png)
+
 Core Concept - An alternate take on Spaceman.  He *always* upgrades the first played hand per round but charges you $2.  Then after that he might upgrade any played hand for free but with worse odds than spaceman.
 
 Design - I pictured a cute little loach in the kind of sand caves they make.  They're the cutest little fish, I used to have a tank full of them. 
 
 ## Holowing Owl
-![alt text](../assets/images/balatro/holowing owl.png)
+
 Core Concept - I always loved hologram cards as a collector as a kid.  I think they need more love.  This will retrigger each hologram card so it goes great with an xMult joker.  I thought it would be fun to have a low proc rate to grant hologram to another played card if the played hand includes at least one.  Like 'contagious holograms'
 
 Design - A snowy owl with lisa frank like holograms infront of a moon with a 'moondog', one of those ice rings around a full moon you see sometimes.
 
 ## Enfeeble
-![alt text](../assets/images/balatro/enfeeble.png)
+
 Core Concept - The opposite of a Strength card
 
 Design - For some reason a little yowling kitten seemed right for this one.  
 
 ## Meteor Shower
-![alt text](../assets/images/balatro/SpectralmeteorShower.png)
+
 Core Concept - This spectral card is like aura, but applies to your whole hand of cards in the Shop.  However, it also has a Wheel of Fortune like chance to do nothing.
 
 Design - to keep with the animal theme, a cat or other animal looking through a telescope and the sky is full of meteros or shooting stars
 
 ## Polymerization
-![alt text](../assets/images/balatro/SpectralPolymerization.png)
+
 Core Concept - A risk reward spectral.  This might apply Glass, Steel or Gold to any hand in your whole hand in the shop, like Meteor Shower.  It might also destroy a single card too.
 
 Design - Totally open to interpetation, I did a bad job recreating the art from the card game for this one.
 
 ## Maximum Holofoil
-![alt text](../assets/images/balatro/holoPack.png)
+
 Core Concept - An expensive an rare booster with guaranteed holofoil cards inside.  Implemented for Jokers only but thought about doing this for playing cards too.
 
 Design - A nod to the Yugioh  "Maximum Gold' series of booster packs with an eye catching holofoily design.  Totally open to interpretation
 
 
 ## Maximum Negation
-![alt text](../assets/images/balatro/negativePack.png)
+
 Core Concept - An expensive ($15 or maybe $20) and rare booster with guaranteed NEGATIVE cards inside.  
 
 Design - A nod to the Yugioh  "Maximum Gold' series of booster packs with an eye catching negative palette design.  Totally open to interpretation
 
 
 ## Maximum Negation
-![alt text](../assets/images/balatro/fourFingeredFox.png)
+
 Core Concept - Buying it gives you a negative four fingered joker one time
 
 Design - I just think it's neat
