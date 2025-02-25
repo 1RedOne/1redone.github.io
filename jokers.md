@@ -21,7 +21,7 @@ This doc is laid out in this order:
 
 ## Legend
 Status | Description
---|--
+---|---
 Planning | The concept is locked in
 Debugging | Mostly written and added to game
 Programmed | Placeholder art added and debugged
@@ -29,17 +29,17 @@ Completed | Finished with completed art
 
 
 
-Type | Card Name | Rarity | Status
---|---|---| --
+Type | Card Name | Rarity | Status | 
+--|---|---| -- | --
 Joker | Golden Repeater | Uncommon | Programmed
 Joker | Lucky Retriever | Uncommon | Programmed
 Joker | Fickle Fox | Uncommon | Programmed
 Joker | Fickle Fox Follow Up - Benevolence | Gated | Programmed
-Joker | Akuma Themed Card | Common | Programmed
-Joker | Felicette | Uncommon | Programmed
+Joker | Akuma Themed Card | Common | WIP | Thanks Akravator
+Joker | Felicette | Uncommon | Completed | Thanks MarioFan597
 Joker | Lord of Gold | Rare | Programmed
 Joker | Hachiko | Common | Programmed
-Joker | Sonar Bat | Common | Programmed
+Joker | Sonar Bat | Common | Completed | Thanks MarioFan597
 Joker | 6's and 9's (Kyuubi) | Common | Programmed
 Joker | Bandit Loach | Uncommon | Programmed
 Joker | Holowing Owl | Rare| Programmed
@@ -49,7 +49,7 @@ Spectral | Meteor Shower | Rare* | Programmed
 Spectral | Polymerization | Rare* | Programmed
 Booster | Holofoil Pack | Rare | Programmed
 Booster | Negative Pack | Rare & Expensive | Programmed
-Voucher | Fourfingered Voucher | Programmed
+Voucher | Fourfingered Voucher | Completed
 --|--|--
 Joker | Power Up First Card | Planning
 
