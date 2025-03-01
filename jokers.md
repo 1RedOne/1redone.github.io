@@ -20,7 +20,7 @@ This doc is laid out in this order:
 
 
 ## Legend
-Status | Description
+Status | Description 
 ---|---
 Planning | The concept is locked in
 Debugging | Mostly written and added to game
@@ -32,8 +32,8 @@ Completed | Finished with completed art
 Type | Card Name | Rarity | Status | 
 --|---|---| -- | --
 Joker | Golden Repeater | Uncommon | Programmed
-Joker | Lucky Retriever | Uncommon | Programmed
-Joker | Fickle Fox | Uncommon | Programmed
+Joker | Lucky Retriever | Uncommon | Thanks OhPahn!
+Joker | Fickle Fox | Uncommon | Completed
 Joker | Fickle Fox Follow Up - Benevolence | Gated | Programmed
 Joker | Akuma Themed Card | Common | WIP | Thanks Akravator
 Joker | Felicette | Uncommon | Completed | Thanks MarioFan597
