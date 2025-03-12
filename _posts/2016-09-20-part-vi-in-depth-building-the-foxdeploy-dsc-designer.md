@@ -253,7 +253,8 @@ These elements render up like so:
 
 Finally, to add the resultant textbox. The only thing out of the ordinary here is that I knew our DSC Configuration would be long, and didn't want the UI to resize when the configuration loaded, so I added a ScrollViewer, which is just a wrapper class to add scrollbars.
 
-```xml <DockPanel Grid.ColumnSpan="2" Grid.Row="3"> <ScrollViewer Height="239" VerticalScrollBarVisibility="Auto"> <TextBox x:Name="DSCBox" AcceptsReturn="True" TextWrapping="Wrap" Text="Compiled Resource will appear here"/> </ScrollViewer> </DockPanel>
+```xml 
+<DockPanel Grid.ColumnSpan="2" Grid.Row="3"> <ScrollViewer Height="239" VerticalScrollBarVisibility="Auto"> <TextBox x:Name="DSCBox" AcceptsReturn="True" TextWrapping="Wrap" Text="Compiled Resource will appear here"/> </ScrollViewer> </DockPanel>
 ```
 
 We also added a status bar to the very bottom, and with these changes in place, here is our current UI.
@@ -303,9 +304,7 @@ Last of all, I wanted a way to display a prompt to the user that the file was ex
 
 ## What's next?
 
-This is what I've been able to complete so far, and it WORKS! If you'd like to, feel free to pitch in and help me out, the project is available here.
-
-![](https://github.com/1RedOne/DSC-Designer)
+This is what I've been able to complete so far, and it WORKS! If you'd like to, feel free to pitch in and help me out, the [project is available here](https://github.com/1RedOne/DSC-Designer).
 
 Here are my short-term design goals for the project from here on:
 
