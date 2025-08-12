@@ -1,0 +1,43 @@
+The Case of the Cursed Release
+
+
+Observed files being created in our output artifacts...awesome
+
+These get conveyed to a release system as a hash verified .zip file
+
+Doing a copy was failing on them in our release system?  Why?
+
+Added logging
+
+We can clearly see the files
+
+Different in output
+
+The Get-ChildItem command was throwing on get-item??
+
+The Upload command was also failing?
+
+And both of them showed mixed file paths?!?!
+
+Eventually tried to 
+In the end why was this so hard?  We just added a folder to a path that was already being zipped!
+ 
+Turns out we were using Windows build containers which default to PowerShell v 5, which has a bug that was never fixed in which zip folders are created using a Windows native file convention.  This caused the nested files in Linux to be created with slashes in their names instead of as folders
+ 
+This caused havoc and confusion as our deployment includes PowerShell running in Linux Containers, and that was misparsing the files.  PowerShell is slash agnostic and doesn't care which direction of slashes you use, always interpreting them as folder delimiters.  But these slashes were truly part of the file name.
+ 
+The fix was to force the zip file step to run in PowerShell Core mode, which uses the newest version of PowerShell, which fixes this bug.
+
+
+
+Thanks.  This was truly cursed.  
+ 
+PowerShell could see the files but would fail in using them.  For instance, file Upload failed because the file handle would automatically swap the wrong direction slashes for linux appropriate slash.  So the files did not exist.  Different behavior in piping too.  Evidently calling $_.FullName.ToString() would rewrite the slash direction to set them all to frontslashes in Linux style, even though the real file had some backslashes
+ 
+ 
+ 
+if I used -include or -filer those would fail as well, as those are system level providers in PowerShell and so it would fail with 'Cannot get file' 
+ 
+But pipeing in to Where-Object did not fail.  It was a nightmare.
+ 
+ 
