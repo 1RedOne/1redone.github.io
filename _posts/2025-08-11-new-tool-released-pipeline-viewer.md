@@ -2,7 +2,7 @@
 title: "New Tool – Azure DevOps Pipeline Viewer / Editor"
 date: "2025-08-12"
 redirect_from: /azure-devops-pipeline-viewer
-coverImage: \assets\images\2025\adopipelineview.png
+coverImage: \assets\images\2025\pipelineViewHeader.png
 categories:
   - "programming"
   - "tools"
@@ -14,7 +14,7 @@ excerpt: "Ever find yourself scrolling through a mile-long Azure DevOps pipeline
 fileName: '2025-08-12-azure-devops-pipeline-viewer.md'
 ---
 
-![](../assets/images/2025/adopipelineview.png)
+![](../assets/images/2025/pipelineViewHeader.png)
 Ever find yourself staring at a 2,000-line Azure DevOps pipeline JSON file, wondering if the YAML crowd is secretly laughing at you?  Ever miss the classic pipeline viewer?  Ever wonder why we have to check in pipelines before we can preview them, graphically?
 
 Do you kind of just want to go back to using Orchestrator again, or hell, just go back to 2007 again?  Maybe get back out your old emo clothes?  Do you miss $2 Pabst Blue Ribbons at dive bars, fighting games and Halo and chatting with your friends till 2 AM a few nights a week?  Staying up, just to watch the sunrise?
