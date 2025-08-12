@@ -12,6 +12,8 @@
       link: /series/snippet-randomSamples
     - name: Random SQL Snippets
       link: /series/snippet-randomSql
+    - name : Azure DevOps Pipeline Viewer
+      link: /AdoPipelineView/
 - name: Series  
   dropdown: 
     - name: Learn PowerShell
