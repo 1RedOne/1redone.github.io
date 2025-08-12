@@ -9,7 +9,7 @@ tags:
  - "PowerShell"
  - "DevOps"
  - "AzurePipelines"
-excerpt: "Everything looked fine—until our Linux container refused to touch our build artifacts. Turns out PowerShell v5 zipped up our files with backslashes in their *names*. This post dives into a cursed bug with a surprisingly simple fix."
+excerpt: "Everything looked fine...until our Linux container refused to touch our build artifacts. Turns out PowerShell v5 zipped up our files with backslashes in their *names*. This post dives into a cursed bug with a surprisingly simple fix."
 fileName: '2025-08-07-the-case-of-the-cursed-release.md'
 ---
 
