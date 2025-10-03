@@ -14,6 +14,8 @@
       link: /series/snippet-randomSql
     - name : Azure DevOps Pipeline Viewer
       link: /AdoPipelineView/
+    - name : Azure Policy Conditions Viewer
+      link: /ArmJsonOsTargetingConditionParser/
 - name: Series  
   dropdown: 
     - name: Learn PowerShell
