@@ -4,6 +4,9 @@ title: About
 permalink: /about/
 ---
 
+
+![Ignite Crowd](/assets/images/igniteCrowd.jpg)
+
 Hi! I work for Microsoft as a full-stack dev for Azure out of Atlanta.  
 
 My focus is on distributed high performance web systems, with an emphasis on end-to-end testing, security, CICD and release automation. I love writing products people will really use.  
@@ -16,6 +19,10 @@ I wasn’t always a dev though, only pivoting since around 2013. Before that I h
 
 I’m also a seasoned speaker, delivering sessions at user groups and conferences in Atlanta, Minneapolis, and NYC. I’ve spoken at MMS and Microsoft Ignite as well.  
 
-For hobbies, I enjoy Yu-Gi-Oh!, adventuring with my family, and programming for fun.  
+For hobbies, I enjoy Yu-Gi-Oh!, Balatro, adventuring with my family, and programming for fun.  
 
 Let’s jam.  
+
+
+
+![Demo gone wrong!](/assets/images/Powershell-StephenOwen.JPG)
