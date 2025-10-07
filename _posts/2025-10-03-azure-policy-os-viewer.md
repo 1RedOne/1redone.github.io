@@ -2,7 +2,7 @@
 title: "New Tool – Azure Policy OS Allowlist Viewer"
 date: "2025-10-03"
 redirect_from: /azure-policy-os-viewer
-coverImage: \assets\images\NewToolForYouCover.png.png
+coverImage: \assets\images\NewToolForYouCover.png
 categories:
   - "programming"
   - "tools"
