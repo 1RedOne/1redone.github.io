@@ -1,0 +1,7 @@
+carousels:
+  - images: 
+    - image: /assets/images/ignite/1.jpg
+    - image: /assets/images/ignite/2.jpg
+    - image: /assets/images/ignite/3.jpg
+    - image: /assets/images/ignite/4.jpg
+    - image: /assets/images/ignite/5.jpg
