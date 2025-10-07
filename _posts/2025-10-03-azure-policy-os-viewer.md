@@ -2,7 +2,7 @@
 title: "New Tool – Azure Policy OS Allowlist Viewer"
 date: "2025-10-03"
 redirect_from: /azure-policy-os-viewer
-coverImage: \assets\images\2025\policyViewHeader.png
+coverImage: \assets\images\NewToolForYouCover.png.png
 categories:
   - "programming"
   - "tools"
@@ -14,7 +14,7 @@ excerpt: "Ever get lost in a spaghetti of Azure Policy JSON while trying to reme
 fileName: '2025-10-03-azure-policy-os-viewer.md'
 ---
 
-![](../assets/images/2025/policyViewHeader.png)
+![](../assets/images/NewToolForYouCover.png)
 
 Ever cracked open an Azure Policy JSON file and felt like you needed a PhD in *indentation archaeology* just to figure out what OSes are allowed?  
 Ever find yourself squinting at a sea of `anyOf` and `allOf` blocks like they’re some arcane magical incantation?  
@@ -31,7 +31,7 @@ This little single-page app lets you **paste in a Policy JSON blob** and instant
 
 Think of it as “Clippy for Azure Policy,” except instead of asking if you’re writing a letter, it tells you if you’re about to allow RHEL 6 (spoiler: you’re not).
 
-![Example of parsed policy rules](<../assets/images/2025/policyView.png>)
+![Example of parsed policy rules](../assets/images/2025/policyparser.png)
 
 ### Features
 - Expand and collapse nested policy clauses like a file tree  
