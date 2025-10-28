@@ -8,6 +8,7 @@ The FoxDeploy blog  is part of a multi-repo setup used to host:
 - ⚙️ Some **standalone Single Page Applications (SPA)** at:
 - - **https://www.foxdeploy.com/AdoPipelineView/**
 - - **https://www.foxdeploy.com/ArmJsonOsTargetingConditionParser/**
+  - **https://www.foxdeploy.com/JavaScriptWindowFingerprintingExperiment**
 
 The SPA and blog are hosted via **GitHub Pages**, but they live in **separate repositories** for clarity and cleaner dev workflows.
 
@@ -20,6 +21,7 @@ The SPA and blog are hosted via **GitHub Pages**, but they live in **separate re
 | `https://www.foxdeploy.com/` | Main Jekyll blog | [`1redone.github.io`](https://github.com/1RedOne/1redone.github.io) |
 | `https://www.foxdeploy.com/AdoPipelineView/` | Deployed SPA | [`AdoPipelineView`](https://github.com/1RedOne/AdoPipelineView) |
 | `https://www.foxdeploy.com/ArmJsonOsTargetingConditionParser/` | Deployed SPA | [`OS Condition Targeting Parser`](https://github.com/1RedOne/ArmJsonOsTargetingConditionParser/tree/main) |
+| `https://www.foxdeploy.com/JavaScriptWindowFingerprintingExperiment/` | Deployed SPA | [`JS Window Fingerprinting Experiment`](https://github.com/1RedOne/JavaScriptWindowFingerprintingExperiment) |
 
 ---
 
@@ -29,6 +31,7 @@ The SPA source code is **NOT inside the blog repo** (`1redone.github.io`) — in
 
 > [`1RedOne/AdoPipelineView`](https://github.com/1RedOne/AdoPipelineView)
 > [`1RedOne/ArmJsonParser`](https://github.com/1RedOne/ArmJsonOsTargetingConditionParser)
+> [`1RedOne/JavaScriptWindowFingerprintingExperiment`](https://github.com/1RedOne/JavaScriptWindowFingerprintingExperiment)
 
 This repo builds a single-page app (`index.html`, etc.) and publishes it to GitHub Pages using the classic GitHub pages *DeployFromBranch* model, deploying from the `main` or `master` branches.
 
@@ -36,6 +39,7 @@ You can confirm it is published successfully at:
 
 >https://github.com/1RedOne/AdoPipelineView/settings/pages
 >https://github.com/1RedOne/ArmJsonOsTargetingConditionParser/deployments/github-pages
+>https://github.com/1RedOne/JavaScriptWindowFingerprintingExperiment/actions
 
 ---
 
