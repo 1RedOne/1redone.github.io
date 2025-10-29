@@ -49,11 +49,6 @@ Simply upload your nUnit XML results file or paste the XML content directly into
 ### It's Completely Private!
 There's no telemetry, monitoring, or data collection of any kind. Your test results stay completely within your browser tab - nothing is ever sent to a server or stored anywhere.
 
-### Perfect for:
-- **Local development** - Quickly review test results from your local test runs
-- **CI/CD troubleshooting** - Download XML results from failed builds and analyze them locally
-- **Test result archiving** - Keep historical test results viewable in a user-friendly format
-- **Team collaboration** - Share test results in a format that's actually readable
 
 If you've ever spent way too long trying to parse XML test results by hand, this tool will save your sanity (and probably some time too).
 
