@@ -2,7 +2,7 @@
 title: "New Tool – nUnit Test Results Viewer"
 date: "2025-10-27"
 redirect_from: /new-tools-nunit-test-viewer
-coverImage: \assets\images\2025\pipelineViewHeader.png
+coverImage: \assets\images\2025\testViewer.png
 categories:
   - "programming"
   - "tools"
@@ -17,14 +17,16 @@ excerpt: "Tired of trying to parse nUnit XML test results by hand? This new sing
 fileName: '2025-10-27-new-tool-released-nUnit-viewer.md'
 ---
 
-![](../assets/images/2025/pipelineViewHeader.png)
-Ever find yourself staring at a massive nUnit XML test results file, trying to figure out which tests passed, failed, or were skipped? Ever wish you could see your test results in the same clean, organized view you get when running tests in an Azure DevOps pipeline?
+![](../assets/images/2025/pipelineVitestViewer.png)
+Ever find yourself staring at a massive nUnit XML test results file, trying to figure out which tests passed, failed, or were skipped? Isn't it SPOOOKY when you have to scroll for forever, or try to read test results in Pester?  
 
-If you're like me, you've probably opened those XML files in a text editor more times than you'd care to admit, scrolling through endless `<test-case>` elements, trying to make sense of the results. There has to be a better way!
+Ever wish you could see your test results in the same clean, organized view you get when running tests in an Azure DevOps pipeline?
+
+If you're like me, you've probably opened those XML files in a text editor more times than you'd care to admit, scrolling through endless `<test-case>` elements, trying to make sense of the results. There has to be a better way 🎃!
 
 Well, now there is.
 
-## Introducing: **nUnit Test Results Viewer** 🎉
+## 👻 Introducing: **nUnit Test Results Viewer** 👻
 
 This single-page application takes your nUnit XML test results and renders them in a beautiful, pipeline-style view that makes it easy to understand your test outcomes at a glance.
 

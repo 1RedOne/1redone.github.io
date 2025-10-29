@@ -1,17 +1,16 @@
 ---
-title: "PostTitle"
+title: "Fox Tip! Performing Tests against the previous state of files"
 date: "2025-10-27"
 redirect_from : 2025/10/27/ADO-Tip---Performing-quality-checks-only-on-changed-files!
-coverImage: \assets\images\2021\trackingStates.webp
+coverImage: \assets\images\2025\changeQualityControl.png
 categories: 
   - "scripting"
 tags: 
-
  - "Azure DevOps" 
  - "Pipelines" 
  - "CI/CD" 
  - "Quality Checks"
-excerpt: "In this post, we'll look at a way to optimize your Azure DevOps pipelines by only performing quality checks on files that have changed in a pull request."
+excerpt: "In this post, we'll look at a way to track how files are changing from within an Azure DevOps pipelines"
 fileName: '2025-10-27-ado-tip---performing-quality-checks-only-on-changed-files!'
 ---
 If you've noticed the trajectory of my posts, you'll note that I've moved on to now automating things in the cloud, and shifted my focus a bit to the land of CI/CD.  
@@ -20,7 +19,7 @@ Recently, this issue popped up :
 
 ## How do I make sure people change their content...in the right way
 
-![Header for this post, reads 'How To Make GitHub Button'](\assets\images\2021\trackingStates.webp)
+![Header for this post, reads 'How To Make GitHub Button'](assets\images\2025\changeQualityControl.png)
 
 *Post Outline*
 
