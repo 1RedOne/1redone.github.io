@@ -62,6 +62,14 @@ It was very easy to get the list of files I cared about, the interesting thing w
 
 This will give you a list, in linux file format, of all files that changed in your commits/pr versus master.  
 
+This actually failed aggresively, as it turns out that ADO pipelines will by default only include the dev branch and won't mirror master as well.  I added this to fix that particular issue.
+
+```
+ git fetch origin master
+$changedFiles = git diff --name-only master    
+```
+
+
 From here, it was simple enough to compare `$allJsonFiles` against the list back from `$allChangedFiles` and filter things down.  I then ended the `BeforeDiscovery` block of my test by publishing `$myChangedJsonFiles`.  
 
 Next up, it's very easy to hand a list of resources off to a `Describe` block and iterate over them, using this syntax:
