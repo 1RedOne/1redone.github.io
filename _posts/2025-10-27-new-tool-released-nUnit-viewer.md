@@ -17,7 +17,7 @@ excerpt: "Tired of trying to parse nUnit XML test results by hand? This new sing
 fileName: '2025-10-27-new-tool-released-nUnit-viewer.md'
 ---
 
-![](../assets/images/2025/pipelineVitestViewer.png)
+![](../assets/images/2025/testViewer.png)
 Ever find yourself staring at a massive nUnit XML test results file, trying to figure out which tests passed, failed, or were skipped? Isn't it SPOOOKY when you have to scroll for forever, or try to read test results in Pester?  
 
 Ever wish you could see your test results in the same clean, organized view you get when running tests in an Azure DevOps pipeline?
@@ -30,7 +30,7 @@ Well, now there is.
 
 This single-page application takes your nUnit XML test results and renders them in a beautiful, pipeline-style view that makes it easy to understand your test outcomes at a glance.
 
-![nUnit Test Results in a clean, organized view](<../assets/images/2025/pipelineView.png>)
+![nUnit Test Results in a clean, organized view](<../assets/images/2025/nunitViewer.png>)
 
 No more squinting at raw XML trying to count passed vs failed tests, or hunting through massive files to find that one test that's been causing issues.
 
@@ -43,14 +43,15 @@ Think of it as "Azure DevOps Test Results tab," except it works with any nUnit X
 - **Search and filter** - Quickly find specific tests or filter by status
 - **Runs entirely in your browser** - No installs, no servers, no hassle
 - **Complete privacy** - Your test results never leave your browser
-
+- **Janky CSS** - Look, you get what you pay for.
 
 ### How to Use It
 Simply upload your nUnit XML results file or paste the XML content directly into the viewer. The app will parse your test results and display them in an organized, easy-to-read format that mimics the test results view you're familiar with from Azure DevOps pipelines.
 
 ### It's Completely Private!
-There's no telemetry, monitoring, or data collection of any kind. Your test results stay completely within your browser tab - nothing is ever sent to a server or stored anywhere.
+There's no telemetry, monitoring, or data collection of any kind. Your test results stay completely within your browser tab - nothing is ever sent to a server or stored anywhere.  Don't believe me?  GOOD!
 
+I mean if you don't believe me, just check your network traces tab in devtools.  
 
 If you've ever spent way too long trying to parse XML test results by hand, this tool will save your sanity (and probably some time too).
 
