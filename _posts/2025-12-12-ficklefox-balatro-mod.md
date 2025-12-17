@@ -25,7 +25,10 @@ Hi folks!  I know that you mostly know me from my consulting days, or my blog po
 
 An animal themed, vanilla friendly, configurable Balatro mod!
 
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/channels/1116389027176787968/1343279563563597854)
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/channels/1116389027176787968/1343279563563597854) 
+[![GitHub followers](https://img.shields.io/github/followers/1RedOne.svg?style=social&label=Download&maxAge=2592000)](https://github.com/1RedOne/FickleFox)
+
+>Download the mod here! [FickleFox](https://github.com/1RedOne/FickleFox)
 
 *Report issues or suggest ideas in the Discord!  Or file an issue on the repo!*
 
