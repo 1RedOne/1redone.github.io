@@ -1,0 +1,8 @@
+When launching Minecraft for Windows from my PC, which is signed into my Gamepass account which has an active subscription, I get an error that says "You're at your limit for the number of devices you can use with Xbox Account", however when I click the link and sign in to Manage Devices, no devices are shown to me.  I think this has to do with me recently upgrading my motherboard on this PC.
+
+
+Work around
+
+There is actually an issue in that your account may have been used on many PCs over the years...or maybe like me you upgraded a major component and that trigegred you to log back in, whcih then pushed you over the limit.  The issue might be, if you have a very old Microsoft account like me (been using it and Xbox logins since the Windows 8 era) that your Windows Store logins may not be properly merged in to your Xbox / windows store profile.  If this happens, when you click the link to view your managed devices whcih is shwon in Minecraft, you'll see an empty list!
+
+Open the Microsoft Store, not Gamepass or the Xbox app.  Uninstall and reinstall Minecraft from there.  From here, you will be able to 
