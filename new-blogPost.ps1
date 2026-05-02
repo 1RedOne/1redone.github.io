@@ -49,9 +49,13 @@ param($postTitle,$postDate, $postExcerpt,$postTags)
     "would be created as $calculatedFileName.md"
 
     $postContent
-    remove-item $calculatedFileName
+    #remove-item $calculatedFileName
     new-item -Name $calculatedFileName -Value $postContent -ItemType File -force
 }
 
 $targetDate =  get-date ([DateTime]::Now.AddDays(-1)) -UFormat %Y-%m-%d
 
+New-BlogPost -postTitle "ADO Tip - Performing quality checks only on changed files!" .\_config.yml `
+    -postDate $targetDate `
+    -postExcerpt "In this post, we'll look at a way to optimize your Azure DevOps pipelines by only performing quality checks on files that have changed in a pull request." `
+    -postTags "Azure DevOps","Pipelines","CI/CD","Quality Checks" | clip

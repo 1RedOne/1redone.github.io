@@ -12,6 +12,12 @@
       link: /series/snippet-randomSamples
     - name: Random SQL Snippets
       link: /series/snippet-randomSql
+    - name : Azure DevOps Pipeline Viewer
+      link: /AdoPipelineView/
+    - name : Azure Policy Conditions Viewer
+      link: /ArmJsonOsTargetingConditionParser/
+    - name : nUnit Test Viewer
+      link: /NUnitTestViewer/
 - name: Series  
   dropdown: 
     - name: Learn PowerShell

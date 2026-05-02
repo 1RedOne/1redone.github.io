@@ -54,17 +54,40 @@ After this, the `AzurePowerShell` commands can work.
 
 ### The term 'C:\__w\1\s' is not recognized as a name of a cmdlet, functio
 
-Let's say you setup your modules as above, and then go to run subsequent commands, and see this lovely error. 
+Let's say you setup your modules as above, and then go to run subsequent commands, like this one: 
+
+```yaml
+ - task: PowerShell@2
+        displayName: 'Update Az.Accounts Module'
+        inputs:          
+          script: |
+           Write-host "Hello world"           
+```
+Seems super simple right?  But then you see this lovely error:
 
 ```
-##[error]The term 'D:\a\1\s\myPowershellFile.ps1' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+##[error]The term 'C:\__w\1\s' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 ```
 
-This occurs because the `AzurePowerShell` commands have different parameters than the plain-jane `PowerShell` task!
+This occurs because the `PowerShell@2` command has an optional parameter of `targetType`, with the supported values of `inline` and `script`.  The default value is `script`.  This means that Azure Devops is interpretting our `Write-host...` as **the path to a script file**. Notice the `w` letter?  I know it's soooo dumb.
 
-Specifically, you'll need to **always specify `azurePowerShellVersion` and `azureSubscription` fields**.  Fail to do this, and the default params will think you're using a script file and throw an error.
+#### Fix 
 
-And that leads you directly into the next problem.
+If you're running some inline commands as in my example, always add this param:
+
+```yaml
+ - task: PowerShell@2
+        displayName: 'Update Az.Accounts Module'
+        inputs:
+          targetType: 'inline'     <============ HERE
+          script: |
+           Write-host "Hello world"           
+```
+For the love of God, so help me if you include the `<======== HERE` bit in your code then come crying to me like 
+
+> "FoxDeploy-san, help me!! It says `<=========== HERE` is not a known PowerShell command QQ"
+
+We are going to have words.
 
 ### No output when running an AzureDevops command
 
@@ -77,9 +100,11 @@ For instance, you might see this
 2024-05-10T15:59:14.8584021Z ##[command]Disconnect-AzAccount -Scope CurrentUser -ErrorAction Stop
 ```
 
-How lovely, it finishes executing `Set-AzContext` and then immediatly runs `Disconnect-AzAccount`.  What's the deal!?
+How lovely, it finishes executing `Set-AzContext` and then immediatly runs `Disconnect-AzAccount`.  What the shell
 
-Well in a lovely turn of events, even more parameters are different in `AzurePowerShell`.  
+Well in a lovely turn of events, if you happen to use `AzurePowerShell` thinking that "Surely this will work and be the same as PowerShell@2" then you will be greeted with Pain. 
+
+#### WTF is it this time?
 
 Specifically when using an inline script you must set your `ScriptType` to `'InlineScript'`, and then provide your actual script in `Inline: |` format.  
 
