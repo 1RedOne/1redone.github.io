@@ -18,6 +18,8 @@
       link: /ArmJsonOsTargetingConditionParser/
     - name : nUnit Test Viewer
       link: /NUnitTestViewer/
+    - name : Quick Web Tools
+      link: /QuickWebTools/
 - name: Series  
   dropdown: 
     - name: Learn PowerShell
