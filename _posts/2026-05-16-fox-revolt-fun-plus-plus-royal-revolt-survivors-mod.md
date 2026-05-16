@@ -37,7 +37,7 @@ The goal is pretty simple: make runs feel faster, more generous, and less punish
 
 Download it here:
 
-> **[Fox Revolt Fun++ on GitHub](https://github.com/1RedOne/FoxRevoltFunPlusPlus)**
+> **[Fox Revolt Fun++ on GitHub](https://github.com/1RedOne/Fox-Revolt-Fun-Plus-Plus)**
 
 Grab the newest release from the Releases page, unzip it into your BepInEx plugins folder, and then go forth and make the numbers more fun.
 
@@ -58,6 +58,8 @@ Or, if you prefer the technical version:
 ```text
 FoxRevoltFunPlusPlus.dll
 ```
+
+I made a dll!
 
 That little DLL patches several player stat and ability behaviors at runtime using BepInEx.  Which sounds very normal until you remember that the first few hours of Unity modding mostly feel like walking through someone else's house in the dark while carrying a plate of spaghetti.
 
