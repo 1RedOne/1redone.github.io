@@ -29,14 +29,37 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
+    env:
+      RUBY_VERSION: '3.1.7'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Ruby in tool cache
+        shell: bash
+        env:
+          RUBY_CONFIGURE_OPTS: --enable-shared --disable-install-doc
+        run: |
+          arch="$(node -p 'process.arch')"
+          prefix="$RUNNER_TOOL_CACHE/Ruby/$RUBY_VERSION/$arch"
+          if [[ -f "$prefix.complete" ]]; then
+            echo "Ruby $RUBY_VERSION is already installed in $prefix"
+            exit 0
+          fi
+
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential autoconf patch libssl-dev libyaml-dev zlib1g-dev \
+            libffi-dev libgmp-dev libreadline-dev libncurses-dev libgdbm-dev
+          git clone --depth 1 https://github.com/rbenv/ruby-build.git "$RUNNER_TEMP/ruby-build"
+          "$RUNNER_TEMP/ruby-build/bin/ruby-build" --verbose "$RUBY_VERSION" "$prefix"
+          "$prefix/bin/ruby" -ropenssl -rpsych -rzlib -e 'puts RUBY_DESCRIPTION'
+          touch "$prefix.complete"
       - name: Setup Ruby
         uses: ruby/setup-ruby@086ffb1a2090c870a3f881cc91ea83aa4243d408 # v1.195.0
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
+          ruby-version: ${{ env.RUBY_VERSION }}
+          self-hosted: true # Use our tool-cache install rather than a prebuilt runner image.
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
