@@ -16,7 +16,7 @@ tags:
   - "Linux"
   - "Baseline Remediation"
   - "Targeted Remediation"   
-excerpt: "to do"
+excerpt: "It took 18 months..."
 fileName: '2026-11-17-baseline-remediation.md'
 ---
 
@@ -29,6 +29,9 @@ For a few years, my day job revolved around helping companies in implementing th
 And it had something called Azure Policy, but that didn't work the same way as, or cover the things you could do with Group Policy.  At least...not until now.
 
 Years of experience working in the trenches, doing this the right way for customers and now, imagine my joy when I was asked to work on enabling Baselines natively in Azure Policy.
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/CYaHCFo7Dq4)](https://www.youtube.com/watch?v=CYaHCFo7Dq4)
+
 
 ## Baseline Customization
  We called it Baseline Settings Customization, and we shipped it Public Preview at Ignite 2025 then GA'd it in May of 2026.
